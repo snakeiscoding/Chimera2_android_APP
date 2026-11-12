@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fitness_test_summary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fitness_test_result_title"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/fitness_test_result_uc"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#909090"
+            app:layout_constraintTop_toBottomOf="@id/fitness_test_result_title"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fitness_test_result_rating"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            app:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/rating_tc"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/fitness_test_result_title"/>
+
+        <TextView
+            android:id="@+id/fitness_test_last_stage"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:text="@string/last_stage_completed_tc"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/fitness_test_result_rating"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- MyZone Summary -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myzone_summary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#ffe6e6e6">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/myzone_summary_mc"
+                android:textColor="#1A1A1A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/move_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/myzone_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="150dp"
+            android:text="@string/move_details_uc"
+            style="@style/myzone_sub_title" />
+
+        <TextView
+            android:id="@+id/time_in_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/myzone_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="62dp"
+            android:layout_marginRight="225dp"
+            style="@style/myzone_sub_title"
+            android:text="@string/time_in_zones_tc" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_mv_dtl_1_lbl_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="23dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/move_detail">
+
+            <TextView
+                android:id="@+id/myzone_mv_dtl_lbl_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duration_tc"
+                app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_1_lbl_block"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_lbl_block"
+                android:textStyle="bold"
+                style="@style/myzone_move_details" />
+
+            <TextView
+                android:id="@+id/myzone_mv_dtl_lbl_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/effort_tc"
+                app:layout_constraintTop_toBottomOf="@id/myzone_mv_dtl_lbl_11"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_lbl_block"
+                android:textStyle="bold"
+                style="@style/myzone_move_details" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meps_tc"
+                style="@style/myzone_move_details"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/myzone_mv_dtl_lbl_12"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_lbl_block" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_mv_dtl_1_val_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_1_lbl_block"
+            app:layout_constraintStart_toEndOf="@id/myzone_mv_dtl_1_lbl_block">
+            <TextView
+                android:id="@+id/myzone_duration_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_move_details"
+                app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_1_val_block"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_val_block" />
+            <TextView
+                android:id="@+id/myzone_effort_val"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                style="@style/myzone_move_details"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_val_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_duration_val" />
+            <TextView
+                android:id="@+id/myzone_meps_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_move_details"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_1_val_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_effort_val" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_mv_dtl_2_lbl_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/move_detail"
+            app:layout_constraintStart_toEndOf="@id/myzone_mv_dtl_1_val_block"
+
+            android:layout_marginLeft="84dp"
+            android:layout_marginBottom="23dp">
+            <TextView
+                android:id="@+id/myzone_mv_dtl_lbl_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_2_lbl_block"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_lbl_block"
+                style="@style/myzone_move_details"
+                android:textStyle="bold"
+                android:text="@string/calories_tc"/>
+            <TextView
+                android:id="@+id/myzone_mv_dtl_lbl_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_lbl_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_mv_dtl_lbl_21"
+                style="@style/myzone_move_details"
+                android:textStyle="bold"
+                android:text="@string/average_hr_tc"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_lbl_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_mv_dtl_lbl_22"
+                style="@style/myzone_move_details"
+                android:textStyle="bold"
+                android:text="@string/peak_hr_tc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_mv_dtl_2_val_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_2_lbl_block"
+            app:layout_constraintStart_toEndOf="@id/myzone_mv_dtl_2_lbl_block" >
+            <TextView
+                android:id="@+id/myzone_calories_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_move_details"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_val_block"
+                app:layout_constraintTop_toTopOf="@id/myzone_mv_dtl_2_val_block" />
+            <TextView
+                android:id="@+id/myzone_average_hr_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_move_details"
+                android:text="*"
+                tools:ignore="HardcodedText"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_val_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_calories_val" />
+            <TextView
+                android:id="@+id/myzone_peak_hr_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_move_details"
+                app:layout_constraintStart_toStartOf="@id/myzone_mv_dtl_2_val_block"
+                app:layout_constraintTop_toBottomOf="@id/myzone_average_hr_val" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_tz_1_block"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="53dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/time_in_zone"
+            app:layout_constraintEnd_toStartOf="@id/myzone_tz_2_block" >
+            <ImageView
+                android:id="@+id/mz_im_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mz_level1" />
+            <ImageView
+                android:id="@+id/mz_im_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/mz_im_1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mz_level2" />
+            <ImageView
+                android:id="@+id/mz_im_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/mz_im_2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mz_level3" />
+            <TextView
+                android:id="@+id/mz_lvl1_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/mz_im_1"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/myzone_meps" />
+            <TextView
+                android:id="@+id/mz_lvl2_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toEndOf="@id/mz_im_2"
+                app:layout_constraintTop_toBottomOf="@id/mz_lvl1_data"
+                style="@style/myzone_meps" />
+            <TextView
+                android:id="@+id/mz_lvl3_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/mz_im_3"
+                app:layout_constraintTop_toBottomOf="@id/mz_lvl2_data"
+                style="@style/myzone_meps" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myzone_tz_2_block"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/time_in_zone"
+            app:layout_constraintEnd_toEndOf="parent" >
+            <ImageView
+                android:id="@+id/mz_im_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/mz_level4" />
+            <ImageView
+                android:id="@+id/mz_im_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/mz_im_4"
+                app:layout_constraintStart_toStartOf="@id/mz_im_4"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/mz_level5" />
+            <ImageView
+                android:id="@+id/mz_im_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/mz_im_5"
+                app:layout_constraintStart_toStartOf="@id/mz_im_4"
+                android:background="@drawable/mz_level6" />
+            <TextView
+                android:id="@+id/mz_lvl4_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myzone_meps"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mz_im_4" />
+            <TextView
+                android:id="@+id/mz_lvl5_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                style="@style/myzone_meps"
+                app:layout_constraintTop_toBottomOf="@id/mz_lvl4_data"
+                app:layout_constraintStart_toEndOf="@id/mz_im_5" />
+            <TextView
+                android:id="@+id/mz_lvl6_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/myzone_meps"
+                app:layout_constraintTop_toBottomOf="@id/mz_lvl5_data"
+                app:layout_constraintStart_toEndOf="@id/mz_im_6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/workout_summary_section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="#20FFFFFF"
+        android:padding="15dp">
+
+        <!-- Header row -->
+        <LinearLayout
+            android:id="@+id/sprint8_table_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:background="#ffe6e6e6"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="2.3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.75"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/warmup_uc"
+                android:textColor="#1A1A1A"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="+"
+                android:textColor="#a3a3a3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.75"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/workout_uc"
+                android:textColor="#1A1A1A"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="+"
+                android:textColor="#a3a3a3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.75"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/cool_down_uc"
+                android:textColor="#1A1A1A"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="="
+                android:textColor="#a3a3a3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.75"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/total_uc"
+                android:textColor="#1A1A1A"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="0.1"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/workout_summary_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sprint8_table_header_layout"/>
+
+
+        <!-- Container needed by post workout surveymonkey  -->
+        <!-- Add this programmatically to avoid possible rare inflation crash
+        <WebView
+            android:id="@id/workout_summary_survey"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" /> -->
+    </RelativeLayout>
+
+</LinearLayout>

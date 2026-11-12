@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/constantWattsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000"
+                android:orientation="vertical">
+
+    <!-- Contains animating lightning. Source was at 30 fps but we can't handle the CPU requirements so stream @ 24 fps and playback speed 1.25. -->
+    <com.jht.chimera.lib.widget.streamingimageview.StreamingImageView
+        android:id="@+id/lightningImageView"
+        android:layout_width="1920dp"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        app:baseFilename="lightning_"
+        app:basePath="/sdcard/jht/lightning"
+        app:endIndex="60"
+        app:fileExtension=".png"
+        app:fps="24"
+        app:frameIdFieldWidth="2"
+        app:speed="1.25"
+        app:startIndex="0"
+        app:useFileCache="true"/>
+
+    <com.jht.chimera.lib.widget.dial.MultiZoneCircleGauge
+        android:id="@+id/wattsDial"
+        android:layout_width="425dp"
+        android:layout_height="425dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:padding="50dp"
+        />
+
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/wattsIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:clickable="false"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/wattsDial"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        app:drawableBackground="@android:color/transparent"
+        app:drawableIcon="@drawable/ic_watts_white"
+        />
+
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/rpmIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:visibility="gone"
+        android:clickable="false"
+        android:layout_alignTop="@+id/wattsDial"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        app:drawableBackground="@android:color/transparent"
+        app:drawableIcon="@drawable/ic_rpm_white"
+        />
+
+    <RelativeLayout
+        android:id="@+id/graphContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <com.jht.chimera.lib.graph.workoutgraph.WorkoutGraphThreaded
+            android:id="@+id/workout_graph"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"/>
+
+        <com.jht.chimera.lib.graph.GraphLegendWidget
+            android:id="@+id/graph_left_legend_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/workout_graph"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="2dp"
+        />
+
+        <TextView
+            android:id="@+id/heartRateTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/workout_graph"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:text=""
+            android:textColor="#80a0a0a0"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/workoutModeText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="#30909090"
+            android:textSize="60dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

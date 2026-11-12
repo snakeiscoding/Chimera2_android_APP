@@ -1,0 +1,5 @@
+<root>
+    <item name='java.nio.charset.Charset'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/machine_setup_console_serial_number"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/machine_setup_frame_serial_number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:imeOptions="actionNext"
+        app:auto_correct="true"
+        app:label="@string/console_serial_number_tc"
+        app:max_chars="@integer/max_serial_number_chars"
+        app:textfilter="allcaps|digits" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/machine_setup_frame_serial_number"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/machine_setup_console_serial_number"
+        app:layout_constraintRight_toLeftOf="@id/machine_setup_bridge_serial_number"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:imeOptions="actionNext"
+        app:auto_correct="true"
+        app:label="@string/frame_serial_number_tc"
+        app:max_chars="@integer/max_serial_number_chars"
+        app:textfilter="allcaps|digits" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/machine_setup_bridge_serial_number"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toRightOf="@id/machine_setup_frame_serial_number"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:imeOptions="actionNext"
+        app:auto_correct="true"
+        app:label="@string/serial_number_bridge_tc"
+        app:max_chars="@integer/max_serial_number_chars"
+        app:textfilter="allcaps|digits" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/machine_setup_club_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/machine_setup_console_serial_number"
+        app:layout_constraintRight_toRightOf="@id/machine_setup_console_serial_number"
+        app:layout_constraintTop_toBottomOf="@id/machine_setup_console_serial_number"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        app:auto_correct="true"
+        app:input_type="integer_input"
+        app:label="@string/club_id_tc"
+        app:max_chars="5"
+        app:min_value="0"
+        app:max_value="65535"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/machine_setup_import_serial_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/machine_setup_frame_serial_number"
+        app:layout_constraintRight_toRightOf="@id/machine_setup_frame_serial_number"
+        app:layout_constraintTop_toBottomOf="@id/machine_setup_frame_serial_number"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/standard_button"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/import_serial_numbers_tc"
+        android:textColor="#FF000000"
+        android:textSize="18dp"
+        app:srcCompat="@drawable/back_button"
+        tools:ignore="SpUsage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

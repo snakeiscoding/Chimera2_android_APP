@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="#26FFFFFF"
+    android:padding="10dp"
+    tools:ignore="HardcodedText">
+
+    <Button
+        android:id="@+id/safety_pin_button_1"
+        style="@style/digital_safety_pin_button"
+        android:text="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/safety_pin_button_2"
+        style="@style/digital_safety_pin_button"
+        android:layout_marginLeft="10dp"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@id/safety_pin_button_1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/safety_pin_button_3"
+        style="@style/digital_safety_pin_button"
+        android:layout_marginLeft="10dp"
+        android:text="3"
+        app:layout_constraintLeft_toRightOf="@id/safety_pin_button_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/safety_pin_button_4"
+        style="@style/digital_safety_pin_button"
+        android:text="4"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_1"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_1" />
+
+    <Button
+        android:id="@+id/safety_pin_button_5"
+        style="@style/digital_safety_pin_button"
+        android:text="5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_2"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_2" />
+
+    <Button
+        android:id="@+id/safety_pin_button_6"
+        style="@style/digital_safety_pin_button"
+        android:text="6"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_3"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_3" />
+
+    <Button
+        android:id="@+id/safety_pin_button_7"
+        style="@style/digital_safety_pin_button"
+        android:text="7"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_4"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_4" />
+
+    <Button
+        android:id="@+id/safety_pin_button_8"
+        style="@style/digital_safety_pin_button"
+        android:text="8"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_5"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_5" />
+
+    <Button
+        android:id="@+id/safety_pin_button_9"
+        style="@style/digital_safety_pin_button"
+        android:text="9"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_6"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_6" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/safety_pin_button_back"
+        style="@style/digital_safety_pin_button"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_7"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_7"
+        app:srcCompat="@drawable/ic_baseline_backspace_24"
+        android:tint="@color/black"
+        android:padding="@dimen/safety_pin_button_delete_padding"
+        />
+
+    <Button
+        android:id="@+id/safety_pin_button_0"
+        style="@style/digital_safety_pin_button"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_8"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_8" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/safety_pin_button_enter"
+        style="@style/digital_safety_pin_confirm_button"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="@id/safety_pin_button_9"
+        app:layout_constraintTop_toBottomOf="@id/safety_pin_button_9"
+        app:srcCompat="@drawable/ic_baseline_check_24"
+        android:padding="@dimen/safety_pin_button_confirm_padding"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

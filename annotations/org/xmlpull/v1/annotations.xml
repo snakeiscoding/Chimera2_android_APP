@@ -1,0 +1,26 @@
+<root>
+    <item
+        name='org.xmlpull.v1.XmlSerializer org.xmlpull.v1.XmlSerializer endTag(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='org.xmlpull.v1.XmlSerializer org.xmlpull.v1.XmlSerializer startTag(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='org.xmlpull.v1.XmlSerializer void startDocument(java.lang.String, java.lang.Boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='org.xmlpull.v1.XmlPullParser void setInput(java.io.InputStream, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='org.xmlpull.v1.XmlPullParser java.lang.String getAttributeValue(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='org.xmlpull.v1.XmlPullParser java.lang.String getAttributeValue(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

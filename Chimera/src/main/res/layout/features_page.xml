@@ -1,0 +1,74 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/featuresRow1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="100dp"
+    android:layout_gravity="center_horizontal"
+    android:paddingTop="50dp"
+    tools:context="com.jht.chimera.ui.machinesetup.MachineSetup">
+
+    <CheckBox
+        android:id="@+id/machine_setup_enable_am"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/machine_setup_enable_wt"
+        android:text="@string/asset_management_tc" />
+
+    <CheckBox
+        android:id="@+id/machine_setup_enable_wt"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/workout_tracking_tc" />
+
+    <CheckBox
+        android:id="@+id/machine_setup_enable_egym"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/machine_setup_enable_wt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/egym_tc" />
+
+    <Button
+        android:id="@+id/check_for_usb_update"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/check_for_usb_updates"
+        app:layout_constraintEnd_toEndOf="@id/machine_setup_enable_am"
+        app:layout_constraintStart_toStartOf="@id/machine_setup_enable_am"
+        app:layout_constraintTop_toBottomOf="@id/machine_setup_enable_am" />
+
+    <TextView
+        android:id="@+id/update_details"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="@id/machine_setup_enable_wt"
+        app:layout_constraintStart_toStartOf="@id/machine_setup_enable_wt"
+        app:layout_constraintTop_toBottomOf="@id/machine_setup_enable_wt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_width="500dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/install_usb_update"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/update_from_usb_tc"
+        app:layout_constraintEnd_toEndOf="@id/machine_setup_enable_egym"
+        app:layout_constraintStart_toStartOf="@id/machine_setup_enable_egym"
+        app:layout_constraintTop_toBottomOf="@id/machine_setup_enable_egym" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

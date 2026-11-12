@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.service.workout.stat.MachineData java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.workout.stat.WorkoutStateData java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

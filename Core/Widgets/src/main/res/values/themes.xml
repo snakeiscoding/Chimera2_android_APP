@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- hide the splash icon when spinning up the new process (API 28–30) -->
+    <style name="Theme.NoSplash" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.lib.tv.settopbox.EnseoCommHandler'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.tv.settopbox.IRCommHandler'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

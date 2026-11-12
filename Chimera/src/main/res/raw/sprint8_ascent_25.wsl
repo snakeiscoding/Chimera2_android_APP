@@ -1,0 +1,823 @@
+settings
+    workout_id = 18
+    allow_skip_warmup = 0
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 0
+
+input RAMP_RATE_INCLINE
+input RAMP_RATE_RESISTANCE
+input RESISTANCE_IN
+input INCLINE_IN
+input LEVEL
+
+export RESISTANCE
+export INCLINE
+export GOAL_TYPE
+export GOAL
+export PREVENT_USER_GOAL_CHANGES
+
+// Specific for Sprint8
+export NEXT_RESISTANCE
+export NEXT_INCLINE
+export IS_RAMPING
+export IS_SPRINTING
+export INTERVAL_GOAL_TYPE
+export INTERVAL_GOAL
+
+NEXT_RESISTANCE = -1
+NEXT_INCLINE = -1
+IS_RAMPING = 0
+
+    LEVEL_1_RESISTANCE = [3, 1, 3, 1, 4, 1, 4, 1, 6, 1, 6, 1, 6, 1, 6]
+    LEVEL_1_INCLINE = [30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30]
+    LEVEL_2_RESISTANCE = [4, 1, 4, 1, 5, 1, 5, 1, 7, 1, 7, 1, 7, 1, 7]
+    LEVEL_2_INCLINE = [30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30]
+    LEVEL_3_RESISTANCE = [5, 1, 5, 1, 6, 1, 6, 1, 8, 1, 8, 1, 8, 1, 8]
+    LEVEL_3_INCLINE = [30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30]
+    LEVEL_4_RESISTANCE = [6, 1, 6, 1, 7, 1, 7, 1, 9, 1, 9, 1, 9, 1, 9]
+    LEVEL_4_INCLINE = [30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30]
+    LEVEL_5_RESISTANCE = [7, 1, 7, 1, 8, 1, 8, 1, 10, 1, 10, 1, 10, 1, 10]
+    LEVEL_5_INCLINE = [30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30, 0, 30]
+    LEVEL_6_RESISTANCE = [8, 2, 8, 2, 9, 2, 9, 2, 11, 2, 11, 2, 11, 2, 11]
+    LEVEL_6_INCLINE = [40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40]
+    LEVEL_7_RESISTANCE = [9, 2, 9, 2, 10, 2, 10, 2, 12, 2, 12, 2, 12, 2, 12]
+    LEVEL_7_INCLINE = [40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40]
+    LEVEL_8_RESISTANCE = [10, 2, 10, 2, 11, 2, 11, 2, 13, 2, 13, 2, 13, 2, 13]
+    LEVEL_8_INCLINE = [40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40]
+    LEVEL_9_RESISTANCE = [11, 2, 11, 2, 12, 2, 12, 2, 14, 2, 14, 2, 14, 2, 14]
+    LEVEL_9_INCLINE = [40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40]
+    LEVEL_10_RESISTANCE = [12, 2, 12, 2, 13, 2, 13, 2, 15, 2, 15, 2, 15, 2, 15]
+    LEVEL_10_INCLINE = [40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40, 0, 40]
+    LEVEL_11_RESISTANCE = [13, 2, 13, 2, 14, 2, 14, 2, 16, 2, 16, 2, 16, 2, 16]
+    LEVEL_11_INCLINE = [50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50]
+    LEVEL_12_RESISTANCE = [14, 2, 14, 2, 15, 2, 15, 2, 17, 2, 17, 2, 17, 2, 17]
+    LEVEL_12_INCLINE = [50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50]
+    LEVEL_13_RESISTANCE = [15, 2, 15, 2, 16, 2, 16, 2, 18, 2, 18, 2, 18, 2, 18]
+    LEVEL_13_INCLINE = [50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50]
+    LEVEL_14_RESISTANCE = [16, 2, 16, 2, 17, 2, 17, 2, 19, 2, 19, 2, 19, 2, 19]
+    LEVEL_14_INCLINE = [50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50]
+    LEVEL_15_RESISTANCE = [17, 2, 17, 2, 18, 2, 18, 2, 20, 2, 20, 2, 20, 2, 20]
+    LEVEL_15_INCLINE = [50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50, 0, 50]
+    LEVEL_16_RESISTANCE = [18, 3, 18, 3, 19, 3, 19, 3, 21, 3, 21, 3, 21, 3, 21]
+    LEVEL_16_INCLINE = [60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60]
+    LEVEL_17_RESISTANCE = [19, 3, 19, 3, 20, 3, 20, 3, 22, 3, 22, 3, 22, 3, 22]
+    LEVEL_17_INCLINE = [60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60]
+    LEVEL_18_RESISTANCE = [20, 3, 20, 3, 21, 3, 21, 3, 23, 3, 23, 3, 23, 3, 23]
+    LEVEL_18_INCLINE = [60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60]
+    LEVEL_19_RESISTANCE = [21, 3, 21, 3, 22, 3, 22, 3, 24, 3, 24, 3, 24, 3, 24]
+    LEVEL_19_INCLINE = [60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60]
+    LEVEL_20_RESISTANCE = [22, 3, 22, 3, 23, 3, 23, 3, 25, 3, 25, 3, 25, 3, 25]
+    LEVEL_20_INCLINE = [60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60, 0, 60]
+
+stage "warmup"
+    PREVENT_USER_GOAL_CHANGES = 1
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 3 * 60 * 1000
+    INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_CONSTANT
+    INTERVAL_GOAL = 3 * 60 * 1000
+    IS_SPRINTING = 0
+    // When it is time to ramp
+    when IS_RAMPING != 1 && ((INTERVAL_TIME_MS >= GOAL - (abs(NEXT_RESISTANCE - RESISTANCE_IN) / RAMP_RATE_RESISTANCE) * 1000) || (INTERVAL_TIME_MS >= GOAL - (abs(NEXT_INCLINE - INCLINE_IN) / RAMP_RATE_INCLINE) * 1000))
+        RESISTANCE = NEXT_RESISTANCE
+        INCLINE = NEXT_INCLINE
+        IS_RAMPING = 1
+
+    when INTERVAL_TIME_MS >= GOAL
+        IS_RAMPING = 0
+        interval = interval + 1
+
+    level 1
+        RESISTANCE = 1
+
+        interval
+            NEXT_RESISTANCE = LEVEL_1_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_1_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_1_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_1_INCLINE[0]
+
+    level 2
+        RESISTANCE = 1
+
+        interval
+            NEXT_RESISTANCE = LEVEL_2_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_2_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_2_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_2_INCLINE[0]
+
+    level 3
+        RESISTANCE = 1
+
+        interval
+            NEXT_RESISTANCE = LEVEL_3_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_3_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_3_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_3_INCLINE[0]
+
+    level 4
+        RESISTANCE = 1
+
+        interval
+            NEXT_RESISTANCE = LEVEL_4_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_4_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_4_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_4_INCLINE[0]
+
+    level 5
+        RESISTANCE = 1
+
+        interval
+            NEXT_RESISTANCE = LEVEL_5_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_5_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_5_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_5_INCLINE[0]
+
+    level 6
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_6_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_6_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_6_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_6_INCLINE[0]
+
+    level 7
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_7_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_7_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_7_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_7_INCLINE[0]
+
+    level 8
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_8_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_8_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_8_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_8_INCLINE[0]
+
+    level 9
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_9_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_9_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_9_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_9_INCLINE[0]
+
+    level 10
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_10_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_10_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_10_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_10_INCLINE[0]
+
+    level 11
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_11_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_11_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_11_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_11_INCLINE[0]
+
+    level 12
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_12_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_12_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_12_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_12_INCLINE[0]
+
+    level 13
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_13_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_13_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_13_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_13_INCLINE[0]
+
+    level 14
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_14_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_14_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_14_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_14_INCLINE[0]
+
+    level 15
+        RESISTANCE = 2
+
+        interval
+            NEXT_RESISTANCE = LEVEL_15_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_15_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_15_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_15_INCLINE[0]
+
+    level 16
+        RESISTANCE = 3
+
+        interval
+            NEXT_RESISTANCE = LEVEL_16_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_16_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_16_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_16_INCLINE[0]
+
+    level 17
+        RESISTANCE = 3
+
+        interval
+            NEXT_RESISTANCE = LEVEL_17_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_17_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_17_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_17_INCLINE[0]
+
+    level 18
+        RESISTANCE = 3
+
+        interval
+            NEXT_RESISTANCE = LEVEL_18_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_18_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_18_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_18_INCLINE[0]
+
+    level 19
+        RESISTANCE = 3
+
+        interval
+            NEXT_RESISTANCE = LEVEL_19_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_19_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_19_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_19_INCLINE[0]
+
+    level 20
+        RESISTANCE = 3
+
+        interval
+            NEXT_RESISTANCE = LEVEL_20_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_20_INCLINE[0]
+
+        onLevelSwap
+            NEXT_RESISTANCE = LEVEL_20_RESISTANCE[0]
+            NEXT_INCLINE = LEVEL_20_INCLINE[0]
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 14.5 * 60 * 1000
+    PREVENT_USER_GOAL_CHANGES = 1
+    SPRINT8_INT_TIMES = [30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000]
+    setIntervals INTERVAL_GOAL = SPRINT8_INT_TIMES
+    
+    currentInterval = -1
+    nextSpeedInterval = -1
+    timeLeftInInterval = 0
+    
+    IS_SPRINTING_ARRAY = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+    setIntervals IS_SPRINTING = IS_SPRINTING_ARRAY
+
+    // When the interval is switched this will be run
+    when interval != currentInterval
+        currentInterval = interval
+        // If we skipped an interval we remove the skipped time from the time goal
+        GOAL = GOAL - timeLeftInInterval
+    
+    // Update the time left in interval
+    when 1
+        timeLeftInInterval = INTERVAL_GOAL - INTERVAL_TIME_MS
+    
+    // Ramp when in recovery and is correct time
+    when INTERVAL_GOAL == 90000 && IS_RAMPING != 1 && ((INTERVAL_TIME_MS >= (INTERVAL_GOAL - (abs(NEXT_RESISTANCE - RESISTANCE_IN) / RAMP_RATE_RESISTANCE) * 1000)) || ((INTERVAL_TIME_MS >= INTERVAL_GOAL - (abs(NEXT_INCLINE - INCLINE_IN) / RAMP_RATE_INCLINE) * 1000)))
+        IS_RAMPING = 1
+        RESISTANCE = NEXT_RESISTANCE
+        INCLINE = NEXT_INCLINE
+        
+    when INTERVAL_TIME_MS >= INTERVAL_GOAL // Set the next values for UI to display
+        IS_RAMPING = 0
+        interval = interval + 1    
+    
+    // If the workout is paused during a sprint do not continue the sprint after resume
+    onResume
+        if (INTERVAL_GOAL == 30000)
+            interval = interval + 1
+        
+    level 1
+        setIntervals RESISTANCE = LEVEL_1_RESISTANCE
+        setIntervals INCLINE = LEVEL_1_INCLINE
+        // Updates the next speed and next incline values
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_1_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_1_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_1_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_1_INCLINE[interval + 1]
+
+    level 2
+        setIntervals RESISTANCE = LEVEL_2_RESISTANCE
+        setIntervals INCLINE = LEVEL_2_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_2_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_2_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_2_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_2_INCLINE[interval + 1]
+
+    level 3
+        setIntervals RESISTANCE = LEVEL_3_RESISTANCE
+        setIntervals INCLINE = LEVEL_3_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_3_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_3_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_3_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_3_INCLINE[interval + 1]
+    level 4
+        setIntervals RESISTANCE = LEVEL_4_RESISTANCE
+        setIntervals INCLINE = LEVEL_4_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_4_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_4_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_4_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_4_INCLINE[interval + 1]
+    level 5
+        setIntervals RESISTANCE = LEVEL_5_RESISTANCE
+        setIntervals INCLINE = LEVEL_5_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_5_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_5_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 1
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_5_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_5_INCLINE[interval + 1]
+    level 6
+        setIntervals RESISTANCE = LEVEL_6_RESISTANCE
+        setIntervals INCLINE = LEVEL_6_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_6_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_6_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_6_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_6_INCLINE[interval + 1]
+    level 7
+        setIntervals RESISTANCE = LEVEL_7_RESISTANCE
+        setIntervals INCLINE = LEVEL_7_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_7_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_7_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_7_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_7_INCLINE[interval + 1]
+    level 8
+        setIntervals RESISTANCE = LEVEL_8_RESISTANCE
+        setIntervals INCLINE = LEVEL_8_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_8_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_8_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_8_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_8_INCLINE[interval + 1]
+    level 9
+        setIntervals RESISTANCE = LEVEL_9_RESISTANCE
+        setIntervals INCLINE = LEVEL_9_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_9_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_9_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_9_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_9_INCLINE[interval + 1]
+    level 10
+        setIntervals RESISTANCE = LEVEL_10_RESISTANCE
+        setIntervals INCLINE = LEVEL_10_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_10_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_10_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_10_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_10_INCLINE[interval + 1]
+    level 11
+        setIntervals RESISTANCE = LEVEL_11_RESISTANCE
+        setIntervals INCLINE = LEVEL_11_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_11_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_11_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_11_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_11_INCLINE[interval + 1]
+    level 12
+        setIntervals RESISTANCE = LEVEL_12_RESISTANCE
+        setIntervals INCLINE = LEVEL_12_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_12_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_12_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_12_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_12_INCLINE[interval + 1]
+    level 13
+        setIntervals RESISTANCE = LEVEL_13_RESISTANCE
+        setIntervals INCLINE = LEVEL_13_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_13_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_13_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_13_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_13_INCLINE[interval + 1]
+    level 14
+        setIntervals RESISTANCE = LEVEL_14_RESISTANCE
+        setIntervals INCLINE = LEVEL_14_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_14_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_14_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_14_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_14_INCLINE[interval + 1]
+    level 15
+        setIntervals RESISTANCE = LEVEL_15_RESISTANCE
+        setIntervals INCLINE = LEVEL_15_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_15_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_15_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 2
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_15_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_15_INCLINE[interval + 1]
+    level 16
+        setIntervals RESISTANCE = LEVEL_16_RESISTANCE
+        setIntervals INCLINE = LEVEL_16_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_16_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_16_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_16_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_16_INCLINE[interval + 1]
+    level 17
+        setIntervals RESISTANCE = LEVEL_17_RESISTANCE
+        setIntervals INCLINE = LEVEL_17_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_17_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_17_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_17_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_17_INCLINE[interval + 1]
+    level 18
+        setIntervals RESISTANCE = LEVEL_18_RESISTANCE
+        setIntervals INCLINE = LEVEL_18_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_18_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_18_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_18_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_18_INCLINE[interval + 1]
+    level 19
+        setIntervals RESISTANCE = LEVEL_19_RESISTANCE
+        setIntervals INCLINE = LEVEL_19_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_19_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_19_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_19_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_19_INCLINE[interval + 1]
+    level 20
+        setIntervals RESISTANCE = LEVEL_20_RESISTANCE
+        setIntervals INCLINE = LEVEL_20_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_20_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_20_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_RESISTANCE = 3
+                NEXT_INCLINE = 0
+            else
+                NEXT_RESISTANCE = LEVEL_20_RESISTANCE[interval + 1]
+                NEXT_INCLINE = LEVEL_20_INCLINE[interval + 1]
+            
+stage "cooldown"
+    PREVENT_USER_GOAL_CHANGES = 1
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 2.5 * 60 * 1000
+    INTERVAL_GOAL = 150000
+    IS_SPRINTING = 0
+    
+    when INTERVAL_TIME_MS >= GOAL
+        end
+    
+    level 1
+        interval
+            RESISTANCE = 1
+            INCLINE = 0
+    level 2
+        interval
+            RESISTANCE = 1
+            INCLINE = 0
+    level 3
+        interval
+            RESISTANCE = 1
+            INCLINE = 0
+    level 4
+        interval
+            RESISTANCE = 1
+            INCLINE = 0
+    level 5
+        interval
+            RESISTANCE = 1
+            INCLINE = 0
+    level 6
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 7
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 8
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 9
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 10
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 11
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 12
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 13
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 14
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 15
+        interval
+            RESISTANCE = 2
+            INCLINE = 0
+    level 16
+        interval
+            RESISTANCE = 3
+            INCLINE = 0
+    level 17
+        interval
+            RESISTANCE = 3
+            INCLINE = 0
+    level 18
+        interval
+            RESISTANCE = 3
+            INCLINE = 0
+    level 19
+        interval
+            RESISTANCE = 3
+            INCLINE = 0
+    level 20
+        interval
+            RESISTANCE = 3
+            INCLINE = 0

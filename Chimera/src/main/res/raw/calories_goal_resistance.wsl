@@ -1,0 +1,34 @@
+settings
+    workout_id = 15
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 1
+
+input CALORIE_GOAL_START
+input START_RESISTANCE
+input COOLDOWN_TIME_START
+input CALORIES
+input GOAL
+
+export RESISTANCE
+export GOAL
+export GOAL_TYPE
+
+stage "workout"
+    interval
+        RESISTANCE = START_RESISTANCE
+        GOAL = CALORIE_GOAL_START
+        GOAL_TYPE = GOAL_TYPE_CALORIES_STAGE_CONSTANT
+        
+        when STAGE_CALORIES >= GOAL
+            interval = interval + 1
+            
+stage "cooldown"
+    interval
+        RESISTANCE = 1
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<resources>
+
+    <string name="frame_u600">U600</string>
+    <string name="frame_r600">R600</string>
+    <string name="frame_s600">S600</string>
+    <string name="frame_s700">S700</string>
+    <string name="frame_t600e110v">AC 100/120V 50&#8211;60Hz</string>
+    <string name="frame_t600e220v">AC 220/240V 50&#8211;60Hz</string>
+
+</resources>
+

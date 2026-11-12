@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <!--Corner views for hiding update screen-->
+    <View
+        android:id="@+id/top_left_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <View
+        android:id="@+id/top_right_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <View
+        android:id="@+id/bottom_left_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <View
+        android:id="@+id/bottom_right_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+
+    <View
+        android:id="@+id/bottom_bar_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#e81413"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1" />
+
+    <View
+        android:id="@+id/center_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintTop_toBottomOf="@id/top_background" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/top_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/progress_spinner_image_view"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_spinner_red"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/install_message" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/install_tc"
+        android:textColor="#ffffff"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/version_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="right"
+        android:text=""
+        android:textColor="#ffffff"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar_background"
+        app:layout_constraintEnd_toEndOf="@id/bottom_bar_background"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="@id/bottom_bar_background"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_background"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/one_moment_please_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/upgrade_in_progress_pg"
+        android:textColor="#cccccc"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/installing_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_background"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/installing_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/install_tc"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/install_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one_moment_please_text_view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/install_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/install_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/installing_text_view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/install_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/progress_spinner_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/install_subtitle" />
+
+
+    <LinearLayout
+        android:id="@+id/error_message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f6ff00" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_warning" />
+
+            <TextView
+                android:id="@+id/error_description_text_view"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="This is the error message text"
+                tools:ignore="HardcodedText"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f6ff00" />
+
+        <Button
+            android:id="@+id/reboot_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_error"
+            android:text="@string/reboot_tc"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+
+    <include layout="@layout/system_reset"
+        android:id="@+id/system_reset_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

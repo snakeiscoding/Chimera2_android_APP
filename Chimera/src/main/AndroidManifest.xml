@@ -1,0 +1,587 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="com.jht.uid.chimera"
+    tools:targetApi="33"
+    android:sharedUserMaxSdkVersion="33"> <!-- sharedUserId cause non-deterministic behavior within the package manager. This will remove sharedUserId dependency on new consoles -->
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.MANAGE_USB"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.SET_TIME_ZONE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.MANAGE_USERS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.REBOOT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.CONNECTIVITY_INTERNAL"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.OVERRIDE_WIFI_CONFIG"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.NETWORK_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" tools:ignore ="MockLocation,ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.FLAG_IMMUTABLE" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--Required to WRITE to the WorkoutData ContentProvider (addPoint/clear). -->
+    <uses-permission android:name="com.jht.workoutdata.permission.WRITE" />
+
+    <application
+        android:name=".MatrixApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_chimera_app_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/ChimeraTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:process="com.jht.chimera"
+        tools:replace="android:supportsRtl,android:theme,android:icon,android:hardwareAccelerated">
+        <!-- TODO remove android:supportsRtl once Andy fixes va parser-->
+
+        <!-- Could be useful for profiling -->
+        <!--<profileable android:shell="true" />-->
+
+        <!-- taskAffinity is just a name for dedicated android UI activity stack that is created by starting with new task flag, it does not need to match process -->
+        <!-- It appears whichever stack or "taskAffinity" splash starts becomes the "home" stack -->
+
+        <!-- SPLASH APP -->
+        <!-- If we give splash and blank mainapp taskAffinity, then anything bailing to the launcher should just go back to our app. However do we want that? What if bail was unexpected? -->
+        <!--  Keeping last UI as the launcher can make android home button more predictable, but we do not use android home button -->
+        <!-- If we give splash and blank own taskAffinity, then if something bails to the launcher there is a window for our UI flow to take action before we fail over to splash? -->
+        <!--  Falling back to blank as the launcher can make transitions a little smoother when an app bails to launcher -->
+        <activity
+            android:name="com.jht.splashapp.SplashScreenActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|layoutDirection|touchscreen"
+            android:process="com.jht.splashapp"
+            android:taskAffinity="com.jht.mainapp"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="DiscouragedApi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+        <!-- BOOT_COMPLETED seems to always start after splash app so not needed?
+        <receiver
+            android:name="com.jht.splashapp.ServiceStarter"
+            android:process="com.jhtp.splashapp">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- Blank cleans up transition, but can also act as a catch if an app crashes. Keep it with splash screen -->
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.BlankActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.splashapp"
+            android:taskAffinity="com.jht.mainapp"
+            android:screenOrientation="landscape" />
+
+        <!-- My Media -->
+        <activity
+            android:name=".ui.mymedia.MyMediaActivity"
+            android:label="My Media"
+            android:launchMode="singleTask"
+            android:process="com.jht.mymedia"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mymedia">
+        </activity>
+
+        <!-- SYSTEM SETUP -->
+        <activity
+            android:name="com.jht.chimera.ui.machinesettings.EngineeringScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|layoutDirection|touchscreen"
+            android:label="Engineering Screen"
+            android:process="com.jht.machinesettings"
+            android:screenOrientation="landscape"
+            android:theme="@style/EngineeringScreenTheme"
+            android:taskAffinity="com.jht.machinesettings"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MACHINE SETUP -->
+        <activity
+            android:name="com.jht.chimera.ui.machinesetup.MachineSetup"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation|screenSize|locale|layoutDirection|screenLayout|touchscreen"
+            android:label="Machine Setup"
+            android:process="com.jht.machinesetup"
+            android:screenOrientation="landscape"
+            android:theme="@style/EngineeringScreenTheme"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.jht.machinesetup"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--
+        <service
+            android:name="com.jht.chimera.service.bluetooth.BTService"
+            android:process="com.jhtp.bluetoothservice">
+            <intent-filter>
+                <action android:name="com.jht.bluetooth.BTService" />
+            </intent-filter>
+        </service> -->
+
+        <!-- WEB BROWSER -->
+        <activity
+            android:name="com.jht.chimera.ui.browser.WebBrowserActivity"
+            android:label="Web Browser"
+            android:process="com.jht.webbrowserapp"
+            android:configChanges="touchscreen"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.webbrowserapp"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+
+        <!-- MAIN APP -->
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.WelcomeActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="touchscreen"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.GoScreenActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="touchscreen"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            android:taskAffinity="com.jht.mainapp" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.landmark.LandmarkWorkoutActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.EGymActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.egym"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|layoutDirection"
+            android:taskAffinity="com.jht.egym" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.ClubComActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.webapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.webapp" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.HDMIActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.hdmi" />
+        <!-- Vortex TvView needs singleTask and its own taskAffinity or else it will crash -->
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.StreamingAppActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode|layoutDirection|touchscreen"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.chimera.ui.mainapp.StreamingAppActivity" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.TVActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.tv" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.TVActivityNew"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.tv" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.RemoteTVActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.remotetv" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.WebAppActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.webapp"
+            android:configChanges="touchscreen"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            android:taskAffinity="com.jht.webapp" >
+
+            <intent-filter android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.WebAppSSOActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.webappsso"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode|layoutDirection|touchscreen"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing"
+            android:taskAffinity="com.jht.webappsso" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.HeartRateIIActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.heartrate" />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.ConstantWattsActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.constantwatts" />
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.workoutsummary.WorkoutSummaryActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp" />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.DemoVideoActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp" />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.createaccount.LoginRegisterActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".ui.machinesettings.TVChannelSetupActivity"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.machinesettings"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+
+        <!-- Vortex TvView needs singleTask and its own taskAffinity or else it will crash -->
+        <activity android:name=".ui.machinesettings.TVChannelSetupActivityNew"
+            android:windowSoftInputMode="adjustNothing"
+            android:launchMode="singleTask"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.tvsetup"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            />
+
+        <activity android:name=".ui.machinesettings.ErrorCodeDetails"
+            android:windowSoftInputMode="adjustNothing"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.machinesettings"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            />
+
+        <activity android:name=".ui.machinesettings.factory.IcrCalibrationActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.machinesettings"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            />
+        <activity android:name=".ui.machinesettings.factory.IcrZeroSensorActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.machinesettings"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.BikePaceActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.bikepaceactivity"
+            android:exported="true"
+            />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.BikeIntervalsActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.bikeintervalsactivity"
+            android:exported="true"
+            />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.FTPTestActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.ftptestactivity"
+            android:exported="true"
+            />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.MaxHRTestActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.maxhrtestactivity"
+            android:exported="true"
+            />
+
+        <!-- should FrictionTestActivity be on process "com.jht.machinesettings"? -->
+        <activity
+            android:name="com.jht.chimera.ui.machinesettings.frictiontest.FrictionTestActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.frictiontest"
+            android:exported="true"
+            />
+
+
+        <!-- SERVICES -->
+        <service
+            android:name="com.jht.chimera.service.logger.LoggerService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true"
+            android:process="com.jhtp.loggerservice">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service" />
+        </service>
+
+        <service
+            android:name="com.jht.chimera.service.matrixcomm.MatrixCommService"
+            android:process="com.jhtp.services" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true"
+            android:process="com.jhtp.loggerservice"
+            />
+
+        <service
+            android:name="com.jht.chimera.service.hal.HALService"
+            android:process="com.jhtp.halservice" />
+
+        <service
+            android:name="com.jht.chimera.service.hal.IOService"
+            android:process="com.jhtp.iolcbservice" />
+
+        <service
+            android:name="com.jht.chimera.service.hal.LCBService"
+            android:process="com.jhtp.iolcbservice" />
+
+        <service
+            android:name="com.jht.chimera.service.workout.WorkoutControllerService"
+            android:process="com.jhtp.workoutcontrollerservice" />
+
+        <service
+            android:name="com.jht.chimera.service.workout.WorkoutSaverService"
+            android:process="com.jhtp.services" />
+
+        <service
+            android:name="com.jht.chimera.service.ui.UiService"
+            android:process="com.jhtp.uiservice" />
+
+        <service
+            android:name="com.jht.chimera.service.dapi.DAPIService"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|layoutDirection|touchscreen"
+            android:process="com.jhtp.dapiservice"
+            android:exported="true"/>
+
+        <service
+            android:name="com.jht.chimera.ui.mainapp.workouttracking.WorkoutTrackingService"
+            android:exported="true"
+            android:enabled="true"
+            android:process="com.jhtp.services"
+            tools:ignore="ExportedService">
+
+            <intent-filter>
+                <action android:name="com.jht.chimera.ui.mainapp.workouttracking.IWorkoutTrackingService"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.jht.chimera.service.systemsettings.SystemSettings"
+            android:process="com.jhtp.services" />
+
+        <service
+            android:name="com.jht.chimera.service.tiers.Tiers"
+            android:process="com.jhtp.services">
+        </service>
+
+        <service
+            android:name=".service.usbmedia.UsbMediaService"
+            android:process="com.jhtp.services" />
+
+        <service
+            android:name=".service.sso.SingleSignOnService"
+            android:process="com.jhtp.services" />
+
+        <service android:name="com.jht.chimera.service.IPGeolocationService"
+            android:process="com.jhtp.loggerservice"/>
+
+        <service
+            android:name="com.jht.chimera.service.gattserver2.GattServerServiceConsole"
+            android:process="com.jhtp.services" />
+
+        <!-- This service supervises our console services. It needs meta-data so child services can find it. -->
+        <service
+            android:name=".service.ConsoleServiceSupervisor"
+            android:process="com.jhtp.services"
+            android:exported="false">
+            <!-- In case we need to search out this ServiceInfo from our PackageInfo -->
+            <meta-data
+                android:name="com.jht.services.isCentralService"
+                android:value="true" />
+        </service>
+        <!-- Fastest to read this direct instead of searching for it in PackageInfo -->
+        <meta-data
+            android:name="com.jht.services.centralPackageName"
+            android:value="com.jht.chimera" />
+        <meta-data
+            android:name="com.jht.services.centralClassName"
+            android:value="com.jht.chimera.service.ConsoleServiceSupervisor" />
+
+
+        <provider
+            android:name="com.jht.datamatrixlib.service.DataMatrixContentProvider"
+            android:authorities="com.jht.datamatrixservice.contentprovider"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <!-- Keep VA on own process -->
+        <activity tools:replace="android:process"
+            android:name="com.jht.virtualactive.activity.VAActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode|layoutDirection|touchscreen"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.mainapp"
+            android:process="com.jhtp.virtualactive" />
+        <service tools:replace="android:process"
+            android:name="com.jht.virtualactive.service.VAService"
+            android:enabled="true"
+            android:exported="false"
+            android:process="com.jhtp.virtualactive" />
+
+        <!-- Fleet E2E Test -->
+        <activity
+            android:name="com.jht.chimera.lib.fleet.FleetTestActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.jht.chimera.FLEET_TEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    <!-- Libraries -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+    </application>
+
+
+</manifest>

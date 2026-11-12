@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.2"
+        android:background="@drawable/background_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/graphLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/intervalNumberTextID"
+
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:text="@string/interval_tc"
+            android:textColor="#FFFFFF"
+
+            android:textSize="30dp"
+            app:autoSizeMaxTextSize="30dp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintHorizontal_bias=".03"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".033" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timeWordLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_intervals_gradient"
+
+                android:gravity="bottom|center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.16"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".362"
+
+                app:layout_constraintWidth_percent="0.85">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeWordID"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="bottom|center_horizontal"
+
+                    android:text="@string/time_tc"
+                    android:textColor="#ffffff"
+
+                    android:textSize="30dp"
+                    app:autoSizeMaxTextSize="30dp"
+                    app:autoSizeTextType="uniform"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.26"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias=".86" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeCountdownTimeID"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="bottom|center_horizontal"
+
+                android:text="00:00"
+                android:textColor="#ffffff"
+
+                android:textSize="200dp"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="200dp"
+                app:autoSizeTextType="uniform"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/timeWordLayout"
+                app:layout_constraintHeight_percent=".28"
+                app:layout_constraintStart_toStartOf="@+id/timeWordLayout"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".22"
+                tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/distanceWordLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_intervals_gradient"
+
+            android:gravity="bottom|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.16"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias=".82"
+            app:layout_constraintWidth_percent="0.85">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distanceWordID"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="bottom|center_horizontal"
+
+                android:text="@string/distance_tc"
+                android:textColor="#ffffff"
+
+                android:textSize="30dp"
+                app:autoSizeMaxTextSize="30dp"
+                app:autoSizeTextType="uniform"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.26"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".86" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/distanceNumericID"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="bottom|center_horizontal"
+
+            android:text="21.5 MI"
+            android:textColor="#ffffff"
+
+            android:textSize="200dp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="200dp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/distanceWordLayout"
+            app:layout_constraintHeight_percent=".28"
+            app:layout_constraintStart_toStartOf="@+id/distanceWordLayout"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".7576"
+            tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/include_workout_graph_small" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".4">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.5"
+            android:background="@drawable/background_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/previousTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+
+            android:text="@string/previous_intervals_tc"
+            android:textAllCaps="true"
+
+            android:textColor="#9B9B9B"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="24dp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".033" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0895" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/intervalsView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hguideline"
+            app:layout_constraintWidth_percent="0.88" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

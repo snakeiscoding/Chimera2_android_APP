@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chimera Large Screen Resolution -->
+    <dimen name="textSizeMedium">16dp</dimen>
+    <dimen name="textSizeGo">18dp</dimen>
+    <dimen name="workout_description">18dp</dimen>
+    <dimen name="workout_title">42dp</dimen>
+    <dimen name="custom_workout_recycler_text_size">22dp</dimen>
+    <dimen name="featured_item_description_text_size">18dp</dimen>
+    <dimen name="featured_main_height">920dp</dimen>
+</resources>

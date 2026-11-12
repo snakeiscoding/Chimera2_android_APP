@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/EngineeringPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/eng_import_settings_usb"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="250dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/import_settings_tc" />
+                <ProgressBar
+                    android:id="@+id/import_usb_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp"
+                    android:layout_toRightOf="@id/eng_import_settings_usb"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/eng_export_settings_usb"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="250dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/export_settings_to_disk_tc" />
+                <ProgressBar
+                    android:id="@+id/export_usb_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp"
+                    android:layout_toRightOf="@id/eng_export_settings_usb"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/eng_export_settings"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="250dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/export_settings_tc" />
+                <ProgressBar
+                    android:id="@+id/export_settings_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp"
+                    android:layout_toEndOf="@id/eng_export_settings"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                android:id="@+id/eng_site_survey"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="250dp"
+                android:layout_centerInParent="true"
+                android:text="@string/site_survey_tc" />
+
+            <ProgressBar
+                android:id="@+id/site_survey_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
+                android:layout_toRightOf="@id/eng_site_survey"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF232323"
+            android:orientation="horizontal"
+            android:paddingEnd="25dp">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/console_serial_number_tc"
+                android:textSize="22dp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/connection_status_tc"
+                android:textSize="22dp"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:layout_marginVertical="15dp"
+                android:singleLine="true"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/select_all_button"
+                    android:layout_width="250dp"
+                    style="@style/GeneralEngineeringButton"
+                    android:text="@string/select_all_uc"></Button>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            style="@style/jht_standard_table_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eng_site_survey_table"
+                style="@style/jht_standard_inner_recycle_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#26FFFFFF" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

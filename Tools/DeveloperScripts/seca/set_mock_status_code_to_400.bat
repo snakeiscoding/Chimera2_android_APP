@@ -1,0 +1,1 @@
+adb shell am broadcast -a com.jht.engage360.SET_MOCK_STATUS_CODE --ei status_code 400

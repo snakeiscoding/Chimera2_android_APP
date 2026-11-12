@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<resources>
+    <!-- Strings that were not translated for sprint 8  -->
+    <string name="enter_your_workout_pg">Enter your Workout</string>
+    <string name="workout_1_tc">Workout 1</string>
+    <string name="how_many_sprints_pg">How Many Sprints?</string>
+</resources>

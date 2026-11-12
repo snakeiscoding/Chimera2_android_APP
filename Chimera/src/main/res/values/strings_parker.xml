@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<resources>
+
+    <string name="frame_a30_02">A30-02</string>
+    <string name="frame_a30_03">A30-03</string>
+    <string name="frame_a30_04">A30-04</string>
+    <string name="frame_a50">A50</string>
+    <string name="frame_a50_03">A50-03</string>
+    <string name="frame_a50_04">A50-04</string>
+    <string name="frame_c50">C50</string>
+    <string name="frame_c50_02">C50-02</string>
+    <string name="frame_e30">E30</string>
+    <string name="frame_e30_02">E30-02</string>
+    <string name="frame_e50">E50</string>
+    <string name="frame_e50_02">E50-02</string>
+    <string name="frame_r30_03">R30-03</string>
+    <string name="frame_r30_04">R30-04</string>
+    <string name="frame_r50">R50</string>
+    <string name="frame_r50_02">R50-02</string>
+    <string name="frame_t30">T30</string>
+    <string name="frame_t30_02">T30-02</string>
+    <string name="frame_t50">T50</string>
+    <string name="frame_t50_02">T50-02</string>
+    <string name="frame_t50_03">T50-03</string>
+    <string name="frame_t70_02">T70-02 (LCB C2/C3)</string>
+    <string name="frame_t70_02_lcb_c1">T70-02 (LCB C1)</string>
+    <string name="frame_t70_03">T70-03</string>
+    <string name="frame_t70_03_lcb_c1">T70-03 (LCB C1)</string>
+    <string name="frame_t70_04">T70-04</string>
+    <string name="frame_t70_05">T70-05</string>
+    <string name="frame_t70_06">T70-06</string>
+    <string name="frame_t75">T75 (LCB C2/C3)</string>
+    <string name="frame_t75_lcb_c1">T75 (LCB C1)</string>
+    <string name="frame_t75_02">T75-02</string>
+    <string name="frame_t75_04">T75-04</string>
+    <string name="frame_tf30">TF30</string>
+    <string name="frame_tf30_02">TF30-02</string>
+    <string name="frame_tf30_03">TF30-03</string>
+    <string name="frame_tf50">TF50</string>
+    <string name="frame_tf50_02">TF50-02</string>
+    <string name="frame_tf50_03">TF50-03</string>
+    <string name="frame_u30_02">U30-02</string>
+    <string name="frame_u30_03">U30-03</string>
+    <string name="frame_u50">U50</string>
+    <string name="frame_u50_02">U50-02</string>
+    <string name="frame_st90">ST90</string>
+    <string name="frame_icr70">ICR70</string>
+
+</resources>
+

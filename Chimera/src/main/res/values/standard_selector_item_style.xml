@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="standard_selector_item_main_container">
+        <item name="android:background">@drawable/selector_item_background</item>
+    </style>
+
+    <style name="standard_selector_item_text">
+        <item name="android:textColor">@color/selector_text_color</item>
+        <item name="android:textSize">@dimen/selector_item_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="autoSizeMaxTextSize">@dimen/selector_item_text_size</item>
+    </style>
+</resources>

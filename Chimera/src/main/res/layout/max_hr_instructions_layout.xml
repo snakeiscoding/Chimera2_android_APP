@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/max_hr_instructions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    app:layout_constraintHeight_percent="0.4895"
+    app:layout_constraintWidth_percent="0.448">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/easy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="#3078A4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/easy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_1_tc"
+            android:textColor="#FFFFFF"
+
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="23sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_length_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9664"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_easy_instructions"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/max_hr_stage_1_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.05"
+
+            app:layout_constraintEnd_toStartOf="@id/vguidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/vguideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/medium"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="#018116"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/medium_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_2_tc"
+            android:textColor="#FFFFFF"
+
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="23sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_length_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.9664"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_medium_instructions"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medium">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguidelineEnd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/max_hr_stage_2_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.05"
+
+            app:layout_constraintEnd_toStartOf="@id/vguidelineEnd2"
+            app:layout_constraintStart_toEndOf="@id/vguideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="#D60B00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hard_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_3_tc"
+            android:textColor="#FFFFFF"
+
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="23sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:text="@string/max_hr_instructions_stage_length_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.9664"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_hard_instructions"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hard">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vguidelineEnd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/max_hr_stage_3_pg"
+            android:textColor="#FFFFFF"
+
+            android:textSize="20sp"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeTextType="uniform"
+
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.05"
+
+            app:layout_constraintEnd_toStartOf="@id/vguidelineEnd3"
+            app:layout_constraintStart_toEndOf="@id/vguideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

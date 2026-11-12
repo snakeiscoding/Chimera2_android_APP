@@ -1,0 +1,19 @@
+{
+  "customWorkouts": [
+    {
+      "title": "",
+      "subTitle": "",
+      "description": "",
+      "subDescription": "",
+      "backgroundPath": "",
+      "iconPath": "",
+      "identifier": "",
+      "categoryType": 0,
+      "intervalData": {
+        "START_INCLINE": [2.5, 3.0],
+        "START_SPEED": [1.5, 3.0],
+        "TIME_GOAL_START": [1.0, 5.0]
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="0dp"
+    android:paddingEnd="10dp">
+
+    <Button
+        android:id="@+id/enter_wifi_settings"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/network_setup_tc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/connect_to_matrix_wifi"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/connect_to_matrix_wifi_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/enter_wifi_settings" />
+
+    <ImageView
+        android:id="@+id/connect_to_matrix_wifi_status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@id/connect_to_matrix_wifi"
+        app:layout_constraintTop_toTopOf="@id/connect_to_matrix_wifi"
+        app:layout_constraintBottom_toBottomOf="@id/connect_to_matrix_wifi"
+        app:layout_constraintDimensionRatio="1:1"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="3dp"
+        />
+
+    <Button
+        android:id="@+id/eng_import_wifi"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/import_wifi_settings_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/connect_to_matrix_wifi" />
+
+    <Button
+        android:id="@+id/eng_export_wifi"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/export_wifi_settings_to_disk_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/eng_import_wifi" />
+
+    <Button
+        android:id="@+id/eng_network_settings_eth_advanced"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/advanced_ethernet_settings_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/eng_export_wifi" />
+
+    <TextView
+        android:id="@+id/eng_bandwidth_test_label"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/bandwidth_test_tc"
+        android:textColor="@android:color/white"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/eng_network_settings_eth_advanced"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        android:textSize="16dp"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/eng_network_settings_bandwidth_test"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/check_bandwitdth_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/eng_bandwidth_test_label" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/eng_bandwidth_web_page"
+        style="@style/GeneralEditTextStringEngineering"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="10dp"
+        android:text="@string/bandwidth_test_tc"
+        app:layout_constraintEnd_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintStart_toStartOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toBottomOf="@id/eng_network_settings_bandwidth_test"
+        app:input_type="url_input" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/network_settings_values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FF718395"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/enter_wifi_settings"
+        app:layout_constraintTop_toTopOf="@id/enter_wifi_settings" />
+</androidx.constraintlayout.widget.ConstraintLayout>

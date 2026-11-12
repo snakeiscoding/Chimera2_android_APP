@@ -1,0 +1,76 @@
+settings
+    workout_id = 51
+    allow_skip_warmup = 1
+    graph_future = 1
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+    
+input GOAL
+input COOLDOWN_TIME_START
+input AGE
+
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export INTERVAL_GOAL_REMAINING
+export TEST_SCORE
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+export ALLOW_PAUSE
+
+// 20 seconds at 50 spm
+stage warmup
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    workoutComplete = 0
+    ALLOW_PAUSE = 0
+    
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 20000 // 20 second warmup
+    
+    interval
+        RESISTANCE = 6 // Close to 50 spm
+        
+        when 1
+            INTERVAL_GOAL_REMAINING = GOAL - INTERVAL_TIME_MS
+            if (INTERVAL_GOAL_REMAINING <= 0)
+                interval = interval + 1
+
+// 3 minutes at 60 spm
+stage "workout"
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    ALLOW_PAUSE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 180000
+    
+    interval
+        RESISTANCE = 9
+        
+        when 1
+            INTERVAL_GOAL_REMAINING = GOAL - INTERVAL_TIME_MS
+            if (INTERVAL_GOAL_REMAINING <= 0)
+                workoutComplete = 1
+                end
+
+stage "cooldown"
+    PREVENT_USER_GOAL_CHANGES = 0
+    PREVENT_USER_CHANGES = 0
+    ALLOW_PAUSE = 1
+    
+    RESISTANCE = 0
+    GOAL = COOLDOWN_TIME_START
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    RESISTANCE = 1
+
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            end
+
+
+onStop
+    if workoutComplete > 0
+        TEST_SCORE = 100
+    else
+        TEST_SCORE = 0
+

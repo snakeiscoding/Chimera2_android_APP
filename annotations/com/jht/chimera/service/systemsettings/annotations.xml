@@ -1,0 +1,34 @@
+<root>
+    <item name='com.jht.chimera.service.systemsettings.ImportExportSettingsProtocol'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.systemsettings.SystemSettings'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.systemsettings.SystemSettings java.lang.String createExportXML()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.systemsettings.SystemSettings$2 void run()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.systemsettings.SystemSettings.ExportClient void run()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.systemsettings.SystemSettings.SettingsAvailMessage java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

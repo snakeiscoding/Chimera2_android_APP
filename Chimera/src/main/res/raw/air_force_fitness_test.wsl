@@ -1,0 +1,268 @@
+settings
+    workout_id = 35
+    allow_skip_warmup = 1
+    graph_future = 1
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+input COOLDOWN_TIME_START
+input DISTANCE
+input SPEED_IN
+input GOAL
+input GENDER
+input AGE
+
+export INCLINE
+export GOAL_TYPE
+export SPEED
+export GOAL
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export ALLOW_PAUSE
+export PREVENT_USER_GOAL_CHANGES
+
+stage workout
+    GOAL_TYPE = GOAL_TYPE_DISTANCE_STAGE_CONSTANT
+    GOAL = 2.41402 // 1.5 miles
+    ALLOW_PAUSE = 0
+    
+    SPEED = 0.8
+    INCLINE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    
+    workoutCompleteTime = 0
+    interval
+        when STAGE_DISTANCE >= GOAL
+            workoutCompleteTime = INTERVAL_TIME_MS
+            end
+
+// Cooldown can only be reached by clicking on the cooldown button
+stage cooldown
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = COOLDOWN_TIME_START
+    SPEED = min(0.6 * SPEED_IN, 6.43738)
+    PREVENT_USER_GOAL_CHANGES = 0
+    
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            end
+
+M_UNDER_25_VALUE = [552, 574, 585, 598, 610, 623, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 7200]
+M_UNDER_25_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 46.5, 44.0, 41.0, 38.0, 35.0, 0.0]
+F_UNDER_25_VALUE = [623, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 7200]
+F_UNDER_25_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 46.0, 42.5, 39.0, 35.0, 0.0]
+
+M_25_29_VALUE = [562, 585, 598, 610, 623, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 7200]
+M_25_29_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 46.5, 44.0, 41.0, 38.0, 35.0, 0.0]
+F_25_29_VALUE = [637, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 7200]
+F_25_29_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 45.5, 42.0, 38.5, 35.0, 0.0]
+
+M_30_34_VALUE = [574, 598, 610, 623, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 7200]
+M_30_34_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.5, 43.0, 40.5, 38.0, 35.0, 0.0]
+F_30_34_VALUE = [651, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 7200]
+F_30_34_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 52.5, 51.0, 49.5, 47.0, 44.5, 42.0, 38.5, 35.0, 0.0]
+
+M_35_39_VALUE = [585, 610, 623, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 7200]
+M_35_39_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.5, 43.0, 40.5, 38.0, 35.0, 0.0]
+F_35_39_VALUE = [666, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 7200]
+F_35_39_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 52.5, 51.0, 49.5, 47.0, 44.0, 41.0, 38.0, 35.0, 0.0]
+
+M_40_44_VALUE = [598, 623, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 7200]
+M_40_44_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 46.5, 44.0, 41.0, 38.0, 35.0, 0.0]
+F_40_44_VALUE = [682, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 7200]
+F_40_44_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.5, 42.0, 38.5, 35.0, 0.0]
+
+M_45_49_VALUE = [610, 637, 651, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 7200]
+M_45_49_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 49.0, 46.5, 44.0, 41.0, 38.0, 35.0, 0.0]
+F_45_49_VALUE = [698, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 1414, 7200]
+F_45_49_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.0, 42.0, 38.5, 35.0, 0.0]
+
+M_50_54_VALUE = [637, 666, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 7200]
+M_50_54_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.5, 43.0, 40.5, 38.0, 35.0, 0.0]
+F_50_54_VALUE = [773, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 1414, 1486, 7200]
+F_50_54_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 53.5, 52.0, 49.5, 46.0, 42.5, 39.0, 35.0, 0.0]
+
+M_55_59_VALUE = [651, 682, 698, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 7200]
+M_55_59_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 53.5, 52.0, 50.5, 48.0, 45.5, 43.0, 40.5, 38.0, 35.0, 0.0]
+F_55_59_VALUE = [794, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 1414, 1486, 1566, 7200]
+F_55_59_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 53.5, 52.0, 49.0, 46.0, 43.0, 39.0, 35.0, 0.0]
+
+M_OVER_60_VALUE = [682, 716, 734, 753, 773, 794, 816, 840, 865, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 7200]
+M_OVER_60_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 55.0, 54.5, 54.0, 52.5, 51.0, 49.5, 47.0, 44.5, 41.5, 38.5, 35.0, 0.0]
+F_OVER_60_VALUE = [840, 892, 920, 950, 982, 1017, 1054, 1094, 1136, 1183, 1233, 1288, 1348, 1414, 1486, 1566, 1647, 7200]
+F_OVER_60_SCORE = [60.0, 59.5, 59.0, 58.5 ,58.0, 57.5, 57.0, 56.5, 56.0, 55.5, 54.0, 52.5, 51.0, 47.0, 43.0, 39.0, 35.0, 0.0]
+
+onStop
+    if workoutCompleteTime > 0
+        workoutTimeSec = workoutCompleteTime / 1000
+        temp_score = 0
+        if AGE <= 24
+            i = 0  
+            lookup_value = M_UNDER_25_VALUE[i]
+            temp_score = M_UNDER_25_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_UNDER_25_SCORE[i]
+                lookup_value = M_UNDER_25_VALUE[i]
+    
+        else if AGE > 24 && AGE <= 29
+            i = 0  
+            lookup_value = M_25_29_VALUE[i]
+            temp_score = M_25_29_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_25_29_SCORE[i]
+                lookup_value = M_25_29_VALUE[i]
+    
+        else if AGE > 29 && AGE <= 34
+            i = 0  
+            lookup_value = M_30_34_VALUE[i]
+            temp_score = M_30_34_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_30_34_SCORE[i]
+                lookup_value = M_30_34_VALUE[i]
+    
+        else if AGE > 34 && AGE <= 39
+            i = 0  
+            lookup_value = M_35_39_VALUE[i]
+            temp_score = M_35_39_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_35_39_SCORE[i]
+                lookup_value = M_35_39_VALUE[i]
+    
+        else if AGE > 39 && AGE <= 44
+            i = 0  
+            lookup_value = M_40_44_VALUE[i]
+            temp_score = M_40_44_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_40_44_SCORE[i]
+                lookup_value = M_40_44_VALUE[i]
+    
+        else if AGE > 44 && AGE <= 49
+            i = 0  
+            lookup_value = M_45_49_VALUE[i]
+            temp_score = M_45_49_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_45_49_SCORE[i]
+                lookup_value = M_45_49_VALUE[i]
+    
+        else if AGE > 49 && AGE <= 54
+            i = 0  
+            lookup_value = M_50_54_VALUE[i]
+            temp_score = M_50_54_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_50_54_SCORE[i]
+                lookup_value = M_50_54_VALUE[i]
+    
+        else if AGE > 54 && AGE <= 59
+            i = 0  
+            lookup_value = M_55_59_VALUE[i]
+            temp_score = M_55_59_SCORE[i]
+            while  workoutTimeSec > lookup_value 
+                i = i + 1  
+                temp_score = M_55_59_SCORE[i]
+                lookup_value = M_55_59_VALUE[i]
+
+        else if AGE > 59
+            i = 0
+            lookup_value = M_OVER_60_VALUE[i]
+            temp_score = M_OVER_60_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = M_OVER_60_SCORE[i]
+                lookup_value = M_OVER_60_VALUE[i]
+
+        TEST_SCORE_MALE = temp_score
+
+    
+        if AGE <= 24
+            i = 0
+            lookup_value = F_UNDER_25_VALUE[i]
+            temp_score = F_UNDER_25_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_UNDER_25_SCORE[i]
+                lookup_value = F_UNDER_25_VALUE[i]
+
+        else if AGE > 24 && AGE <= 29
+            i = 0
+            lookup_value = F_25_29_VALUE[i]
+            temp_score = F_25_29_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_25_29_SCORE[i]
+                lookup_value = F_25_29_VALUE[i]
+
+        else if AGE > 29 && AGE <= 34
+            i = 0
+            lookup_value = F_30_34_VALUE[i]
+            temp_score = F_30_34_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_30_34_SCORE[i]
+                lookup_value = F_30_34_VALUE[i]
+
+        else if AGE > 34 && AGE <= 39
+            i = 0
+            lookup_value = F_35_39_VALUE[i]
+            temp_score = F_35_39_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_35_39_SCORE[i]
+                lookup_value = F_35_39_VALUE[i]
+
+        else if AGE > 39 && AGE <= 44
+            i = 0
+            lookup_value = F_40_44_VALUE[i]
+            temp_score = F_40_44_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_40_44_SCORE[i]
+                lookup_value = F_40_44_VALUE[i]
+
+        else if AGE > 44 && AGE <= 49
+            i = 0
+            lookup_value = F_45_49_VALUE[i]
+            temp_score = F_45_49_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_45_49_SCORE[i]
+                lookup_value = F_45_49_VALUE[i]
+
+        else if AGE > 49 && AGE <= 54
+            i = 0
+            lookup_value = F_50_54_VALUE[i]
+            temp_score = F_50_54_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_50_54_SCORE[i]
+                lookup_value = F_50_54_VALUE[i]
+
+        else if AGE > 54 && AGE <= 59
+            i = 0
+            lookup_value = F_55_59_VALUE[i]
+            temp_score = F_55_59_SCORE[i]
+            while  workoutTimeSec > lookup_value
+                i = i + 1
+                temp_score = F_55_59_SCORE[i]
+                lookup_value = F_55_59_VALUE[i]
+
+        else if AGE > 59
+                    i = 0
+                    lookup_value = F_OVER_60_VALUE[i]
+                    temp_score = F_OVER_60_SCORE[i]
+                    while  workoutTimeSec > lookup_value
+                        i = i + 1
+                        temp_score = F_OVER_60_SCORE[i]
+                        lookup_value = F_OVER_60_VALUE[i]
+            
+        TEST_SCORE_FEMALE = temp_score
+    else
+        TEST_SCORE = 0
+

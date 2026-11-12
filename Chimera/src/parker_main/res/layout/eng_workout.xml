@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout
+            style="@style/EngineeringPageGridLayout"
+            app:columnCount="2">
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_max_workout_time"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/max_workout_time_tc"
+                app:input_type="integer_input"
+                app:max_value="@integer/max_workout_time"
+                app:min_value="@integer/min_workout_time"
+                app:max_chars="3"
+                app:units="time_minutes" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1">
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_max_workout_distance"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:imeOptions="actionDone"
+                    app:input_type="double_input"
+                    app:label="@string/max_workout_distance_tc"
+                    app:units="distance" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_max_workout_floors"
+                    style="@style/GeneralEditTextIntEngineering"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:imeOptions="actionDone"
+                    app:label="@string/max_workout_floors_tc"
+                    app:input_type="integer_input"
+                    app:max_value="300"
+                    app:min_value="15"
+                    app:max_chars="3"
+                    app:units="floors" />
+            </RelativeLayout>
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_max_workout_resistance"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:max_value="30"
+                app:min_value="1"
+                app:min_chars="0"
+                app:max_chars="2"
+                app:input_type="integer_input"
+                app:label="@string/max_resistance_level_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_max_workout_calories"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:max_value="10000"
+                app:min_value="50"
+                app:min_chars="0"
+                app:max_chars="5"
+                app:input_type="integer_input"
+                app:label="@string/max_workout_calories_tc"
+                app:units="calories" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_pause_time"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="@string/pause_time_tc"
+                app:max_value="@integer/max_pause_time"
+                app:min_value="@integer/min_pause_time"
+                app:max_chars="2"
+                app:units="time_minutes" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_cool_down_time"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="@string/cooldown_time_tc"
+                app:max_value="@integer/max_cool_down_time"
+                app:min_value="@integer/min_cool_down_time"
+                app:max_chars="2"
+                app:units="time_minutes" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                 android:id="@+id/eng_max_adjust_cool_down_time"
+                 style="@style/GeneralEditTextIntEngineering"
+                 android:layout_marginBottom="10dp"
+                 app:input_type="integer_input"
+                 android:imeOptions="actionDone"
+                 app:min_value="@integer/min_cool_down_adjust_time"
+                 app:max_value="@integer/max_cool_down_adjust_time"
+                 app:max_chars="2"
+                 app:label="@string/max_cooldown_adjustment_time_tc"
+                 app:units="time_minutes" />
+
+            <RelativeLayout
+                android:id="@+id/eng_speed_incline_settings_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_start_speed"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="double_input"
+                app:input_resolution="0.1"
+                app:max_chars="3"
+                app:label="@string/start_speed_tc"
+                app:units="speed" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_max_speed"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="double_input"
+                app:max_chars="4"
+                app:label="@string/max_speed_tc"
+                app:units="speed" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_max_incline"
+                style="@style/GeneralEditTextDoubleEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:max_chars="3"
+                app:label="@string/max_incline_tc"
+                app:units="percent" />
+
+
+            <RelativeLayout
+                android:id="@+id/eng_tread_ascent_settings_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <CheckBox
+                android:id="@+id/eng_tread_sense"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/tread_sense_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tread_sense_timeout"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                app:input_type="integer_input"
+                app:label="@string/tread_sense_timeout_tc"
+                app:max_value="90"
+                app:min_value="5"
+                app:max_chars="2"
+                app:units="time_seconds" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tread_sense_countdown"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="@string/tread_sense_countdown_tc"
+                app:max_value="10"
+                app:min_value="5"
+                app:max_chars="2"
+                app:units="time_seconds" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_keyboard_threshold_tm"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="double_input"
+                app:input_resolution="0.1"
+                app:max_chars="3"
+                app:label="@string/keyboard_disable_threshold_tc"
+                app:units="speed" />
+
+            <RelativeLayout
+                android:id="@+id/eng_tread_settings_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <CheckBox
+                android:id="@+id/eng_elevation_above_5000_ft"
+                android:visibility="gone"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/elevation_above_tc" />
+
+            <CheckBox
+                android:id="@+id/show_marathon_mode"
+                style="@style/GeneralEngineeringCheckBox"
+                android:visibility="gone"
+                android:text="@string/marathon_tc" />
+
+            <RelativeLayout
+                android:id="@+id/eng_cm_settings_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                app:layout_columnWeight="1">
+
+                <CheckBox
+                    android:id="@+id/eng_estop_enable"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="match_parent"
+                    android:text="@string/control_zone_enable_tc" />
+            </RelativeLayout>
+
+            <!--<com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_estop_sensitivity"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/e_stop_sensitivity_tc"
+                app:max_value="100"
+                app:min_value="0" />-->
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                app:layout_columnWeight="1">
+
+                <CheckBox
+                    android:id="@+id/eng_detect_person"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="match_parent"
+                    android:text="@string/detect_person_tc" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <Button
+                android:id="@+id/add_special_workout"
+                android:visibility="gone"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                app:layout_columnSpan="2"
+                app:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/add_special_workout_tc"/>
+
+
+            <LinearLayout
+                android:id="@+id/special_workout_table_container"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center"
+                android:background="#FF575E65"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                app:layout_columnSpan="2"
+                android:layout_marginTop="20dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FF000000"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        style="@style/GeneralEngineeringTextHeading"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:gravity="center"
+                        android:text="@string/special_workout_tc"
+                        android:textSize="18dp"
+                        tools:ignore="SpUsage" />
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/special_workout_table"
+                    style="@style/jht_side_menu_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

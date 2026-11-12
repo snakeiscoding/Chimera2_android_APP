@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="mm_assessment_tip1_pg" formatted="false"><![CDATA[欢迎使用 Matrix Method：5 公里跑训练计划！无论您是一个经验丰富的跑者还是刚刚开始跑步，都能在这项计划中找到适合自己的内容。]]></string>
+    <string name="mm_assessment_tip2_pg" formatted="false"><![CDATA[为了获得最佳体验，请仔细阅读这些提示。借助专业指导，您可以从每次锻炼中获益更多。]]></string>
+    <string name="mm_assessment_tip3_pg" formatted="false"><![CDATA[我们将从评估开始，测量您作为跑者的经验。该评估将包括 5 分钟热身、15 分钟配速跑和 5 分钟缓和训练。评估的速度由您控制。在这段时间里，尽最大努力非常重要，因为评估结果将作为您将来锻炼的基准。]]></string>
+    <string name="mm_assessment_tip4_pg" formatted="false"><![CDATA[在整个评估过程中，请务必在挑战自己的同时，保持正确姿势并确保自身安全。]]></string>
+    <string name="mm_assessment_tip5_pg" formatted="false"><![CDATA[您已经跑到一半了——继续努力！]]></string>
+    <string name="mm_assessment_tip6_pg" formatted="false"><![CDATA[只剩下四分钟了，继续加油！]]></string>
+    <string name="mm_assessment_tip7_pg" formatted="false"><![CDATA[真了不起！您已经完成了评估部分，迈出了成为 5 公里跑者的第一步！现在，我们将根据您的评估结果创建一个适合您的计划。]]></string>
+    <string name="mm_assessment_tip8_pg" formatted="false"><![CDATA[用剩下的几分钟来缓和一下，喘口气，补充水分！为了最大限度地提升对您健康的益处，在缓和期继续散步至关重要。]]></string>
+    <string name="mm_week1_tip1_pg" formatted="false"><![CDATA[今天的训练以慢速长跑开始。这种跑步的目标是增加耐力和血容量，帮助您的身体适应更长时间的站立。]]></string>
+    <string name="mm_week1_tip2_pg" formatted="false"><![CDATA[这种类型的跑步通常以慢跑速度进行。这将有助于您保持一致性，让您的身体更好地适应长时间的跑步。]]></string>
+    <string name="mm_week1_tip3_pg" formatted="false"><![CDATA[您正在进入区间 1。这是低强度配速跑，非常适合做热身和缓和。整个八周内将通过区间让您知道自己应该使用的跑步强度。]]></string>
+    <string name="mm_week1_tip4_pg" formatted="false"><![CDATA[您正在进入区间 3。这个区间通常以慢跑的配速进行，您开始可能会感到有点不舒服。区间 3 有助于血液循环，也正是在此时，乳酸开始积聚。]]></string>
+    <string name="mm_week1_tip5_pg" formatted="false"><![CDATA[您正在进入区间 2。区间 2 是可以长时间进行的较轻强度。这是一个很好的区间，能够锻炼总体耐力，对抗疲劳，燃烧脂肪，增强肌肉素质。]]></string>
+    <string name="mm_week1_tip6_pg" formatted="false"><![CDATA[您的强度会对本计划产生影响。鞭策自己，让我们看看您能走多远。]]></string>
+    <string name="mm_week1_tip7_pg" formatted="false"><![CDATA[您做得太棒了！记得保持呼吸，试着找到适合自己的节奏。这将使未来的跑步更加易于管理。]]></string>
+    <string name="mm_week1_tip8_pg" formatted="false"><![CDATA[干得好，只剩下一分钟了！利用最后五分钟缓和下来，反思自己的表现。]]></string>
+    <string name="mm_week1_tip9_pg" formatted="false"><![CDATA[当您继续这段旅程时，记住一定要保证饮食健康和水分充足，补充电解质，减轻压力并获得充足睡眠。]]></string>
+    <string name="mm_week1_tip10_pg" formatted="false"><![CDATA[今天，您将进行间歇跑。间歇跑包括有意改变配速，将高强度运动与积极恢复结合起来。]]></string>
+    <string name="mm_week1_tip11_pg" formatted="false"><![CDATA[这次跑步的目标是强迫自己高速跑一分钟，再利用两分钟的步行休息时间尽可能地恢复。]]></string>
+    <string name="mm_week1_tip12_pg" formatted="false"><![CDATA[记住，在短时间内，这样做十分困难。但这能够使您的身体适应高强度的跑步条件。]]></string>
+    <string name="mm_week1_tip13_pg" formatted="false"><![CDATA[您正在进入区间 4。在区间 4，跑步会变得困难，您的身体正在接近极限。这个区间有助于提升速度和耐力，并训练您的身体承受高水平的乳酸。]]></string>
+    <string name="mm_week1_tip14_pg" formatted="false"><![CDATA[您已经达到一半了！保持配速，继续努力。请记住，在整个跑步过程中都要注意保持正确的姿势。]]></string>
+    <string name="mm_week1_tip15_pg" formatted="false"><![CDATA[您正在进入区间 5。区间 5 应将您的身体推向极限。这个区间不可能在较长时间内持续，但它非常适合让您的身体适应高强度训练。]]></string>
+    <string name="mm_week1_tip16_pg" formatted="false"><![CDATA[真了不起！您已经把自己的身体推向极限，并一直在非常努力地跑步。在接下来的八周里，您会觉得其中一些训练变得更容易了。]]></string>
+    <string name="mm_week1_tip17_pg" formatted="false"><![CDATA[继续坚持下去——恢复是训练的一个重要方面。]]></string>
+    <string name="mm_week1_tip18_pg" formatted="false"><![CDATA[本周的最后一项训练将是节奏跑。节奏跑是一种持续时间较长的持续性跑步，其间穿插短暂的慢跑休息。]]></string>
+    <string name="mm_week1_tip19_pg" formatted="false"><![CDATA[节奏跑经常被描述为“舒适而又艰难”。您应该以一种可以持续更长时间的配速前进。考虑一下接近自己在比赛日将要跑的配速。]]></string>
+    <string name="mm_week1_tip20_pg" formatted="false"><![CDATA[在开始的时候，记得要鞭策自己，找到一个舒适而艰难的配速。您要找到一种可以持续更长时间的配速。]]></string>
+    <string name="mm_week1_tip21_pg" formatted="false"><![CDATA[快到一半了！我希望您已经找到了一个不错的配速。记住要抬起下巴，您做得很好。]]></string>
+    <string name="mm_week1_tip22_pg" formatted="false"><![CDATA[慢跑吧，您就快完成了！]]></string>
+    <string name="mm_week1_tip23_pg" formatted="false"><![CDATA[这周干得非常棒。您已经完成了八周旅程的第一周，离成为一名成功的 5 公里跑者又近了一步。请记住，在这段旅程中，有时您可能会怀疑自己，但您可以做到！]]></string>
+    <string name="mm_week1_tip24_pg" formatted="false"><![CDATA[祝贺您迈出这重要的一步！下周您将会走得更远。]]></string>
+    <string name="mm_week2_tip1_pg" formatted="false"><![CDATA[欢迎来到第 2 周的训练。又一次开始长跑，这一次您需要努力保持平衡。以合适的配速跑步，让您的血液沸腾，身体习惯于站立。]]></string>
+    <string name="mm_week2_tip2_pg" formatted="false"><![CDATA[本周，您的长跑将额外增加一组。这意味着您将多跑四分钟，休息时间为一分钟。]]></string>
+    <string name="mm_week2_tip3_random_pg" formatted="false"><![CDATA[抬起下巴，有助于保持肩膀向后并保证核心稳定。这是公认的正确跑步形式，会使您的锻炼尽可能高效。]]></string>
+    <string name="mm_week2_tip4_random_pg" formatted="false"><![CDATA[我们必须投资于健身，因为谁也不知道什么时候这项投资就会给予我们回报。]]></string>
+    <string name="mm_week2_tip5_random_pg" formatted="false"><![CDATA[您的脚应该始终靠近自己的重心。这样做可以使您保持平衡并控制自己。]]></string>
+    <string name="mm_week2_tip6_random_pg" formatted="false"><![CDATA[目标是快速而安静地落地。]]></string>
+    <string name="mm_week2_tip7_random_pg" formatted="false"><![CDATA[如果您很难设想手的姿势，请试着想象手持振翅的蝴蝶来保持双手柔软。]]></string>
+    <string name="mm_week2_tip8_random_pg" formatted="false"><![CDATA[您的双手应该上提，置于躯干部位，而不是躯干之下。]]></string>
+    <string name="mm_week2_tip9_random_pg" formatted="false"><![CDATA[您是否在努力理解自己应处于什么样的跑步姿态？请试着想象自己在两栋离得很近的建筑之间奔跑，宽度刚好够您穿过中间。]]></string>
+    <string name="mm_week2_tip10_pg" formatted="false"><![CDATA[今天做得非常棒！您增加了跑步里程，而且看起来很轻松。]]></string>
+    <string name="mm_week2_tip11_pg" formatted="false"><![CDATA[继续养成良好的习惯，尤其是在跑步体态方面。]]></string>
+    <string name="mm_week2_tip12_pg" formatted="false"><![CDATA[您可能会注意到本周的间歇跑比上周更难。在这个计划中，每一周都会比上一周更难。]]></string>
+    <string name="mm_week2_tip13_pg" formatted="false"><![CDATA[如果想看看自己到底能取得什么成就，就必须将自己推向新的极限。]]></string>
+    <string name="mm_week2_tip14_random_pg" formatted="false"><![CDATA[越是投入，效率就越高。]]></string>
+    <string name="mm_week2_tip15_random_pg" formatted="false"><![CDATA[如果在心中将跑九英里转变为专注完成九个完美的一英里分段，您将会成为一名更好的跑者。]]></string>
+    <string name="mm_week2_tip16_random_pg" formatted="false"><![CDATA[您可能会痛苦，可能会生气，或者可能会变得很忙。所以，忙碌起来吧！]]></string>
+    <string name="mm_week2_tip17_random_pg" formatted="false"><![CDATA[舒展身姿，抬起下巴，肩膀向后。]]></string>
+    <string name="mm_week2_tip18_random_pg" formatted="false"><![CDATA[落地时，您应该始终保持膝盖微微弯曲。]]></string>
+    <string name="mm_week2_tip19_random_pg" formatted="false"><![CDATA[当锻炼看起来太难时，想想二三十年后的生活会是什么样子。当前的行动将对我们的未来产生重大影响。]]></string>
+    <string name="mm_week2_tip20_pg" formatted="false"><![CDATA[又是一次艰难的训练，但您挺过来了。期待您在接下来的六周里取得进步，不论是作为一名跑者还是一个普通人。]]></string>
+    <string name="mm_week2_tip21_pg" formatted="false"><![CDATA[您已经完成了第 2 周的最后一次训练。您将进行一次持续约 30 分钟的节奏跑。记住，节奏跑的配速应该是您比赛配速的 80-90%。]]></string>
+    <string name="mm_week2_tip22_pg" formatted="false"><![CDATA[节奏跑非常适合提高乳酸阈值速度。这种类型的跑步将直接有利于提高您长时间跑步的能力。]]></string>
+    <string name="mm_week2_tip23_pg" formatted="false"><![CDATA[当您做不到的时候，不要因此而束手无策。没有必要陷入绝望和丧失信心的泥潭！]]></string>
+    <string name="mm_week2_tip24_random_pg" formatted="false"><![CDATA[不要忘记您开始跑步的主要原因。并以此为动力！]]></string>
+    <string name="mm_week2_tip25_random_pg" formatted="false"><![CDATA[您无需成为世界级的运动员才能保持健康。只需要做到始终如一。]]></string>
+    <string name="mm_week2_tip26_random_pg" formatted="false"><![CDATA[每当我们的生活变得富足时，往往会产生浪费并缺乏感激之情。请不惜一切代价避免这种心态！]]></string>
+    <string name="mm_week2_tip27_random_pg" formatted="false"><![CDATA[无论是在跑步还是生活中，您都应该永远抬起下巴！]]></string>
+    <string name="mm_week2_tip28_pg" formatted="false"><![CDATA[干得漂亮！这一周您做得非常棒，您应该为自己在跑步上取得的巨大进步而感到骄傲。]]></string>
+    <string name="mm_week2_tip29_pg" formatted="false"><![CDATA[每次跑步前请一定要做一些动态拉伸。这将帮助您放松，降低受伤的机会。]]></string>
+    <string name="mm_week3_tip1_pg" formatted="false"><![CDATA[欢迎来到第 3 周的训练。今天您又要开始长跑了。在整个训练过程中，请试着把注意力集中在呼吸模式上。这将帮助您跑得更远。]]></string>
+    <string name="mm_week3_tip2_pg" formatted="false"><![CDATA[长跑时，请记住不要跑得太快。这次跑步的目标是让您适应长时间站立。]]></string>
+    <string name="mm_week3_tip3_random_pg" formatted="false"><![CDATA[您无需成为世界级的运动员才能保持健康，只需要做到始终如一即可。]]></string>
+    <string name="mm_week3_tip4_random_pg" formatted="false"><![CDATA[多样化是生活的调味品，尤其是作为一名运动员。]]></string>
+    <string name="mm_week3_tip5_random_pg" formatted="false"><![CDATA[当我们享受舒适便捷的生活时，我们真正的力量往往处于休眠状态。]]></string>
+    <string name="mm_week3_tip6_random_pg" formatted="false"><![CDATA[关于积极性，有两个说法是正确的——看到它时，就会了解它，拥有它时，就会感受到它。]]></string>
+    <string name="mm_week3_tip7_random_pg" formatted="false"><![CDATA[请记住，在跑步前务必严格执行动态热身。这将让您终身受益。]]></string>
+    <string name="mm_week3_tip8_pg" formatted="false"><![CDATA[您必须拼尽全力才能接受困难的处境。同时也必须深挖潜力，充分利用这种糟糕的情况。但您猜怎么着？您可以做到。]]></string>
+    <string name="mm_week3_tip9_pg" formatted="false"><![CDATA[能完成这次跑步，您真是太棒了！这次锻炼几乎持续了 45 分钟，真是一个不小的壮举。给自己一些赞美，并确保积极恢复。]]></string>
+    <string name="mm_week3_tip10_pg" formatted="false"><![CDATA[今天，您又要进行一次间歇跑。我想强调跑步前适当热身的重要性。间歇跑会对您的身体造成特别大的压力。]]></string>
+    <string name="mm_week3_tip11_pg" formatted="false"><![CDATA[保持身体水分充足和良好的体态，对今天的成功训练至关重要。]]></string>
+    <string name="mm_week3_tip12_random_pg" formatted="false"><![CDATA[在悲剧的黑暗中，您内心的余烬可以成为力量和决心的熊熊之火。]]></string>
+    <string name="mm_week3_tip13_random_pg" formatted="false"><![CDATA[没有什么比人类精神更为强大、更引人注目且更美丽的了。尤其是在其经受考验的时候。]]></string>
+    <string name="mm_week3_tip14_random_pg" formatted="false"><![CDATA[事实是，通过多走几步或增加节奏（步频），您可以更好地保持平衡。]]></string>
+    <string name="mm_week3_tip15_random_pg" formatted="false"><![CDATA[记得注意您的配速和呼吸，如果需要的话，可以减速慢跑。]]></string>
+    <string name="mm_week3_tip16_pg" formatted="false"><![CDATA[接受考验时，我们会展现出真实的自我。下次您考虑放弃的时候，请想想当初为什么要跑步。]]></string>
+    <string name="mm_week3_tip17_pg" formatted="false"><![CDATA[今天做得非常棒！您可能看不到，但这些间歇跑正在改善您的心血管健康和全身健康。]]></string>
+    <string name="mm_week3_tip18_pg" formatted="false"><![CDATA[希望您已经为今天的节奏跑做好了热身和准备。您今天将多跑一组，总时长约为 36 分钟。一定要保证水分充足，维持良好的体态。让我们看看您能做到什么程度！]]></string>
+    <string name="mm_week3_tip19_pg" formatted="false"><![CDATA[想想您能坚持跑一个小时的配速。以这样的配速，您就能知道在比赛日能将自己的身体推至什么样的极限。]]></string>
+    <string name="mm_week3_tip20_random_pg" formatted="false"><![CDATA[重返跑道总是比遭受挫折更甜蜜。]]></string>
+    <string name="mm_week3_tip21_random_pg" formatted="false"><![CDATA[请始终记住——永远不要把任何事情或任何人视为理所当然！]]></string>
+    <string name="mm_week3_tip22_random_pg" formatted="false"><![CDATA[跑步时，您可以做的一件事就是步行休息一下，以及向后走。这有助于保持平衡、协调和使用不同的肌肉群。]]></string>
+    <string name="mm_week3_tip23_random_pg" formatted="false"><![CDATA[您应该根据自己早上的静息心率来进行训练。]]></string>
+    <string name="mm_week3_tip24_pg" formatted="false"><![CDATA[今天完成得很不错！您完成了第 3 周的训练，在为 5 公里跑做准备方面，您已经取得了重大进展。您应该为自己迄今所取得的成就感到无比自豪。]]></string>
+    <string name="mm_week3_tip25_pg" formatted="false"><![CDATA[可以考虑做一些轻度静态拉伸来完成您的锻炼。这有助于加速肌肉恢复，缓解疼痛感。]]></string>
+    <string name="mm_week4_tip1_pg" formatted="false"><![CDATA[欢迎进入第 4 周，全部旅程的中间点！本周，您将继续增加训练的里程和强度。今天，从长跑开始。]]></string>
+    <string name="mm_week4_tip2_pg" formatted="false"><![CDATA[为了今天的跑步，您需要集中精力保持良好的体态。肩膀向后，下巴抬起，保持核心稳定，并快速但轻柔地落地。]]></string>
+    <string name="mm_week4_tip3_random_pg" formatted="false"><![CDATA[跑步时，双脚尽量靠近身体落地。这将帮助您更加投入，并保持平衡。]]></string>
+    <string name="mm_week4_tip4_random_pg" formatted="false"><![CDATA[您可以从 5 到 10 分钟的跑步前动态运动热身开始。热身运动可以采用侧弓步、高抬腿、腿后蹬或侧滑步。]]></string>
+    <string name="mm_week4_tip5_random_pg" formatted="false"><![CDATA[您的内心总会有斗争。您只需要有意愿在最有必要的时候挺身而出，去战斗。]]></string>
+    <string name="mm_week4_tip6_pg" formatted="false"><![CDATA[长距离慢跑有助于提高跑步效率。]]></string>
+    <string name="mm_week4_tip7_random_pg" formatted="false"><![CDATA[我们都有保持积极向上的力量，因为归根结底，这是我们的选择。]]></string>
+    <string name="mm_week4_tip8_random_pg" formatted="false"><![CDATA[每当我们拥有富足的事物时，我们往往会认为这是理所当然的，直到失去它。不要让这种事发生在您身上！]]></string>
+    <string name="mm_week4_tip9_pg" formatted="false"><![CDATA[今天完成得很好！现在，回想一下您的第一次长跑。您能感觉到区别吗？想象一下四周后您会有什么不同！继续努力！]]></string>
+    <string name="mm_week4_tip10_pg" formatted="false"><![CDATA[您的心脏越来越强大了！每一次跑步，您都会泵出更多的血液，代谢更多的氧气，让心脏效率略为增高。]]></string>
+    <string name="mm_week4_tip11_pg" formatted="false"><![CDATA[您又用一次间歇跑开始了今天的日程。今天的跑步会非常激烈。您将进行四次间隔一分钟的直线冲刺。这会将您的身体推至极限，所以让我们要确保您已经准备就绪。]]></string>
+    <string name="mm_week4_tip12_pg" formatted="false"><![CDATA[确保您在每次跑步中都做好了适当的热身，尤其是进行间歇跑时。伸展也好，走路也好，您应该保持放松和灵活。]]></string>
+    <string name="mm_week4_tip13_random_pg" formatted="false"><![CDATA[最重要的是我们可以完全控制一件事。]]></string>
+    <string name="mm_week4_tip14_pg" formatted="false"><![CDATA[您知道吗？研究表明，以无氧配速进行间歇跑可以增加肌肉含量。]]></string>
+    <string name="mm_week4_tip15_random_pg" formatted="false"><![CDATA[您拥有一切保持积极向上的东西。但这需要您付出一切。]]></string>
+    <string name="mm_week4_tip16_random_pg" formatted="false"><![CDATA[健身会将您保持积极向上的心态，而两者结合会带来良好的心理健康状态。]]></string>
+    <string name="mm_week4_tip17_random_pg" formatted="false"><![CDATA[如果您继续战斗，继续奋力前进。您终将实现自己的目标！]]></string>
+    <string name="mm_week4_tip18_random_pg" formatted="false"><![CDATA[请确保您给了身体足够的时间来恢复。]]></string>
+    <string name="mm_week4_tip19_pg" formatted="false"><![CDATA[又是一次令人赞叹的锻炼！记得好好享受步行休息时间。这样做不仅仅是为了恢复，还能为您的身体提供各种好处。]]></string>
+    <string name="mm_week4_tip20_pg" formatted="false"><![CDATA[为本周的最后一次训练做好准备！您可能已经猜到了，您要进行一次节奏跑。]]></string>
+    <string name="mm_week4_tip21_pg" formatted="false"><![CDATA[您现在应该是专业人士了。请记住，这次跑步您得做到舒适而艰难，并设想一下自己在比赛日的表现。]]></string>
+    <string name="mm_week4_tip22_random_pg" formatted="false"><![CDATA[生活中的艰难处境将把您塑造成您想成为的人，所以接受挑战吧！]]></string>
+    <string name="mm_week4_tip23_random_pg" formatted="false"><![CDATA[跑步只不过是用单腿保持平衡的简单动作。]]></string>
+    <string name="mm_week4_tip24_pg" formatted="false"><![CDATA[记住，节奏跑十分具有挑战性，但这种练习会让您成为一个更有效率的跑者。]]></string>
+    <string name="mm_week4_tip25_random_pg" formatted="false"><![CDATA[专注于您的呼吸，并练习掌控呼吸节奏。这对于任何长跑的成功来说都至关重要。]]></string>
+    <string name="mm_week4_tip26_random_pg" formatted="false"><![CDATA[鞭策自己是自我成长的方式，是让您成为一名更好跑者的方式，也是帮助您全面进步的方式。]]></string>
+    <string name="mm_week4_tip27_random_pg" formatted="false"><![CDATA[有一个很好的拉伸技巧是在做半月式时，用阻力带套在脚踝上。]]></string>
+    <string name="mm_week4_tip28_pg" formatted="false"><![CDATA[用这样的方式结束第 4 周多好啊！您已经取得了长足的进步，在开始进行这些训练时，您应该有一种放松的感觉。您正在大步前进，离终点线只有一半距离了。]]></string>
+    <string name="mm_week5_tip1_pg" formatted="false"><![CDATA[您将在第 5 周强势起步。今天您要跑很长距离，是迄今为止最长的一次！这一次跑步将持续将近 53 分钟，所以像往常一样，确保水分充足，保持良好的体态，享受跑步的乐趣吧。]]></string>
+    <string name="mm_week5_tip2_pg" formatted="false"><![CDATA[饮食是长跑训练的重要组成部分。您要确保自己摄入大量的碳水化合物，因为它会为您的身体提供糖原，而糖原对提供能量至关重要。您还需要摄入健康蛋白质来恢复机体。]]></string>
+    <string name="mm_week5_tip3_random_pg" formatted="false"><![CDATA[您知道吗？研究表明，每次跑步时，每一次落地，腿上承受的重量是您体重的 3-4 倍。穿着合适的鞋子对于减少这种影响十分关键。]]></string>
+    <string name="mm_week5_tip4_pg" formatted="false"><![CDATA[长距离慢跑对增强腿部肌肉非常有益。]]></string>
+    <string name="mm_week5_tip5_random_pg" formatted="false"><![CDATA[为了保持恰当的姿势，请想象自己像是一个 90 岁的老人在结冰的湖面上奔跑。]]></string>
+    <string name="mm_week5_tip6_pg" formatted="false"><![CDATA[长距离慢跑也会消耗大量的卡路里，而又不会过于剧烈。]]></string>
+    <string name="mm_week5_tip7_random_pg" formatted="false"><![CDATA[重复冲击是超过 50% 的跑者每年都会经历某种形式损伤的原因。是缩短步幅并定期拉伸可以帮助降低这种风险。]]></string>
+    <string name="mm_week5_tip8_pg" formatted="false"><![CDATA[这次跑步里程不短，但您看起来完成得很轻松！完成这次跑步后，您可以确信，在短短几周内，您将为 5 公里跑做好准备。]]></string>
+    <string name="mm_week5_tip9_pg" formatted="false"><![CDATA[比赛日之前的饮食十分重要。]]></string>
+    <string name="mm_week5_tip10_pg" formatted="false"><![CDATA[您将以间歇跑开始今天的锻炼。到目前为止，您应该了解了这些跑步训练的预期作用，以及每周您需要怎样更加努力，才能走得更远。]]></string>
+    <string name="mm_week5_tip11_pg" formatted="false"><![CDATA[和往常一样，在开始本次训练之前，请确保您的身体是放松而灵活的。如果需要的话，休息一下，并确保水分充足！]]></string>
+    <string name="mm_week5_tip12_random_pg" formatted="false"><![CDATA[科技十分有效，它可以提供数据来测量和改善您的健身之旅。然而，不要让它影响您的跑步体态和有节奏的呼吸！]]></string>
+    <string name="mm_week5_tip13_random_pg" formatted="false"><![CDATA[通过练习正确的姿势，可以最大限度地减少和预防伤害。]]></string>
+    <string name="mm_week5_tip14_pg" formatted="false"><![CDATA[研究表明，进行 15 到 30 分钟的短时间高强度间歇训练 (HIIT) 和长时间的适度运动相比，两者对健康的益处相同。]]></string>
+    <string name="mm_week5_tip15_random_pg" formatted="false"><![CDATA[为了保持良好的体态，您需要保持双手柔软，靠近躯干，不要越过中心线。]]></string>
+    <string name="mm_week5_tip16_pg" formatted="false"><![CDATA[重要的是确保我们能够轻松地进入间歇跑。您的关节可能会承受很大的压力，所以花时间进行恢复至关重要。]]></string>
+    <string name="mm_week5_tip17_random_pg" formatted="false"><![CDATA[您的目标应该是让髋部放松，尽量减少旋转。这将使您保持良好的体态，并将受伤的风险降至最低。]]></string>
+    <string name="mm_week5_tip18_pg" formatted="false"><![CDATA[全程跑步状态非常好！今天做得非常棒！]]></string>
+    <string name="mm_week5_tip19_pg" formatted="false"><![CDATA[今天您又要进行一次节奏跑。这一次，您要进行四组七分钟的跑步，中间穿插两分钟的慢跑。]]></string>
+    <string name="mm_week5_tip20_pg" formatted="false"><![CDATA[记住要集中精力保持正确的体态，调整呼吸模式，保持水分充足。]]></string>
+    <string name="mm_week5_tip21_random_pg" formatted="false"><![CDATA[如果您觉得自己在与不健康的心理状态作斗争，我希望您能将自己的不舒服与您爱的人分享。不要害怕。]]></string>
+    <string name="mm_week5_tip22_pg" formatted="false"><![CDATA[节奏跑的目标是提高您的速度，让您能够舒适地在更长时间内跑得更快。]]></string>
+    <string name="mm_week5_tip23_random_pg" formatted="false"><![CDATA[试着把脚放在髋部下方。这将帮助您保持良好的体态。]]></string>
+    <string name="mm_week5_tip24_pg" formatted="false"><![CDATA[借助这些节奏跑，您将在比赛日大大提升速度！]]></string>
+    <string name="mm_week5_tip25_random_pg" formatted="false"><![CDATA[试着想象，地面接触您的脚，而不是您的脚去接触地面。]]></string>
+    <string name="mm_week5_tip26_random_pg" formatted="false"><![CDATA[有几个建议可以帮助您保持正确体态：始终保持抬起下巴，肩膀放松，腹部绷紧，背部挺直。]]></string>
+    <string name="mm_week5_tip27_pg" formatted="false"><![CDATA[即使您已经完成了计划课程，继续训练也是一个不错的主意。]]></string>
+    <string name="mm_week5_tip28_pg" formatted="false"><![CDATA[专注于机动性训练、力量训练和充分休息将创造一个成功而平衡的日程。]]></string>
+    <string name="mm_week6_tip1_pg" formatted="false"><![CDATA[欢迎进入第 6 周的训练！很快就要接近比赛周了，而且您取得了惊人的进步。]]></string>
+    <string name="mm_week6_tip2_pg" formatted="false"><![CDATA[今天您又要跑长跑。本周您的跑步时间会更长，所以这是一个很绝佳的机会，来将配速调节到让自己舒服的状态。]]></string>
+    <string name="mm_week6_tip3_random_pg" formatted="false"><![CDATA[定期步行休息，以保持高效的跑步体态。]]></string>
+    <string name="mm_week6_tip4_pg" formatted="false"><![CDATA[您目前正在训练您的呼吸、心肺功能和肌肉系统，以提高效率。]]></string>
+    <string name="mm_week6_tip5_random_pg" formatted="false"><![CDATA[有节奏的呼吸可以帮助您保存能量。]]></string>
+    <string name="mm_week6_tip6_random_pg" formatted="false"><![CDATA[理想的节奏（步频）是每分钟 165-180 步。试着达到每 30 秒 41 到 45 步，以匹配建议的节奏（步频）。]]></string>
+    <string name="mm_week6_tip7_pg" formatted="false"><![CDATA[这次跑步不仅能帮助您燃烧更多的卡路里，而且对帮助您的身体适应跑步状态至关重要。]]></string>
+    <string name="mm_week6_tip8_random_pg" formatted="false"><![CDATA[跑在当下，在每次训练中都要注意自己的体态和呼吸模式。]]></string>
+    <string name="mm_week6_tip9_pg" formatted="false"><![CDATA[这次跑步完成得太棒了！能够控制配速和所处的状态对于完成 5 公里跑来说至关重要。]]></string>
+    <string name="mm_week6_tip10_pg" formatted="false"><![CDATA[今天，您将进行另一次间歇跑。这一次的间歇跑会很激烈，所以当您感觉艰难时，请回想从开始到现在已经走了多远。想想您为什么要跑步，为什么要完成 5 公里跑，并以此来激励自己。]]></string>
+    <string name="mm_week6_tip11_pg" formatted="false"><![CDATA[专注于呼吸，并在冲刺之间利用步行休息时间十分重要。和往常一样，如果您感觉负担过重，就降一级。]]></string>
+    <string name="mm_week6_tip12_random_pg" formatted="false"><![CDATA[疼痛通常是运动链中某处的不平衡或虚弱造成的。所以，如果您的左跟腱很紧，那是因为您身体另一侧的右臀肌很弱。（运动后恢复的重要性）]]></string>
+    <string name="mm_week6_tip13_random_pg" formatted="false"><![CDATA[高强度间歇训练 (HIIT) 是提高速度和缩短 5 公里跑时长的绝佳方法。]]></string>
+    <string name="mm_week6_tip14_pg" formatted="false"><![CDATA[短时间内的爆发性跑步对人体生长激素（也称为 hGH）的产生大有裨益。hGH 对健康有益，如维持身体结构、新陈代谢和葡萄糖水平。]]></string>
+    <string name="mm_week6_tip15_random_pg" formatted="false"><![CDATA[考虑在休息日进行力量训练。这样做真的可以帮助您锻炼到腿部肌肉。]]></string>
+    <string name="mm_week6_tip16_pg" formatted="false"><![CDATA[HIIT 已被证明可以改善无氧和有氧活动。]]></string>
+    <string name="mm_week6_tip17_random_pg" formatted="false"><![CDATA[提高机动性、稳定性、灵活性和平衡性是成为一名优秀跑者的关键。]]></string>
+    <string name="mm_week6_tip18_pg" formatted="false"><![CDATA[您刚刚完成了一次多么令人赞叹的跑步！在接下来的几分钟里，放松一下。您今天挥汗努力了，您应该为此感到骄傲。]]></string>
+    <string name="mm_week6_tip19_pg" formatted="false"><![CDATA[您来到了第 6 周的最后一次训练，这是一次节奏跑。一定要注意您的呼吸并保持良好的体态。]]></string>
+    <string name="mm_week6_tip20_random_pg" formatted="false"><![CDATA[定期监测早上的静息心率，为确定您的身体休息得如何或压力有多大设定基准线。这有助于决定您即将进行的训练量和强度。]]></string>
+    <string name="mm_week6_tip21_random_pg" formatted="false"><![CDATA[对运动员来说，补水和睡眠是最为重要的两件事。]]></string>
+    <string name="mm_week6_tip22_pg" formatted="false"><![CDATA[对于跑步而言，一个被忽视的方面是心理挑战。对于这种心理挑战，节奏跑是一种适应它并训练自己克服它的良好方式。]]></string>
+    <string name="mm_week6_tip23_random_pg" formatted="false"><![CDATA[如果您想设定每天的液体摄入基准量，那么就用您的体重除以二。这个数值就表示您应该摄入多少盎司的液体。]]></string>
+    <string name="mm_week6_tip24_pg" formatted="false"><![CDATA[在整个跑步过程中，您会希望自己的配速刚好低于比赛日的计划配速。]]></string>
+    <string name="mm_week6_tip25_random_pg" formatted="false"><![CDATA[您进行的运动种类越多，身材就会越健美。]]></string>
+    <string name="mm_week6_tip26_random_pg" formatted="false"><![CDATA[每晚睡觉前，抬高您的腿。向不同方向旋转脚踝。做一系列这样的动作，然后做跟腱伸展运动。这样做对您脚部的许多不同部位都有益处。]]></string>
+    <string name="mm_week6_tip27_pg" formatted="false"><![CDATA[干得漂亮！这可真是一次长距离跑，您挺过来了。您差不多准备好完成 5 公里跑了！]]></string>
+    <string name="mm_week7_tip1_pg" formatted="false"><![CDATA[欢迎进入第 7 周的训练！这将是您计划中最艰难的一周，但您可以做到。从第 1 周开始，您已经走了很长的路，是时候证明自己了。]]></string>
+    <string name="mm_week7_tip2_pg" formatted="false"><![CDATA[您将从另一次长跑开始，所以要充分利用迄今为止学到的一切。虽然这是您最长距离的一次跑步，但您应该感觉到有自信和能力。]]></string>
+    <string name="mm_week7_tip3_random_pg" formatted="false"><![CDATA[大多数跑者犯的最大错误是在第一英里中的速度过快。]]></string>
+    <string name="mm_week7_tip4_pg" formatted="false"><![CDATA[LSD 将提高您应对不适的能力，让您成为一名更有耐心、更为自律的跑者。]]></string>
+    <string name="mm_week7_tip5_random_pg" formatted="false"><![CDATA[确保持续控制您的配速。这将有助于维持耐力和集中注意力。]]></string>
+    <string name="mm_week7_tip6_random_pg" formatted="false"><![CDATA[务必确保水分充足。脱水会阻碍您的锻炼，还会使您更容易受伤。]]></string>
+    <string name="mm_week7_tip7_random_pg" formatted="false"><![CDATA[完成训练之后，水应该是您的主要补水来源。研究表明，只有在长时间进行高强度运动时才会弊大于利。]]></string>
+    <string name="mm_week7_tip8_random_pg" formatted="false"><![CDATA[第一英里的配速应该比您预期中的剩余距离的平均配速慢 60-90 秒。]]></string>
+    <string name="mm_week7_tip9_pg" formatted="false"><![CDATA[剧烈运动将有助于增加线粒体的大小，进而改善氧气和糖原储备的使用。]]></string>
+    <string name="mm_week7_tip10_random_pg" formatted="false"><![CDATA[保持良好体态和呼吸至关重要。]]></string>
+    <string name="mm_week7_tip11_pg" formatted="false"><![CDATA[干得漂亮！您切切实实地证明了自己有能力做到这一切。无论如何，这不是一次轻松的跑步，所以为自己感到骄傲吧。]]></string>
+    <string name="mm_week7_tip12_pg" formatted="false"><![CDATA[您又要进行一次间歇跑。记得在跑步前做伸展运动，并专注于您的体态。]]></string>
+    <string name="mm_week7_tip13_random_pg" formatted="false"><![CDATA[您的身体和心脏尤其需要时间来泵送富含氧气的血液来给肌肉充氧。]]></string>
+    <string name="mm_week7_tip14_random_pg" formatted="false"><![CDATA[定期步行休息。]]></string>
+    <string name="mm_week7_tip15_pg" formatted="false"><![CDATA[完成间歇运动后，您的代谢率会在长达两个小时的时间内保持升高，从而延长卡路里燃烧的时间。]]></string>
+    <string name="mm_week7_tip16_random_pg" formatted="false"><![CDATA[永远不要不作任何休息地跑超过一英里。]]></string>
+    <string name="mm_week7_tip17_pg" formatted="false"><![CDATA[虽然耐力训练通常是通过长距离跑步来完成的，但 HIIT 是提高耗氧量的好方法。]]></string>
+    <string name="mm_week7_tip18_random_pg" formatted="false"><![CDATA[在进行 5 公里跑之前，用燕麦粥搭配水果是一顿不错的早餐。]]></string>
+    <string name="mm_week7_tip19_pg" formatted="false"><![CDATA[非常棒！您正在飞快地跑完全程。]]></string>
+    <string name="mm_week7_tip20_pg" formatted="false"><![CDATA[节奏跑是最接近真正 5 公里跑的练习。利用这段时间，以稳定的配速进行更长时间的舒适跑步。]]></string>
+    <string name="mm_week7_tip21_random_pg" formatted="false"><![CDATA[当情况变得艰难时，不要让自己陷入怀疑。]]></string>
+    <string name="mm_week7_tip22_pg" formatted="false"><![CDATA[当乳酸在您的肌肉中积聚时，会导致疲劳。节奏跑是一种极好的方式，可以增强您对乳酸的耐受力，帮助您跑得更快、更久。]]></string>
+    <string name="mm_week7_tip23_random_pg" formatted="false"><![CDATA[当您去跑步时，千万不要想象要跑九英里。相反，想象自己是跑九次一英里。]]></string>
+    <string name="mm_week7_tip24_random_pg" formatted="false"><![CDATA[如果您在进行追踪改进，指标是非常重要的。追踪您的平均配速、平均心率和节奏（步频）。]]></string>
+    <string name="mm_week7_tip25_random_pg" formatted="false"><![CDATA[确保您补充了充足的能量、水分并且好好休息了。这些都是跑好比赛的重要组成部分。]]></string>
+    <string name="mm_week7_tip26_random_pg" formatted="false"><![CDATA[每次锻炼的前 10 分钟应该是简单到适度的强度，让您的心血管系统和肌肉适应锻炼的严格要求。]]></string>
+    <string name="mm_week7_tip27_pg" formatted="false"><![CDATA[真了不起！您完成了第 7 周的训练，在进行 5 公里跑之前只需要再进行几次训练。]]></string>
+    <string name="mm_week8_tip1_pg" formatted="false"><![CDATA[欢迎进入第 8 周训练，本周是最后一周！在过去的 7 周里，您取得了惊人的进步，现在是时候汇聚所有的努力成果了。]]></string>
+    <string name="mm_week8_tip2_pg" formatted="false"><![CDATA[第 8 周的训练与计划中的其他部分略有不同，因为它并不比第 7 周更难。本周末您应该确保自己储备了足够的能量来完成 5 公里跑。]]></string>
+    <string name="mm_week8_tip3_random_pg" formatted="false"><![CDATA[从动态热身运动开始您的锻炼总是一项明智的选择。]]></string>
+    <string name="mm_week8_tip4_random_pg" formatted="false"><![CDATA[确保完成彻底的训练后缓和。]]></string>
+    <string name="mm_week8_tip5_random_pg" formatted="false"><![CDATA[您现在可能感觉很累，这没关系，但请试着尽可能长时间地鞭策自己。]]></string>
+    <string name="mm_week8_tip6_random_pg" formatted="false"><![CDATA[拉伸并用泡沫轴充分滚动您的髋部、臀肌和腿部。]]></string>
+    <string name="mm_week8_tip7_pg" formatted="false"><![CDATA[经常训练会使您的韧带、肌腱、骨骼和关节适应跑步的压力。]]></string>
+    <string name="mm_week8_tip8_random_pg" formatted="false"><![CDATA[目标是在整个跑步过程中保持一致的配速。]]></string>
+    <string name="mm_week8_tip9_random_pg" formatted="false"><![CDATA[记住，您的节奏跑强度应该在您最大强度的 70-80% 之间。]]></string>
+    <string name="mm_week8_tip10_pg" formatted="false"><![CDATA[恭喜！这是本计划的最后一次长跑。您离 5 公里跑很近了。]]></string>
+    <string name="mm_week8_tip11_pg" formatted="false"><![CDATA[经过这几周的努力训练，这次间歇跑对您而言应该是小菜一碟！]]></string>
+    <string name="mm_week8_tip12_pg" formatted="false"><![CDATA[确保自己向前看，把手放在腰附近，不要步伐紊乱、上下弹跳。]]></string>
+    <string name="mm_week8_tip13_random_pg" formatted="false"><![CDATA[在积极恢复日进行轻度训练是很重要的。不要跳过这一步！]]></string>
+    <string name="mm_week8_tip14_random_pg" formatted="false"><![CDATA[运动后的完美饮料可能就是巧克力牛奶！]]></string>
+    <string name="mm_week8_tip15_pg" formatted="false"><![CDATA[虽然间歇训练时间通常很短暂，但这是一种很好的减肥方法。]]></string>
+    <string name="mm_week8_tip16_random_pg" formatted="false"><![CDATA[记得在每次锻炼后 30 分钟内补充能量和水分。]]></string>
+    <string name="mm_week8_tip17_random_pg" formatted="false"><![CDATA[将滚泡沫轴视为一种恢复方式。这将有助于放松您的肌肉，减少酸痛感。]]></string>
+    <string name="mm_week8_tip18_random_pg" formatted="false"><![CDATA[多睡、睡好是恢复的一个关键方面。]]></string>
+    <string name="mm_week8_tip19_pg" formatted="false"><![CDATA[今天跑得多棒啊！您看起来一天比一天锋芒渐露，可以肯定地说，您差不多已经为 5 公里跑做好了准备。]]></string>
+    <string name="mm_week8_tip20_pg" formatted="false"><![CDATA[这一天终于来了！度过这漫长的八周，您终于迎来了最后一次跑步。您已经走了很长一段路，走到这一步实在值得称赞。]]></string>
+    <string name="mm_week8_tip21_pg" formatted="false"><![CDATA[您将以最后一次节奏跑结束这个计划。将这次跑步作为真正 5 公里跑的练习。运用您在过去八周里学到的一切，将其付诸实践。]]></string>
+    <string name="mm_week8_tip22_random_pg" formatted="false"><![CDATA[注意保证营养饮食和水分充足，补充电解质，减轻压力，并获得充足的睡眠。]]></string>
+    <string name="mm_week8_tip23_pg" formatted="false"><![CDATA[借助节奏跑，您将提高身体的能力。通过增加耐力，您也在增加 V02 最大值，这是一项测量心血管能力和整体健康程度的指标。]]></string>
+    <string name="mm_week8_tip24_random_pg" formatted="false"><![CDATA[杏仁奶、一根香蕉、1/2 个牛油果、一汤匙坚果黄油、一勺蛋白粉和 1/2 托盘冰就能组成一杯绝妙的运动后奶昔。]]></string>
+    <string name="mm_week8_tip25_pg" formatted="false"><![CDATA[您需要坚强的意志，尤其是如果您想继续训练以应对更高难度的比赛。节奏跑是建立精神力量的好方法。]]></string>
+    <string name="mm_week8_tip26_random_pg" formatted="false"><![CDATA[在比赛周中获得充足的睡眠、足够的食物和足够的水至关重要。]]></string>
+    <string name="mm_week8_tip27_random_pg" formatted="false"><![CDATA[由 50% 的碳水化合物、25% 的蛋白质和 25% 的脂肪组成的均衡饮食是赛前的理想组合。]]></string>
+    <string name="mm_week8_tip28_pg" formatted="false"><![CDATA[您差不多就要完成训练并准备好您的第一个 5 公里跑了——最后一次冲刺！]]></string>
+    <string name="mm_week8_tip29_pg" formatted="false"><![CDATA[恭喜！您完成了为期八周的训练计划。您现在已经准备好进行 5 公里跑了。比赛前一定要保证补充足够的睡眠、水和食物。]]></string>
+</resources>

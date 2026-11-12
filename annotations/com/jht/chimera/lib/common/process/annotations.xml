@@ -1,0 +1,7 @@
+<root>
+    <item name='com.jht.chimera.lib.common.process.KillProcessHelper'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

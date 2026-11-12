@@ -1,0 +1,16 @@
+<resources>
+
+    <integer name="ifitWorkoutGetStartedX">960</integer>
+    <integer name="ifitWorkoutGetStartedY">665</integer>
+    <integer name="ifitGuestWorkoutX">1210</integer>
+    <integer name="ifitGuestWorkoutY">650</integer>
+
+    <integer name="ifitWorkoutSelectionX">590</integer>
+    <integer name="ifitWorkoutSelectionY">590</integer>
+    <integer name="ifitStartWorkoutX">625</integer>
+    <integer name="ifitStartWorkoutY">405</integer>
+    <integer name="ifitAccepWorkoutX">960</integer>
+    <integer name="ifitAccepWorkoutY">640</integer>
+    <integer name="ifitEndWarmupX">960</integer>
+    <integer name="ifitEndWarmupY">770</integer>
+</resources>

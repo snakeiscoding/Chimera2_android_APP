@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color_slate_blue"
+    tools:context=".ui.machinesettings.EngineeringScreen">
+
+    <include layout="@layout/machine_settings_top_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:paddingEnd="10dp">
+
+        <RelativeLayout
+            style="@style/jht_standard_container"
+            android:layout_width="@dimen/engineering_page_list_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/engineering_page_selector"
+                style="@style/jht_standard_inner_recycle_container"
+                android:background="#FF575E65" />
+        </RelativeLayout>
+
+        <com.jht.chimera.ui.machinesettings.viewpager.CustomSettingViewPager
+            android:id="@+id/engineering_pages"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

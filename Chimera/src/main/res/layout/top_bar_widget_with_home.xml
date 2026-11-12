@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layoutTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:orientation="horizontal">
+
+    <include layout="@layout/top_bar_widget"/>
+
+    <com.jht.chimera.lib.widget.button.HomeButton
+        android:id="@+id/buttonHome"
+        android:layout_width="@dimen/top_bar_button_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_gradient_users"
+        app:tint="#ffcccccc" />
+
+    <com.jht.chimera.lib.widget.indicator.TopBarDebugIndicator
+        android:id="@+id/debug_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/buttonHome"
+        android:layout_marginStart="20dp"/>
+
+</RelativeLayout>

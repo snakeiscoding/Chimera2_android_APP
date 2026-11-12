@@ -1,0 +1,22 @@
+<root>
+    <item name='com.jht.chimera.lib.landmark.BackgroundImage java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.landmark.Landmark java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.landmark.LandmarkManager'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.landmark.StepEvent java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

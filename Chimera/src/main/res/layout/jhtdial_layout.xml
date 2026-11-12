@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jhtDial"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/jhtDialBackground"
+        android:layout_width="495dp"
+        android:layout_height="495dp"
+        android:background="@drawable/dial_background_circle"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:id="@+id/jhtDialFill"
+        android:layout_width="495dp"
+        android:layout_height="495dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dial_level_fill">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jhtDialTargetFill"
+        android:layout_width="495dp"
+        android:layout_height="495dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dial_target_fill"
+        android:visibility="gone">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jhtDialMinMaxMarker"
+        android:layout_width="495dp"
+        android:layout_height="495dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dial_min_max_marker">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jhtDialNeedle"
+        android:layout_width="495dp"
+        android:layout_height="495dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dial_icon_needle">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jhtDialNumeric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/jhtDialBackground"
+        android:layout_alignLeft="@id/jhtDialBackground"
+        android:layout_alignRight="@id/jhtDialBackground"
+        android:layout_marginBottom="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/jhtDialNumericMinLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/jhtDialNumericValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="-8dp"
+                    android:includeFontPadding="false"
+                    android:text="66"
+                    android:textColor="@android:color/white"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/jhtDialNumericUnitLabel"
+                    app:autoSizeMaxTextSize="22dp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="-8dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/rpm_uc"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/jhtDialNumericMaxLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="150"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

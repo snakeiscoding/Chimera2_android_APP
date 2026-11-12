@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage">
+
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/lcd_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lcd_debug_testing_tc"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/show_debug_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/show_debug_button"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/show_debug_lcd_tc"
+            app:layout_constraintBottom_toTopOf="@id/lcd_touch_firmware_version"
+            app:layout_constraintStart_toStartOf="@id/lcd_title_text"
+            app:layout_constraintTop_toBottomOf="@id/lcd_title_text"
+            app:layout_constraintWidth_percent="0.45"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/reset_lcd_button"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/reset_lcm_tc"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/show_debug_button"
+            app:layout_constraintTop_toTopOf="@id/show_debug_button"
+            app:layout_constraintWidth_percent="0.45"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/lcd_touch_firmware_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lcd_touch_version_tc"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/line_break_2"
+            app:layout_constraintStart_toStartOf="@id/show_debug_button"
+            app:layout_constraintTop_toBottomOf="@id/show_debug_button" />
+
+        <Button
+            android:id="@+id/debug_layout"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Debug LCD's Touch Input"
+            app:layout_constraintBottom_toBottomOf="@id/lcd_touch_firmware_version"
+            app:layout_constraintStart_toEndOf="@id/lcd_touch_firmware_version"
+            app:layout_constraintTop_toTopOf="@id/lcd_touch_firmware_version"
+            app:layout_constraintWidth_percent="0.45" />
+
+        <RelativeLayout
+            android:id="@+id/line_break_2"
+            style="@style/engineering_line_break"
+            app:layout_columnSpan="@integer/eng_cols_per_page"
+            app:layout_constraintBottom_toTopOf="@id/bump_sensor_setting_control"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lcd_touch_firmware_version" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bump_sensor_setting_control"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_break_2">
+
+            <TextView
+                android:id="@+id/label_bump_sensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bump Sensor Testing"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/bump_sensor_version"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/bump_sensor_version_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/bump_sensor_version_tc"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/label_bump_sensor"
+                app:layout_constraintTop_toBottomOf="@id/label_bump_sensor" />
+
+            <TextView
+                android:id="@+id/bump_sensor_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/bump_sensor_version_label"
+                app:layout_constraintStart_toStartOf="@id/input_trigger_threshold"
+                app:layout_constraintTop_toTopOf="@id/bump_sensor_version_label" />
+
+            <TextView
+                android:id="@+id/trigger_threshold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="Trigger Threshold (10 - 120)"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/bump_sensor_version_label"
+                app:layout_constraintTop_toBottomOf="@id/bump_sensor_version_label"
+                tools:ignore="HardcodedText" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/input_trigger_threshold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="Enter Trigger Threshold"
+                app:input_type="integer_input"
+                app:layout_constraintBottom_toBottomOf="@id/trigger_threshold_text"
+                app:layout_constraintStart_toEndOf="@id/trigger_threshold_text"
+                app:layout_constraintTop_toTopOf="@id/trigger_threshold_text"
+                app:layout_constraintWidth_percent="0.12"
+                app:max_chars="8"
+                app:min_chars="0"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/accept_trigger_threshold"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Apply"
+                app:layout_constraintBottom_toBottomOf="@id/input_trigger_threshold"
+                app:layout_constraintStart_toEndOf="@id/input_trigger_threshold"
+                app:layout_constraintTop_toTopOf="@id/input_trigger_threshold"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btn_erp"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Enter ERP"
+                app:layout_constraintBottom_toBottomOf="@id/accept_trigger_threshold"
+                app:layout_constraintStart_toEndOf="@id/accept_trigger_threshold"
+                app:layout_constraintTop_toTopOf="@id/accept_trigger_threshold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_trigger_threshold_read_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Current Value: "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_erp"
+                app:layout_constraintStart_toEndOf="@id/btn_erp"
+                app:layout_constraintTop_toTopOf="@id/btn_erp"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/color_picker"
+        android:windowSoftInputMode="adjustPan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

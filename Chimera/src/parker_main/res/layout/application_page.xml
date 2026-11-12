@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/previousApplicationPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".07"
+        app:layout_constraintHeight_percent=".90"
+        android:background="@drawable/app_page_drag_background_left"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/applicationGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".90"
+        android:background="@drawable/app_page_drag_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/nextApplicationPage"
+        app:layout_constraintLeft_toRightOf="@id/previousApplicationPage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/nextApplicationPage"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".04"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".90"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/app_page_drag_background_right"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/dropContainer"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="324dp"-->
+    <!--android:background="@drawable/app_order_border"-->
+    <!--android:visibility="visible"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/previousApplicationPage"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

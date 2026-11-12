@@ -1,0 +1,60 @@
+settings
+    workout_id = 88
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 1
+
+input NUM_INTERVALS
+input INTERVAL_DISTANCE_GOAL
+input REST_TIME_GOAL
+input START_RESISTANCE
+
+export GOAL
+export GOAL_TYPE
+export INTERVAL_GOAL
+export IS_SPRINTING
+export RESISTANCE
+
+stage "workout"
+    workIntervalCount = 0
+    isResting = 0
+
+    distanceAtIntervalStart = 0
+    isStarted = 0
+    interval = "work"
+
+    when isStarted == 0
+        distanceAtIntervalStart = STAGE_DISTANCE
+        isStarted = 1
+
+    when (STAGE_DISTANCE - distanceAtIntervalStart >= INTERVAL_DISTANCE_GOAL && isResting == 0 && workIntervalCount < NUM_INTERVALS)
+            distanceAtIntervalStart = STAGE_DISTANCE
+            workIntervalCount = workIntervalCount + 1
+            isResting = 1
+            interval = "rest"
+
+    when (INTERVAL_TIME_MS >= REST_TIME_GOAL && isResting == 1 && workIntervalCount < NUM_INTERVALS)
+        isResting = 0
+        interval = "work"
+        distanceAtIntervalStart = STAGE_DISTANCE
+
+    when workIntervalCount >= NUM_INTERVALS
+        GOAL_TYPE = GOAL_TYPE_NONE_CONSTANT
+
+
+    interval "work"
+        distance = INTERVAL_DISTANCE_GOAL
+        GOAL_TYPE = GOAL_TYPE_DISTANCE_STAGE_CONSTANT
+        GOAL = distanceAtIntervalStart + INTERVAL_DISTANCE_GOAL
+        INTERVAL_GOAL = INTERVAL_DISTANCE_GOAL
+        IS_SPRINTING = 1
+        RESISTANCE = START_RESISTANCE
+
+    interval "rest"
+        duration = REST_TIME_GOAL
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = REST_TIME_GOAL
+        INTERVAL_GOAL = REST_TIME_GOAL
+        IS_SPRINTING = 0
+        RESISTANCE = START_RESISTANCE

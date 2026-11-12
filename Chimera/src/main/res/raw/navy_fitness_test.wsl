@@ -1,0 +1,490 @@
+settings
+    workout_id = 34
+    allow_skip_warmup = 1
+    graph_future = 1
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+input COOLDOWN_TIME_START
+input DISTANCE
+input SPEED_IN
+input GOAL
+input GENDER
+input AGE
+input FRAME_ELEVATION
+
+export INCLINE
+export GOAL_TYPE
+export SPEED
+export GOAL
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export ALLOW_PAUSE
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_INCLINE_CHANGES
+
+stage warmup
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 180000
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    SPEED = 0.8
+    INCLINE = 0
+    
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+
+stage workout
+    GOAL_TYPE = GOAL_TYPE_DISTANCE_STAGE_CONSTANT
+    GOAL = 2.41402 // 1.5 miles
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_INCLINE_CHANGES = 1
+    INCLINE = 1
+    
+    workoutCompleteTime = 0
+    interval
+        when STAGE_DISTANCE >= GOAL
+            workoutCompleteTime = INTERVAL_TIME_MS
+            end
+
+// Cooldown can only be reached by clicking on the cooldown button
+stage cooldown
+    ALLOW_PAUSE = 1
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = COOLDOWN_TIME_START
+    SPEED = min(0.6 * SPEED_IN, 6.43738)
+    
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            end
+
+
+// Values for navy test scores
+// Low elevation values
+MALE_LOW_1 = [495, 525, 540, 555, 570, 585, 600, 630, 660, 720, 735, 7200]
+MALE_LOW_2 = [510, 540, 555, 585, 600, 630, 645, 690, 720, 765, 795, 7200]
+MALE_LOW_3 = [535, 563, 578, 615, 630, 652, 683, 735, 773, 803, 825, 7200]
+MALE_LOW_4 = [560, 585, 600, 630, 660, 675, 720, 780, 825, 840, 855, 7200]
+MALE_LOW_5 = [565, 593, 608, 638, 668, 683, 743, 803, 848, 863, 885, 7200]
+MALE_LOW_6 = [570, 600, 615, 645, 675, 705, 765, 825, 870, 885, 915, 7200]
+MALE_LOW_7 = [573, 608, 630, 668, 698, 728, 780, 848, 893, 915, 945, 7200]
+MALE_LOW_8 = [575, 615, 645, 690, 720, 750, 795, 870, 915, 945, 975, 7200]
+MALE_LOW_9 = [642, 669, 685, 717, 749, 792, 853, 914, 975, 993, 1011, 7200]
+MALE_LOW_10 = [681, 708, 724, 760, 796, 833, 900, 967, 1034, 1067, 1100, 7200]
+MALE_LOW_11 = [701, 733, 763, 800, 837, 874, 947, 1020, 1093, 1140, 1187, 7200]
+
+FEMALE_LOW_1 = [569, 675, 690, 705, 720, 750, 765, 780, 810, 855, 885, 7200]
+FEMALE_LOW_2 = [587, 675, 690, 735, 765, 795, 810, 825, 855, 900, 915, 7200]
+FEMALE_LOW_3 = [617, 690, 705, 750, 780, 803, 840, 870, 893, 923, 945, 7200]
+FEMALE_LOW_4 = [646, 705, 720, 765, 795, 810, 870, 915, 930, 945, 975, 7200]
+FEMALE_LOW_5 = [651, 713, 728, 773, 803, 825, 878, 930, 953, 975, 998, 7200]
+FEMALE_LOW_6 = [656, 720, 735, 780, 810, 840, 885, 945, 975, 1005, 1020, 7200]
+FEMALE_LOW_7 = [658, 728, 750, 795, 825, 848, 900, 953, 990, 1013, 1028, 7200]
+FEMALE_LOW_8 = [660, 735, 765, 810, 840, 855, 915, 960, 1005, 1020, 1035, 7200]
+FEMALE_LOW_9 = [743, 819, 837, 865, 893, 920, 969, 1018, 1068, 1083, 1098, 7200]
+FEMALE_LOW_10 = [814, 890, 908, 934, 960, 985, 1037, 1086, 1131, 1148, 1165, 7200]
+FEMALE_LOW_11 = [885, 961, 979, 1003, 1027, 1050, 1098, 1146, 1194, 1213, 1231, 7200]
+
+// High elevation values
+MALE_HIGH_1 = [540, 570, 590, 605, 620, 640, 655, 685, 720, 785, 800, 7200]
+MALE_HIGH_2 = [555, 590, 605, 640, 655, 685, 705, 750, 785, 835, 865, 7200]
+MALE_HIGH_3 = [583, 615, 630, 673, 688, 710, 745, 800, 843, 875, 898, 7200]
+MALE_HIGH_4 = [610, 640, 655, 705, 720, 735, 785, 850, 900, 915, 930, 7200]
+MALE_HIGH_5 = [615, 648, 663, 705, 728, 753, 810, 875, 925, 940, 965, 7200]
+MALE_HIGH_6 = [620, 655, 670, 705, 735, 770, 835, 900, 950, 965, 1000, 7200]
+MALE_HIGH_7 = [623, 663, 688, 728, 760, 795, 850, 925, 975, 998, 1033, 7200]
+MALE_HIGH_8 = [625, 670, 705, 750, 785, 820, 865, 950, 1000, 1030, 1065, 7200]
+MALE_HIGH_9 = [706, 736, 754, 789, 824, 871, 938, 1005, 1073, 1092, 1112, 7200]
+MALE_HIGH_10 = [749, 779, 796, 836, 876, 916, 990, 1064, 1137, 1174, 1210, 7200]
+MALE_HIGH_11 = [771, 806, 839, 880, 921, 961, 1042, 1122, 1202, 1254, 1306, 7200]
+
+FEMALE_HIGH_1 = [620, 735, 750, 770, 785, 820, 835, 850, 885, 930, 965, 7200]
+FEMALE_HIGH_2 = [640, 735, 750, 800, 835, 865, 885, 900, 930, 980, 1000, 7200]
+FEMALE_HIGH_3 = [673, 753, 768, 818, 850, 875, 918, 950, 973, 1005, 1033, 7200]
+FEMALE_HIGH_4 = [705, 770, 785, 835, 865, 885, 950, 1000, 1015, 1030, 1065, 7200]
+FEMALE_HIGH_5 = [710, 778, 793, 843, 875, 900, 958, 1015, 1040, 1063, 1088, 7200]
+FEMALE_HIGH_6 = [715, 785, 800, 850, 885, 915, 965, 1030, 1065, 1095, 1110, 7200]
+FEMALE_HIGH_7 = [718, 793, 818, 868, 900, 923, 983, 1038, 1080, 1103, 1120, 7200]
+FEMALE_HIGH_8 = [720, 800, 835, 885, 915, 930, 1000, 1045, 1095, 1110, 1130, 7200]
+FEMALE_HIGH_9 = [817, 901, 921, 952, 982, 1012, 1066, 1120, 1175, 1191, 1208, 7200]
+FEMALE_HIGH_10 = [895, 979, 999, 1027, 1056, 1084, 1141, 1195, 1244, 1263, 1282, 7200]
+FEMALE_HIGH_11 = [974, 1057, 1077, 1103, 1130, 1155, 1208, 1261, 1313, 1334, 1354, 7200]
+
+TEST_SCORES = [12.0, 11.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0]
+
+
+onStop
+    if workoutCompleteTime > 0
+        workoutTimeSec = workoutCompleteTime / 1000
+
+        // Low elevation
+        if (FRAME_ELEVATION == FRAME_ELEVATION_LOW)
+            if AGE <= 19
+                i = 0
+                lookup_value = MALE_LOW_1[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_1[i]
+
+                i = 0
+                lookup_value = FEMALE_LOW_1[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_1[i]
+
+
+            if AGE > 19 && AGE <= 24
+                i = 0
+                lookup_value = MALE_LOW_2[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_2[i]
+                i = 0
+                lookup_value = FEMALE_LOW_2[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_2[i]
+
+            if AGE > 24 && AGE <= 29
+                i = 0
+                lookup_value = MALE_LOW_3[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_3[i]
+                i = 0
+                lookup_value = FEMALE_LOW_3[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_3[i]
+
+            if AGE > 29 && AGE <= 34
+                i = 0
+                lookup_value = MALE_LOW_4[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_4[i]
+                i = 0
+                lookup_value = FEMALE_LOW_4[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_4[i]
+
+            if AGE > 34 && AGE <= 39
+                i = 0
+                lookup_value = MALE_LOW_5[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_5[i]
+                i = 0
+                lookup_value = FEMALE_LOW_5[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_5[i]
+
+            if AGE > 39 && AGE <= 44
+                i = 0
+                lookup_value = MALE_LOW_6[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_6[i]
+                i = 0
+                lookup_value = FEMALE_LOW_6[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_6[i]
+
+            if AGE > 44 && AGE <= 49
+                i = 0
+                lookup_value = MALE_LOW_7[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_7[i]
+                i = 0
+                lookup_value = FEMALE_LOW_7[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_7[i]
+
+            if AGE > 49 && AGE <= 54
+                i = 0
+                lookup_value = MALE_LOW_8[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_8[i]
+                i = 0
+                lookup_value = FEMALE_LOW_8[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_8[i]
+
+            if AGE > 54 && AGE <= 59
+                i = 0
+                lookup_value = MALE_LOW_9[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_9[i]
+                i = 0
+                lookup_value = FEMALE_LOW_9[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_9[i]
+
+            if AGE > 59 && AGE <= 64
+                i = 0
+                lookup_value = MALE_LOW_10[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_10[i]
+                i = 0
+                lookup_value = FEMALE_LOW_10[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_10[i]
+
+            if AGE > 64
+                i = 0
+                lookup_value = MALE_LOW_11[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_LOW_11[i]
+                i = 0
+                lookup_value = FEMALE_LOW_11[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_LOW_11[i]
+
+
+        // High elevation
+        else if (FRAME_ELEVATION == FRAME_ELEVATION_HIGH)
+            if AGE <= 19
+                i = 0
+                lookup_value = MALE_HIGH_1[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_1[i]
+
+                i = 0
+                lookup_value = FEMALE_HIGH_1[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_1[i]
+
+
+            if AGE > 19 && AGE <= 24
+                i = 0
+                lookup_value = MALE_HIGH_2[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_2[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_2[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_2[i]
+
+            if AGE > 24 && AGE <= 29
+                i = 0
+                lookup_value = MALE_HIGH_3[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_3[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_3[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_3[i]
+
+            if AGE > 29 && AGE <= 34
+                i = 0
+                lookup_value = MALE_HIGH_4[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_4[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_4[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_4[i]
+
+            if AGE > 34 && AGE <= 39
+                i = 0
+                lookup_value = MALE_HIGH_5[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_5[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_5[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_5[i]
+
+            if AGE > 39 && AGE <= 44
+                i = 0
+                lookup_value = MALE_HIGH_6[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_6[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_6[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_6[i]
+
+            if AGE > 44 && AGE <= 49
+                i = 0
+                lookup_value = MALE_HIGH_7[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_7[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_7[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_7[i]
+
+            if AGE > 49 && AGE <= 54
+                i = 0
+                lookup_value = MALE_HIGH_8[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_8[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_8[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_8[i]
+
+            if AGE > 54 && AGE <= 59
+                i = 0
+                lookup_value = MALE_HIGH_9[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_9[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_9[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_9[i]
+
+            if AGE > 59 && AGE <= 64
+                i = 0
+                lookup_value = MALE_HIGH_10[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_10[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_10[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_10[i]
+
+            if AGE > 64
+                i = 0
+                lookup_value = MALE_HIGH_11[i]
+                temp_score_male = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_male = TEST_SCORES[i]
+                    lookup_value = MALE_HIGH_11[i]
+                i = 0
+                lookup_value = FEMALE_HIGH_11[i]
+                temp_score_female = TEST_SCORES[i]
+                while  workoutTimeSec > lookup_value
+                    i = i + 1
+                    temp_score_female = TEST_SCORES[i]
+                    lookup_value = FEMALE_HIGH_11[i]
+
+        TEST_SCORE_MALE = temp_score_male
+        TEST_SCORE_FEMALE = temp_score_female
+
+    else
+        TEST_SCORE_MALE = 0
+        TEST_SCORE_FEMALE = 0
+

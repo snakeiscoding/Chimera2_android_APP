@@ -1,0 +1,33 @@
+<root>
+    <item name='java.io.File File(java.io.File, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.io.File File(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.io.File File(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.io.File File(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.io.FileReader FileReader(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.io.InputStreamReader InputStreamReader(java.io.InputStream, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.io.FileInputStream FileInputStream(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.io.FileOutputStream FileOutputStream(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.io.DataOutputStream void writeBytes(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

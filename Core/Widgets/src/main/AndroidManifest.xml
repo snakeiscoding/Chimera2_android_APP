@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="com.jht.widgets.WebBrowserComposeActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.webBrowserCompose"
+            android:theme="@style/Theme.NoSplash"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            android:taskAffinity="com.jht.webBrowserCompose" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

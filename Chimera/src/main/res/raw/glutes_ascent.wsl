@@ -1,0 +1,120 @@
+settings
+    workout_id = 50
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 1
+
+input TIME_GOAL_START
+input MIN_RESISTANCE
+input MAX_RESISTANCE
+input GOAL
+input COOLDOWN_TIME_START
+
+export RESISTANCE
+export INCLINE
+export GOAL
+export GOAL_TYPE
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = TIME_GOAL_START
+    
+    totalIntervals = 19
+    lastSetInterval = 0
+    intervalCompletionTime = 0
+     
+    when STAGE_TIME_MS >= (GOAL - intervalCompletionTime) / (totalIntervals - interval) + intervalCompletionTime
+        interval = interval + 1
+
+    when lastSetInterval != interval
+        intervalCompletionTime = STAGE_TIME_MS
+        lastSetInterval = interval
+        
+
+
+    interval
+        INCLINE = 50
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 65
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 100
+        RESISTANCE = MAX_RESISTANCE
+
+    interval
+        INCLINE = 85
+        RESISTANCE = MIN_RESISTANCE
+        
+    interval
+        INCLINE = 65
+        RESISTANCE = MIN_RESISTANCE
+
+    interval
+        INCLINE = 50
+        RESISTANCE = MIN_RESISTANCE
+    
+stage "cooldown"
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        RESISTANCE = 1
+        INCLINE = 0
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end

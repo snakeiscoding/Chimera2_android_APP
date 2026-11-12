@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    TODO CGC-20594: Remove duplicate-->
+    <color name="selected_color">#98b0c8</color>
+    <color name="primary_btn">#98b0c8</color>
+    <color name="primary">#98b0c8</color>
+
+    <color name="alert_color">#ff432e</color>
+    <color name="unselected_color">#728496</color>
+    <color name="lineColor">#d9d9d9</color>
+    <color name="language_card_color">#333333</color>
+    <color name="network_card">#2d2d2d</color>
+
+<!--    TODO CGC-20594: Remove duplicate-->
+    <color name="secondary_btn">#4c4c4c</color>
+    <color name="text_field_background">#4c4c4c</color>
+    <color name="secondary">#4c4c4c</color>
+
+    <color name="success">#17c264</color>
+
+    <!--    TODO CGC-20594: Remove duplicate-->
+    <color name="dark_button_text">#05080a</color>
+    <color name="dark_text">#05080a</color>
+
+    <!--    TODO CGC-20594: Remove duplicate-->
+    <color name="light_button_text">#ffffff</color>
+    <color name="light_text">#ffffff</color>
+
+    <!--    Machine Calibration  -->
+    <color name="med_text">#777777</color>
+    
+<!--    TV setup-->
+    <color name="selected_card">#3398b0c8</color>
+
+
+    <color name="grey_0">#ffffff</color>
+    <color name="grey_0_70">#b3ffffff</color>
+    <color name="grey_1">#c1c6c8</color>
+    <color name="grey_2">#7f7f7f</color>
+    <color name="grey_3">#4f4949</color>
+    <color name="grey_4">#4c4c4c</color>
+    <color name="grey_5">#2d2d2d</color>
+    <color name="grey_6">#222222</color>
+    <color name="grey_7">#141414</color>
+
+    <color name="dropdown_menu">#f1edf8</color>
+
+    <color name="blue_1">#98b0c8</color>
+    <color name="blue_2">#899eb4</color>
+    <color name="blue_3">#7a8da0</color>
+    <color name="blue_4">#728496</color>
+    <color name="blue_5">#5b6a78</color>
+    <color name="blue_6">#44505a</color>
+    <color name="blue_7">#4e96c0</color>
+
+    <color name="green_1">#85da77</color>
+    <color name="green_2">#12ce4b</color>
+
+    <color name="red_1">#ff5a5c</color>
+    <color name="red_2">#ff432e</color>
+
+    <color name="yellow">#eba946</color>
+</resources>

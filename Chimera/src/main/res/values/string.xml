@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string formatted="false" name="port_test_tc" ns1:ignore="MissingTranslation"><![CDATA[Port Test]]></string>
+    <string formatted="false" name="hr_port_tc" ns1:ignore="MissingTranslation"><![CDATA[Heart Rate Port]]></string>
+    <string formatted="false" name="hr_port_test_fail_pg" ns1:ignore="MissingTranslation"><![CDATA[: Loopback test failed]]></string>
+    <string formatted="false" name="hr_port_test_read_fail_pg" ns1:ignore="MissingTranslation"><![CDATA[: Loopback driver read fail]]></string>
+    <string formatted="false" name="hr_port_test_mismatch_pg" ns1:ignore="MissingTranslation"><![CDATA[: Loopback data mismatch]]></string>
+    <string formatted="false" name="hr_port_test_pass_pg" ns1:ignore="MissingTranslation"><![CDATA[: Loopback test passed]]></string>
+    <string formatted="false" name="hr_port_test_start_pg" ns1:ignore="MissingTranslation"><![CDATA[: Testing in progress]]></string>
+    <string formatted="false" name="hr_port_write_fail_pg" ns1:ignore="MissingTranslation"><![CDATA[: Loopback driver write failed]]></string>
+    <string formatted="false" name="port_button_tc" ns1:ignore="MissingTranslation"><![CDATA[Click to Test Port]]></string>
+</resources>

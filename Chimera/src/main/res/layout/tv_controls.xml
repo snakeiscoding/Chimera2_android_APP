@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/tv_player_channel_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#26FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_player_channel_up"
+            style="@style/tv_remote_button"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="15dp"
+            app:srcCompat="@drawable/ic_arrow_up_black" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/ic_icon_channel"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_player_channel_down"
+            style="@style/tv_remote_button"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_arrow_down_black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/tv_player_additional_remote_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#26FFFFFF"
+        app:layout_constraintLeft_toLeftOf="@id/tv_player_channel_change"
+        app:layout_constraintTop_toBottomOf="@id/tv_player_channel_change"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_player_last_channel"
+            style="@style/tv_remote_button"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_icon_previous_channels" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_player_closed_captioning"
+            style="@style/tv_remote_button"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_icon_cc" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_player_sap"
+            style="@style/tv_remote_button"
+            app:srcCompat="@drawable/ic_audio_track"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:layout_marginTop="10dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/tv_remote_info"
+            style="@style/tv_remote_button"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/eng_tv_control_left"
+            app:layout_constraintTop_toBottomOf="@id/eng_tv_control_left"
+            app:srcCompat="@drawable/button_info_navigation" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

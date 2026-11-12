@@ -1,0 +1,87 @@
+<root>
+    <item name='org.json.JSONObject int getInt(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject java.lang.String getString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONArray getJSONArray(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject getJSONObject(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject boolean isNull(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, java.lang.Object) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, java.lang.Object) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, long) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, float) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, double) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject put(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONObject putOpt(java.lang.String, java.lang.Object) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject boolean has(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject boolean optBoolean(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject int optInt(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject int optInt(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject long optLong(java.lang.String, long) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject float optFloat(java.lang.String, float) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject java.lang.String optString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject java.lang.String optString(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject java.lang.String optString(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject org.json.JSONArray optJSONArray(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+
+    <item name='org.json.JSONObject java.lang.Object get(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject double getDouble(java.lang.String, double) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='org.json.JSONObject double getDouble(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

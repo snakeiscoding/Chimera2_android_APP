@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_handgrip_led_selection"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_header_text"
+        android:text="@string/select_led_tc"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/title_header_description"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_header_description"
+        android:text="@string/select_led_message_tc"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_header_text"
+        app:layout_constraintBottom_toTopOf="@id/basic_led"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/basic_led"
+        android:background="@drawable/p1_item_selector"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/none_led"
+        app:layout_constraintTop_toBottomOf="@id/title_header_text"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/basic_led_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/p1_basic_led"
+        app:layout_constraintStart_toStartOf="@id/basic_led"
+        app:layout_constraintEnd_toEndOf="@id/basic_led"
+        app:layout_constraintTop_toTopOf="@id/basic_led"
+        app:layout_constraintBottom_toBottomOf="@id/basic_led" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/basic_led_text"
+        android:text="@string/basic_tc"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/basic_led"
+        app:layout_constraintEnd_toEndOf="@id/basic_led"
+        app:layout_constraintTop_toBottomOf="@id/basic_led"/>
+
+<!--    -->
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:id="@+id/speed_led"-->
+<!--        android:background="@drawable/p1_item_selector"-->
+<!--        app:layout_constraintWidth_percent="0.15"-->
+<!--        app:layout_constraintDimensionRatio="1:1.1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/basic_led"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title_header_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/speed_led_image"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/p1_speed_led"-->
+<!--        app:layout_constraintStart_toStartOf="@id/speed_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/speed_led"-->
+<!--        app:layout_constraintTop_toTopOf="@id/speed_led"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/speed_led" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/speed_led_text"-->
+<!--        android:text="@string/speed_tc"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="18sp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/speed_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/speed_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/speed_led"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:id="@+id/heart_rate_led"-->
+<!--        android:background="@drawable/p1_item_selector"-->
+<!--        app:layout_constraintWidth_percent="0.15"-->
+<!--        app:layout_constraintDimensionRatio="1:1.1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/speed_led"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/calories_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title_header_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/heart_rate_led_image"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/p1_heart_rate_led"-->
+<!--        app:layout_constraintStart_toStartOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintTop_toTopOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/heart_rate_led" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/heart_rate_led_text"-->
+<!--        android:text="@string/heart_rate_tc"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="18sp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/heart_rate_led"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:id="@+id/calories_led"-->
+<!--        android:background="@drawable/p1_item_selector"-->
+<!--        app:layout_constraintWidth_percent="0.15"-->
+<!--        app:layout_constraintDimensionRatio="1:1.1"-->
+<!--        app:layout_constraintStart_toEndOf="@id/heart_rate_led"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/none_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title_header_text"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/calories_led_image"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/p1_calories_led"-->
+<!--        app:layout_constraintStart_toStartOf="@id/calories_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/calories_led"-->
+<!--        app:layout_constraintTop_toTopOf="@id/calories_led"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/calories_led" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/calories_led_text"-->
+<!--        android:text="@string/calories_tc"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="18sp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/calories_led"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/calories_led"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/calories_led"/>-->
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/none_led"
+        android:background="@drawable/p1_item_selector"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1.1"
+        app:layout_constraintStart_toEndOf="@id/basic_led"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_header_text"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/none_led_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/p1_none_led"
+        app:layout_constraintStart_toStartOf="@id/none_led"
+        app:layout_constraintEnd_toEndOf="@id/none_led"
+        app:layout_constraintTop_toTopOf="@id/none_led"
+        app:layout_constraintBottom_toBottomOf="@id/none_led" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/none_led_text"
+        android:text="@string/none_tc"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/none_led"
+        app:layout_constraintEnd_toEndOf="@id/none_led"
+        app:layout_constraintTop_toBottomOf="@id/none_led"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

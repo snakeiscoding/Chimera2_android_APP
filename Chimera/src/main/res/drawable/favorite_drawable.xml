@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true"
+        android:state_pressed="false">
+        <layer-list>
+            <item android:width="40dp" android:height="40dp"
+                android:drawable="@drawable/ic_favorite_selected"
+                android:gravity="center">
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item android:width="40dp" android:height="40dp"
+                android:drawable="@drawable/ic_favorite_unselected"
+                android:gravity="center">
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

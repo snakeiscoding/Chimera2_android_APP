@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.service.hal.lib.hardware.HeadphoneManager HeadphoneManager()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.hal.lib.hardware.VirtualKeyboardManager'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

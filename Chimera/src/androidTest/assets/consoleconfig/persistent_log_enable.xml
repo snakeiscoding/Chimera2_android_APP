@@ -1,0 +1,7 @@
+<Configuration>
+    <Config Version="1">
+        <systemSettings>
+            <persistentLogs>true</persistentLogs>
+        </systemSettings>
+    </Config>
+</Configuration>

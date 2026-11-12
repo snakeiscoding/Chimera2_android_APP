@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_workout_settings_left"
+    android:layout_width="240dp"
+    android:layout_height="320dp">
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticView
+        android:id="@+id/lock_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2F2F2F"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintDimensionRatio="1.9:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintWidth_percent="0.92" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lock_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toTopOf="@id/lock_button"
+        app:layout_constraintBottom_toBottomOf="@id/lock_button"
+        app:layout_constraintStart_toStartOf="@id/lock_button"
+        app:layout_constraintEnd_toEndOf="@id/lock_button"
+        app:srcCompat="@drawable/ic_icon_locked"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lock_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/haptics_text"
+        app:layout_constraintTop_toTopOf="@id/lock_button"
+        app:layout_constraintBottom_toBottomOf="@id/lock_button"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:text="@string/lock_toggles_tc"
+        android:textStyle="bold"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticView
+        android:id="@+id/haptics_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2F2F2F"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintDimensionRatio="1.9:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.92"  />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/haptics_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintTop_toTopOf="@id/haptics_button"
+        app:layout_constraintBottom_toBottomOf="@id/haptics_button"
+        app:layout_constraintStart_toStartOf="@id/haptics_button"
+        app:layout_constraintEnd_toEndOf="@id/haptics_button"
+        app:srcCompat="@drawable/ic_haptics_on"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/haptics_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/haptics_imageview"
+        app:layout_constraintEnd_toEndOf="@id/haptics_button"
+        app:layout_constraintTop_toTopOf="@id/haptics_button"
+        app:layout_constraintBottom_toBottomOf="@id/haptics_button"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:text="Turn Off Haptics"
+        android:textStyle="bold"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

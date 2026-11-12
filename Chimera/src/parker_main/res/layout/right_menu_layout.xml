@@ -1,0 +1,184 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rightMenuRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/inactiveScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/inactive"
+        android:clickable="true"/>
+
+    <View
+        android:id="@+id/audioLayout"
+        android:layout_width="@dimen/side_bar_button_width"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#ff515151" />
+
+    <View
+        android:id="@+id/audio_menu_background"
+        android:layout_width="365dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@id/btnClose"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#99000000"
+        />
+
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/side_bar_button_width"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableBackground="#e6e6e6"
+        app:drawableIcon="@drawable/ic_close_white"
+        app:drawableIconTint="#000000"
+        app:iconHeight="60dp"
+        app:iconWidth="60dp"/>
+
+    <com.jht.chimera.lib.widget.slider.SliderWidget
+        android:id="@+id/audioSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="@id/audioLayout"
+        app:layout_constraintEnd_toEndOf="@id/audioLayout"
+        android:layout_marginTop="10dp"
+        app:borderColor="#ff828282"
+        app:captionText=" "
+        app:highlightColor="#fffcaf1a"
+        app:isSlimline="true"
+        app:quantizeStepSize="1.0"
+        app:rangeMax="30.0"
+        app:rangeMin="0.0"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnMute"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        app:layout_constraintStart_toStartOf="@id/audioLayout"
+        app:layout_constraintEnd_toEndOf="@id/audioLayout"
+        app:layout_constraintTop_toBottomOf="@id/audioSlider"
+        android:background="@drawable/mute_button_bg"
+        app:srcCompat="@drawable/ic_volume_white"
+        android:tint="#000000"
+        android:scaleType="fitCenter"
+        android:padding="30dp"/>
+    
+    <Button
+        android:id="@+id/bt_pairing_button"
+        android:layout_width="325dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="W, 1:5"
+        app:layout_constraintStart_toStartOf="@id/audio_menu_background"
+        app:layout_constraintEnd_toEndOf="@id/audio_menu_background"
+        app:layout_constraintTop_toTopOf="@id/btnClose"
+        android:text="@string/device_pairing_tc"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:paddingLeft="40dp"
+        android:textColor="#FF333333"
+        android:background="@drawable/default_button_selector1"
+        app:backgroundTint="#FFE6E6E6"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_bluetooth_black"
+        app:layout_constraintStart_toStartOf="@id/bt_pairing_button"
+        app:layout_constraintEnd_toEndOf="@id/bt_pairing_button"
+        app:layout_constraintTop_toTopOf="@id/bt_pairing_button"
+        app:layout_constraintBottom_toBottomOf="@id/bt_pairing_button"
+        android:elevation="6dp"
+        app:layout_constraintHorizontal_bias="0.04"
+        />
+
+    <Button
+        android:id="@+id/wifi_button"
+        android:layout_width="325dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="W, 1:5"
+        app:layout_constraintStart_toStartOf="@id/audio_menu_background"
+        app:layout_constraintEnd_toEndOf="@id/audio_menu_background"
+        app:layout_constraintTop_toBottomOf="@id/bt_pairing_button"
+        android:text="@string/wifi_setup_tc"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:paddingLeft="40dp"
+        android:textColor="#FF333333"
+        android:background="@drawable/default_button_selector1"
+        app:backgroundTint="#FFE6E6E6"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        />
+
+
+    <ImageView
+        android:id="@+id/wifi_button_icon"
+        android:layout_width="35dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_icon_wifi"
+        android:tint="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/wifi_button"
+        app:layout_constraintEnd_toEndOf="@id/wifi_button"
+        app:layout_constraintTop_toTopOf="@id/wifi_button"
+        app:layout_constraintBottom_toBottomOf="@id/wifi_button"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.04"
+        />
+
+    <Button
+        android:id="@+id/machine_setting_button"
+        android:layout_width="325dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="W, 1:5"
+        app:layout_constraintStart_toStartOf="@id/audio_menu_background"
+        app:layout_constraintEnd_toEndOf="@id/audio_menu_background"
+        app:layout_constraintTop_toBottomOf="@id/wifi_button"
+        android:text="@string/machine_settings_tc"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:paddingLeft="40dp"
+        android:textColor="#FF333333"
+        android:background="@drawable/default_button_selector1"
+        app:backgroundTint="#FFE6E6E6"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        />
+
+    <ImageView
+        android:id="@+id/machine_setting_button_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_setting_black"
+        app:layout_constraintStart_toStartOf="@id/machine_setting_button"
+        app:layout_constraintEnd_toEndOf="@id/machine_setting_button"
+        app:layout_constraintTop_toTopOf="@id/machine_setting_button"
+        app:layout_constraintBottom_toBottomOf="@id/machine_setting_button"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.04"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/audio_source_list"
+        android:layout_width="325dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/audio_menu_background"
+        app:layout_constraintEnd_toEndOf="@id/audio_menu_background"
+        app:layout_constraintTop_toBottomOf="@id/bt_pairing_button"
+        android:layout_marginTop="5dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

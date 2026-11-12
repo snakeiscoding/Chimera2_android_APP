@@ -1,0 +1,21 @@
+<Configuration>
+    <Config Version="2">
+        <systemSettings>
+            <enableYMCA360>false</enableYMCA360>
+            <enableMileHighRunClub>false</enableMileHighRunClub>
+            <enableSurveyMonkey>false</enableSurveyMonkey>
+            <postWorkoutSurveyURL>test.url/123</postWorkoutSurveyURL>
+            <mlAfterExerciseSurvey>ml.test.url/456</mlAfterExerciseSurvey>
+            <midWorkoutSurveyURL>test.url/123</midWorkoutSurveyURL>
+            <enableEGYM>false</enableEGYM>
+            <setEnvironmentEGYM>development</setEnvironmentEGYM>
+            <enableLogsMCU>false</enableLogsMCU>
+            <enableLogsCSAFE>false</enableLogsCSAFE>
+            <enableLogsURL>false</enableLogsURL>
+            <enableLogsLCB>false</enableLogsLCB>
+            <enableLogsGymkit>false</enableLogsGymkit>
+            <enableLogsPTP>false</enableLogsPTP>
+            <enableLogsRFID>false</enableLogsRFID>
+        </systemSettings>
+    </Config>
+</Configuration>

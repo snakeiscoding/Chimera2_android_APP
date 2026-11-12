@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/concierge_btn_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="false">
+
+    <ImageView
+        android:id="@+id/concierge_btn_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_concierge"
+        android:contentDescription="@string/request_help_tc"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/concierge_btn_text"
+        android:layout_marginTop="1dp"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/request_help_tc"
+        android:textStyle="bold"
+        android:clickable="false"/>
+
+</LinearLayout>

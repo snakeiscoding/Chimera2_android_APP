@@ -1,0 +1,26 @@
+<root>
+    <item name='android.os.BaseBundle boolean getBoolean(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.BaseBundle long getLong(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.BaseBundle java.lang.String getString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.BaseBundle void putBoolean(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.BaseBundle void putString(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.BaseBundle void putInt(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.HandlerThread HandlerThread(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.os.ParcelUuid android.os.ParcelUuid fromString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

@@ -1,0 +1,224 @@
+settings
+    workout_id = 37
+    allow_skip_warmup = 1
+    graph_future = 0
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+input COOLDOWN_TIME_START
+input DISTANCE
+input SPEED_IN
+input GOAL
+input GENDER
+input AGE
+
+export INCLINE
+export GOAL_TYPE
+export SPEED
+export GOAL
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export ALLOW_PAUSE
+
+stage workout
+    GOAL_TYPE = GOAL_TYPE_DISTANCE_STAGE_CONSTANT
+    GOAL = 2.41402 // 1.5 miles
+    ALLOW_PAUSE = 0
+    
+    SPEED = 0.8
+    INCLINE = 0
+    
+    workoutCompleteTime = 0
+    interval
+        when DISTANCE >= GOAL
+            workoutCompleteTime = INTERVAL_TIME_MS
+            end
+
+// Cooldown can only be reached by clicking on the cooldown button
+stage cooldown
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = COOLDOWN_TIME_START
+    SPEED = min(0.6 * SPEED_IN, 6.43738)
+    
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            end
+
+
+// Values for peb test scores
+MALE_VALUES_1 = [568, 596, 617, 634, 649, 664, 679, 693, 707, 720, 736, 752, 770, 790, 813, 841, 878, 928, 1015, 7200]
+MALE_VALUES_2 = [574, 604, 625, 643, 661, 677, 690, 705, 720, 736, 752, 770, 789, 811, 838, 868, 907, 959, 1042, 7200]
+MALE_VALUES_3 = [588, 622, 647, 667, 685, 702, 718, 735, 752, 770, 789, 810, 831, 856, 885, 918, 960, 1015, 1093, 7200]
+MALE_VALUES_4 = [601, 637, 663, 689, 710, 732, 751, 770, 788, 810, 830, 854, 880, 908, 938, 970, 1011, 1062, 1158, 7200]
+MALE_VALUES_5 = [627, 672, 704, 730, 760, 780, 806, 828, 852, 874, 896, 920, 944, 972, 998, 1035, 1079, 1146, 1239, 7200]
+MALE_VALUES_6 = [675, 719, 758, 788, 811, 838, 864, 892, 917, 937, 960, 982, 1010, 1038, 1070, 1105, 1143, 1198, 1310, 7200]
+MALE_VALUES_7 = [723, 777, 815, 848, 871, 895, 923, 947, 967, 993, 1015, 1036, 1062, 1097, 1130, 1160, 1196, 1262, 1365, 7200]
+MALE_VALUES_8 = [768, 814, 858, 897, 942, 969, 990, 1014, 1044, 1063, 1084, 1108, 1147, 1180, 1208, 1250, 1285, 1355, 1440, 7200]
+MALE_VALUES_9 = [763, 837, 895, 915, 957, 984, 1018, 1042, 1072, 1094, 1124, 1159, 1179, 1202, 1233, 1272, 1328, 1391, 1454, 7200]
+
+FEMALE_VALUES_1 = [696, 745, 779, 810, 834, 861, 883, 905, 928, 948, 973, 995, 1020, 1043, 1068, 1105, 1147, 1201, 1302, 7200]
+FEMALE_VALUES_2 = [705, 723, 784, 812, 842, 843, 896, 919, 946, 967, 992, 1015, 1042, 1074, 1103, 1138, 1181, 1236, 1335, 7200]
+FEMALE_VALUES_3 = [719, 777, 819, 861, 892, 921, 946, 971, 998, 1025, 1051, 1075, 1085, 1099, 1159, 1193, 1241, 1311, 1408, 7200]
+FEMALE_VALUES_4 = [739, 805, 843, 884, 914, 942, 981, 1003, 1030, 1058, 1086, 1112, 1143, 1180, 1210, 1247, 1287, 1347, 1443, 7200]
+FEMALE_VALUES_5 = [775, 872, 903, 952, 987, 1014, 1037, 1056, 1080, 1098, 1125, 1150, 1175, 1200, 1230, 1272, 1323, 1391, 1515, 7200]
+FEMALE_VALUES_6 = [849, 932, 981, 1003, 1029, 1054, 1101, 1125, 1144, 1158, 1178, 1197, 1226, 1252, 1269, 1317, 1348, 1428, 1500, 7200]
+FEMALE_VALUES_7 = [922, 999, 1056, 1119, 1152, 1168, 1185, 1227, 1250, 1251, 1276, 1328, 1356, 1382, 1389, 1440, 1482, 1586, 1686, 7200]
+
+SCORES = [95.0, 90.0, 85.0, 80.0, 75.0, 70.0, 65.0, 60.0, 55.0, 50.0, 45.0, 40.0, 35.0, 30.0, 25.0, 20.0, 15.0, 10.0, 5.0, 0.0]
+
+onStop
+    if workoutCompleteTime > 0
+        workoutTimeSec = workoutCompleteTime / 1000
+        if AGE >= 0 && AGE <= 24
+            i = 0  
+            lookup_value = MALE_VALUES_1[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_1[i]
+        else if AGE >= 25 && AGE <= 29
+            i = 0  
+            lookup_value = MALE_VALUES_2[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_2[i]
+    
+        else if AGE >= 30 && AGE <= 34
+            i = 0  
+            lookup_value = MALE_VALUES_3[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_3[i]
+    
+        else if AGE >= 35 && AGE <= 39
+            i = 0  
+            lookup_value = MALE_VALUES_4[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_4[i]
+    
+        else if AGE >= 40 && AGE <= 44
+            i = 0  
+            lookup_value = MALE_VALUES_5[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_5[i]
+    
+        else if AGE >= 45 && AGE <= 49
+            i = 0  
+            lookup_value = MALE_VALUES_6[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_6[i]
+    
+        else if AGE >= 50 && AGE <= 54
+            i = 0  
+            lookup_value = MALE_VALUES_7[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_7[i]
+    
+        else if AGE >= 55 && AGE <= 59
+            i = 0  
+            lookup_value = MALE_VALUES_8[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_8[i]
+    
+        else if AGE >= 60 && AGE <= 100
+            i = 0  
+            lookup_value = MALE_VALUES_9[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = MALE_VALUES_9[i]
+
+        TEST_SCORE_MALE = temp_score
+
+    // Female Scoring
+        if AGE >= 0 && AGE <= 24
+            i = 0  
+            lookup_value = FEMALE_VALUES_1[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_1[i]
+    
+        else if AGE >= 25 && AGE <= 29
+            i = 0  
+            lookup_value = FEMALE_VALUES_2[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_2[i]
+    
+        else if AGE >= 30 && AGE <= 34
+            i = 0  
+            lookup_value = FEMALE_VALUES_3[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_3[i]
+    
+        else if AGE >= 35 && AGE <= 39
+            i = 0  
+            lookup_value = FEMALE_VALUES_4[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_4[i]
+    
+        else if AGE >= 40 && AGE <= 44
+            i = 0  
+            lookup_value = FEMALE_VALUES_5[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_5[i]
+    
+        else if AGE >= 45 && AGE <= 49
+            i = 0  
+            lookup_value = FEMALE_VALUES_6[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_6[i]
+    
+        else if AGE >= 50 && AGE <= 100
+            i = 0  
+            lookup_value = FEMALE_VALUES_7[i]
+            temp_score = SCORES[i]
+            while  workoutTimeSec > lookup_value 
+                temp_score = SCORES[i]
+                i = i + 1  
+                lookup_value = FEMALE_VALUES_7[i]
+
+        TEST_SCORE_FEMALE = temp_score
+
+    else
+        TEST_SCORE_MALE = 0
+        TEST_SCORE_FEMALE = 0
+

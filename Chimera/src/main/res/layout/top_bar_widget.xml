@@ -1,0 +1,57 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@android:color/black"
+    android:clickable="true"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+
+    <com.jht.chimera.lib.widget.indicator.TopBarSamsungWatchBadge
+        android:id="@+id/samsung_badge"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_samsung_watch"
+        app:layout_constraintEnd_toStartOf="@id/topbar_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3.8:1"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        />
+
+    <com.jht.chimera.lib.widget.indicator.TopBarLogo
+        android:id="@+id/topbar_logo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.23"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_logo_matrix"
+        android:background="@android:color/transparent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+    <com.jht.chimera.lib.widget.indicator.TopBarGymKitBadge
+        android:id="@+id/gymkit_badge"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_apple_watch_old"
+        app:layout_constraintStart_toEndOf="@id/topbar_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3.8:1"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        />
+
+    <include
+        layout="@layout/top_bar_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

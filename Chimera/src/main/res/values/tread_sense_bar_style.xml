@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tread_sense_bar_background">
+        <item name="android:background">#FFE1261C</item>
+    </style>
+</resources>

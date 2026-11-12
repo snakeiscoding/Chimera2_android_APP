@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000" >
+
+    <RelativeLayout
+        android:id="@+id/non_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.jht.chimera.lib.webapp.VideoEnabledWebView
+            android:id="@+id/video_enabled_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_view_container_popup_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/web_view_container_popup_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/icon_x" />
+
+        <com.jht.chimera.ui.mainapp.PopupWebView
+            android:id="@+id/web_view_container_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="40dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

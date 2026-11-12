@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    >
+
+    <ImageView android:id="@+id/snapshot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"/>
+
+    <ImageView android:id="@+id/snapshot2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:scaleType="fitXY"
+        android:visibility="invisible"/>
+
+    <Space android:id="@+id/left_panel_spacer"
+        android:layout_width="@dimen/side_bar_button_width"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"/>
+
+    <RelativeLayout android:id="@+id/content"
+        android:layout_width="450dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/left_panel_spacer"
+        android:background="#80000000"
+        android:paddingBottom="@dimen/progress_padding"
+        android:paddingTop="@dimen/progress_padding">
+        <!--android:layout_marginRight="@dimen/content_right_margin_normal_screen"-->
+        <!--android:layout_toLeftOf="@+id/anchor"-->
+
+        <com.jht.chimera.ui.mainapp.landmark.LandmarkProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/progress_bar"
+            android:layout_marginLeft="@dimen/total_floors_text_margin_left"
+            android:layout_marginTop="@dimen/total_floors_text_margin_top"
+            android:layout_toRightOf="@+id/progress_bar">
+
+            <TextView android:id="@+id/goalValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/total_floors_text_margin_left"
+                android:layout_marginTop="@dimen/total_floors_text_margin_top"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_fullscreen_goal_value"
+                android:textStyle="bold"/>
+
+            <TextView android:id="@+id/goalValueUnitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/total_floors_text_margin_left"
+                android:layout_marginTop="@dimen/total_floors_text_margin_top"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_fullscreen_goal_value_unit"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/landmark_info_margin_right"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/buildingNameText"
+                android:layout_width="@dimen/text_width_fullscreen_landmark_name"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_fullscreen_landmark_title"
+                android:textStyle="bold"/>
+
+            <TextView android:id="@+id/locationText"
+                android:layout_width="@dimen/text_width_fullscreen_landmark_location"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="@dimen/text_size_fullscreen_landmark_location"/>
+
+            <TextView android:id="@+id/heightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="@dimen/text_size_fullscreen_landmark_height"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <SurfaceView android:id="@+id/startVideoHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Space android:id="@+id/anchor"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <com.jht.chimera.lib.widget.button.FullscreenButton
+        android:id="@+id/showHidePanels"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/right_panel_spacer"
+        app:drawableBackground="@android:color/transparent"
+        app:drawableIconTint="@android:color/white"
+        app:drawablePressState="@android:color/transparent"
+        app:iconHeight="60dp"
+        app:iconWidth="60dp"/>
+
+    <Space android:id="@+id/right_panel_spacer"
+        android:layout_width="@dimen/side_bar_button_width"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

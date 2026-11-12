@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Messages>
+    <PostWorkoutMessage Priority="20" TTL="120000" Title="Nice Workout">Way to go. You just completed a tough workout.</PostWorkoutMessage>
+</Messages>

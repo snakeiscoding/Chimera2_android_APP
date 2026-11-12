@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="com.jht.uid.chimera"
+    tools:targetApi="33"
+    android:sharedUserMaxSdkVersion="33"> <!-- sharedUserId cause non-deterministic behavior within the package manager. This will remove sharedUserId dependency on new consoles -->
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.READ_LOGS"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.RECOVERY"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
+                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application android:allowBackup="true"
+                 android:usesCleartextTraffic="true"
+                 android:label="@string/app_name"
+                 android:process="com.jhtp.updateservice"
+                 android:supportsRtl="false"
+                 android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        <activity android:name="com.jht.updateservice.BackgroundActivity"
+                  android:exported="true"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="landscape"/>
+
+        <receiver android:name="com.jht.updateservice.ServiceStarter"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.jht.updateservice.UpdateService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.jht.updateservice.UpdateService"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

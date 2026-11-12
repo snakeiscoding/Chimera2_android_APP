@@ -1,0 +1,6 @@
+<root>
+    <item
+        name='com.jht.serialport.SerialPort SerialPort(java.lang.String, com.jht.serialport.SerialPortConfiguration) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

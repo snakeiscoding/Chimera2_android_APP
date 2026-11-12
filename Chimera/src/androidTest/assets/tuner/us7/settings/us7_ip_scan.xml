@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='US-ASCII'?>
+<IPTVChannels>
+    <Channels>
+        <Channel ip="224.1.2.3" port="1234" />
+    </Channels>
+</IPTVChannels>

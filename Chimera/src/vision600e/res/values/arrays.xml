@@ -1,0 +1,8 @@
+<resources>
+
+<string-array name="welcome_icon_positions">
+    <item>@string/center_tc</item>
+    <item>@string/gone_tc</item>
+</string-array>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_workout_settings_right"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="@android:color/black">
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticView
+        android:id="@+id/pause_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cooldown_selector_background"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintDimensionRatio="1.9:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintWidth_percent="0.92" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/pause_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintTop_toTopOf="@id/pause_button"
+        app:layout_constraintBottom_toBottomOf="@id/pause_button"
+        app:layout_constraintStart_toStartOf="@id/pause_button"
+        app:layout_constraintEnd_toEndOf="@id/pause_button"
+        app:srcCompat="@drawable/ic_pause_yellow"/>
+    <!-- app:layout_constraintHorizontal_bias="0.1" -->
+
+    <!--<androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pause_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/pause_imageview"
+        app:layout_constraintEnd_toEndOf="@id/pause_button"
+        app:layout_constraintTop_toTopOf="@id/pause_button"
+        app:layout_constraintBottom_toBottomOf="@id/pause_button"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="@string/pause_workout_tc"
+        android:textStyle="bold"/>-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticView
+        android:id="@+id/stop_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cooldown_selector_background"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintDimensionRatio="1.9:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.92" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/stop_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/stop_button"
+        app:layout_constraintBottom_toBottomOf="@id/stop_button"
+        app:layout_constraintStart_toStartOf="@id/stop_button"
+        app:layout_constraintEnd_toEndOf="@id/stop_button"
+        app:srcCompat="@drawable/ic_stop_yellow"/>
+    <!-- app:layout_constraintHorizontal_bias="0.1" -->
+
+    <!--<androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stop_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/pause_text"
+        app:layout_constraintEnd_toEndOf="@id/stop_button"
+        app:layout_constraintTop_toTopOf="@id/stop_button"
+        app:layout_constraintBottom_toBottomOf="@id/stop_button"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="@string/end_workout_tc"
+        android:textStyle="bold"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

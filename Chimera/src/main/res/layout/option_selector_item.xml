@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <TextView
+        style="@style/jht_setting_heading"
+        android:layout_height="wrap_content"
+        app:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:textSize="24dp"
+        app:autoSizeMaxTextSize="24dp"
+        android:id="@+id/option_selector_label" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/option_container_height_default"
+        android:id="@+id/selector_container"
+        android:background="@drawable/selector_item_background"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:id="@+id/selector_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/selector_item_text_end_margin"
+            android:paddingEnd="@dimen/selector_item_text_end_margin"
+            android:gravity="center"
+            android:textColor="@color/selector_text_color"
+            app:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textSize="24dp"
+            app:autoSizeMaxTextSize="24dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/selector_arrow_margin"
+            android:layout_marginTop="8dp" >
+            <ImageView
+                android:id="@+id/selector_arrow_down"
+                android:layout_width="@dimen/selector_arrow_size"
+                android:layout_height="@dimen/selector_arrow_size"
+                android:rotation="180"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/selector_arrow"/>
+            </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

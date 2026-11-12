@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogDown" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogDownAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="DialogDownAnimation">
+        <item name="android:windowEnterAnimation">@anim/top_down</item>
+        <item name="android:windowExitAnimation">@anim/top_up</item>
+    </style>
+
+</resources>

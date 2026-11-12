@@ -1,0 +1,10 @@
+<root>
+    <item
+        name='androidx.fragment.app.DialogFragment void show(androidx.fragment.app.FragmentManager, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='androidx.fragment.app.FragmentTransaction androidx.fragment.app.FragmentTransaction replace(int, androidx.fragment.app.Fragment, java.lang.String) 2'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

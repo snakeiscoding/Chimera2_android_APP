@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogBorderLayout"
+    android:layout_width="900dp"
+    android:layout_height="wrap_content"
+    android:background="#33FFFFFF"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#191919">
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/dialogCloseButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:drawableBackground="@android:color/transparent"
+            app:drawableIcon="@drawable/ic_close_white"
+            app:layout_constraintTop_toTopOf="@+id/dialogMainLayout"
+            app:layout_constraintRight_toRightOf="@id/dialogMainLayout"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/dialogMainLayout"
+            app:layout_constraintBottom_toBottomOf="@id/dialogMainLayout"
+            app:layout_constraintRight_toRightOf="@id/dialogMainLayout"
+            app:layout_constraintLeft_toLeftOf="@id/dialogMainLayout"
+            android:layout_marginVertical="90dp" >
+
+            <ImageView
+                android:id="@+id/dialogIconTop"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/dialogTitleText"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineHeight="35dp"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="22dp"/>
+
+            <TextView
+                android:id="@+id/dialogDescriptionText"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:lineHeight="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <com.jht.chimera.lib.widget.indicator.BusyIndicator
+                android:id="@+id/dialogBusyIndicator"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/dialogButton"
+                android:layout_width="wrap_content"
+                android:minWidth="215dp"
+                android:paddingHorizontal="20dp"
+                android:layout_height="50dp"
+                android:background="#446278"
+                android:textSize="21dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/dialogIconBottom"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/dialogProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progress_bar_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:progress="30"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dialogMainLayout"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

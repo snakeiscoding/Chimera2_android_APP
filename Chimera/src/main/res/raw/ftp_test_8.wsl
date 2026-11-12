@@ -1,0 +1,49 @@
+settings 
+    workout_id = 72 
+    allow_skip_warmup = 1 
+    allow_skip_workout = 0 
+    graph_future = 0 
+    allow_user_goal_changes = 1 
+
+input FTP_WATTS 
+
+export RESISTANCE 
+export GOAL 
+export GOAL_TYPE 
+export ALLOW_PAUSE 
+export TEST_SCORE 
+export PREVENT_USER_GOAL_CHANGES 
+
+stage "warmup" 
+    interval 
+        ALLOW_PAUSE = 1 
+        INCLINE = 0 
+        RESISTANCE = 1 
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT 
+        GOAL = 300000 
+        PREVENT_USER_GOAL_CHANGES = 0 
+        workoutComplete = 0 
+		
+        
+        when INTERVAL_TIME_MS >= GOAL 
+            interval = interval + 1 
+
+stage "workout" 
+    ALLOW_PAUSE = 0 
+    PREVENT_USER_GOAL_CHANGES = 1 
+    allow_user_goal_changes = 0 
+
+    interval 
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT 
+        GOAL = 60 * 8 * 1000 
+        AVERAGE_WATTS = average WATTS for GOAL 
+
+        when INTERVAL_TIME_MS >= GOAL 
+            workoutComplete = 1 
+            end 
+
+onStop 
+   if workoutComplete > 0 
+        TEST_SCORE = 0.9 * AVERAGE_WATTS 
+   else 
+        TEST_SCORE = 0 

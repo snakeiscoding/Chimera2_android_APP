@@ -1,0 +1,51 @@
+version: 0.2
+
+env:
+  variables:
+    android.enableJetifier: "true"
+    android.useAndroidX: "true"
+    ALLURE_PROJECT_ID: "dev-lcgui-release"
+    ALLURE_FLAVOR: "Chimera_mainMatrixLcgui"
+phases:
+  pre_build:
+    commands:
+      - mkdir /tmp/BuildAssets/
+      - echo "releasePath=/tmp/" > local.properties
+      - echo "buildAssets=/tmp/BuildAssets/" >> local.properties
+      - echo "USE_RC_VERSIONS=true" >> local.properties
+      - git remote set-url origin git@bitbucket.org:johnsonhealthtech/chimera2.git
+  build:
+    commands:
+     - ./gradlew preBuildCheckChimera_mainMatrixLcgui --stacktrace
+     - ./gradlew assembleChimera_mainMatrixLcguiRelease --stacktrace
+     # Recycle the daemons so the test phase does not inherit the heap R8 left behind.
+     - ./gradlew --stop
+     - ./gradlew JHTGenerateTestCommentMapping --stacktrace
+     - ./gradlew testReleaseUnitTest --stacktrace --continue || echo "Finished tests."
+     - ./gradlew JHTMapResultsToCodeComments --stacktrace
+     - ./gradlew JHTSendAllureResults --stacktrace
+     - ./gradlew JHTGenerateAllureReport --stacktrace
+     # Staging MD5s every staged zip (~870MB for Assets); start it with a clean heap too.
+     - ./gradlew --stop
+     - ./gradlew stageChimera_mainMatrixLcgui --stacktrace
+     - ./gradlew publishCOREAssociationChimera_mainMatrixLcgui --stacktrace
+
+reports:
+  ui-java-unit-tests:
+    files:
+      - '**/*Test.xml'
+    base-directory: 'UI'
+    discard-paths: false
+    file-format: JUNITXML
+  Core-java-unit-tests:
+    files:
+      - '**/*Test.xml'
+    base-directory: 'Core'
+    discard-paths: false
+    file-format: JUNITXML
+  Feature-java-unit-tests:
+    files:
+      - '**/*Test.xml'
+    base-directory: 'Feature'
+    discard-paths: false
+    file-format: JUNITXML

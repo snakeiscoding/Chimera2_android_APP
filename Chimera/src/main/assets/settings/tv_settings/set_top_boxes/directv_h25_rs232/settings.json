@@ -1,0 +1,203 @@
+{
+    "serialPortDevice": "/dev/ttyUSB1",
+    "irFrequencyKhz": 0,
+    "serialPortConfiguration": {
+        "baudRate": 9600
+    },
+    "remoteButtons": [
+        {
+            "end": null,
+            "buttonName": "up",
+            "header": null,
+            "buttonId": 6,
+            "command": "FA A5 0 1 9C",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "left",
+            "header": null,
+            "buttonId": 7,
+            "command": "FA A5 0 1 9B",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "right",
+            "header": null,
+            "buttonId": 8,
+            "command": "FA A5 0 1 9A",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "enter",
+            "header": null,
+            "buttonId": 9,
+            "command": "FA A5 0 1 A0",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "down",
+            "header": null,
+            "buttonId": 10,
+            "command": "FA A5 0 1 9D",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "dash",
+            "header": null,
+            "buttonId": 12,
+            "command": "FA A5 0 1 A5",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "one",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E1",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "select",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 C3",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "six",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E6",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "lastchannel",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 D6",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "five",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E5",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "zero",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E0",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "right",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 9A",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "down",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 9D",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "nine",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E9",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "channelup",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 D1",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "eight",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E8",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "left",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 9B",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "channeldown",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 D2",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "up",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 9C",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "four",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E4",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "two",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E2",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "seven",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E7",
+            "data": null
+        },
+        {
+            "end": null,
+            "buttonName": "three",
+            "header": null,
+            "buttonId": -1,
+            "command": "FA A5 0 1 E3",
+            "data": null
+        }
+    ],
+    "setTopBoxName": "DIRECTV H25 RS232",
+    "useIR": false
+}

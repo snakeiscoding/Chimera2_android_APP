@@ -1,0 +1,235 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bike_pace_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.jht.chimera.lib.widget.athena.BikePaceWidget
+        android:id="@+id/bikePaceWidget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.jht.chimera.lib.widget.streamingimageview.StreamingImageView
+        android:id="@+id/animatedBikeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bikeman_00"
+        app:baseFilename="bikeman_"
+        app:basePath="/sdcard/jht/animated_bike_man"
+        app:fileExtension=".png"
+        app:endIndex="47"
+        app:fps="20"
+        app:frameIdFieldWidth="2"
+        app:speed="1.0"
+        app:startIndex="0"
+        app:useFileCache="true"
+
+        app:layout_constraintDimensionRatio="w,120:317"
+        app:layout_constraintHeight_percent=".43"
+        app:layout_constraintHorizontal_bias=".6"
+        app:layout_constraintVertical_bias=".95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/distanceNumeric"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="00.0"
+        android:includeFontPadding="false"
+
+        app:autoSizeMaxTextSize="200dp"
+        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:maxLines="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHeight_percent=".25"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintVertical_bias=".15"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="@string/current_distance_tc"
+        android:textSize="24dp"
+        android:textColor="#6D6D6D"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:includeFontPadding="false"
+
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeTextType="uniform"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintHorizontal_bias=".11"
+        app:layout_constraintVertical_bias=".115"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/speedNumeric"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="00.0"
+        android:includeFontPadding="false"
+        android:gravity="right"
+
+        app:autoSizeMaxTextSize="200dp"
+        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:maxLines="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paceBarGraph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHeight_percent=".25"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintHorizontal_bias=".99"
+        app:layout_constraintVertical_bias=".15"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/speedLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:text="@string/current_speed_uc"
+        android:textSize="24dp"
+        android:textColor="#6D6D6D"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:includeFontPadding="false"
+        android:gravity="right"
+
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeTextType="uniform"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paceBarGraph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintHorizontal_bias=".99"
+        app:layout_constraintVertical_bias=".115"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/targetSpeedNumeric"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".05"
+
+        android:textSize="25dp"
+        android:text=""
+        android:textStyle="italic"
+        android:textColor="#882222"
+        android:autoSizeMaxTextSize="25dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/currentAvgSpeedNumeric"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".12"
+
+        android:textSize="25dp"
+        android:text=""
+        android:textStyle="italic"
+        android:textColor="#882222"
+        android:autoSizeMaxTextSize="25dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/currentPosition"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/paceBarGraph"
+        app:layout_constraintBottom_toBottomOf="@id/paceBarGraph"
+        app:layout_constraintTop_toTopOf="@id/paceBarGraph"
+
+        app:layout_constraintHorizontal_bias=".95"
+        app:layout_constraintVertical_bias=".5"
+
+        android:textSize="24dp"
+        android:lines="2"
+        android:text="@string/target_pace_tc"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#B5B5B5"
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeTextType="uniform"
+        />
+
+    <com.jht.chimera.lib.widget.athena.BarGraphWidget
+        android:id="@+id/paceBarGraph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent=".95"
+
+        app:layout_constraintWidth_percent=".07"
+        app:layout_constraintHorizontal_bias=".975"
+        app:layout_constraintVertical_bias="0"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

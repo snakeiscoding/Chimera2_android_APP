@@ -1,0 +1,401 @@
+####################################################################################################
+# Section used to declare versions which can be referenced by dependencies.
+####################################################################################################
+[versions]
+compileSdk = "35"
+minSdk = "28"
+#noinspection ExpiredTargetSdkVersion
+targetSdk = "31"
+ndkVersion = "21.0.6113669"
+agp = "8.11.2"
+
+# items from the old Config.groovy
+thisVersionCode = "1"
+thisVersionName = "1.0" # our build scripting will replace this anyway
+multiDexEnabled = "true"
+useSupportLibrary = "true"
+
+awsAndroidSdk = "2.19.0"
+bleLibrary = "2.7.5"
+virtualActiveExo = "2026.8.18.0-parker" # probably need to rename the flavors to something more meaningful?
+virtualActiveNative = "2025.12.29.0-chimera"
+
+androidxCore = "1.12.0"
+androidxLifecycle = "2.7.0"
+androidxNavigation = "2.7.7"
+androidxPaging = "3.2.1"
+androidxConstraintLayout = "1.0.1"
+androidxCamera = "1.3.4"
+datastorePreferences = "1.2.1"
+room = "2.8.4"
+
+espressoVersion = "3.5.1"
+kotlinxCoroutinesTest = "1.7.3"
+robolectric = "4.16.1"
+
+# For Kotlin version >= 2.0.0 some of this changes https://stackoverflow.com/a/78316235
+kotlinVersion = "2.2.21"
+kotlinKsp = "2.2.21-2.0.5"
+kotlinCompilerExtensionVersion = "1.5.9"
+dokkaKdoc = "1.9.10"
+daggerHilt = "2.58"
+hiltNavigationCompose = "1.2.0"
+javapoet = "1.13.0" # HILT issue https://github.com/google/dagger/issues/3068
+
+composeUi = "1.7.2" # when we reach 1.7, comment out workaround in AbstractStandAloneComposeView
+accompanist = "0.36.0" # these versions track compose versions https://github.com/google/accompanist?tab=readme-ov-file#compose-versions
+composeMaterial3 = "1.4.0"
+composeGlide = "1.0.0-beta01" # Glide image library for compose
+composeGlideCompiler = "4.16.0" # Glide image library for compose
+coilImageLoadingLibrary = "2.6.0"
+composeMarkdown = "0.5.8" # last release on coil2; 0.6.0+ requires coil3
+imageMetaDataExtractor = "2.19.0"
+adobeXmpCore = "6.1.11"
+graphicsShapesAndroid = "1.0.1"
+ktorClient = "2.3.13"
+allureDocker = "2026.3.5.0"
+awsIotDeviceSdk = "1.25.1"
+awsCrtAndroid = "0.38.4"
+appAuth = "0.11.1"
+bouncyCastle = "1.83"
+
+
+
+####################################################################################################
+# Section used to declare the aliases to coordinates
+####################################################################################################
+[libraries]
+androidx-appcompat-appcompat = "androidx.appcompat:appcompat:1.6.1"
+androidx-constraintlayout-constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.3"
+androidx-datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "datastorePreferences" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-fragment-fragment = "androidx.fragment:fragment:1.6.2"
+androidx-core-core = { module = "androidx.core:core", version.ref = "androidxCore" }
+androidx-core-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-gridlayout-gridlayout = "androidx.gridlayout:gridlayout:1.0.0"
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+androidx-legacy-legacySupportCoreUi = "androidx.legacy:legacy-support-core-ui:1.0.0"
+androidx-legacy-legacySupportCoreUtils = "androidx.legacy:legacy-support-core-utils:1.0.0"
+androidx-legacy-legacySupportV13 = "androidx.legacy:legacy-support-v13:1.0.0"
+androidx-camera-cameraCore = { module = "androidx.camera:camera-core", version.ref = "androidxCamera" }
+androidx-camera-cameraCamera2 = { module = "androidx.camera:camera-camera2", version.ref = "androidxCamera" }
+androidx-camera-cameraView = { module = "androidx.camera:camera-view", version.ref = "androidxCamera" }
+androidx-camera-cameraLifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "androidxCamera" }
+androidx-media-media = "androidx.media:media:1.0.0"
+androidx-multidex-multidex = "androidx.multidex:multidex:2.0.1"
+androidx-recyclerview-recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
+androidx-vectordrawable-vectordrawable = "androidx.vectordrawable:vectordrawable:1.0.0"
+androidx-webkit-webkit = "androidx.webkit:webkit:1.17.1"
+
+# Testing Libraries are below
+junit-junit = "junit:junit:4.13.2"
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+pl-pragmatists-JUnitParams = "pl.pragmatists:JUnitParams:1.1.1"
+io-mockk-mockk = "io.mockk:mockk:1.13.11"
+app-cash-turbine-turbine = "app.cash.turbine:turbine:1.1.0"
+org-jetbrains-kotlinx-kotlinxCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1"
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-test-core = "androidx.test:core:1.7.0"
+androidx-test-rules = "androidx.test:rules:1.7.0"
+androidx-test-runner = "androidx.test:runner:1.7.0"
+androidx-test-monitor = "androidx.test:monitor:1.8.0"
+androidx-test-ext = "androidx.test.ext:junit:1.3.0"
+androidx-test-espresso-espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoVersion" }
+androidx-test-uiautomator-uiautomator = "androidx.test.uiautomator:uiautomator:2.3.0"
+com-google-zxing-core = "com.google.zxing:core:3.5.4"
+
+# fixme: these should just be bundles.
+# Platform flavor versions
+# The VLC dependency version for the Chimera product line.
+chimera-vlcAndroid-libvlc = "vlc-android:libvlc:3.2.9-jht8-64"
+# The VLC dependency version for the Low Cost GUI console.
+lcgui-vlcAndroid-libvlc = "vlc-android:libvlc:3.2.9-jht8-64"
+
+# UI flavor versions
+#ex: matrix-artifact
+
+# Product flavor versions
+vision600e-vlcAndroid-libvlc = "vlc-android:libvlc:3.2.9-jht8-64"
+parker-vlcAndroid-libvlc = "vlc-android:libvlc:3.2.9-jht8-64"
+
+parker-com-jht-virtualactive-virtualActive = { module="com.jht.virtualactive:VirtualActive", version.ref="virtualActiveExo" }
+chimera-com-jht-virtualactive-virtualActive = { module="com.jht.virtualactive:VirtualActive", version.ref="virtualActiveExo" }
+lcgui-com-jht-virtualactive-virtualActive = { module="com.jht.virtualactive:VirtualActive", version.ref="virtualActiveExo" }
+
+#
+# The bump sensor is available in multiple flavors. If a flavor doesn't use the bump sensor, the
+# files will be removed from the classpath during packaging.
+#
+com-jht-libbumpsensor-libbumpsensor = "com.jht.libbumpsensor:libbumpsensor:2026.5.16.0"
+
+androidx-annotation-annotation = "androidx.annotation:annotation:1.7.0"
+androidx-percentlayout-percentlayout = "androidx.percentlayout:percentlayout:1.0.0"
+
+com-amazonaws-awsAndroidSdkCore = { module="com.amazonaws:aws-android-sdk-core", version.ref="awsAndroidSdk" }
+com-amazonaws-awsAndroidSdkS3 = { module="com.amazonaws:aws-android-sdk-s3", version.ref="awsAndroidSdk" }
+com-amazonaws-awsAndroidSdkCognitoidentityprovider = { module="com.amazonaws:aws-android-sdk-cognitoidentityprovider", version.ref="awsAndroidSdk" }
+com-amazonaws-awsAndroidSdkCognito = { module="com.amazonaws:aws-android-sdk-cognito", version.ref="awsAndroidSdk" }
+com-amazonaws-awsAndroidSdkDdb = { module="com.amazonaws:aws-android-sdk-ddb", version.ref="awsAndroidSdk" }
+com-amazonaws-awsAndroidSdkDdbMapper = { module="com.amazonaws:aws-android-sdk-ddb-mapper", version.ref="awsAndroidSdk" }
+
+# FIXME: Not sure if this is actually needed.
+com-google-android-material-material = "com.google.android.material:material:1.11.0"
+com-google-code-gson-gson = "com.google.code.gson:gson:2.9.0"
+
+com-googlecode-jsonSimple-jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
+
+# Dynamic string resource replacement (https://github.com/B3nedikt/restring)
+dev-b3nedikt-restring-restring = "dev.b3nedikt.restring:restring:6.0.0"
+# Re-applies Restring to android:text/hint set in layout XML. ViewPump stays on 4.0.14 because 4.0.15
+# is built with Kotlin 2.3, which SSA cannot read, and both repos should match.
+dev-b3nedikt-viewpump-viewpump = "dev.b3nedikt.viewpump:viewpump:4.0.14"
+dev-b3nedikt-reword-reword = "dev.b3nedikt.reword:reword:4.0.4"
+
+net-lingala-zip4j-zip4j = "net.lingala.zip4j:zip4j:1.3.2"
+
+no-nordicsemi-android-ble = { module="no.nordicsemi.android:ble", version.ref="bleLibrary" }
+no-nordicsemi-android-bleCommon = { module="no.nordicsemi.android:ble-common", version.ref="bleLibrary" }
+
+androidCommonAlgorithms-androidCommonAlgorithms = "com.jht.androidCommonAlgorithms:AndroidCommonAlgorithms:2026.4.30.0"
+androidUiWidgets-androidUiWidgets = "com.jht.androidUIWidgets:AndroidUIWidgets:2024.03.06.0"
+chimeraDrivers-chimeraDrivers = "com.jht.chimera_drivers:chimera_drivers:2026.7.10.0"
+gattServer-gattServer = "com.jht.gattserver:GattServer:2026.1.30.0"
+crashreportlib-crashreportlib = "com.jht.crashreportlib:crashreportlib:2026.9.21.0"
+csafelib-app = "com.jht.cSafeLib:CSafeLib:2024.10.29.0"
+dapi-dapiservicelib = "com.jht.dapi:DAPIServiceLib:2025.11.25.0"
+datamatrix-datamatrixlib = "com.jht.datamatrixlib:DataMatrix:2026.01.15.0"
+gymkitmodule-gymkitmodule = "com.jht.gymKitModule:GymKitModule:2024.06.19.1"
+iptvPlayer-iptvPlayer = "iptv_player:IPTVPlayer:2021.10.08.142221"
+com-jht-engage360-ptpNative = "com.jht.engage360:PtpNative:2026.9.15.0" # kotlin/compose PTP artifact
+translations-translations = "com.jht.translations:translations:2026.7.13.0"
+updatemanagerservicelib-updatemanagerservicelib = "com.jht.updatemanagerservicelib:UpdateManagerServiceLib:2026.6.16.0"
+workoutcontroller-workoutcontroller = "com.jht.workoutcontrollerlib:WorkoutControllerLib:2026.07.02.0"
+com-journeyapps-zxingAndroidEmbedded = "com.journeyapps:zxing-android-embedded:4.3.0"
+com-lightspark-composeQrCode = "com.lightspark:compose-qr-code:1.0.1"
+org-javaWebsocket-javaWebSocket = "org.java-websocket:Java-WebSocket:1.5.3"
+com-jht-rfidreaders-rfidreaders = "com.jht.rfidreaders:rfidreaders:2026.9.22.0"
+com-jht-serialport-serialport = "com.jht.serialport:serialport:2026.5.16.0"
+com-jht-liberror-liberror = "com.jht.liberror:LibError:2026.6.10.0"
+com-jht-resources-consoleResources = "com.jht.resources:ConsoleResources:2026.9.9.0"
+
+net-openid-appauth = { module = "net.openid:appauth", version.ref = "appAuth" }
+johnson-web-backendlib = "com.jht.oauthlib:oauthlib:2026.8.25.0"
+
+# AWS IoT Device SDK v2 for Fleet Provisioning by Claim (MQTT)
+aws-iot-device-sdk = { module = "software.amazon.awssdk.iotdevicesdk:aws-iot-device-sdk", version.ref = "awsIotDeviceSdk" }
+aws-crt-android = { module = "software.amazon.awssdk.crt:aws-crt-android", version.ref = "awsCrtAndroid" }
+
+org-json-json = "org.json:json:20210307"
+
+androidx-test-espresso-espressoContrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoVersion" }
+androidx-test-espresso-espressoRemote = { module = "androidx.test.espresso:espresso-remote", version.ref = "espressoVersion" }
+androidx-test-espresso-espressoWeb = { module = "androidx.test.espresso:espresso-web", version.ref = "espressoVersion" }
+androidx-test-ext-junit = "androidx.test.ext:junit:1.1.5"
+com-jht-irlibrary-irLibrary = "com.jht.irlibrary:IRLibrary:2021.04.12.190435"
+
+org-jetbrains-annotations = "org.jetbrains:annotations:22.0.0"
+
+com-squareup-okhttp3-mockwebserver = "com.squareup.okhttp3:mockwebserver:4.3.1"
+
+# Ktor Client - https://ktor.io/docs/welcome.html
+# License: Apache 2.0 - https://github.com/ktorio/ktor/blob/main/LICENSE
+# This library is developed and maintained by Jetbrains Inc. It provides a modern HTTP client that allows more modern web features than HttpUrlConnection
+# The initial use case for this was support for multipart form data. Other technologies ktor client supports is HTTP/2, websockets, connection pooling etc.
+io-ktor-ktorClientCore = { module = "io.ktor:ktor-client-core", version.ref = "ktorClient" }
+io-ktor-ktorClientAndroid = { module = "io.ktor:ktor-client-android", version.ref = "ktorClient" }
+io-ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
+io-ktor-ktorSerializationKotlinxJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClient" }
+#io-ktor-ktorSerializationKotlinxXml = { module = "io.ktor:ktor-serialization-kotlinx-xml", version.ref = "ktorClient" }
+#io-ktor-ktorSerializationKotlinxCbor = { module = "io.ktor:ktor-serialization-kotlinx-cbor", version.ref = "ktorClient" }
+io-ktor-ktorClientMock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorClient" }
+
+### Compose dependencies from https://developer.android.com/jetpack/compose/interop/adding
+# Paging
+androidx-paging-pagingCompose = { module = "androidx.paging:paging-compose", version.ref = "androidxPaging" }
+# Constraint layout
+androidx-constraintlayout-constraintlayoutCompose = {module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "androidxConstraintLayout"}
+# Integration with activities
+androidx-activity-activityCompose = "androidx.activity:activity-compose:1.8.2" # beyond 1.8.0-alpha02 requires compileSdkVersion = 34
+# Compose Material Design
+androidx-compose-material-material = { module = "androidx.compose.material:material", version.ref = "composeUi" }
+androidx-compose-material-materialIconsCore = { module = "androidx.compose.material:material-icons-core", version.ref = "composeUi" }
+#androidx-compose-material-materialIconsExtended = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeUi" }
+androidx-compose-material3-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+#androidx-compose-material3-material3WindowSize = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "composeMaterial3" }
+# Navigation
+androidx-navigation-navigationCommonKtx = { module = "androidx.navigation:navigation-common-ktx", version.ref = "androidxNavigation" }
+androidx-navigation-navigationRuntimeKtx = { module = "androidx.navigation:navigation-runtime-ktx", version.ref = "androidxNavigation" }
+androidx-navigation-navigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
+# Compose UI
+androidx-compose-ui-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeUi" }
+androidx-compose-ui-uiUtil = { group = "androidx.compose.ui", name = "ui-util", version.ref = "composeUi" }
+com-google-accompanist-accompanistDrawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
+# Glide Compose
+glide-compose = { group = "com.github.bumptech.glide", name = "compose", version.ref = "composeGlide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "composeGlideCompiler" }
+# Coil image loading library
+coil-compose = {group = "io.coil-kt", name = "coil-compose", version.ref = "coilImageLoadingLibrary"}
+coil-svg = {group = "io.coil-kt", name = "coil-svg", version.ref = "coilImageLoadingLibrary"}
+compose-markdown = { module = "com.github.jeziellago:compose-markdown", version.ref = "composeMarkdown" }
+# XMP image meta data
+image-metadata-extractor = { module = "com.drewnoakes:metadata-extractor", version.ref = "imageMetaDataExtractor"}
+com-adobe-xmp-xmpcore = { module = "com.adobe.xmp:xmpcore", version.ref = "adobeXmpCore"}
+# Animations
+androidx-compose-animation-animation = { module = "androidx.compose.animation:animation", version.ref = "composeUi" }
+# Tooling support (Previews, etc.)
+androidx-compose-ui-uiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "composeUi" }
+androidx-compose-ui-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeUi" }
+# Integration with ViewModels
+androidx-lifecycle-lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-lifecycleViewmodelCompose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-lifecycleService = { module = "androidx.lifecycle:lifecycle-service", version.ref = "androidxLifecycle" }
+# UI Tests
+androidx-compose-ui-uiTestJunit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "composeUi" }
+androidx-compose-ui-uiTestManifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "composeUi" }
+androidx-navigation-navigationFragment = "androidx.navigation:navigation-fragment:2.3.5"
+androidx-navigation-navigation-ui = "androidx.navigation:navigation-ui:2.3.5"
+
+com-android-tools-build-gradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+org-jetbrains-kotlin-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+org-apache-commons-commonsIo = "org.apache.commons:commons-io:1.3.2"
+net-dongliu-apkParser = "net.dongliu:apk-parser:2.6.10"
+javax-xml-bind-jaxbApi = "javax.xml.bind:jaxb-api:2.3.1"
+org-bouncycastle-bcprovJdk18on = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncyCastle" }
+org-jetbrains-kotlin-kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlinVersion" }
+org-jetbrains-kotlin-kotlinTestJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlinVersion" }
+org-jetbrains-kotlinx-kotlinxSerializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
+org-jetbrains-kotlin-kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinVersion" }
+org-jetbrains-kotlin-kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinVersion" }
+org-jetbrains-kotlin-kotlinMavenPlugin = { module = "org.jetbrains.kotlin:kotlin-maven-plugin", version.ref="kotlinVersion" }
+
+dokka-gradle-plugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokkaKdoc" }
+dokka-android-plugin = { group = "org.jetbrains.dokka", name = "android-documentation-plugin", version.ref = "dokkaKdoc" } # recommended, but only seems to add a "hide" tag?
+
+#Dagger - Hilt
+javapoet = { group = "com.squareup", name = "javapoet", version.ref = "javapoet" }
+hilt-android-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "daggerHilt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerHilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "daggerHilt" }
+
+
+com-auth0-javaJwt = "com.auth0:java-jwt:4.4.0"
+androidx-graphics-shapes-android = { group = "androidx.graphics", name = "graphics-shapes-android", version.ref = "graphicsShapesAndroid" }
+
+####################################################################################################
+# Section used to declare dependency bundles.
+#
+# WARNING: Using bundles seems to obfuscate usage of the libraries listed above. This may not always
+#          be the case; however, this is being avoided until resolved.
+####################################################################################################
+[bundles]
+
+# common JHT includes for chameleon UI modules
+jhtConsoleCommon = [
+#    "com-jht-interfaces-consoleInterfaces",
+    "com-jht-resources-consoleResources",
+#    "com-jht-widgets-consoleWidgets",
+]
+
+#jhtCompose provides source of truth for compose/HILT dependencies for our UI modules
+# also need plugins 'com.google.devtools.ksp', 'com.google.dagger.hilt.android'
+jhtCompose = [
+    # Material (should we just shift everything to 3 ? for some icons need original material?
+    "androidx-compose-material-material",
+    # Material 3
+    "androidx-compose-material3-material3",
+    "androidx-compose-material-materialIconsCore",
+#    "androidx-compose-material3-material3WindowSize",
+    "androidx-core-coreKtx",
+    "androidx-appcompat-appcompat",
+    "androidx-lifecycle-lifecycleRuntimeKtx",
+    "androidx-activity-activityCompose",
+    # Nav
+    "androidx-navigation-navigationCommonKtx",
+    "androidx-navigation-navigationRuntimeKtx",
+    "androidx-navigation-navigationCompose",
+    #
+    "androidx-compose-ui-ui",
+    "androidx-compose-ui-uiUtil",
+    "androidx-compose-ui-uiToolingPreview",
+    "glide-compose",
+    "com-google-accompanist-accompanistDrawablepainter",
+    # hilt
+    "hilt-android",
+    # paging
+    "androidx-paging-pagingCompose",
+    #constraint layout
+    "androidx-constraintlayout-constraintlayoutCompose",
+
+    # camera
+    "androidx-camera-cameraCore",
+    "androidx-camera-cameraCamera2",
+    "androidx-camera-cameraView",
+    "androidx-camera-cameraLifecycle",
+    "com-lightspark-composeQrCode",
+]
+jhtComposeDebug = [
+    "androidx-compose-ui-uiTooling",
+    "androidx-compose-ui-uiTestManifest",
+]
+jhtComposeTest = [
+    "junit-junit",
+    "robolectric",
+    # coroutines test
+    "kotlinx-coroutines-test",
+    # hilt
+    "hilt-android-testing",
+]
+jhtComposeAndroidTest = [
+    "androidx-compose-ui-uiTestJunit4",
+    "androidx-test-ext-junit",
+    "androidx-test-espresso-espressoCore",
+    # hilt
+    "hilt-android-testing",
+]
+jhtComposeKsp = [
+    "glide-compiler",
+    "hilt-android-compiler",
+]
+jhtComposeKspTest = [
+    "hilt-android-compiler",
+]
+jhtComposeKspAndroidTest = [
+    "hilt-android-compiler",
+]
+
+ktorClient = [
+    "io-ktor-ktorClientCore",
+    "io-ktor-ktorClientAndroid",
+    "io-ktor-contentNegotiation",
+    "io-ktor-ktorSerializationKotlinxJson", # should we include standard formats or leave them out of bundle for gradle file to choose what it needs?
+]
+ktorClientTest = [
+    "io-ktor-ktorClientMock",
+]
+imageMetaData = [
+    "image-metadata-extractor",
+    "com-adobe-xmp-xmpcore",
+]
+
+
+####################################################################################################
+# Section used to declare plugins.
+####################################################################################################
+[plugins]
+
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokkaKdoc" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kotlinKsp" }
+allure-docker = { id = "com.jht.allureDockerPlugin", version.ref = "allureDocker"}
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
+kotlin-android = { id = "org.jetbrains.kotlin.android" }
+kotlin-parcelize = { id = "kotlin-parcelize", version.ref = "kotlinVersion" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion"}
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
+android-lib = { id = "com.android.library" }
+android-app = { id = "com.android.application" }

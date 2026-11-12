@@ -1,0 +1,227 @@
+{
+   "sso_settings": [
+      {
+         "packageName": "com.ifit.standalone",
+         "packageInfo": [
+            {
+               "packageVersion": "2.6.33",
+               "ssoVersion": "1",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "2.7.0",
+               "ssoVersion": "2",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "2.8.0",
+               "ssoVersion": "2",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "2.8.1",
+               "ssoVersion": "3",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "2.8.2",
+               "ssoVersion": "4",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "2.8.3",
+               "ssoVersion": "5",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "3.2.0",
+               "ssoVersion": "6",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            },
+            {
+               "packageVersion": "*",
+               "ssoVersion": "3",
+               "files": [
+                  "shared_prefs/",
+                  "files/Secret/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.netflix.mediaclient",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "shared_prefs/",
+                  "/data/vendor/mediadrm/IDM1013/L3/"
+               ],
+               "cleanUp": [
+                  "rm -rf /data/vendor/mediadrm/IDM1013/L3/*"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.disney.disneyplus",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1",
+               "files": [
+                  "shared_prefs/",
+                  "files/sessionState.json"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.jht.chimera",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "app_webview_WebAppSSOActivity/Cookies",
+                  "app_webview_WebAppSSOActivity/Default/Cookies"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "flipboard.app",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "databases/com.usebutton.events",
+                  "databases/users-v6.db",
+                  "databases/users-v6.db-wal",
+                  "shared_prefs/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.amazon.klite",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "databases/map_data_storage.db"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.amazon.kindle",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.2",
+               "files": [
+                  "databases/event_provider.db",
+                  "databases/kindle_library.db",
+                  "databases/kwis_client.db",
+                  "databases/map_data_storage.db",
+                  "databases/downloads.db",
+                  "databases/nwstd.resources.db",
+                  "databases/odot.db"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.spotify.music",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "files/settings/",
+                  "shared_prefs/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.newspaperdirect.pressreader.android",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "databases/PressReader",
+                  "shared_prefs/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "com.tencent.mm",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "shared_prefs/",
+                  "MicroMsg/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "org.ymca360.omni",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1.1",
+               "files": [
+                  "shared_prefs/"
+               ]
+            }
+         ]
+      },
+      {
+         "packageName": "tv.pluto.android",
+         "packageInfo": [
+            {
+               "packageVersion": "*",
+               "ssoVersion": "1",
+               "files": [
+                  "primary.prof",
+                  "app_webview/Default/Session Storage/",
+                  "shared_prefs/users_shared_pref.xml",
+                  "shared_prefs/mobile_profile_repository_name.xml"
+               ]
+            }
+         ]
+      }
+
+   ]
+}

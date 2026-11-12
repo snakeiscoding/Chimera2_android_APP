@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/network_setting_item_container"
+    style="@style/EngineeringNetworkSettingsRowOdd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/network_setting_item_title"
+        style="@style/EngineeringNetworkSettingsHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:gravity="end|center_vertical"
+        android:layout_gravity="end|center_vertical"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="@dimen/jht_setting_title_text_size"
+        android:maxLines="1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/network_setting_item_value1"
+        style="@style/EngineeringNetworkSettingsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="@dimen/jht_setting_title_text_size" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/network_setting_item_value2"
+        android:visibility="gone"
+        style="@style/EngineeringNetworkSettingsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:singleLine="false"
+        app:autoSizeMaxTextSize="@dimen/jht_setting_title_text_size"
+        app:autoSizeTextType="uniform" />
+
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+settings
+    workout_id = 30
+    allow_skip_warmup = 0
+    graph_future = 1
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+//// short_name = Gerkin     workout name = fitness_test_gerkin_tm
+// treadmill_workout=true     stepper_workout=false     ep_workout=false     climbmill_workout=false     bike_workout=false     ascent_workout=false
+
+input COOLDOWN_TIME_START
+input WEIGHT
+input SPEED_IN
+input INCLINE_IN
+input GOAL
+input AGE
+input GENDER
+input HEART_RATE
+input WATTS
+
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+
+export INCLINE
+export INTERVAL_NAME
+export GOAL_TYPE
+export INTERVAL_DURATION
+export SPEED
+export GOAL
+export INTERVAL_GOAL_REMAINING
+export TARGET_HEART_RATE
+export ALLOW_PAUSE
+export HEART_RATE_WARNING
+export VO2
+
+WORKOUT_SPEED_VALUES = [7.24203, 7.24203, 8.0467, 8.0467, 8.85137, 8.85137, 9.65604, 9.65604, 10.46071, 10.46071, 11.26538, 11.26538, 12.07005, 12.07005, 12.87472]
+WORKOUT_INCLINE_VALUES = [0,   2,   2,   4,   4,   6,   6,   8,   8,  10,  10,  12,  12,  14,  14]
+
+endingWatts = 0
+
+TARGET_HEART_RATE = (211 - 0.64 * AGE)
+mphFactor = 0.621371
+HEART_RATE_WARNING = 0
+
+stage "warmup"
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 180000
+    
+    interval
+        SPEED = 1.60934
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+    
+    interval
+        SPEED = 2.41402
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+            
+    interval
+        SPEED = 3.21869
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+            
+    interval
+        SPEED = 4.02336
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+            
+    interval
+        SPEED = 4.82803
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+            
+    interval
+        SPEED = 4.82803
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= 30000
+            interval = interval + 1
+            
+stage "workout"
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 900000 // test is 15 minutes
+    
+    currentInterval = 0
+    maxHeartRate = (211 - 0.64 * AGE)
+    
+    setIntervals SPEED = WORKOUT_SPEED_VALUES
+    setIntervals INCLINE = WORKOUT_INCLINE_VALUES
+    
+    when INTERVAL_TIME_MS >= 60000
+        endingWatts = WATTS
+        currentInterval = currentInterval + 1
+        interval = interval + 1
+        
+    when HEART_RATE >= maxHeartRate for 15000
+        stage = stage + 1
+        
+    when HEART_RATE <= 0 for 30000
+        HEART_RATE_WARNING = 1
+        
+    when HEART_RATE <= 0 for 60000
+        stage = stage + 1
+        
+    when 1
+        if (HEART_RATE > 0 && HEART_RATE_WARNING == 1)
+            HEART_RATE_WARNING = 0
+
+stage "cooldown"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 180000
+    
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 0
+    
+    when INTERVAL_TIME_MS >= GOAL
+        interval = interval + 1
+    
+    interval
+        SPEED = min( SPEED * 0.6, 4.82803)
+        INCLINE = 0
+
+        
+SCORES = [99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 10, 5]
+VALUES_1 = [58.8, 54.0, 53.9, 48.2, 48.1, 44.2, 44.1, 41.9, 40.9, 37.1, 37.9, 31.6]
+VALUES_2 = [58.9, 52.5, 52.4, 46.8, 46.7, 42.4, 42.3, 38.9, 38.8, 35.4, 35.3, 30.9]
+VALUES_3 = [55.4, 50.4, 50.3, 44.1, 44.0, 39.9, 39.8, 36.7, 36.6, 33.0, 32.9, 28.3]
+VALUES_4 = [52.5, 47.1, 47.0, 41.0, 40.9, 36.7, 36.6, 33.8, 33.7, 30.2, 30.1, 25.1]
+
+VALUES_5 = [53.0, 46.8, 46.7, 41.0, 40.9, 36.7, 36.6, 33.8, 33.7, 30.6, 30.5, 25.9]
+VALUES_6 = [48.7, 43.9, 43.8, 38.6, 38.5, 34.6, 34.5, 32.3, 32.2, 28.7, 28.6, 25.1]
+VALUES_7 = [46.8, 41.0, 40.9, 36.3, 36.2, 32.3, 32.2, 29.5, 29.4, 26.5, 26.4, 23.5]
+VALUES_8 = [42.0, 36.8, 36.7, 32.3, 32.2, 29.4, 29.3, 26.9, 26.8, 24.3, 24.2, 21.1]
+
+onStop
+    // If moving faster than 4.0 use a different
+    if endingWatts > 0
+        VO2 = ((endingWatts * 12) + (WEIGHT * 3.5)) / WEIGHT
+        
+        if AGE >= 0 && AGE <= 29
+            i = 0
+            VO2_array_val = VALUES_1[i]
+            temp_score = SCORES[i]
+            
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_1[i]
+            
+        else if AGE >= 30 && AGE <= 39
+            i = 0
+            VO2_array_val = VALUES_2[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_2[i]
+            
+        else if AGE >= 40 && AGE <= 49
+            i = 0
+            VO2_array_val = VALUES_3[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_3[i]
+            
+        else if AGE >= 50 && AGE <= 200
+            i = 0
+            VO2_array_val = VALUES_4[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_4[i]
+
+        TEST_SCORE_MALE = temp_score
+
+        // Female score
+        if AGE >= 0 && AGE <= 29
+            i = 0
+            VO2_array_val = VALUES_5[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_5[i]
+            
+        else if AGE >= 30 && AGE <= 39
+            i = 0
+            VO2_array_val = VALUES_6[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_6[i]
+            
+        else if AGE >= 40 && AGE <= 49
+            i = 0
+            VO2_array_val = VALUES_7[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_7[i]
+            
+        else if AGE >= 50 && AGE <= 200
+            i = 0
+            VO2_array_val = VALUES_8[i]
+            temp_score = SCORES[i]
+            while  VO2 < VO2_array_val
+                i = i + 1
+                temp_score = SCORES[i]
+                VO2_array_val = VALUES_8[i]
+
+        TEST_SCORE_FEMALE = temp_score
+        
+    else
+        VO2 = 0
+        TEST_SCORE_MALE = 0
+        TEST_SCORE_FEMALE = 0

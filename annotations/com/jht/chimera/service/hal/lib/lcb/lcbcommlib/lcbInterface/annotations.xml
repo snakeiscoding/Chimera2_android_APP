@@ -1,0 +1,8 @@
+<root>
+    <item
+        name='com.jht.chimera.service.hal.lib.lcb.lcbcommlib.lcbInterface.EnClimbmillInterface java.lang.String showStatus()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NextValueTopBar">
+        <attr name="top_bar_background" format="reference" />
+        <attr name="left_right_background" format="reference" />
+        <attr name="left_right_value_text" format="reference" />
+        <attr name="left_right_unit_text" format="reference" />
+        <attr name="next_increment_label_text" format="reference" />
+        <attr name="countdown_label_text" format="reference" />
+    </declare-styleable>
+</resources>

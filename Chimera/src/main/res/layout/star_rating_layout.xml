@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        app:autoSizeMaxTextSize="30dp"
+        app:autoSizeMinTextSize="20dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/star3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/star_top_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_star_empty"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintBottom_toBottomOf="@+id/star3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        android:src="@drawable/ic_star_empty"
+        app:layout_constraintBottom_toBottomOf="@+id/star3"
+        app:layout_constraintLeft_toRightOf="@id/star1"
+        app:layout_constraintRight_toLeftOf="@id/star3"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,1:1"
+        android:src="@drawable/ic_star_empty"
+        app:layout_constraintBottom_toTopOf="@id/star_bottom_guideline"
+        app:layout_constraintLeft_toRightOf="@id/star2"
+        app:layout_constraintRight_toLeftOf="@id/star4"
+        app:layout_constraintTop_toTopOf="@id/star_top_guideline" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_star_empty"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintBottom_toBottomOf="@+id/star3"
+        app:layout_constraintLeft_toRightOf="@id/star3"
+        app:layout_constraintRight_toLeftOf="@id/star5"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_star_empty"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintBottom_toBottomOf="@+id/star3"
+        app:layout_constraintLeft_toRightOf="@id/star4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/star_bottom_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/hate_it"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/hate_it_pg"
+        app:autoSizeMaxTextSize="20dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toLeftOf="@id/star1"
+        app:layout_constraintRight_toRightOf="@id/star1"
+        app:layout_constraintTop_toBottomOf="@id/star1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1" />
+
+    <TextView
+        android:id="@+id/love_it"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:text="@string/love_it_pg"
+        app:autoSizeMaxTextSize="20dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toLeftOf="@id/star5"
+        app:layout_constraintRight_toRightOf="@id/star5"
+        app:layout_constraintTop_toBottomOf="@id/star5"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".1" />
+
+</merge>

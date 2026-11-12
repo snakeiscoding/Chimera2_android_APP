@@ -1,0 +1,163 @@
+settings
+    workout_id = 40
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 1
+
+input LEVEL
+input TIME_GOAL_START
+input GOAL
+input COOLDOWN_TIME_START
+
+export INCLINE
+export RESISTANCE
+export GOAL
+export GOAL_TYPE
+
+stage WORKOUT
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = TIME_GOAL_START
+
+    totalIntervals = 16
+    lastSetInterval = 0
+    intervalCompletionTime = 0
+
+    when STAGE_TIME_MS >= (GOAL - intervalCompletionTime) / (totalIntervals - interval) + intervalCompletionTime
+        interval = interval + 1
+
+    when lastSetInterval != interval
+        intervalCompletionTime = STAGE_TIME_MS
+        lastSetInterval = interval
+
+    
+    LEVEL1_RESISTANCE = [1, 4, 1, 5, 1, 5, 1, 6, 1, 6, 1, 6, 1, 4, 1, 1]
+    LEVEL2_RESISTANCE = [1, 5, 1, 5, 1, 6, 4, 6, 4, 6, 4, 6, 4, 5, 1, 1]
+    LEVEL3_RESISTANCE = [1, 5, 4, 6, 4, 6, 4, 7, 4, 7, 4, 7, 4, 6, 1, 1]
+    LEVEL4_RESISTANCE = [4, 5, 4, 6, 4, 7, 5, 10, 5, 10, 5, 10, 5, 6, 4, 4]
+    LEVEL5_RESISTANCE = [4, 6, 4, 6, 4, 8, 6, 11, 6, 11, 6, 11, 6, 8, 3, 3]
+    LEVEL6_RESISTANCE = [5, 6, 5, 7, 5, 10, 6, 12, 6, 12, 6, 12, 6, 7, 5, 5]
+    LEVEL7_RESISTANCE = [5, 6, 5, 7, 5, 10, 6, 12, 6, 12, 6, 12, 6, 10, 5, 5]
+    LEVEL8_RESISTANCE = [5, 6, 5, 10, 5, 11, 6, 14, 6, 14, 6, 14, 6, 10, 5, 5]
+    LEVEL9_RESISTANCE = [6, 7, 6, 10, 6, 11, 7, 16, 7, 16, 7, 16, 7, 11, 6, 6]
+    LEVEL10_RESISTANCE = [6, 7, 6, 10, 6, 12, 7, 17, 7, 17, 7, 17, 7, 11, 6, 6]
+    LEVEL11_RESISTANCE = [6, 10, 6, 11, 6, 12, 7, 18, 7, 18, 7, 18, 7, 12, 6, 6]
+    LEVEL12_RESISTANCE = [7, 10, 7, 11, 7, 14, 10, 20, 10, 20, 10, 20, 10, 12, 7, 7]
+    LEVEL13_RESISTANCE = [7, 10, 7, 12, 7, 14, 10, 22, 10, 22, 10, 22, 10, 14, 7, 7]
+    LEVEL14_RESISTANCE = [7, 11, 7, 12, 7, 16, 10, 23, 10, 23, 10, 23, 10, 14, 7, 7]
+    LEVEL15_RESISTANCE = [10, 11, 10, 14, 10, 16, 11, 24, 11, 24, 11, 24, 11, 16, 10, 10]
+    LEVEL16_RESISTANCE = [10, 12, 10, 16, 10, 18, 11, 24, 11, 24, 11, 24, 11, 17, 10, 10]
+    LEVEL17_RESISTANCE = [10, 13, 10, 18, 10, 22, 11, 25, 11, 25, 11, 25, 11, 18, 10, 10]
+    LEVEL18_RESISTANCE = [11, 16, 11, 18, 11, 22, 12, 28, 12, 28, 12, 27, 12, 20, 11, 11]
+    LEVEL19_RESISTANCE = [11, 17, 11, 20, 11, 23, 14, 29, 13, 29, 13, 29, 13, 22, 11, 11]
+    LEVEL20_RESISTANCE = [12, 18, 12, 22, 12, 24, 16, 30, 16, 30, 16, 30, 16, 23, 12, 12]
+    
+    level 1
+        LEVEL1_INCLINE = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        setIntervals INCLINE = LEVEL1_INCLINE
+        setIntervals RESISTANCE = LEVEL1_RESISTANCE
+            
+    level 2
+        LEVEL2_INCLINE = [25, 25, 15, 25, 15, 30, 20, 30, 20, 30, 20, 30, 20, 25, 15, 15]
+        setIntervals INCLINE = LEVEL2_INCLINE
+        setIntervals RESISTANCE = LEVEL2_RESISTANCE
+        
+    level 3
+        LEVEL3_INCLINE = [25, 25, 20, 30, 20, 30, 20, 35, 20, 35, 20, 35, 20, 30, 15, 15]
+        setIntervals INCLINE = LEVEL3_INCLINE
+        setIntervals RESISTANCE = LEVEL3_RESISTANCE
+        
+    level 4
+        LEVEL4_INCLINE = [25, 25, 20, 30, 20, 35, 25, 40, 25, 40, 25, 40, 25, 30, 20, 20]
+        setIntervals INCLINE = LEVEL4_INCLINE
+        setIntervals RESISTANCE = LEVEL4_RESISTANCE
+        
+    level 5
+        LEVEL5_INCLINE = [25, 30, 20, 30, 20, 35, 30, 45, 30, 45, 30, 45, 30, 35, 20, 20]
+        setIntervals INCLINE = LEVEL5_INCLINE
+        setIntervals RESISTANCE = LEVEL5_RESISTANCE
+        
+    level 6
+        LEVEL6_INCLINE = [25, 30, 25, 35, 25, 40, 30, 50, 30, 50, 30, 50, 30, 35, 25, 25]
+        setIntervals INCLINE = LEVEL6_INCLINE
+        setIntervals RESISTANCE = LEVEL6_RESISTANCE
+            
+    level 7
+        LEVEL7_INCLINE = [25, 30, 25, 35, 25, 40, 30, 50, 30, 50, 30, 50, 30, 40, 25, 25]
+        setIntervals INCLINE = LEVEL7_INCLINE
+        setIntervals RESISTANCE = LEVEL7_RESISTANCE
+        
+    level 8
+        LEVEL8_INCLINE = [25, 30, 25, 40, 25, 45, 30, 55, 30, 55, 30, 55, 30, 40, 25, 25]
+        setIntervals INCLINE = LEVEL8_INCLINE
+        setIntervals RESISTANCE = LEVEL8_RESISTANCE
+        
+    level 9
+        LEVEL9_INCLINE = [25, 35, 30, 40, 30, 45, 35, 60, 35, 60, 35, 60, 35, 45, 30, 30]
+        setIntervals INCLINE = LEVEL9_INCLINE
+        setIntervals RESISTANCE = LEVEL9_RESISTANCE
+        
+    level 10
+        LEVEL10_INCLINE = [25, 35, 30, 40, 30, 50, 35, 65, 35, 65, 35, 65, 35, 45, 30, 30]
+        setIntervals INCLINE = LEVEL10_INCLINE
+        setIntervals RESISTANCE = LEVEL10_RESISTANCE
+        
+    level 11
+        LEVEL11_INCLINE = [25, 40, 30, 45, 30, 50, 35, 70, 35, 70, 35, 70, 35, 50, 30, 30]
+        setIntervals INCLINE = LEVEL11_INCLINE
+        setIntervals RESISTANCE = LEVEL11_RESISTANCE
+        
+    level 12
+        LEVEL12_INCLINE = [25, 40, 35, 45, 35, 55, 40, 75, 40, 75, 40, 75, 40, 50, 35, 35]
+        setIntervals INCLINE = LEVEL12_INCLINE
+        setIntervals RESISTANCE = LEVEL12_RESISTANCE
+        
+    level 13
+        LEVEL13_INCLINE = [25, 40, 35, 50, 35, 55, 40, 80, 40, 80, 40, 80, 40, 55, 35, 35]
+        setIntervals INCLINE = LEVEL13_INCLINE
+        setIntervals RESISTANCE = LEVEL13_RESISTANCE
+        
+    level 14
+        LEVEL14_INCLINE = [25, 45, 35, 50, 35, 60, 40, 85, 40, 85, 40, 85, 40, 55, 35, 35]
+        setIntervals INCLINE = LEVEL14_INCLINE
+        setIntervals RESISTANCE = LEVEL14_RESISTANCE
+        
+    level 15
+        LEVEL15_INCLINE = [25, 45, 40, 55, 40, 60, 45, 90, 45, 90, 45, 90, 45, 60, 40, 40]
+        setIntervals INCLINE = LEVEL15_INCLINE
+        setIntervals RESISTANCE = LEVEL15_RESISTANCE
+        
+    level 16
+        LEVEL16_INCLINE = [25, 50, 40, 60, 40, 70, 45, 90, 45, 90, 45, 90, 45, 65, 40, 40]
+        setIntervals INCLINE = LEVEL16_INCLINE
+        setIntervals RESISTANCE = LEVEL16_RESISTANCE
+        
+    level 17
+        LEVEL17_INCLINE = [25, 55, 40, 70, 40, 80, 45, 95, 45, 95, 45, 95, 45, 70, 40, 40]
+        setIntervals INCLINE = LEVEL17_INCLINE
+        setIntervals RESISTANCE = LEVEL17_RESISTANCE
+        
+    level 18
+        LEVEL18_INCLINE = [25, 60, 45, 70, 45, 80, 50, 100, 50, 100, 50, 100, 50, 75, 45, 45]
+        setIntervals INCLINE = LEVEL18_INCLINE
+        setIntervals RESISTANCE = LEVEL18_RESISTANCE
+        
+    level 19
+        LEVEL19_INCLINE = [25, 65, 45, 75, 45, 85, 55, 100, 55, 100, 55, 100, 55, 80, 45, 45]
+        setIntervals INCLINE = LEVEL19_INCLINE
+        setIntervals RESISTANCE = LEVEL19_RESISTANCE
+        
+    level 20
+        LEVEL20_INCLINE = [25, 70, 50, 80, 50, 90, 60, 100, 60, 100, 60, 100, 60, 85, 50, 50]
+        setIntervals INCLINE = LEVEL20_INCLINE
+        setIntervals RESISTANCE = LEVEL20_RESISTANCE
+        
+stage "cooldown"
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INCLINE = 0
+        RESISTANCE = 1
+            
+        when INTERVAL_TIME_MS >= GOAL
+            end

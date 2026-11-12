@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="mm_assessment_tip1_pg" formatted="false"><![CDATA[Matrix Method へようこそ: 5km レースのトレーニングプログラム！経験豊富なランナーにも、これからランニングを始める人にも、誰もが楽しめる何かがここにあります。]]></string>
+    <string name="mm_assessment_tip2_pg" formatted="false"><![CDATA[可能な限り最高のエクスペリエンスを得るために、これらのヒントをよくお読みください。専門家の指導を受ければ、毎回のワークアウトをより効果的に行うことができます。]]></string>
+    <string name="mm_assessment_tip3_pg" formatted="false"><![CDATA[まず、あなたのランナーとしての経験を測るためのアセスメントを行いましょう。このアセスメントは、5 分間のウォームアップ、15 分間のペース、および 5 分間のクールダウンで構成されます。このアセスメントの速度は、あなたがコントロールしてください。得られた結果がベースラインとして使用されるため、与えられた時間内で全力を尽くすことが重要です。]]></string>
+    <string name="mm_assessment_tip4_pg" formatted="false"><![CDATA[このアセスメント全体で、正しいフォームと安全性を維持しながら挑戦することを心掛けてください。]]></string>
+    <string name="mm_assessment_tip5_pg" formatted="false"><![CDATA[あと半分です - 残りもがんばりましょう！]]></string>
+    <string name="mm_assessment_tip6_pg" formatted="false"><![CDATA[残り 4 分です。そのペースでいきましょう！]]></string>
+    <string name="mm_assessment_tip7_pg" formatted="false"><![CDATA[素晴らしい！アセスメントを完了し、5km ランナーへの第一歩を踏み出しました！その結果をもとに、あなたの能力に合ったプログラムを作成します。]]></string>
+    <string name="mm_assessment_tip8_pg" formatted="false"><![CDATA[残りの数分でクールダウンし、息を整え、水分を補給してください！健康へのメリットを最大限に高めるには、クールダウン中もウォーキングを続けることが重要です。]]></string>
+    <string name="mm_week1_tip1_pg" formatted="false"><![CDATA[今日のワークアウトは、長くゆっくり走る距離走から始めましょう。このタイプのランニングの目的は、持久力を高め、血液量を増やし、長く立ったままでいることに体を適応させることです。]]></string>
+    <string name="mm_week1_tip2_pg" formatted="false"><![CDATA[通常、このタイプのランニングはジョギングのペースで行います。そうすることで、一貫性を保ち、長時間のランニングに体を適応させることができます。]]></string>
+    <string name="mm_week1_tip3_pg" formatted="false"><![CDATA[ゾーン 1 に入ります。これはウォームアップとクールダウンに最適な低強度のペースです。ゾーンは 8 週間を通して使用し、どの強度でランニングすべきかを把握します。]]></string>
+    <string name="mm_week1_tip4_pg" formatted="false"><![CDATA[ゾーン 3 に入ります。通常、このゾーンはジョギングのペースで行われるため、少し不快に感じ始めることもあるかもしれません。ゾーン 3 は血液循環を助け、乳酸が蓄積し始める場所です。]]></string>
+    <string name="mm_week1_tip5_pg" formatted="false"><![CDATA[ゾーン 2 に入ります。ゾーン 2 は軽強度で、長時間続けることができます。これは一般的な持久力をつけ、疲労と闘い、脂肪を燃焼させ、筋力を高めるのに最適なゾーンです。]]></string>
+    <string name="mm_week1_tip6_pg" formatted="false"><![CDATA[強度が異なると、プログラムも異なってきます。自分を追い込んで、どこまでできるか試してみましょう。]]></string>
+    <string name="mm_week1_tip7_pg" formatted="false"><![CDATA[素晴しい！呼吸を続け、自分に合ったリズムを見つける努力を忘れないでください。そうすることで、今後のランニングをより管理しやすくなります。]]></string>
+    <string name="mm_week1_tip8_pg" formatted="false"><![CDATA[よくやっています、あと 1 分です！最後の 5 分間を使ってクールダウンし、自分の出来を振り返ってください。]]></string>
+    <string name="mm_week1_tip9_pg" formatted="false"><![CDATA[このジャーニーを続けるにあたり、よく食べ、水分補給をし、電解質を補給し、ストレスを減らし、十分な睡眠をとることを意識してください。]]></string>
+    <string name="mm_week1_tip10_pg" formatted="false"><![CDATA[今日はインターバル走を行います。インターバル走では、ペースを意図的に変化させ、高強度の運動と積極的な回復を組み合わせます。]]></string>
+    <string name="mm_week1_tip11_pg" formatted="false"><![CDATA[このランの目標は、1 分間本気で自分を追い込み、2 分間のウォーキング休憩でできる限り回復することです。]]></string>
+    <string name="mm_week1_tip12_pg" formatted="false"><![CDATA[これは短期間では難しいことを覚えておいてください。しかし、これによりあなたの体を激しいランニング条件に慣れることができます。]]></string>
+    <string name="mm_week1_tip13_pg" formatted="false"><![CDATA[ゾーン 4 に入ります。ゾーン 4 では、ランニングがハードになり、体を最大レベルのあたりまで働かせす。このゾーンは、スピードと持久力を高め、高レベルの乳酸に耐えられるよう体を鍛えるのに役立ちます。]]></string>
+    <string name="mm_week1_tip14_pg" formatted="false"><![CDATA[中間点に到達しました！この調子でいきましょう。ランニング中は、正しいフォームを意識することを忘れずに。]]></string>
+    <string name="mm_week1_tip15_pg" formatted="false"><![CDATA[ゾーン 5 に入ります。ゾーン 5 では体を限界まで追い込みます。長時間持続することはできませんが、高強度のワークアウトに体を慣れさせるには最適です。]]></string>
+    <string name="mm_week1_tip16_pg" formatted="false"><![CDATA[素晴らしい！体を限界まで追い込み、すごく頑張りましたね。今後の 8 週間を通じて、これらのトレーニングのいくつかがより簡単になったように感じられるでしょう。]]></string>
+    <string name="mm_week1_tip17_pg" formatted="false"><![CDATA[ワークアウトを継続してください。回復はトレーニングに欠かせない要素です。]]></string>
+    <string name="mm_week1_tip18_pg" formatted="false"><![CDATA[今週最後のトレーニングはテンポ走です。テンポ走では、短いジョギング休憩を挟みながら、長時間持続して走ります。]]></string>
+    <string name="mm_week1_tip19_pg" formatted="false"><![CDATA[テンポ走はよく「心地よいハードさ」と表現されます。自分が長く走り続けられるペースにします。レース当日に自分が走るペースに近づけることを考えてください。]]></string>
+    <string name="mm_week1_tip20_pg" formatted="false"><![CDATA[始めたら、自分を追い込み、快適でハードなペースを見つけることを忘れないでください。自分が長く走り続けられるペースを見つけましょう。]]></string>
+    <string name="mm_week1_tip21_pg" formatted="false"><![CDATA[もう少しで折り返しです！良いペースが見つかりましたか？あごを上げるのを忘れないで。順調に進んでいます。]]></string>
+    <string name="mm_week1_tip22_pg" formatted="false"><![CDATA[あと少しです。走り切りましょう！]]></string>
+    <string name="mm_week1_tip23_pg" formatted="false"><![CDATA[今週は素晴しい出来でした。8 週間のジャーニーの最初の 1 週間を終え、5km ランナーとしての成功にまた一歩近づきました。旅の途中、自信を失いそうになることもあるかもしれません。でも、あなたにはできます！]]></string>
+    <string name="mm_week1_tip24_pg" formatted="false"><![CDATA[あなたは大きな一歩を踏み出しました。おめでとう！来週はさらに前に進みます。]]></string>
+    <string name="mm_week2_tip1_pg" formatted="false"><![CDATA[第 2 週へようこそ。再び距離走から始めましょう。このランニングではバランスを取ることに努めます。良いペースで走って血液の巡りをよくし、立ったままでいることに慣れましょう。]]></string>
+    <string name="mm_week2_tip2_pg" formatted="false"><![CDATA[今週は、距離走に追加のセットを追加します。つまり、1 分間の休憩を挟んで、さらに 4 分間走ります。]]></string>
+    <string name="mm_week2_tip3_random_pg" formatted="false"><![CDATA[あごを上げたままにすると、肩を後ろに引いて、体幹をしっかり保つことができます。これが正しいランニングフォームとされていて、トレーニングを可能な限り効率的に行うことができます。]]></string>
+    <string name="mm_week2_tip4_random_pg" formatted="false"><![CDATA[フィットネスには投資をするつもりで取り組む必要があります。なぜなら、そのフィットネスがいつ報われるかわからないからです。]]></string>
+    <string name="mm_week2_tip5_random_pg" formatted="false"><![CDATA[足は常に重心の近くに置くようにします。そうすることで、バランスを保ち、自分自身をうまく制御できます。]]></string>
+    <string name="mm_week2_tip6_random_pg" formatted="false"><![CDATA[目標は素早く静かに着地することです。]]></string>
+    <string name="mm_week2_tip7_random_pg" formatted="false"><![CDATA[手の位置をイメージするのが難しいなら、ひらひら舞う蝶を手に持っている様子をイメージをして、手を柔らかく保ちます。]]></string>
+    <string name="mm_week2_tip8_random_pg" formatted="false"><![CDATA[両手は体幹の高い位置に上げ、下には降ろしません。]]></string>
+    <string name="mm_week2_tip9_random_pg" formatted="false"><![CDATA[どのようなランニングフォームをとればよいのか、悩んでいますか？ちょうど真ん中を通れるくらいの幅しかない、非常に近くにある 2 つの建物の間を走ることを考えてください。]]></string>
+    <string name="mm_week2_tip10_pg" formatted="false"><![CDATA[今日はよくできました！より長い距離を、楽な様子で走ることができました。]]></string>
+    <string name="mm_week2_tip11_pg" formatted="false"><![CDATA[特にランニングフォームに関しては、良い習慣をこれからも続けてください。]]></string>
+    <string name="mm_week2_tip12_pg" formatted="false"><![CDATA[今週のインターバル走は先週よりもハードになっていることにお気付きかもしれません。このプログラム全体を通じ、週が進むにつれて徐々にハードになっていきます。]]></string>
+    <string name="mm_week2_tip13_pg" formatted="false"><![CDATA[自分がどこまで達成できるか知りたければ、新たな限界に挑戦する意欲が必要です。]]></string>
+    <string name="mm_week2_tip14_random_pg" formatted="false"><![CDATA[ステップを踏めば踏むほど、より効率的に進めることができます。]]></string>
+    <string name="mm_week2_tip15_random_pg" formatted="false"><![CDATA[9 マイルを走る場合、1 マイルの区間を 9 回完璧にこなすことに集中するなら、より良いランナーになれます。]]></string>
+    <string name="mm_week2_tip16_random_pg" formatted="false"><![CDATA[苦しくなったり、怒りを感じたり、テキパキ進めることが必要かもしれません。では、テキパキ進めましょう！]]></string>
+    <string name="mm_week2_tip17_random_pg" formatted="false"><![CDATA[背筋を伸ばし、あごを上げ、肩を後ろに引いて走ります。]]></string>
+    <string name="mm_week2_tip18_random_pg" formatted="false"><![CDATA[常に膝を少し曲げて着地してください。]]></string>
+    <string name="mm_week2_tip19_random_pg" formatted="false"><![CDATA[ワークアウトがハードだと感じたら、20 年後、30 年後の生活を考えてみましょう。私たちが現在とっている行動は、将来に大きな影響を与えます。]]></string>
+    <string name="mm_week2_tip20_pg" formatted="false"><![CDATA[今回もタフなワークアウトでしたが、よくやり遂げました。ランナーとして、そして人として、今後 6 週間でどのように成長できるか、楽しみにしてください。]]></string>
+    <string name="mm_week2_tip21_pg" formatted="false"><![CDATA[2 週目の最後のワークアウトを完了しました。これから約 30 分間のテンポ走を行います。テンポ走のペースはレースの約 80 ～ 90% であることを覚えておいてください。]]></string>
+    <string name="mm_week2_tip22_pg" formatted="false"><![CDATA[テンポ走は、乳酸閾値のペースを上げるのに最適です。このタイプのランニングは、長時間走る能力に​​直接的なメリットをもたらします。]]></string>
+    <string name="mm_week2_tip23_pg" formatted="false"><![CDATA[達成できなくても、そのことで萎縮してはいけません。希望を失ったり絶望したりする必要はありません！]]></string>
+    <string name="mm_week2_tip24_random_pg" formatted="false"><![CDATA[ランニングを始めた一番の理由を思い出してください。それをモチベーションにしましょう！]]></string>
+    <string name="mm_week2_tip25_random_pg" formatted="false"><![CDATA[健康であるために世界的なアスリートになる必要はありません。一貫性を保てればそれでいいのです。]]></string>
+    <string name="mm_week2_tip26_random_pg" formatted="false"><![CDATA[生活が豊かであればあるほど、浪費や感謝の欠如が生じがちです。こうした考え方は絶対に避けてください！]]></string>
+    <string name="mm_week2_tip27_random_pg" formatted="false"><![CDATA[ランニングでも人生でも、あごは常に上げておくべきです！]]></string>
+    <string name="mm_week2_tip28_pg" formatted="false"><![CDATA[素晴しい！あなたは充実した 1 週間を過ごしました。ランニングの大幅な向上を誇りに思うべきです。]]></string>
+    <string name="mm_week2_tip29_pg" formatted="false"><![CDATA[毎回のランニングの前に、必ず動的ストレッチを行ってください。そうすることで体をほぐし、怪我の可能性を減らすことができます。]]></string>
+    <string name="mm_week3_tip1_pg" formatted="false"><![CDATA[第 3 週へようこそ。今日は距離走に戻ります。このワークアウト全体を通して、呼吸のパターンを整えることに集中してください。そうすることで、より長く走れるようになります。]]></string>
+    <string name="mm_week3_tip2_pg" formatted="false"><![CDATA[距離走では、速く走りすぎないように注意してください。このランニングの目的は、長時間立ち続けることに慣れることです。]]></string>
+    <string name="mm_week3_tip3_random_pg" formatted="false"><![CDATA[健康であるために世界的なアスリートになる必要はありません。一貫性を保てればそれでいいのです。]]></string>
+    <string name="mm_week3_tip4_random_pg" formatted="false"><![CDATA[特にアスリートにとって、多様性は人生のスパイスです。]]></string>
+    <string name="mm_week3_tip5_random_pg" formatted="false"><![CDATA[快適で便利な生活を送っていると、私たちの真の力は眠ってしまいがちです。]]></string>
+    <string name="mm_week3_tip6_random_pg" formatted="false"><![CDATA[ポジティブさについては 2 つのこと - 見ればわかり、持てば感じる - が当てはまります。]]></string>
+    <string name="mm_week3_tip7_random_pg" formatted="false"><![CDATA[ランニング前のダイナミックな動きを規律正しく行うことを忘れないでください。それは生涯にわたって大きなメリットをもたらすでしょう。]]></string>
+    <string name="mm_week3_tip8_pg" formatted="false"><![CDATA[困難な状況を受け入れるには、深く掘り下げる必要があります。また、その悪い状況でベストを尽くすにも、深く掘り下げる必要があります。でも、どうでしょう？あなたならできます。]]></string>
+    <string name="mm_week3_tip9_pg" formatted="false"><![CDATA[よく走り切りました！ほぼ 45 分間のトレーニングでした。並大抵のことではありません。自分を褒めてあげて、アクティブリカバリーに参加してください。]]></string>
+    <string name="mm_week3_tip10_pg" formatted="false"><![CDATA[今日はまたインターバル走に戻ります。ランニング前に適切にウォーミングアップすることの重要性を強調したいと思います。インターバル走は特に体に負担がかかります。]]></string>
+    <string name="mm_week3_tip11_pg" formatted="false"><![CDATA[今日のワークアウトを成功させるには、水分を補給し、良いフォームを保つことが重要です。]]></string>
+    <string name="mm_week3_tip12_random_pg" formatted="false"><![CDATA[あなたの内なる炎は、悲劇の暗闇の中で、強さと決意の猛火へと燃え上がる可能性があります。]]></string>
+    <string name="mm_week3_tip13_random_pg" formatted="false"><![CDATA[人間の精神ほど強く、説得力があり、美しいものはありません。とりわけ試練のときには。]]></string>
+    <string name="mm_week3_tip14_random_pg" formatted="false"><![CDATA[実際は、歩数を増やしたり、ケイデンスを上げたりすることで、バランスをより良く保つことができます。]]></string>
+    <string name="mm_week3_tip15_random_pg" formatted="false"><![CDATA[ペースと呼吸に注意し、必要ならジョギングまで落とすことを意識しておきましょう。]]></string>
+    <string name="mm_week3_tip16_pg" formatted="false"><![CDATA[試練にさらされたとき、本当の自分が現れます。次にランニングをやめようと思ったら、そもそもなぜランニングを始めたのかを思い出してください。]]></string>
+    <string name="mm_week3_tip17_pg" formatted="false"><![CDATA[今日はよくできました！目には見えないかもしれませんが、インターバル走は心臓血管の健康と全体的なフィットネスを改善します。]]></string>
+    <string name="mm_week3_tip18_pg" formatted="false"><![CDATA[ウォームアップして、今日のテンポ走に備えてください。今日は 1 セット余分に走り、合計 36 分ほどになる予定です。水分補給を欠かさず、正しいフォームを心がけてください。何ができるか見てみましょう！]]></string>
+    <string name="mm_week3_tip19_pg" formatted="false"><![CDATA[1 時間どれくらいのペースで走れるかを考えてください。このようなペースで行えば、レース当日までに自分の体をどれだけ追い込めるか見当がつくでしょう。]]></string>
+    <string name="mm_week3_tip20_random_pg" formatted="false"><![CDATA[再起はいつも、挫折よりも甘い経験です。]]></string>
+    <string name="mm_week3_tip21_random_pg" formatted="false"><![CDATA[決して忘れてはならないことは、何事も、誰に対しても、当たり前だと思わないことです！]]></string>
+    <string name="mm_week3_tip22_random_pg" formatted="false"><![CDATA[ランニングの際、ウォークブレイクをとり、後ろ向きに歩くのも 1 つの方法です。これは、バランス、調整、さまざまな筋肉群を使うことに役立ちます。]]></string>
+    <string name="mm_week3_tip23_random_pg" formatted="false"><![CDATA[ワークアウトは、朝の安静時の心拍数に基づいて行ってください。]]></string>
+    <string name="mm_week3_tip24_pg" formatted="false"><![CDATA[今日は驚くべき偉業を達成しました！ちょうど 3 週目を終えて、5km レースの準備に向けて大幅な進歩が見られました。これまで成し遂げたことを誇りに思うべきです。]]></string>
+    <string name="mm_week3_tip25_pg" formatted="false"><![CDATA[ワークアウトの最後に、軽い静的ストレッチを行うことをお勧めします。これは筋肉の回復を早め、痛みを和らげるのに役立ちます。]]></string>
+    <string name="mm_week4_tip1_pg" formatted="false"><![CDATA[第 4 週目へようこそ！これが折り返し地点です。今週は、引き続きワークアウトの距離と強度を増やしていきます。今日は距離走から始めます。]]></string>
+    <string name="mm_week4_tip2_pg" formatted="false"><![CDATA[今日のランニングは、良いフォームを保つことを心掛けてください。肩を後ろに引き、あごを上げ、体幹をしっかりさせ、素早く、しかしソフトに着地しましょう。]]></string>
+    <string name="mm_week4_tip3_random_pg" formatted="false"><![CDATA[走るときは、足をできるだけ体に近づけて着地するようにしてください。そうすることで、歩数が増え、バランスを保ちやすくなります。]]></string>
+    <string name="mm_week4_tip4_random_pg" formatted="false"><![CDATA[走る前に 5 ～ 10 分のダイナミックな動きから始めることをお勧めします。これには、サイドランジ、ハイニー、グルートキック、またはラテラルシャッフルなどがあります。]]></string>
+    <string name="mm_week4_tip5_random_pg" formatted="false"><![CDATA[あなたの中でいつも戦いがあります。必要なのは、最も必要なときにステップアップして戦う意志だけです。]]></string>
+    <string name="mm_week4_tip6_pg" formatted="false"><![CDATA[長距離をゆっくりと走り続けることは、効率的なランニングフォームを身に付けるのに役立ちます。]]></string>
+    <string name="mm_week4_tip7_random_pg" formatted="false"><![CDATA[私たちには、誰でもポジティブになる力があります。最終的に自分が選択できることだからです。]]></string>
+    <string name="mm_week4_tip8_random_pg" formatted="false"><![CDATA[私たちは何でも豊富に持っていますが、それを失うまでそれを当然のことと考える傾向があります。あなたはそうならないようにしてください！]]></string>
+    <string name="mm_week4_tip9_pg" formatted="false"><![CDATA[今日は見事な達成しました！ここで、最初の距離走のことを思い出してください。あのときと今の違いを感じることができますか？では 4 週間後の自分を想像してみてください！この調子で続けましょう！]]></string>
+    <string name="mm_week4_tip10_pg" formatted="false"><![CDATA[あなたの心臓は強くなっています！より多くの血液を送り出し、より多くの酸素を代謝することで、走るたびに心臓の効率が少し上がります。]]></string>
+    <string name="mm_week4_tip11_pg" formatted="false"><![CDATA[今日もインターバル走から始めましょう。今日のランニングはかなり激しいものになるでしょう。1 分間の直線スプリントのインターバルを 4 回行います。体に激しく負荷をかけることになるので、しっかりと準備を整えましょう。]]></string>
+    <string name="mm_week4_tip12_pg" formatted="false"><![CDATA[特にインターバルの日は、毎回きちんとウォーミングアップをしてください。ストレッチでもウォーキングでも、リラックスし、柔軟であってください。]]></string>
+    <string name="mm_week4_tip13_random_pg" formatted="false"><![CDATA[私たちの態度は、私たちが完全にコントロールできるものです。]]></string>
+    <string name="mm_week4_tip14_pg" formatted="false"><![CDATA[ご存知でしたか？研究によると、無酸素ペースでインターバル走を行うと筋肉量が増加することがわかっています。]]></string>
+    <string name="mm_week4_tip15_random_pg" formatted="false"><![CDATA[あなたはポジティブになるために必要なものをすべてお持ちです。でも、そのためには全力を尽くす必要があります。]]></string>
+    <string name="mm_week4_tip16_random_pg" formatted="false"><![CDATA[フィットネスはポジティブな気持ちにつながり、両方を組み合わせることで良好な精神的健康をもたらします。]]></string>
+    <string name="mm_week4_tip17_random_pg" formatted="false"><![CDATA[戦い続け、前進し続けるならば。目標を達成できます！]]></string>
+    <string name="mm_week4_tip18_random_pg" formatted="false"><![CDATA[体をきちんと回復させるのに十分な時間を確保してください。]]></string>
+    <string name="mm_week4_tip19_pg" formatted="false"><![CDATA[今回も素晴らしいワークアウトでした！ウォークブレイクを忘れずに取り入れてください。単なる回復のためではありません。行うことで、体にさまざまなメリットをもたらします。]]></string>
+    <string name="mm_week4_tip20_pg" formatted="false"><![CDATA[今週最後のトレーニングに向けて気合を入れましょう！ご想像のとおり、テンポ走を行います。]]></string>
+    <string name="mm_week4_tip21_pg" formatted="false"><![CDATA[あなたはもうそのプロになっているはずです。心地よくハードに走ることを意識して、レース当日の走り方を考えてみてください。]]></string>
+    <string name="mm_week4_tip22_random_pg" formatted="false"><![CDATA[人生における困難な状況には、なりたい自分を形作る力があります。挑戦を受け入れましょう！]]></string>
+    <string name="mm_week4_tip23_random_pg" formatted="false"><![CDATA[走るということは、片足でバランスを取るという単純な行為に過ぎません。]]></string>
+    <string name="mm_week4_tip24_pg" formatted="false"><![CDATA[確かにテンポ走は難しいですが、この練習をすることでより効率的なランナーになることができます。]]></string>
+    <string name="mm_week4_tip25_random_pg" formatted="false"><![CDATA[呼吸に意識を集中し、リズムを整える練習をしましょう。これは、長距離のランニングで成功する上で非常に重要です。]]></string>
+    <string name="mm_week4_tip26_random_pg" formatted="false"><![CDATA[自分を追い込むことは、成長し、より良いランナーになり、全体として向上する方法なのです。]]></string>
+    <string name="mm_week4_tip27_random_pg" formatted="false"><![CDATA[ストレッチをする際は、レジスタンスバンドを足首に巻きつけ、半月運動をするのが効果的です。]]></string>
+    <string name="mm_week4_tip28_pg" formatted="false"><![CDATA[素晴しい仕方で第 4 週を締めくくることができました！あなたはかなりの進歩を遂げており、これらのワークアウトに取り組むのも楽になってきたはずです。本当に進歩しています。ゴールまで残り半分です。]]></string>
+    <string name="mm_week5_tip1_pg" formatted="false"><![CDATA[第 5 週目は好調なスタートを切りました。今日はこれまでで一番長い距離を走ります！53 分近く走るので、いつものように水分を補給し、いいフォームをキープし、楽しんでください。]]></string>
+    <string name="mm_week5_tip2_pg" formatted="false"><![CDATA[距離走において食事は重要な要素です。炭水化物をしっかり摂取して、エネルギー源として不可欠なグリコーゲンを補給しましょう。回復のため、健康的な量のタンパク質も摂取する必要があります。]]></string>
+    <string name="mm_week5_tip3_random_pg" formatted="false"><![CDATA[ご存知でしたか？研究によると、ランニングでは足を踏み出すたびに体重の 3 ～ 4 倍の負荷が脚にかかることがわかっています。この影響を軽減するには、適切なシューズを履くことが不可欠です。]]></string>
+    <string name="mm_week5_tip4_pg" formatted="false"><![CDATA[長距離をゆっくり走ることは、脚の筋肉を鍛えるのに適しています。]]></string>
+    <string name="mm_week5_tip5_random_pg" formatted="false"><![CDATA[正しいフォームを身につけるには、凍った湖の上を 90 歳が人が走るようなイメージで走ることです。]]></string>
+    <string name="mm_week5_tip6_pg" formatted="false"><![CDATA[長距離をゆっくり走ると、無理なく大量のカロリーを消費できます。]]></string>
+    <string name="mm_week5_tip7_random_pg" formatted="false"><![CDATA[ランナーの 50% 以上が毎年何らかの怪我を経験しているのは、繰り返し衝撃が加わるためです。このリスクを軽減する 1 つの方法は、歩幅を短くし、定期的にストレッチすることです。]]></string>
+    <string name="mm_week5_tip8_pg" formatted="false"><![CDATA[長い距離でしたが、楽に走っているように見えましたよ！それを完了すれば、数週間後には 5km レースを走る準備が整うことを確信できます。]]></string>
+    <string name="mm_week5_tip9_pg" formatted="false"><![CDATA[大切なのは、レース当日までの食生活を考慮することです。]]></string>
+    <string name="mm_week5_tip10_pg" formatted="false"><![CDATA[このワークアウトをインターバル走で始めましょう。このランニングで何を予期すべきか、もう理解しているはずです。毎週少しずつハードにしてゆき、レベルを上げてゆきます。]]></string>
+    <string name="mm_week5_tip11_pg" formatted="false"><![CDATA[これまでと同様、このセクションを始める前に、リラックスし、柔軟であってください。必要に応じて休憩を取り、水分を補給しましょう！]]></string>
+    <string name="mm_week5_tip12_random_pg" formatted="false"><![CDATA[テクノロジーは、あなたのフィットネスの進捗を測り、改善するためのデータを提供してくれる便利なものです。ただし、ランニングフォームやリズミカルな呼吸から気をそらしてはいけません！]]></string>
+    <string name="mm_week5_tip13_random_pg" formatted="false"><![CDATA[正しいフォームを実践することで怪我のリスクを最小限に抑え、予防できます。]]></string>
+    <string name="mm_week5_tip14_pg" formatted="false"><![CDATA[研究によると、15 分～ 30 分の短い高強度インターバルトレーニング (HIIT) を行うことで、適度な運動を長時間行うのと同じ健康効果が得られることが示されています。]]></string>
+    <string name="mm_week5_tip15_random_pg" formatted="false"><![CDATA[良いフォームを維持するため、両手を柔らかく保ち、センターラインを超えないように胴体に密着させます。]]></string>
+    <string name="mm_week5_tip16_pg" formatted="false"><![CDATA[インターバル走は、徐々に慣らしていくことが重要です。関節には大きな負担がかかるので、回復のための時間を取ることは極めて重要です。]]></string>
+    <string name="mm_week5_tip17_random_pg" formatted="false"><![CDATA[腰の回転を最小限に抑え、リラックスした状態を目指してください。そうすることで良いフォームを保ち、怪我のリスクを最小限に抑えることができます。]]></string>
+    <string name="mm_week5_tip18_pg" formatted="false"><![CDATA[とても力強く走り終えました！今日はよくできました！]]></string>
+    <string name="mm_week5_tip19_pg" formatted="false"><![CDATA[今日もテンポ走を行いましょう。今回は、7 分間のランニングを 4 セット行い、間に 2 分間のジョギングを挟みます。]]></string>
+    <string name="mm_week5_tip20_pg" formatted="false"><![CDATA[しっかりとしたフォームを保つこと、呼吸を整えること、水分補給を忘れないことを意識してください。]]></string>
+    <string name="mm_week5_tip21_random_pg" formatted="false"><![CDATA[もし、メンタル面で苦しい思いをしているなら、不快な状態を心地良く感じられるようにし、それを愛する誰かと分かち合うことをお勧めします。恐れることはありません。]]></string>
+    <string name="mm_week5_tip22_pg" formatted="false"><![CDATA[テンポ走の目的は、スピードを上げて、より長く速く走ることに慣れることです。]]></string>
+    <string name="mm_week5_tip23_random_pg" formatted="false"><![CDATA[足を腰の下で着地させるようにしてください。そうすることで、良いフォームを保てます。]]></string>
+    <string name="mm_week5_tip24_pg" formatted="false"><![CDATA[テンポ走で自分を追い込むことで、レース当日のスピードが飛躍的に向上します！]]></string>
+    <string name="mm_week5_tip25_random_pg" formatted="false"><![CDATA[走っている路面に足が近づくのではなく、路面が足に近づいてくるようなイメージを持つようにします。]]></string>
+    <string name="mm_week5_tip26_random_pg" formatted="false"><![CDATA[フォームを保つためのポイントは、常にあごを上げ、肩の力を抜き、体幹をしっかりさせ、背筋を伸ばすことです。]]></string>
+    <string name="mm_week5_tip27_pg" formatted="false"><![CDATA[セッションが終わっても、トレーニングを続けることをお勧めします。]]></string>
+    <string name="mm_week5_tip28_pg" formatted="false"><![CDATA[可動性を高める訓練、筋力トレーニング、十分な休養に重点を置くことで、バランスの取れたスケジュールを組むことができます。]]></string>
+    <string name="mm_week6_tip1_pg" formatted="false"><![CDATA[第 6 週へようこそ！レースウィークが足早に近づいてきました。あなたは素晴らしい進歩を遂げています。]]></string>
+    <string name="mm_week6_tip2_pg" formatted="false"><![CDATA[今日は距離走に戻りましょう。今週はさらに長い距離を走るので、自分のペース配分で走ることに慣れる絶好の機会です。]]></string>
+    <string name="mm_week6_tip3_random_pg" formatted="false"><![CDATA[効率的なランニングフォームを維持するため、定期的にウォークブレイクを取りましょう。]]></string>
+    <string name="mm_week6_tip4_pg" formatted="false"><![CDATA[あなたは現在、呼吸器系、心臓系、筋肉系の効率を高めるトレーニングを行っています。]]></string>
+    <string name="mm_week6_tip5_random_pg" formatted="false"><![CDATA[リズミカルな呼吸はエネルギーを節約するのに役立ちます。]]></string>
+    <string name="mm_week6_tip6_random_pg" formatted="false"><![CDATA[理想的なケイデンスは 1 分間に 165 ～ 180 歩です。この推奨ケイデンスに合うように、30 秒ごとに 41 ～ 45 歩を達成するよう心掛けてください。]]></string>
+    <string name="mm_week6_tip7_pg" formatted="false"><![CDATA[このランニングは、より多くのカロリーを消費するだけでなく、体をランニングに適応させるためにも重要です。]]></string>
+    <string name="mm_week6_tip8_random_pg" formatted="false"><![CDATA[どのワークアウトでも、一瞬一瞬を大切にし、フォームと呼吸を意識しながら走るようにしてください。]]></string>
+    <string name="mm_week6_tip9_pg" formatted="false"><![CDATA[最後までよく走りきりました！ペースをコントロールし、自分の状態を管理できることは、5km レースでは非常に重要です。]]></string>
+    <string name="mm_week6_tip10_pg" formatted="false"><![CDATA[今日もまたインターバル走に取り組みます。このインターバル走はかなり負荷がかかります。辛くなったら、始めてから現在までの道のりを思い出してください。なぜ走るのか、なぜ 5km を完走したいのかを考えて、それをモチベーションにしてください。]]></string>
+    <string name="mm_week6_tip11_pg" formatted="false"><![CDATA[呼吸に集中し、スプリントの合間にウォークブレイクを入れることが重要になります。これまでと同様、無理しすぎたら、少しレベルを下げてください。]]></string>
+    <string name="mm_week6_tip12_random_pg" formatted="false"><![CDATA[痛みには根本的な原因があり、通常は運動連鎖のどこかに不均衡や弱点があります。たとえば、左のアキレス腱が硬い場合、体の反対側にある右の臀筋が弱いことが原因です。(ワークアウト後の回復の重要性)]]></string>
+    <string name="mm_week6_tip13_random_pg" formatted="false"><![CDATA[高強度インターバルトレーニング (HIIT) は、5km ランのスピードを上げ、タイムを縮める素晴らしい方法です。]]></string>
+    <string name="mm_week6_tip14_pg" formatted="false"><![CDATA[このような短時間のランニングは、hGH としても知られるヒト成長ホルモンの生成に最適です。hGH は、体の構造、代謝、血糖値の維持など、健康に役立つ働きをします。]]></string>
+    <string name="mm_week6_tip15_random_pg" formatted="false"><![CDATA[休日には筋力トレーニングをすることをお勧めします。これは脚の筋肉を鍛えるのにとても役立ちます。]]></string>
+    <string name="mm_week6_tip16_pg" formatted="false"><![CDATA[HIIT は無酸素運動と有酸素運動を改善することが示されています。]]></string>
+    <string name="mm_week6_tip17_random_pg" formatted="false"><![CDATA[より良いランナーになるための鍵は、可動性、安定性、柔軟性、バランスを向上させることです。]]></string>
+    <string name="mm_week6_tip18_pg" formatted="false"><![CDATA[素晴らしい走りでした！次の数分間は、歩いてクールダウンしてください。今日はよく頑張りました。そのことを誇りに思うべきです。]]></string>
+    <string name="mm_week6_tip19_pg" formatted="false"><![CDATA[第 6 週の最後のワークアウトはテンポ走です。呼吸に注意し、良いフォームを保つようにしてください。]]></string>
+    <string name="mm_week6_tip20_random_pg" formatted="false"><![CDATA[朝の安静時熱量を定期的にモニターすることで、体がどの程度休息しているか、あるいはどの程度ストレスを感じているかを判断する基準となります。これは、次のワークアウトの量と強度を決めるのに役立ちます。]]></string>
+    <string name="mm_week6_tip21_random_pg" formatted="false"><![CDATA[アスリートにとって最も重要なことは水分補給と睡眠です。]]></string>
+    <string name="mm_week6_tip22_pg" formatted="false"><![CDATA[ランニングで見落とされがちな側面に、精神的チャレンジがあります。テンポ走は、この精神的チャレンジに慣れ、それを克服する訓練をするのに最適な方法です。]]></string>
+    <string name="mm_week6_tip23_random_pg" formatted="false"><![CDATA[1 日に摂取すべき水分量の目安を知りたい場合、体重を測り、それを半分に割ります。それがあなたが飲むべき量 (オンス) です。]]></string>
+    <string name="mm_week6_tip24_pg" formatted="false"><![CDATA[このランニングでは、レース当日に予定しているペースを少し下回るペースで走る必要があります。]]></string>
+    <string name="mm_week6_tip25_random_pg" formatted="false"><![CDATA[動きのバリエーションが多ければ多いほど、レースに合わせることができます。]]></string>
+    <string name="mm_week6_tip26_random_pg" formatted="false"><![CDATA[毎晩寝る前に脚を上げてください。足首をいろいろな方向に回します。これらを何度か行ってから、アキレス腱のストレッチを行います。これは足のさまざまな部分に効果があります。]]></string>
+    <string name="mm_week6_tip27_pg" formatted="false"><![CDATA[素晴しい！長い道のりでしたが、よく乗り切りました。5km を完走する準備がもう少しで整います！]]></string>
+    <string name="mm_week7_tip1_pg" formatted="false"><![CDATA[第 7 週へようこそ！プログラム中、最もタフな週になるでしょう。でも、あなたならできます。第 1 週から長い道のりを歩んできましたね。今こそ自分を証明するときです。]]></string>
+    <string name="mm_week7_tip2_pg" formatted="false"><![CDATA[改めて距離走に取り組むにあたり、今まで学んだことをすべて活用してください。プログラムで最も長い距離を走ることになりますが、自信と実力を感じているはずです。]]></string>
+    <string name="mm_week7_tip3_random_pg" formatted="false"><![CDATA[ほとんどのランナーが犯す最大の間違いは、最初の 1 マイルが最速の 1 マイルだということだ。]]></string>
+    <string name="mm_week7_tip4_pg" formatted="false"><![CDATA[LSD を使用すると、不快感に対処する能力が向上し、より忍耐強く規律あるランナーになれます。]]></string>
+    <string name="mm_week7_tip5_random_pg" formatted="false"><![CDATA[自分のペースをコントロールすることを常に心掛けてください。そうすることでスタミナが向上し、集中力が持続します。]]></string>
+    <string name="mm_week7_tip6_random_pg" formatted="false"><![CDATA[水分補給をしっかり行ってください。脱水状態になると、トレーニングが妨げられ、怪我をしやすくなります。]]></string>
+    <string name="mm_week7_tip7_random_pg" formatted="false"><![CDATA[このようなトレーニングの後は、水を主な水分補給源とすべきです。研究によれば、高強度の運動を長時間続けるのでなければ、デメリットがメリットを上回ることがわかっています。]]></string>
+    <string name="mm_week7_tip8_random_pg" formatted="false"><![CDATA[最初の 1 マイルは、残りの 1 マイルの予想平均タイムより 60 ～ 90 秒遅くしましょう。]]></string>
+    <string name="mm_week7_tip9_pg" formatted="false"><![CDATA[激しい運動はミトコンドリアのサイズを大きくし、酸素の利用とグリコーゲンの貯蔵が向上します。]]></string>
+    <string name="mm_week7_tip10_random_pg" formatted="false"><![CDATA[効率的なフォームと呼吸を維持することに集中することが重要です。]]></string>
+    <string name="mm_week7_tip11_pg" formatted="false"><![CDATA[素晴しい！あなたは、かなりのことができることを実際に証明しました。決して簡単なことではありません。ですから、誇りに思ってください。]]></string>
+    <string name="mm_week7_tip12_pg" formatted="false"><![CDATA[インターバル走に戻りましょう。走る前のストレッチを忘れず、フォームに集中してください。]]></string>
+    <string name="mm_week7_tip13_random_pg" formatted="false"><![CDATA[体と心臓は特に、筋肉に酸素を供給するため、酸素を豊富に含んだ血液を送り出す時間が必要です。]]></string>
+    <string name="mm_week7_tip14_random_pg" formatted="false"><![CDATA[定期的にウォークブレイクをとりましょう。]]></string>
+    <string name="mm_week7_tip15_pg" formatted="false"><![CDATA[インターバル運動終了後、代謝率は最大 2 時間上昇したままとなり、カロリー燃焼時間が延長されます。]]></string>
+    <string name="mm_week7_tip16_random_pg" formatted="false"><![CDATA[ウォークブレイクを取らずに、1 マイル以上走らないでください。]]></string>
+    <string name="mm_week7_tip17_pg" formatted="false"><![CDATA[通常、持久力トレーニングは長時間のランニングによって行われますが、HIIT は酸素消費量を改善する優れた方法です。]]></string>
+    <string name="mm_week7_tip18_random_pg" formatted="false"><![CDATA[オートミールとフルーツの組み合わせは、5km レース前の朝食として最適です。]]></string>
+    <string name="mm_week7_tip19_pg" formatted="false"><![CDATA[よくできました！あなたはこれらのランをいわば疑似体験しています。]]></string>
+    <string name="mm_week7_tip20_pg" formatted="false"><![CDATA[このテンポ走は、実際の 5km レースに最も近い練習になります。今回のワークアウトを活用して、持続的なペースで長時間走ることに慣れましょう。]]></string>
+    <string name="mm_week7_tip21_random_pg" formatted="false"><![CDATA[苦しくなっても、心を疑心暗鬼のままにしてはいけません。]]></string>
+    <string name="mm_week7_tip22_pg" formatted="false"><![CDATA[乳酸が筋肉に蓄積すると疲労を引き起こします。テンポ走は乳酸に対する耐性を高め、より速く、より長く走るのに役立つ素晴らしい方法です。]]></string>
+    <string name="mm_week7_tip23_random_pg" formatted="false"><![CDATA[ランニングをするときは、9 マイルを走ることを想像してはいけません。代わりに、1 マイルを 9 回ランニングすることを想像してください。]]></string>
+    <string name="mm_week7_tip24_random_pg" formatted="false"><![CDATA[トラッキングして改善を目指す場合、指標は非常に重要です。平均ペース、平均心拍数、ケイデンスをトラッキングします。]]></string>
+    <string name="mm_week7_tip25_random_pg" formatted="false"><![CDATA[適切なエネルギー補給、十分な水分補給、適切な休息が取れていることを確認します。これらは良いレースをするために不可欠な要素です。]]></string>
+    <string name="mm_week7_tip26_random_pg" formatted="false"><![CDATA[どんなワークアウトでも、最初の 10 分間は、心臓血管系と筋肉をワークアウトの厳しさに慣れさせるために、低～中程度の負荷にすべきです。]]></string>
+    <string name="mm_week7_tip27_pg" formatted="false"><![CDATA[素晴らしい！7 週目を完了しました。5km レースに取り組むまで、あと数回のワークアウトを残すだけです。]]></string>
+    <string name="mm_week8_tip1_pg" formatted="false"><![CDATA[第 8 週、最終週へようこそ！過去 7 週間で素晴しい進歩を遂げてきました。今こそ、その努力をすべてまとめるときです。]]></string>
+    <string name="mm_week8_tip2_pg" formatted="false"><![CDATA[第 8 週は他のプログラムとは少し異なります。第 7 週に比べて徐々に難度が高まることはありません。今週末には 5km を完走できるだけのエネルギーが残っているはずです。]]></string>
+    <string name="mm_week8_tip3_random_pg" formatted="false"><![CDATA[動的な動きのウォームアップからワークアウトを始めることを常にお勧めします。]]></string>
+    <string name="mm_week8_tip4_random_pg" formatted="false"><![CDATA[ワークアウト後は、クールダウンをしっかり行ってください。]]></string>
+    <string name="mm_week8_tip5_random_pg" formatted="false"><![CDATA[今は疲れを感じているかもしれません。それは問題ありませんが、できるだけ長く自分自身に負荷をかけ続けるようにしてください。]]></string>
+    <string name="mm_week8_tip6_random_pg" formatted="false"><![CDATA[腰、臀部、脚のストレッチとフォームロールを十分に行いましょう。]]></string>
+    <string name="mm_week8_tip7_pg" formatted="false"><![CDATA[頻繁にトレーニングすることで、靱帯、腱、骨、関節がランニングのストレス要因に適応します。]]></string>
+    <string name="mm_week8_tip8_random_pg" formatted="false"><![CDATA[ランニング全体を通して一貫したペースを維持することを目指します。]]></string>
+    <string name="mm_week8_tip9_random_pg" formatted="false"><![CDATA[テンポ走は、最大強度の 70 ～ 80% 程度にすることを意識してください。]]></string>
+    <string name="mm_week8_tip10_pg" formatted="false"><![CDATA[おめでとうございます！これはプログラム最後の距離走でした。5km レースまであと少しです。]]></string>
+    <string name="mm_week8_tip11_pg" formatted="false"><![CDATA[この数週間のハードワークのあとなので、このインターバル走は楽勝でしょう！]]></string>
+    <string name="mm_week8_tip12_pg" formatted="false"><![CDATA[前を見て、手を腰の近くに置き、上下に跳ねない走りをするよう心掛けましょう。]]></string>
+    <string name="mm_week8_tip13_random_pg" formatted="false"><![CDATA[アクティブリカバリーの日は軽めのトレーニングにすることが重要です。このステップを飛ばしてはいけません！]]></string>
+    <string name="mm_week8_tip14_random_pg" formatted="false"><![CDATA[運動後の完璧な飲み物として、チョコレートミルクもいいでしょう！]]></string>
+    <string name="mm_week8_tip15_pg" formatted="false"><![CDATA[一般にインターバルトレーニングは短時間ですが、体重を減らす優れた方法です。]]></string>
+    <string name="mm_week8_tip16_random_pg" formatted="false"><![CDATA[ワークアウト後、30 分以内にエネルギー補給と水分補給を行ってください。]]></string>
+    <string name="mm_week8_tip17_random_pg" formatted="false"><![CDATA[回復の一手段として、フォームローリングをお勧めします。これは筋肉をリラックスさせ、痛みを軽減するのに役立ちます。]]></string>
+    <string name="mm_week8_tip18_random_pg" formatted="false"><![CDATA[より多く、よりよく眠ることは、回復の重要な要素です。]]></string>
+    <string name="mm_week8_tip19_pg" formatted="false"><![CDATA[今日は素晴らしい走りでした！あなたの体は日に日にシャープになってきており、5km レースの準備はほぼ整っていると言っても過言ではありません。]]></string>
+    <string name="mm_week8_tip20_pg" formatted="false"><![CDATA[ついに来ました！ラストランに向けた、長い 8 週間が経過しました。あなたは長い道のりを歩んできました。ここまで来れたことはあらゆる点で称賛に値します。]]></string>
+    <string name="mm_week8_tip21_pg" formatted="false"><![CDATA[最後のテンポ走でこのプログラムを締めくくりましょう。本番の 5km レースの練習として、このランを利用しましょう。この 8 週間で学んだことをすべて活用し、実践してください。]]></string>
+    <string name="mm_week8_tip22_random_pg" formatted="false"><![CDATA[よく食べ、水分を補給し、電解質を補給し、ストレスを減らし、十分な睡眠をとることに集中するのです。]]></string>
+    <string name="mm_week8_tip23_pg" formatted="false"><![CDATA[このテンポ走で体幹の能力を高めます。持久力を高めることで、心血管機能と全体的な健康状態の指標となる V02 max も上昇します。]]></string>
+    <string name="mm_week8_tip24_random_pg" formatted="false"><![CDATA[ワークアウト後に最適なスムージーは、アーモンドミルク、バナナ 1 本、アボカド 1/2 個、ナッツバター大さじ 1、プロテインパウダー 1 スクープ、氷 1/2 トレイで構成されます。]]></string>
+    <string name="mm_week8_tip25_pg" formatted="false"><![CDATA[特に、難易度の高いレースに向けてトレーニングを続けたいなら、強い精神力が必要です。テンポ走は精神的な強さを鍛えるのに最適な方法です。]]></string>
+    <string name="mm_week8_tip26_random_pg" formatted="false"><![CDATA[レースウィーク中は十分な睡眠、十分な食事、十分な水を摂取することが非常に重要です。]]></string>
+    <string name="mm_week8_tip27_random_pg" formatted="false"><![CDATA[炭水化物 50%、タンパク質 25%、脂質 25% からなるバランスの取れた食事は、レース前の理想的な組み合わせです。]]></string>
+    <string name="mm_week8_tip28_pg" formatted="false"><![CDATA[最初の 5km レースまであと少し、最後の追い込みです！]]></string>
+    <string name="mm_week8_tip29_pg" formatted="false"><![CDATA[おめでとうございます！8 週間のトレーニング プログラムを終了しました。これで 5km レースの準備が整いました。レース前には十分な睡眠、水分、食事を摂るようにしてください。]]></string>
+</resources>

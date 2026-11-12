@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.gridlayout.widget.GridLayout
+                style="@style/EngineeringPageGridLayout"
+                app:columnCount="2">
+
+                <TextView
+                    android:id="@+id/eng_run_machine_cal_points_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/found_calibration_data_tc"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/edit_text_label_size"/>
+
+                <TextView
+                    android:id="@+id/eng_run_machine_cal_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/edit_text_label_size"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_columnSpan="2">
+
+                    <Button
+                        android:id="@+id/eng_run_machine_start"
+                        style="@style/GeneralEngineeringButton"
+                        android:layout_width="300dp"
+                        android:text="@string/run_machine_tc" />
+                </RelativeLayout>
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_heart_rate"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/heart_rate_tc"
+                    app:read_only="true" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_time"
+                    style="@style/GeneralEditTextStringEngineering"
+                    app:label="@string/time_tc"
+                    app:read_only="true" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_spm_value"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    android:visibility="gone"
+                    app:label="@string/spm_uc"
+                    app:read_only="true"
+                    app:units="spm" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_rpm_value"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    android:visibility="gone"
+                    app:label="@string/rpm_uc"
+                    app:read_only="true"
+                    app:units="rpm" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_speed_value"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    android:visibility="gone"
+                    app:label="@string/speed_tc"
+                    app:read_only="true"
+                    app:units="speed" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_run_machine_incline_value"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    android:visibility="gone"
+                    app:label="@string/incline_tc"
+                    app:read_only="true"
+                    app:units="percent" />
+
+
+                <RelativeLayout style="@style/engineering_transparent_line_break_small" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <RelativeLayout
+                android:id="@+id/eng_run_machine_tm_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/eng_run_machine_tm_controls_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_spm_setting"
+                        style="@style/GeneralEditTextMeasurementEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:label="@string/spm_uc"
+                        app:max_value="54"
+                        app:min_value="50"
+                        app:units="spm" />
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_speed_setting"
+                        style="@style/GeneralEditTextMeasurementEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:input_type="double_input"
+                        app:label="@string/speed_tc"
+                        app:units="speed" />
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_tm_incline_setting"
+                        style="@style/GeneralEditTextMeasurementEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:label="@string/incline_tc"
+                        app:input_type="double_input"
+                        app:max_value="15"
+                        app:min_value="0"
+                        app:units="percent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eng_run_machine_tm_controls_setting_rpm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eng_run_machine_tm_controls_setting"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/engineering_line_break"
+                        app:layout_columnSpan="@integer/eng_cols_per_page" />
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_tm_set_rpm"
+                        style="@style/GeneralEditTextMeasurementEngineering"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:input_type="integer_input"
+                        app:label="RPM Value"
+                        app:units="rpm"
+                        app:max_value="6000"
+                        app:min_value="0"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eng_run_machine_tm_cadence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eng_run_machine_tm_controls_setting_rpm"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        style="@style/engineering_line_break"
+                        app:layout_columnSpan="@integer/eng_cols_per_page" />
+
+                    <TextView
+                        android:id="@+id/eng_run_machine_tm_cadence_spm_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="@string/spm_uc" />
+
+                    <TextView
+                        android:id="@+id/eng_run_machine_tm_cadence_average_spm_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="@string/average_spm_uc" />
+
+                    <TextView
+                        android:id="@+id/eng_run_machine_tm_accumulate_steps_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="@string/steps_uc" />
+
+                    <TextView
+                        android:id="@+id/eng_run_machine_tm_stride_length_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="@string/stride_length_uc" />
+
+                    <TextView
+                        android:id="@+id/eng_run_machine_tm_average_stride_length_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="@string/average_stride_length_uc" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eng_run_machine_ascent_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_ascent_incline_setting"
+                        style="@style/GeneralEditTextMeasurementEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:input_type="integer_input"
+                        app:label="@string/incline_tc"
+                        app:max_value="15"
+                        app:min_value="0"
+                        app:units="percent" />
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_ascent_resistance_setting"
+                        style="@style/GeneralEditTextIntEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:label="@string/resistance_tc"
+                        app:max_value="25"
+                        app:min_value="1" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eng_run_machine_cardio_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/eng_run_machine_cardio_resistance_setting"
+                        style="@style/GeneralEditTextIntEngineering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:label="@string/resistance_tc"
+                        app:max_value="30"
+                        app:min_value="1" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

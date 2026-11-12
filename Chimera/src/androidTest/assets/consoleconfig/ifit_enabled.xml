@@ -1,0 +1,21 @@
+<Configuration>
+    <Config Version="1">
+        <systemSettings>
+            <enableIFITAthena>true</enableIFITAthena>
+            <enableIFITTreadmill>true</enableIFITTreadmill>
+            <enableIFITElliptical>true</enableIFITElliptical>
+            <enableIFITAscent>true</enableIFITAscent>
+            <enableIFITLowerBodyAscent>true</enableIFITLowerBodyAscent>
+            <enableIFITHybridBike>true</enableIFITHybridBike>
+            <enableIFITUprightBike>true</enableIFITUprightBike>
+            <enableIFITRecumbentBike>true</enableIFITRecumbentBike>
+            <enableIFITStepper>true</enableIFITStepper>
+            <enableIFITClimbmill>true</enableIFITClimbmill>
+            <enableYMCA360>true</enableYMCA360>
+            <enableMileHighRunClub>true</enableMileHighRunClub>
+            <enableSurveyMonkey>true</enableSurveyMonkey>
+            <postWorkoutSurveyURL>test.url/321</postWorkoutSurveyURL>
+            <midWorkoutSurveyURL>test.url/321</midWorkoutSurveyURL>
+        </systemSettings>
+    </Config>
+</Configuration>

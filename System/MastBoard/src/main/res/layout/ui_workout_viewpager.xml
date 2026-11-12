@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_workout_viewpager"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_setting_white"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewpager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.77"
+        app:layout_constraintTop_toBottomOf="@id/settings_icon"
+        app:layout_constraintBottom_toTopOf="@id/first_dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/first_dot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_dot_yellow"
+        app:layout_constraintWidth_percent="0.04"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/viewpager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/second_dot"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/second_dot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_dot_white"
+        app:layout_constraintWidth_percent="0.04"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/viewpager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/first_dot"
+        app:layout_constraintEnd_toStartOf="@id/third_dot"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/third_dot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_dot_white"
+        app:layout_constraintWidth_percent="0.04"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/viewpager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/second_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.service.usbmedia.ios.lib.iap2.ControlSession'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.usbmedia.ios.lib.iap2.Packet java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

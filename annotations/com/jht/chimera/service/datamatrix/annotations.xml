@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.service.datamatrix.DataMatrixContentProvider'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.datamatrix.DataMatrixService'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

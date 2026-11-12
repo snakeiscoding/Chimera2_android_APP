@@ -1,0 +1,92 @@
+settings
+    workout_id = 76
+    allow_skip_warmup = 1
+    allow_skip_workout = 0
+    graph_future = 1
+    allow_user_goal_changes = 0
+
+input HEART_RATE
+input PEAK_HEART_RATE
+
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export HEART_RATE_WARNING
+export TEST_SCORE
+export ALLOW_PAUSE
+export PREVENT_USER_GOAL_CHANGES
+export INTERVAL_NUMBER
+export INTERVAL_TIME_MS
+
+HEART_RATE_WARNING = 0
+
+when HEART_RATE <= 0 for 60000
+    HEART_RATE_WARNING = 1
+    //Need to display message to UI from this output
+    
+when HEART_RATE > 0
+    HEART_RATE_WARNING = 0
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 360000
+    RESISTANCE = 1
+    INTERVAL_NUMBER = 0
+
+    totalIntervals = 3
+    lastSetInterval = 0
+    intervalCompletionTime = 0
+    workoutCompleted = 0
+  
+    when STAGE_TIME_MS >= (GOAL - intervalCompletionTime) / (totalIntervals - INTERVAL_NUMBER) + intervalCompletionTime
+        INTERVAL_NUMBER = INTERVAL_NUMBER + 1
+        if (INTERVAL_NUMBER == 3)
+            workoutCompleted = 1
+        interval = interval + 1
+
+    when lastSetInterval != INTERVAL_NUMBER
+        intervalCompletionTime = STAGE_TIME_MS
+        lastSetInterval = INTERVAL_NUMBER
+
+    interval
+        INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INTERVAL_GOAL = 120000
+        PREVENT_USER_GOAL_CHANGES = 1
+        ALLOW_PAUSE = 0
+        
+        easy_stage_peak_hr = 0
+        medium_stage_peak_hr = 0
+        hard_stage_peak_hr = 0
+        
+        when HEART_RATE > 0 && INTERVAL_TIME_MS >= 5000
+            //wait 5000 // Always wait 5 seconds to read HR before using
+            if PEAK_HEART_RATE > easy_stage_peak_hr
+                easy_stage_peak_hr = PEAK_HEART_RATE
+          
+    interval
+        INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INTERVAL_GOAL = 120000
+        PREVENT_USER_GOAL_CHANGES = 1
+        ALLOW_PAUSE = 0
+        
+        when HEART_RATE > 0 && INTERVAL_TIME_MS >= 5000
+            //wait 5000 // Always wait 5 seconds to read HR before using
+            if PEAK_HEART_RATE > medium_stage_peak_hr
+                medium_stage_peak_hr = PEAK_HEART_RATE
+            
+    interval
+        INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INTERVAL_GOAL = 120000
+        PREVENT_USER_GOAL_CHANGES = 1
+        ALLOW_PAUSE = 0
+        
+        when HEART_RATE > 0 && INTERVAL_TIME_MS >= 5000
+            //wait 5000 // Always wait 5 seconds to read HR before using
+            if PEAK_HEART_RATE > hard_stage_peak_hr
+                hard_stage_peak_hr = PEAK_HEART_RATE
+
+onStop
+    if workoutCompleted == 1
+        TEST_SCORE = ((60 + easy_stage_peak_hr) + (40 + medium_stage_peak_hr) + (20 + hard_stage_peak_hr)) / 3
+    else
+        TEST_SCORE = 0

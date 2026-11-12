@@ -1,0 +1,8 @@
+<root>
+    <item
+        name='com.jht.chimera.ui.machinesettings.adapters.error.ErrorLogItemHolder void update(com.jht.androiduiwidgets.selector.SelectorAdapterBase, com.jht.androiduiwidgets.selector.ISelectorItem, com.jht.androiduiwidgets.selector.IOnItemSelected)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

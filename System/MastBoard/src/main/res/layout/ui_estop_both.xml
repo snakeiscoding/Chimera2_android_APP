@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ui_estop_both"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="#000000">
+</androidx.constraintlayout.widget.ConstraintLayout>

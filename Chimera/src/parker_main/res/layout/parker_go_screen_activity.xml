@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/goScreenRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_color_slate_blue">
+
+
+    <!--Topbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/buttonLogin"
+            app:layout_constraintEnd_toStartOf="@id/buttonSettings"
+            android:gravity="center_vertical"
+            android:background="@android:color/black"
+            android:clickable="true"
+            android:orientation="horizontal">
+            
+            <Space
+                android:layout_width="102dp"
+                android:layout_height="match_parent" />
+
+            <com.jht.chimera.lib.widget.indicator.TopBarTextView
+                android:id="@+id/topbar_logo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:text="@string/featured_content_tc"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                app:autoSizeMaxTextSize="40dp"
+                android:textStyle="bold"/>
+
+            <include
+                layout="@layout/top_bar_icons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_user_profiles"
+            app:drawableIconTint="#ffcccccc"
+            app:iconHeight="60dp"
+            app:iconWidth="60dp"/>
+
+        <TextView
+            android:id="@+id/login_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/buttonLogin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/sign_in_tc"
+            android:textColor="#cccccc"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="17dp"/>
+
+        <com.jht.chimera.lib.widget.indicator.TopBarDebugIndicator
+            android:id="@+id/debug_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintStart_toEndOf="@id/login_name_text"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_setting"
+            app:drawableIcon="@drawable/ic_setting_white"
+            app:drawableIconTint="#ffcccccc"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--NewGoScreen-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/go_screen_root"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBarContainer"
+        android:background="@color/button_red">
+
+        <include layout="@layout/go_screen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.jht.chimera.ui.mainapp.goscreen.GoScreenSettingsMenu
+        android:id="@+id/settings_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

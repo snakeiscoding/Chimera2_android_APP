@@ -1,0 +1,113 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.slo
+*.lo
+*.obj
+*.lai
+*.la
+*.a
+*.lib
+*.out
+*.app
+build
+.gradle
+org.eclipse.jdt.core.prefs
+*.o.d
+*.salive
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+/prototypes/android-cmake/.hgignore
+~$*
+~*.tmp
+bin
+gen
+/libraries/UartLib/obj/local/armeabi/objs/uartlib/uartlib.o.d
+
+/libraries/MixerControlLib/obj/local/armeabi/objs/mixercontrol
+
+/deploy/latest_software/generations_installer
+!/app/EngineeringScreenApp/libs/android-support-v13.jar
+/deploy/ota_test/out
+/deploy/adb_install/config/SystemConfig.sha1
+/deploy/adb_install/config/SystemConfig.sha1.staging
+/deploy/adb_install/config/SystemConfig.xml
+/deploy/adb_install/config/SystemConfig.xml.staging
+/deploy/release_software/adb_install
+/deploy/release_software/usb_install
+/deploy/ota/generations_io/generations_io
+/deploy/ota/generations
+/deploy/ota/keyboard_apps/system/app
+/deploy/ota/third_party_apps/user_apps
+/deploy/upload_s3/out.txt
+/deploy/ota/generations_os_recovery/recovery.img
+/deploy/shared/os/recovery.img
+.idea
+.idea
+.idea
+Prototypes/MockDataDriverDesktop/.metadata/
+
+*.iml
+local.properties
+local.properties.2
+allure.properties
+/build_outputs
+/test_outputs
+/apks
+/PiScripts/unittestsresults.txt
+/Apps/Libs/WidgetLib/src/main/res/values/*.xml~HEAD
+.externalNativeBuild
+/temp
+Source/ChimeraApp/Chimera/.cxx*
+ciPackages
+
+# Default location for Tools/DeveloperScripts/screencapture.bat is the current directory, so...
+/screenshot*.png
+/logcat.txt
+/test-results.txt
+log_input
+log_output
+Chimera/src/main/assets/settings/tv_settings/set_top_boxes/input
+Chimera/src/main/assets/settings/tv_settings/set_top_boxes/output
+
+# Fleet credentials get generated at build time from CI secrets
+Chimera/src/*/assets/fleet-credentials.bks
+UpdateService/src/*/assets/fleet-credentials.bks
+/report.json
+
+# Personal Claude Code preferences - not team standards
+CLAUDE.local.md
+
+# Implementation plans are working scratch, not checked-in documentation
+docs/superpowers/plans/

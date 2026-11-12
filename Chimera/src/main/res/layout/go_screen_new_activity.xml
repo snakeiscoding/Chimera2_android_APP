@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/goScreenRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_color_slate_blue">
+    <!--Topbar-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/top_bar_widget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/buttonHome"
+            app:layout_constraintEnd_toStartOf="@id/buttonSettings"/>
+
+        <com.jht.chimera.lib.widget.button.HomeButton
+            android:id="@+id/buttonHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/button_gradient_users"
+            app:tint="#ffcccccc"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent" />
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonLanguage"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_icon_globe"
+            app:drawableIconTint="#ffcccccc"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp" />
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonPTP"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/buttonHome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_personal_trainer"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"
+            android:visibility="gone"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/buttonPTP"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_login"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+        <TextView
+            android:id="@+id/login_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/buttonLogin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/sign_in_tc"
+            android:textColor="#cccccc"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="17dp"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_setting"
+            app:drawableIcon="@drawable/ic_setting_white"
+            app:drawableIconTint="#ffcccccc"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--NewGoScreen-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/go_screen_root"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBarContainer"
+        android:background="@color/button_red">
+
+        <include layout="@layout/go_screen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/language_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C02D2D2D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBarContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/language_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#C02D2D2D"
+            android:fadeScrollbars="false"
+            android:paddingStart="30dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="30dp"
+            android:scrollbarSize="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/language_scroll_bar"
+            android:scrollbars="vertical"
+            android:spinnerMode="dialog"
+            android:verticalScrollbarPosition="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.35"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/go_screen_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/goBusy"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/ic_spinner"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/welcome_disabled_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/welcome_disabled_background2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/welcome_disabled_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/hand_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

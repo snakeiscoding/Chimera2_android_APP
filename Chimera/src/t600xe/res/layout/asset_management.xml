@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout
+            style="@style/EngineeringPageGridLayout"
+            app:columnCount="2">
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_console_serial_number"
+                style="@style/GeneralEditTextStringCapsEngineering"
+                android:imeOptions="actionDone"
+                app:auto_correct="true"
+                app:label="@string/console_serial_number_tc"
+                app:max_chars="@integer/max_serial_number_chars" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_frame_serial_number"
+                style="@style/GeneralEditTextStringCapsEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/frame_serial_number_tc"
+                app:max_chars="@integer/max_serial_number_chars" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_club_id"
+                style="@style/GeneralEditTextIntEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/club_id_tc"
+                app:max_chars="5"
+                app:max_value="65535"
+                app:min_value="0" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_columnWeight="1"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/eng_upload_serial_numbers"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="300dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/import_serial_numbers_tc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <CheckBox
+                android:id="@+id/eng_enable_am"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/asset_management_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_enable_wt"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/workout_tracking_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_allow_guest"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/allow_guest_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_go_button_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/go_button_enabled_tc"
+                android:visibility="gone" />
+
+            <RelativeLayout style="@style/engineering_line_break_small" android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_xid_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/btn_xid_login_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_barcode_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/barcode_login_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_phone_number_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/phone_number_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_email_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/email_login_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_fitlinxx_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/fit_linxx_login_tc"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/eng_login_custom_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/custom_login_tc"
+                android:visibility="gone" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_login_name"
+                style="@style/GeneralEditTextStringEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/custom_login_name_tc"
+                android:visibility="gone" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_login_label"
+                style="@style/GeneralEditTextStringEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/custom_login_user_name_label_tc"
+                android:visibility="gone" />
+
+            <com.jht.chimera.lib.widget.selector.OptionSelectorItem
+                android:id="@+id/eng_custom_login_input_type"
+                style="@style/GeneralEngineeringOptionSelector"
+                app:label="@string/custom_login_user_name_input_type_tc"
+                app:option_options="@array/custom_login_input_type"
+                app:option_popup_width="400dp"
+                android:visibility="gone" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_password_label"
+                style="@style/GeneralEditTextStringEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/custom_login_password_label_tc"
+                android:visibility="gone" />
+
+
+            <com.jht.chimera.lib.widget.selector.OptionSelectorItem
+                android:id="@+id/eng_custom_password_input_type"
+                style="@style/GeneralEngineeringOptionSelector"
+                app:label="@string/custom_login_password_input_type_tc"
+                app:option_options="@array/custom_login_input_type"
+                app:option_popup_width="400dp"
+                android:visibility="gone" />
+            <!--
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/eng_login_options"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_columnSpan="2" />
+            -->
+
+            <RelativeLayout style="@style/engineering_line_break_small" android:visibility="gone" />
+
+            <com.jht.chimera.lib.widget.selector.OptionSelectorItem
+                android:id="@+id/eng_welcome_icon_position"
+                style="@style/GeneralEngineeringOptionSelector"
+                app:label="@string/welcome_icon_position_tc"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_welcome_screen_fade"
+                style="@style/GeneralEditTextIntEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/welcome_screen_auto_hide_tc"
+                app:max_chars="2"
+                app:max_value="90"
+                app:min_value="0"
+                app:units="time_seconds" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_welcome_screen_slide_show"
+                style="@style/GeneralEditTextIntEngineering"
+                android:imeOptions="actionDone"
+                app:label="@string/custom_welcome_screen_slideshow_tc"
+                app:max_value="300"
+                app:min_value="10"
+                app:units="time_seconds" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_columnWeight="1">
+
+                <Button
+                    android:id="@+id/eng_upload_theme"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="300dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/upload_custom_theme_tc" />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/eng_show_welcome_screen"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/show_welcome_screen_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_logo"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/custom_logo_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_welcome_background"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/custom_welcome_background_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_color_background"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/custom_background_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_workout_background"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/custom_workout_background_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_club_com"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/clubCom_tc"
+                android:visibility="gone" />
+
+
+
+            <!-- Settings may be needed include custom eng_workout, retail mode, lube belt, lube belt reste -->
+        </androidx.gridlayout.widget.GridLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<root>
+    <item name='java.lang.Class'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.Class java.lang.reflect.Field getDeclaredField(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.lang.Class java.lang.reflect.Method getDeclaredMethod(java.lang.String, java.lang.Class&lt;?&gt;...) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.lang.Class java.lang.reflect.Method getMethod(java.lang.String, java.lang.Class&lt;?&gt;...) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.Runtime java.lang.Process exec(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String String(byte[], java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String boolean contains(java.lang.CharSequence) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String boolean equals(java.lang.Object) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String boolean equalsIgnoreCase(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String boolean matches(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String boolean startsWith(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String byte[] getBytes(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String java.lang.String substring(int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.String java.lang.String[] split(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.System'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='java.lang.System void loadLibrary(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

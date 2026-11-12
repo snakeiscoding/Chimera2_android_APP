@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="mm_assessment_tip1_pg" formatted="false"><![CDATA[歡迎來到 Matrix Method：5 公里訓練課程！無論您是經驗豐富的跑者或是剛開始訓練的新手，我們都有為您設計的內容。]]></string>
+    <string name="mm_assessment_tip2_pg" formatted="false"><![CDATA[為獲得最佳使用體驗，請詳閱以下說明。有了專業的建議，您能夠提升每次運動的成效。]]></string>
+    <string name="mm_assessment_tip3_pg" formatted="false"><![CDATA[您會先接受測試，確定您的跑步表現。測驗內容將包括 5 分鐘的暖身、15 分鐘的跑步和 5 分鐘的緩和運動。您可以決定測試時的跑速。在測試的時候，您應該使出全力，因為測試結果將會作為評估的基準。]]></string>
+    <string name="mm_assessment_tip4_pg" formatted="false"><![CDATA[在測試過程中，請試著挑戰自己的極限，但還是應該注意自身狀況，安全第一。]]></string>
+    <string name="mm_assessment_tip5_pg" formatted="false"><![CDATA[您已經進行了一半——再加把勁！]]></string>
+    <string name="mm_assessment_tip6_pg" formatted="false"><![CDATA[只剩下四分鐘——撐住！]]></string>
+    <string name="mm_assessment_tip7_pg" formatted="false"><![CDATA[非常好！您已經完成了測試，踏出成為 5 公里跑者的第一步。現在會使用測試結果為您設計適合的課程內容。]]></string>
+    <string name="mm_assessment_tip8_pg" formatted="false"><![CDATA[用最後的幾分鐘讓身體緩和下來，調整呼吸、補充水份！在緩和期間還是要持續走路，這樣能夠提升運動的效益。]]></string>
+    <string name="mm_week1_tip1_pg" formatted="false"><![CDATA[您今天的訓練課程會以長距離慢跑開始。這種跑步訓練的目標是提升耐力、提升血液量，讓您能夠跑更久。]]></string>
+    <string name="mm_week1_tip2_pg" formatted="false"><![CDATA[這種跑步訓練通常是以慢跑的速度進行。這能讓您的狀況保持穩定，讓身體適應長時間的跑步。]]></string>
+    <string name="mm_week1_tip3_pg" formatted="false"><![CDATA[您正在進入區間 1。這個區間的強度較低，適合熱身或緩和運動。八週的課程中會使用這些區間進行配速，讓您能夠了解自己應該以什麼強度進行訓練。]]></string>
+    <string name="mm_week1_tip4_pg" formatted="false"><![CDATA[您正在進入區間 3。這個區間一般被當成慢跑配速，身體會開始感受到一些負擔。區間 3 幫助血液循環，也會讓乳酸開始堆積。]]></string>
+    <string name="mm_week1_tip5_pg" formatted="false"><![CDATA[您正在進入區間 2。區間 2 強度較低，可以維持長時間運動。這個區間適合用來提升耐力、減緩疲勞、燃燒脂肪、提升肌肉均衡。]]></string>
+    <string name="mm_week1_tip6_pg" formatted="false"><![CDATA[您的強度將會影響課程內容。再加把勁，看看您的極限在哪裡。]]></string>
+    <string name="mm_week1_tip7_pg" formatted="false"><![CDATA[太棒了！記得持續調整呼吸，找到適合自己的節奏。這能讓您往後的訓練更加容易。]]></string>
+    <string name="mm_week1_tip8_pg" formatted="false"><![CDATA[做得好，只剩下一分鐘！在最後五分鐘進行緩和運動，回想自己的表現。]]></string>
+    <string name="mm_week1_tip9_pg" formatted="false"><![CDATA[在這趟旅程中，記得要均衡飲食、適時補充水份和電解質、消除壓力、保持睡眠充足。]]></string>
+    <string name="mm_week1_tip10_pg" formatted="false"><![CDATA[您今天會進行間歇訓練。間歇訓練的內容是要有意識地變更您的配速，以結合高強度的訓練與適度的休息。]]></string>
+    <string name="mm_week1_tip11_pg" formatted="false"><![CDATA[這個訓練的內容是要使盡全力跑一分鐘，然後走路兩分鐘，盡可能地讓身體休息。]]></string>
+    <string name="mm_week1_tip12_pg" formatted="false"><![CDATA[要知道，這個訓練在短期中會非常困難。但它能讓您的身體習慣高強度的狀態。]]></string>
+    <string name="mm_week1_tip13_pg" formatted="false"><![CDATA[您正在進入區間 4。區間 4 的跑步開始變得比較困難，身體的使用率最高。這個區間能提升速度、耐力，也讓您的身體能夠承受大量的乳酸。]]></string>
+    <string name="mm_week1_tip14_pg" formatted="false"><![CDATA[您已經完成一半了！試著持續提升配速，繼續挑戰極限。記得要在訓練過程中保持身體在適當的狀態。]]></string>
+    <string name="mm_week1_tip15_pg" formatted="false"><![CDATA[您正在進入區間 5。區間 5 的速度是身體的極限。您無法在這個區間進行長時間的訓練，但這樣的訓練可以讓您的身體適應高強度的運動。]]></string>
+    <string name="mm_week1_tip16_pg" formatted="false"><![CDATA[非常好！您將身體推到了極限，非常努力地運動。在接下來的八週中，您會發現訓練越來越輕鬆。]]></string>
+    <string name="mm_week1_tip17_pg" formatted="false"><![CDATA[繼續走路——恢復是訓練中的重要環節。]]></string>
+    <string name="mm_week1_tip18_pg" formatted="false"><![CDATA[本週最後的訓練是節奏跑。節奏跑是長時間的穩定跑步，中間穿插短程的慢跑。]]></string>
+    <string name="mm_week1_tip19_pg" formatted="false"><![CDATA[節奏跑常常被形容成「舒適的挑戰」。您應該採用能夠長時間跑步的配速。思考您在比賽日會採用的配速，試著接近那個速度。]]></string>
+    <string name="mm_week1_tip20_pg" formatted="false"><![CDATA[在開始的時候，記得要使出全力，找到一個舒適但具挑戰性的速度。您應該採用能夠維持長時間跑步的配速。]]></string>
+    <string name="mm_week1_tip21_pg" formatted="false"><![CDATA[您快到一半了！希望您已經找到了適合的配速。做得很好，您應該對自己的表現感到驕傲。]]></string>
+    <string name="mm_week1_tip22_pg" formatted="false"><![CDATA[繼續慢跑，就快結束了！]]></string>
+    <string name="mm_week1_tip23_pg" formatted="false"><![CDATA[本週做的很好。您已經完成了八週訓練中的第一週，向著成功的 5 公里跑者更接近了一步。記住：您在旅程中可能會質疑自己，但您一定做得到！]]></string>
+    <string name="mm_week1_tip24_pg" formatted="false"><![CDATA[您邁出了巨大的一步，恭喜！您下週可以走得更遠。]]></string>
+    <string name="mm_week2_tip1_pg" formatted="false"><![CDATA[歡迎回到第二週的訓練。您會再次進行長距離跑步。您要在訓練過程中找到平衡。加快配速，加強血液循環，同時也要習慣使用腳掌奔跑。]]></string>
+    <string name="mm_week2_tip2_pg" formatted="false"><![CDATA[您這週的長距離跑步時間會加長。這代表您會多跑四分鐘，另外多休息一分鐘。]]></string>
+    <string name="mm_week2_tip3_random_pg" formatted="false"><![CDATA[保持下巴抬起，這樣才能讓您的肩膀向後和核心穩固。這是理想的跑步姿勢，讓您運動更有效率。]]></string>
+    <string name="mm_week2_tip4_random_pg" formatted="false"><![CDATA[我們必須投資自己的健康，因為您永遠不知道何時會帶來回報。]]></string>
+    <string name="mm_week2_tip5_random_pg" formatted="false"><![CDATA[您的腳掌要盡可能靠近身體的重心。這樣能讓您取得平衡，更能控制自己的身體。]]></string>
+    <string name="mm_week2_tip6_random_pg" formatted="false"><![CDATA[目標是要快速且安靜地著地。]]></string>
+    <string name="mm_week2_tip7_random_pg" formatted="false"><![CDATA[如果您沒辦法設想自己手部的位置，想像自己抓著振翅的蝴蝶，讓手部放輕鬆。]]></string>
+    <string name="mm_week2_tip8_random_pg" formatted="false"><![CDATA[您的手應該要高過腰部，而不是放在腰部以下。]]></string>
+    <string name="mm_week2_tip9_random_pg" formatted="false"><![CDATA[您會覺得合適的跑步姿勢難以理解嗎？設想在兩棟非常靠近的建築物之間奔跑，它們的間距只能剛好讓您通過。]]></string>
+    <string name="mm_week2_tip10_pg" formatted="false"><![CDATA[今天的表現很棒！您提升了跑步的距離，看起來相當輕鬆。]]></string>
+    <string name="mm_week2_tip11_pg" formatted="false"><![CDATA[繼續維持好的習慣，尤其是跑步時的姿勢。]]></string>
+    <string name="mm_week2_tip12_pg" formatted="false"><![CDATA[您可能會發現這週的間歇跑比上週困難。在這個訓練課程中，每週都會比上週更難一些。]]></string>
+    <string name="mm_week2_tip13_pg" formatted="false"><![CDATA[如果您想要知道自己的極限在哪裡，您必須要不斷強迫自己靠近極限。]]></string>
+    <string name="mm_week2_tip14_random_pg" formatted="false"><![CDATA[您邁出越多步伐，您就能越有效率地進行這件事。]]></string>
+    <string name="mm_week2_tip15_random_pg" formatted="false"><![CDATA[如果您專注於完美地進行九次一英哩的跑步訓練，您就能成為更好的跑者。]]></string>
+    <string name="mm_week2_tip16_random_pg" formatted="false"><![CDATA[這個過程可能會很痛苦、可能會有憤怒、也可能會讓您的行程變得非常忙碌。在這之中，不如就選忙碌吧！]]></string>
+    <string name="mm_week2_tip17_random_pg" formatted="false"><![CDATA[腰桿挺直、肩膀略微向後。]]></string>
+    <string name="mm_week2_tip18_random_pg" formatted="false"><![CDATA[在腳掌著地的同時應該保持膝蓋微彎，]]></string>
+    <string name="mm_week2_tip19_random_pg" formatted="false"><![CDATA[如果覺得堅持訓練太過困難，就想想 20 或 30 年以後的人生。現在的努力會影響將來的生活。]]></string>
+    <string name="mm_week2_tip20_pg" formatted="false"><![CDATA[又是一次充滿挑戰性的訓練，您還是撐過來了。接下來六週的進步值得您期待，無論是作為一個跑者，或是一個人。]]></string>
+    <string name="mm_week2_tip21_pg" formatted="false"><![CDATA[您已經來到第二週訓練的尾聲。您將會進行約 30 分鐘的節奏跑。記住，節奏跑的配速應該是比賽配速的 80% 到 90% 之間。]]></string>
+    <string name="mm_week2_tip22_pg" formatted="false"><![CDATA[節奏跑能夠提高您的乳酸閾值配速。這種訓練能夠直接提升您跑步的時間。]]></string>
+    <string name="mm_week2_tip23_pg" formatted="false"><![CDATA[就算您無法跟上配速，也不能就此放棄。不需要陷入絕望跟沮喪中。]]></string>
+    <string name="mm_week2_tip24_random_pg" formatted="false"><![CDATA[回想一下您開始跑步的主要原因。把這當作您的動機！]]></string>
+    <string name="mm_week2_tip25_random_pg" formatted="false"><![CDATA[要保持健康，您不需要成為世界級的運動員。您需要的是持之以恆。]]></string>
+    <string name="mm_week2_tip26_random_pg" formatted="false"><![CDATA[在健康還有餘裕的時候，我們常會不自覺地揮霍浪費。不能有這樣的思維！]]></string>
+    <string name="mm_week2_tip27_random_pg" formatted="false"><![CDATA[您得隨時抬頭挺胸——無論是在跑步、還是在生活中！]]></string>
+    <string name="mm_week2_tip28_pg" formatted="false"><![CDATA[做得很好！您這週的訓練表現傑出，有著顯著的進步。]]></string>
+    <string name="mm_week2_tip29_pg" formatted="false"><![CDATA[確保自己在跑步前做了足夠的動態伸展。這能讓您放鬆，降低受傷的風險。]]></string>
+    <string name="mm_week3_tip1_pg" formatted="false"><![CDATA[歡迎回到第三週的訓練。今天您要進行長距離跑步。在訓練中，試著找出固定的呼吸模式。這能讓您跑得更遠。]]></string>
+    <string name="mm_week3_tip2_pg" formatted="false"><![CDATA[在長距離訓練中不要跑太快。這種訓練的目標是要讓您習慣長時間使用雙腳。]]></string>
+    <string name="mm_week3_tip3_random_pg" formatted="false"><![CDATA[要維持健康，您不需要成為世界級的運動員，只需要持之以恆。]]></string>
+    <string name="mm_week3_tip4_random_pg" formatted="false"><![CDATA[生命因為多樣性而變得更加美好，對運動員來說更是如此。]]></string>
+    <string name="mm_week3_tip5_random_pg" formatted="false"><![CDATA[過於優渥的生活，常常使我們無法發揮潛能。]]></string>
+    <string name="mm_week3_tip6_random_pg" formatted="false"><![CDATA[正面的態度有兩個特點——見到的時候自然就會明白，具有這種態度的時候也自然地會察覺。]]></string>
+    <string name="mm_week3_tip7_random_pg" formatted="false"><![CDATA[記得一定要規律進行跑步之前的熱身動作。這會為您的生活帶來許多好處。]]></string>
+    <string name="mm_week3_tip8_pg" formatted="false"><![CDATA[您必須更加努力，才能面對更艱困的挑戰。您也需要更加努力，才能讓艱困的環境產生價值。但是呢？您可以做到。]]></string>
+    <string name="mm_week3_tip9_pg" formatted="false"><![CDATA[這次訓練做得很好！這幾乎是一次 45 分鐘的訓練，並不簡單。給自己一點掌聲，並且準備好讓身體機能恢復。]]></string>
+    <string name="mm_week3_tip10_pg" formatted="false"><![CDATA[您今天將會進行另一次間歇跑。我想在此強調跑步前熱身的重要性。間歇跑對身體造成的負擔特別大。]]></string>
+    <string name="mm_week3_tip11_pg" formatted="false"><![CDATA[對今天的訓練來說，適時補充水分和採取正確姿勢都很重要。]]></string>
+    <string name="mm_week3_tip12_random_pg" formatted="false"><![CDATA[這樣的間歇訓練可以提升身體的強度，也能讓意志力變得更堅韌，能夠撐過最灰暗的日子。]]></string>
+    <string name="mm_week3_tip13_random_pg" formatted="false"><![CDATA[沒有什麼比人類的精神更加強大、堅定與美麗。特別是在它接受考驗的時刻。]]></string>
+    <string name="mm_week3_tip14_random_pg" formatted="false"><![CDATA[只要踏出更多步，或是提升步頻，您就能讓身心更加均衡。]]></string>
+    <string name="mm_week3_tip15_random_pg" formatted="false"><![CDATA[記得要調整配速和呼吸；隨時評估自身狀況，在負擔過大的時候改成慢跑。]]></string>
+    <string name="mm_week3_tip16_pg" formatted="false"><![CDATA[在考驗中才能展現我們真正的實力。在想放棄的時候，想想您是為了什麼開始跑步。]]></string>
+    <string name="mm_week3_tip17_pg" formatted="false"><![CDATA[今天的表現很棒！您或許沒辦法馬上看到成效，但間歇跑提升了心肺能力和整體健康。]]></string>
+    <string name="mm_week3_tip18_pg" formatted="false"><![CDATA[希望您已經熱身完畢，準備好進行今天的節奏跑訓練了。您今天會多跑一些，總共約 36 分鐘。確保水分充足，專心保持姿勢。來看看您的表現如何吧！]]></string>
+    <string name="mm_week3_tip19_pg" formatted="false"><![CDATA[想想您可以用怎樣的配速跑一小時。在這樣的配速之下，您可以推論出要在比賽日之前訓練到什麼程度。]]></string>
+    <string name="mm_week3_tip20_random_pg" formatted="false"><![CDATA[回報總是比付出來得甜美。]]></string>
+    <string name="mm_week3_tip21_random_pg" formatted="false"><![CDATA[記住——天下沒有白吃的午餐！]]></string>
+    <string name="mm_week3_tip22_random_pg" formatted="false"><![CDATA[在跑步的時候，您可以用向後走的方式來休息。這可以提升身體平衡、協調性，也會用到不同的肌群。]]></string>
+    <string name="mm_week3_tip23_random_pg" formatted="false"><![CDATA[您應該按照早晨休息的心率來安排訓練。]]></string>
+    <string name="mm_week3_tip24_pg" formatted="false"><![CDATA[今天的表現超棒！您完成了第三週的訓練，已經有了長足的進步，不斷邁向 5 公里的目標。您應該要對自己的成果感到非常滿意。]]></string>
+    <string name="mm_week3_tip25_pg" formatted="false"><![CDATA[試著做一些簡單的靜態伸展，作為訓練的收尾。這能加速肌肉恢復，減緩痠痛。]]></string>
+    <string name="mm_week4_tip1_pg" formatted="false"><![CDATA[歡迎進入第四週的訓練。您這週會持續增加訓練的距離和強度。今天就從長距離訓練開始。]]></string>
+    <string name="mm_week4_tip2_pg" formatted="false"><![CDATA[今天的訓練重點是保持良好的姿勢。肩膀向後、抬頭挺胸、繃緊核心，雙腳快速輕盈地落地。]]></string>
+    <string name="mm_week4_tip3_random_pg" formatted="false"><![CDATA[訓練的過程中，盡可能地讓雙腳靠近身體落地。這能讓您踩更多步，身體更加平衡。]]></string>
+    <string name="mm_week4_tip4_random_pg" formatted="false"><![CDATA[跑步前先進行 5-10 分鐘的熱身會是不錯的做法。熱身動作包括側弓箭步、高抬腿、臀踢和側併步。]]></string>
+    <string name="mm_week4_tip5_random_pg" formatted="false"><![CDATA[您必須要和自己的惰性對抗。您要下定決心努力奮鬥。]]></string>
+    <string name="mm_week4_tip6_pg" formatted="false"><![CDATA[長距離慢跑可以幫助您找到有效率的跑步姿勢。]]></string>
+    <string name="mm_week4_tip7_random_pg" formatted="false"><![CDATA[我們都能夠做到，因為這是我們的選擇。]]></string>
+    <string name="mm_week4_tip8_random_pg" formatted="false"><![CDATA[我們沒有意識到健康得來不易的話，就容易揮霍無度，直到我們不再健康。不要讓這樣的事情在自己身上發生！]]></string>
+    <string name="mm_week4_tip9_pg" formatted="false"><![CDATA[今天做得非常好！回想一下您的第一次長距離慢跑。和現在有什麼差別？想像您四週後的表現會有多好！保持現在的良好表現！]]></string>
+    <string name="mm_week4_tip10_pg" formatted="false"><![CDATA[您的心肺能力越來越強了！您的心臟現在可以輸送更多血液，代謝更多氧氣，每次跑步都讓心臟更有效率。]]></string>
+    <string name="mm_week4_tip11_pg" formatted="false"><![CDATA[您今天要進行間歇跑的訓練。今天的訓練強度會很高。您每次衝刺之間有一分鐘的間隔。這會需要使出全力，務必要做好準備。]]></string>
+    <string name="mm_week4_tip12_pg" formatted="false"><![CDATA[確保您每次跑步之前都有充分的熱身，特別是間歇跑之前。不管是伸展或是走路，您都應該要保持彈性。]]></string>
+    <string name="mm_week4_tip13_random_pg" formatted="false"><![CDATA[我們唯一能夠全盤掌握的就是態度。]]></string>
+    <string name="mm_week4_tip14_pg" formatted="false"><![CDATA[您知道嗎？研究指出以無氧方式進行間歇跑訓練能夠增加肌肉量。]]></string>
+    <string name="mm_week4_tip15_random_pg" formatted="false"><![CDATA[您具有保持正面心態所需的所有要素。但要真正做到這件事情，您也得付出一切。]]></string>
+    <string name="mm_week4_tip16_random_pg" formatted="false"><![CDATA[健康帶來正向態度，兩者結合之後就能夠帶來心理健康。]]></string>
+    <string name="mm_week4_tip17_random_pg" formatted="false"><![CDATA[如果您持續奮鬥、持續努力推進極限。您一定能完成目標！]]></string>
+    <string name="mm_week4_tip18_random_pg" formatted="false"><![CDATA[記得給身體充分的恢復時間。]]></string>
+    <string name="mm_week4_tip19_pg" formatted="false"><![CDATA[又是一次絕佳的訓練表現！記得要用走路來舒緩。這不只是幫助恢復，還能為身體帶來各種效益。]]></string>
+    <string name="mm_week4_tip20_pg" formatted="false"><![CDATA[準備好進行本週最後一次訓練！您大概已經猜到了，這次訓練是節奏跑。]]></string>
+    <string name="mm_week4_tip21_pg" formatted="false"><![CDATA[您現在對此應該已經非常了解。別忘了這個訓練的目的是要舒服地挑戰，腦海中要設想比賽日的狀況。]]></string>
+    <string name="mm_week4_tip22_random_pg" formatted="false"><![CDATA[艱困的挑戰讓您能變成自己想成為的樣子，接受挑戰吧！]]></string>
+    <string name="mm_week4_tip23_random_pg" formatted="false"><![CDATA[跑步只是以單腳平衡這麼簡單的事。]]></string>
+    <string name="mm_week4_tip24_pg" formatted="false"><![CDATA[記住：節奏跑具有挑戰性，但這麼做可以讓您成為一個有效率的跑者。]]></string>
+    <string name="mm_week4_tip25_random_pg" formatted="false"><![CDATA[專注呼吸，練習進入節奏。這對長距離跑步訓練非常重要。]]></string>
+    <string name="mm_week4_tip26_random_pg" formatted="false"><![CDATA[讓自己逼近極限是成長的最佳方式，這能讓您全方位提升自己的能力，成為更好的跑者。]]></string>
+    <string name="mm_week4_tip27_random_pg" formatted="false"><![CDATA[伸展的技巧之一是拿彈力帶繞過腳踝，然後作半月式。]]></string>
+    <string name="mm_week4_tip28_pg" formatted="false"><![CDATA[第四週完美收尾！您有了長足的進步，訓練變得越來越輕鬆。您的進步非常明顯，不斷朝著目標前進。]]></string>
+    <string name="mm_week5_tip1_pg" formatted="false"><![CDATA[第五週的開局非常不錯。今天的訓練內容是要進行目前為止距離最長的一次跑步。您要跑 53 分鐘。一如往常，記得補充水份、保持姿勢正確、享受訓練的過程。]]></string>
+    <string name="mm_week5_tip2_pg" formatted="false"><![CDATA[飲食是長跑的重要關鍵。您要確定攝取足夠的熱量，讓您的身體有能夠轉換成能量的肝醣。您也會想要攝取足夠的蛋白質進行恢復。]]></string>
+    <string name="mm_week5_tip3_random_pg" formatted="false"><![CDATA[您知道嗎？研究指出跑步訓練中的每一步都會施加體重 3-4 倍的壓力到腿上。跑鞋能夠適當地緩衝。]]></string>
+    <string name="mm_week5_tip4_pg" formatted="false"><![CDATA[長距離慢跑能夠有效加強腿部的肌肉。]]></string>
+    <string name="mm_week5_tip5_random_pg" formatted="false"><![CDATA[想像自己是一個 90 歲的老人，在結冰的湖面上慢慢奔跑，這能夠矯正姿勢。]]></string>
+    <string name="mm_week5_tip6_pg" formatted="false"><![CDATA[長距離慢跑能夠消耗許多熱量，但不會過於費力。]]></string>
+    <string name="mm_week5_tip7_random_pg" formatted="false"><![CDATA[每年有 50% 的跑者會因為反覆的承受衝擊而受傷。降低風險的方法就是縮短訓練的長度，並且確實做好伸展。]]></string>
+    <string name="mm_week5_tip8_pg" formatted="false"><![CDATA[雖然距離很長，您進行起來游刃有餘！完成以後，您想必有信心在數週後準備好面對 5 公里賽事。]]></string>
+    <string name="mm_week5_tip9_pg" formatted="false"><![CDATA[正式比賽之前的飲食必須要審慎規劃。]]></string>
+    <string name="mm_week5_tip10_pg" formatted="false"><![CDATA[您將會用間歇跑開始這次訓練。您現在應該已經非常了解這些訓練的內容，也了解每週會提升訓練強度以獲致進步。]]></string>
+    <string name="mm_week5_tip11_pg" formatted="false"><![CDATA[像之前一樣，請在訓練開始前確定自己已經熱身完畢。需要的話可以隨時休息，也別忘了補充水份！]]></string>
+    <string name="mm_week5_tip12_random_pg" formatted="false"><![CDATA[科技有助於蒐集資料提升訓練效果。然而，不要被科技影響到節奏和呼吸！]]></string>
+    <string name="mm_week5_tip13_random_pg" formatted="false"><![CDATA[練習採用正確的姿勢可以避免受傷。]]></string>
+    <string name="mm_week5_tip14_pg" formatted="false"><![CDATA[研究指出進行十五到三十分鐘的高強度間歇訓練跟長時間的中度訓練有一樣的效果。]]></string>
+    <string name="mm_week5_tip15_random_pg" formatted="false"><![CDATA[要維持良好的跑姿，您要放鬆雙手，讓它們自然靠近軀幹，但擺動時不超過軀幹的中線。]]></string>
+    <string name="mm_week5_tip16_pg" formatted="false"><![CDATA[間歇訓練應該要越來越輕鬆。關節可能會承受很大的壓力，必須要花費足夠時間來復原。]]></string>
+    <string name="mm_week5_tip17_random_pg" formatted="false"><![CDATA[您需要讓臀部放鬆，盡可能減少旋轉。這會讓您維持良好跑姿，降低受傷的風險。]]></string>
+    <string name="mm_week5_tip18_pg" formatted="false"><![CDATA[訓練的表現非常出色！今天的表現很棒！]]></string>
+    <string name="mm_week5_tip19_pg" formatted="false"><![CDATA[您今天將會進行另一次節奏跑。您要做四次七分鐘的跑步，以兩分鐘的慢跑作為間隔。]]></string>
+    <string name="mm_week5_tip20_pg" formatted="false"><![CDATA[記得要保持正確跑姿，規律進行呼吸，確保水份充足。]]></string>
+    <string name="mm_week5_tip21_random_pg" formatted="false"><![CDATA[如果您心理上感到很掙扎，我希望您能夠習慣這樣的狀態，找個熟識的人分享。不要畏懼。]]></string>
+    <string name="mm_week5_tip22_pg" formatted="false"><![CDATA[節奏跑的目的是要加快速度，讓自己能夠跑得更快更久。]]></string>
+    <string name="mm_week5_tip23_random_pg" formatted="false"><![CDATA[試著讓腳掌在臀部下方落地。這能讓您維持在理想的跑姿。]]></string>
+    <string name="mm_week5_tip24_pg" formatted="false"><![CDATA[在節奏跑的訓練中挑戰極限，您就能夠大幅提升比賽的速度。]]></string>
+    <string name="mm_week5_tip25_random_pg" formatted="false"><![CDATA[想像您要踏上的地面朝著您的腳掌靠近，而不是腳掌去踩踏地面。]]></string>
+    <string name="mm_week5_tip26_random_pg" formatted="false"><![CDATA[保持跑姿的幾個小秘訣：抬頭挺胸、肩膀放鬆、繃緊核心、腰桿挺直。]]></string>
+    <string name="mm_week5_tip27_pg" formatted="false"><![CDATA[在課表完成以後持續訓練非常重要。]]></string>
+    <string name="mm_week5_tip28_pg" formatted="false"><![CDATA[進行活動度鍛鍊、重量訓練，保持睡眠充足，就能建立成功且平衡的訓練日程表。]]></string>
+    <string name="mm_week6_tip1_pg" formatted="false"><![CDATA[歡迎來到第六週的訓練！比賽週逐漸逼近，您也在不斷進步。]]></string>
+    <string name="mm_week6_tip2_pg" formatted="false"><![CDATA[今天您要進行長距離跑步。您這週要跑的距離又更長了，現在您可以練習採用舒適的配速。]]></string>
+    <string name="mm_week6_tip3_random_pg" formatted="false"><![CDATA[用走路來休息，保持有效率的跑姿。]]></string>
+    <string name="mm_week6_tip4_pg" formatted="false"><![CDATA[您正在訓練呼吸、有氧和肌肉系統，提升跑步效率。]]></string>
+    <string name="mm_week6_tip5_random_pg" formatted="false"><![CDATA[保持呼吸節奏能夠幫助您節省能量。]]></string>
+    <string name="mm_week6_tip6_random_pg" formatted="false"><![CDATA[理想的步頻是每分鐘 165 到 180 步。試著在每 30 秒內踏出 41 到 45 步，達到理想的步頻。]]></string>
+    <string name="mm_week6_tip7_pg" formatted="false"><![CDATA[這樣跑步不只能讓您消耗卡路里，也能把身體調整到適合跑步的狀態。]]></string>
+    <string name="mm_week6_tip8_random_pg" formatted="false"><![CDATA[在每次訓練中除了努力跑步以外，還要維持理想跑姿和呼吸節奏。]]></string>
+    <string name="mm_week6_tip9_pg" formatted="false"><![CDATA[訓練表現非常好！完成 5 公里比賽的重點在於穩定配速並且控管自己的狀態。]]></string>
+    <string name="mm_week6_tip10_pg" formatted="false"><![CDATA[您今天將會進行另一次間歇跑。間歇跑的強度將會相當高，如果太過困難，就回想您過去做的一切努力。想想您跑步的理由、為什麼想要完成 5 公里挑戰，用這樣的信念驅使自己完成訓練。]]></string>
+    <string name="mm_week6_tip11_pg" formatted="false"><![CDATA[專注呼吸，在衝刺的間隔用走路的方式休息。如果您太過費力的話，可以稍微降低強度。]]></string>
+    <string name="mm_week6_tip12_random_pg" formatted="false"><![CDATA[傷痛有其根本原因，通常是動力鏈不平衡，或是有薄弱的環節。如果您的左踝緊繃，可能是因為右邊的臀部肌力不夠。（訓練後恢復的重要性）]]></string>
+    <string name="mm_week6_tip13_random_pg" formatted="false"><![CDATA[高強度間歇訓練能夠提升速度，讓您更快跑完 5 公里。]]></string>
+    <string name="mm_week6_tip14_pg" formatted="false"><![CDATA[短距離衝刺能夠提升賀爾蒙分泌，對身體有很多助益，比如維持新陳代謝和血糖等等。]]></string>
+    <string name="mm_week6_tip15_random_pg" formatted="false"><![CDATA[休息日可以進行重量訓練。這可以鍛鍊腿部的肌肉。]]></string>
+    <string name="mm_week6_tip16_pg" formatted="false"><![CDATA[高強度間歇訓練能夠提升無氧和有氧運動的表現。]]></string>
+    <string name="mm_week6_tip17_random_pg" formatted="false"><![CDATA[要成為更強的跑者，行動力、穩定度、彈性和平衡都需要不斷提升。]]></string>
+    <string name="mm_week6_tip18_pg" formatted="false"><![CDATA[您的表現令人印象深刻！花幾分鐘走路作為緩和運動。您今天非常努力，值得為自己驕傲。]]></string>
+    <string name="mm_week6_tip19_pg" formatted="false"><![CDATA[第六週最後的訓練是節奏跑。確保呼吸規律和良好跑姿。]]></string>
+    <string name="mm_week6_tip20_random_pg" formatted="false"><![CDATA[固定檢查自己早上的靜止心率，這個數值可以用來評估您的身體休息狀況如何、承受多大的壓力。這可以決定訓練的時間和強度。]]></string>
+    <string name="mm_week6_tip21_random_pg" formatted="false"><![CDATA[對運動員來說，最重要的兩件事就是補充水份和睡眠。]]></string>
+    <string name="mm_week6_tip22_pg" formatted="false"><![CDATA[跑步時常被忽略的面向是心理層面的挑戰。節奏跑的訓練讓跑者能夠習慣這樣的心理挑戰，訓練自己克服。]]></string>
+    <string name="mm_week6_tip23_random_pg" formatted="false"><![CDATA[如果您想要知道每天應該喝多少水，把體重除以二。將這個數值乘以三十，就是您應該喝的毫升數。]]></string>
+    <string name="mm_week6_tip24_pg" formatted="false"><![CDATA[在訓練過程中，您需要比規劃的比賽配速稍微慢一些。]]></string>
+    <string name="mm_week6_tip25_random_pg" formatted="false"><![CDATA[您做的動作越多樣，身體就越健康。]]></string>
+    <string name="mm_week6_tip26_random_pg" formatted="false"><![CDATA[每晚睡前將您的腿伸直。將腳踝朝不同方向旋轉。作一系列的運動，然後伸展肌腱。這能夠訓練腳的各個部份。]]></string>
+    <string name="mm_week6_tip27_pg" formatted="false"><![CDATA[做得很好！這是長程的訓練，您完成了。您快要準備好面對 5 公里賽事了。]]></string>
+    <string name="mm_week7_tip1_pg" formatted="false"><![CDATA[歡迎來到第七週的訓練！這將會是訓練過程中最困難的一週，但您一定能做到。從第一週開始，您已經取得了很大的進步，證明自己的時候到了。]]></string>
+    <string name="mm_week7_tip2_pg" formatted="false"><![CDATA[我們會從長距離跑步開始，您要使用目前學到的所有技巧來提升表現。這是您在訓練課程中最長的一次跑步，您應該要對自己有信心。]]></string>
+    <string name="mm_week7_tip3_random_pg" formatted="false"><![CDATA[大多數跑者的最大問題是一開始就跑太快。]]></string>
+    <string name="mm_week7_tip4_pg" formatted="false"><![CDATA[長距離慢跑能夠讓您管控不舒服的感覺，讓您成為更有耐心、更自律的跑者。]]></string>
+    <string name="mm_week7_tip5_random_pg" formatted="false"><![CDATA[確保自己配速穩定。這能提升您的耐力，讓您更加專注。]]></string>
+    <string name="mm_week7_tip6_random_pg" formatted="false"><![CDATA[確保自己攝取充足的水份。缺水的狀態會讓運動表現下降，也會讓您更容易受傷。]]></string>
+    <string name="mm_week7_tip7_random_pg" formatted="false"><![CDATA[在訓練結束後，應該補充大量的水份。研究顯示長時間進行高強度訓練的壞處大過好處。]]></string>
+    <string name="mm_week7_tip8_random_pg" formatted="false"><![CDATA[在第一英哩，您花的時間應該要比預計的平均配速慢 60 到 90 秒。]]></string>
+    <string name="mm_week7_tip9_pg" formatted="false"><![CDATA[高強度的運動會讓粒腺體變大，使用更多的氧氣和儲存的肝醣。]]></string>
+    <string name="mm_week7_tip10_random_pg" formatted="false"><![CDATA[維持有效率的跑姿和呼吸至關重要。]]></string>
+    <string name="mm_week7_tip11_pg" formatted="false"><![CDATA[做得很好！您證明了自己的能力。從各個角度來說，這都不是容易的訓練，您應該為自己感到驕傲。]]></string>
+    <string name="mm_week7_tip12_pg" formatted="false"><![CDATA[您會再進行一次間歇跑。別忘了在跑步前進行伸展，專注保持正確姿勢。]]></string>
+    <string name="mm_week7_tip13_random_pg" formatted="false"><![CDATA[您的身體——尤其是心臟——需要足夠的時間才能把帶著氧的血液送到肌肉。]]></string>
+    <string name="mm_week7_tip14_random_pg" formatted="false"><![CDATA[規律地用走路來休息。]]></string>
+    <string name="mm_week7_tip15_pg" formatted="false"><![CDATA[完成間歇訓練以後，您的代謝率會維持在高檔，最長持續兩個小時，大量地消耗卡路里。]]></string>
+    <string name="mm_week7_tip16_random_pg" formatted="false"><![CDATA[不要不間斷地連續跑超過一英哩，中間不走路休息。]]></string>
+    <string name="mm_week7_tip17_pg" formatted="false"><![CDATA[耐力訓練通常是為了長跑進行的，但間歇訓練也是提升氧氣消耗率的好方法。]]></string>
+    <string name="mm_week7_tip18_random_pg" formatted="false"><![CDATA[跑 5 公里以前，很適合吃燕麥配上水果。]]></string>
+    <string name="mm_week7_tip19_pg" formatted="false"><![CDATA[做得好！您輕鬆地完成這些訓練。]]></string>
+    <string name="mm_week7_tip20_pg" formatted="false"><![CDATA[這次節奏跑會是與實際 5 公里賽事最接近的練習。把握這個機會用穩定的速度進行長距離跑步。]]></string>
+    <string name="mm_week7_tip21_random_pg" formatted="false"><![CDATA[如果訓練越來越困難，不要開始質疑自己。]]></string>
+    <string name="mm_week7_tip22_pg" formatted="false"><![CDATA[乳酸堆積的會造成肌肉疲勞。節奏跑可以提升您的乳酸耐受度，讓您跑得更快更久。]]></string>
+    <string name="mm_week7_tip23_random_pg" formatted="false"><![CDATA[進行跑步訓練的時候，不要想著要跑九英哩。想成是跑九次，每次一英哩。]]></string>
+    <string name="mm_week7_tip24_random_pg" formatted="false"><![CDATA[如果您要看自己進步了多少，指標是很重要的。追蹤自己的平均配速、平均心率和步頻。]]></string>
+    <string name="mm_week7_tip25_random_pg" formatted="false"><![CDATA[確定您的能量充足，補充足夠的水份，也有充分的休息。這些都是能夠提升比賽表現的關鍵要素。]]></string>
+    <string name="mm_week7_tip26_random_pg" formatted="false"><![CDATA[每次運動的前 10 分鐘都不應該有太高的強度，讓您的心肺系統和肌肉可以調整到適合訓練的狀態。]]></string>
+    <string name="mm_week7_tip27_pg" formatted="false"><![CDATA[非常好！您完成了第七週的課程，在進行 5 公里比賽以前只剩下幾次訓練了。]]></string>
+    <string name="mm_week8_tip1_pg" formatted="false"><![CDATA[歡迎來到第八週，也是訓練的最後一週。在過去的七個星期中，您有了長足的進步。是時候展現訓練成果了。]]></string>
+    <string name="mm_week8_tip2_pg" formatted="false"><![CDATA[第八週的訓練跟其它訓練有些不同，強度並沒有高過第七週。在這週結束時，應該有足夠的能量可以完成 5 公里賽事。]]></string>
+    <string name="mm_week8_tip3_random_pg" formatted="false"><![CDATA[每次訓練開始前都應該進行動態暖身。]]></string>
+    <string name="mm_week8_tip4_random_pg" formatted="false"><![CDATA[訓練後也要進行緩和運動。]]></string>
+    <string name="mm_week8_tip5_random_pg" formatted="false"><![CDATA[您可能會覺得很累，這是正常的，還是要試著不斷挑戰自己的極限。]]></string>
+    <string name="mm_week8_tip6_random_pg" formatted="false"><![CDATA[使用滾輪，讓您的臀部和腿部完全舒展開來。]]></string>
+    <string name="mm_week8_tip7_pg" formatted="false"><![CDATA[訓練能讓您的韌帶、肌腱、骨骼和關節適應跑步的壓力。]]></string>
+    <string name="mm_week8_tip8_random_pg" formatted="false"><![CDATA[在訓練過程中試著保持穩定配速。]]></string>
+    <string name="mm_week8_tip9_random_pg" formatted="false"><![CDATA[節奏跑的配速是最大速率的 70% 到 80%。]]></string>
+    <string name="mm_week8_tip10_pg" formatted="false"><![CDATA[恭喜！這是課表中最後一次長距離訓練。您已經非常接近完成 5 公里賽事。]]></string>
+    <string name="mm_week8_tip11_pg" formatted="false"><![CDATA[在努力了這麼久以後，間歇跑對您來說應該只是小菜一碟。]]></string>
+    <string name="mm_week8_tip12_pg" formatted="false"><![CDATA[面向前方，將手靠近腰部，保持身體穩定。]]></string>
+    <string name="mm_week8_tip13_random_pg" formatted="false"><![CDATA[在恢復日做一些輕鬆的訓練也是很重要的。不要略過這個步驟！]]></string>
+    <string name="mm_week8_tip14_random_pg" formatted="false"><![CDATA[巧克力牛奶是運動後最佳的飲料之一！]]></string>
+    <string name="mm_week8_tip15_pg" formatted="false"><![CDATA[雖然間歇訓練耗費的時間不長，它卻是減重的絕佳方式。]]></string>
+    <string name="mm_week8_tip16_random_pg" formatted="false"><![CDATA[別忘了在每次訓練的前 30 分鐘內補充能量和水份。]]></string>
+    <string name="mm_week8_tip17_random_pg" formatted="false"><![CDATA[試著用滾輪恢復肌肉疲勞。這能放鬆肌肉、減緩痠痛。]]></string>
+    <string name="mm_week8_tip18_random_pg" formatted="false"><![CDATA[睡眠的品質與時間也都對恢復的速度有很大的影響。]]></string>
+    <string name="mm_week8_tip19_pg" formatted="false"><![CDATA[今天的表現非常好！您看起來進步了很多，已經準備好挑戰 5 公里賽事了。]]></string>
+    <string name="mm_week8_tip20_pg" formatted="false"><![CDATA[這天終於來了！八週的練習成果即將顯現在最後的這次長跑上。您度過了漫長的旅程，付出了非常大的努力。]]></string>
+    <string name="mm_week8_tip21_pg" formatted="false"><![CDATA[您將會進行最後一次節奏跑，完成這份訓練課表。把這當成 5 公里實戰。回想過去八週學到的所有技巧，把它們全部用上。]]></string>
+    <string name="mm_week8_tip22_random_pg" formatted="false"><![CDATA[均衡飲食、保持水份充足、補充電解質、舒緩壓力、確保睡眠充足。]]></string>
+    <string name="mm_week8_tip23_pg" formatted="false"><![CDATA[您可以靠著這次節奏跑來提升身體的能力。提升耐力也能提升 V02 的最大值，這是心肺能力與整體健康的指標。]]></string>
+    <string name="mm_week8_tip24_random_pg" formatted="false"><![CDATA[杏仁奶、一根香蕉、半顆酪梨、一茶匙堅果奶油、一勺蛋白粉和半盒的冰塊打成的奶昔很適合運動後飲用。]]></string>
+    <string name="mm_week8_tip25_pg" formatted="false"><![CDATA[如果您想要挑戰更困難的比賽，您需要堅韌的心智。節奏跑能夠讓內心更加強韌。]]></string>
+    <string name="mm_week8_tip26_random_pg" formatted="false"><![CDATA[比賽週應該要有充足的睡眠、充足的飲食和充足的水份。]]></string>
+    <string name="mm_week8_tip27_random_pg" formatted="false"><![CDATA[比賽前的均衡飲食應該包括 50% 的碳水化合物、25% 的蛋白質和 25% 的脂肪。]]></string>
+    <string name="mm_week8_tip28_pg" formatted="false"><![CDATA[您已經幾乎完成 5 公里賽事的備戰工作——只差最後一步了！]]></string>
+    <string name="mm_week8_tip29_pg" formatted="false"><![CDATA[恭喜！您已經完成了八週的訓練課表。您已經準備好面對 5 公里賽事了。在比賽前保持充足的睡眠、飲食和水份。]]></string>
+</resources>

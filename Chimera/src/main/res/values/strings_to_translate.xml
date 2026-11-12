@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- strings_to_translate.xml is explicitly for strings that should be collected for translating -->
+    <string name="apple_welcome_ad_pg">Sync and save this workout data to your device — Tap your Apple Watch or iPhone to the %1$s.</string>
+
+    <!-- New frame models -->
+    <string formatted="false" name="tcv_indoor_cycle_fr_tc"><![CDATA[TCV Cycle FR]]></string>
+    <string formatted="false" name="tcv_indoor_cycle_fx_tc"><![CDATA[TCV Cycle FX]]></string>
+
+    <!-- Display a message due to the SafeToStart restriction -->
+    <string name="start_limited_tm_main_motor_tc">Start limited - TM main motor running</string>
+    <string name="start_limited_tm_incline_moving_tc">Start limited - TM incline moving</string>
+    <string name="start_limited_tm_rpm_encoder_tc">Start limited - TM rpm encoder running</string>
+    <string name="start_limited_tm_rpm_value_tc">Start limited - TM rpm value running</string>
+
+    <string name="performance_2027_tc">Performance 2027</string>
+    <string name="engineering_debug_tc">Engineering Debug</string>
+    <string name="stride_length_tc">Stride Length</string>
+    <string name="average_stride_length_tc">Average Stride Length</string>
+    <string name="stride_length_uc">STRIDE LENGTH</string>
+    <string name="average_stride_length_uc">AVERAGE STRIDE LENGTH</string>
+
+    <string name="factory_reset_stb_confirm_pg">Are you sure you want to factory reset the tuner? This can\'t be undone.</string>
+    <string name="factory_reset_stb_failed_pg">Factory reset couldn\'t be completed. Make sure the tuner is up to date and try again.</string>
+    <string name="jump_device_redirect_app_tc">JUMP Device Redirect App</string>
+    <string name="tread_sense_countdown_tc">Tread Sense Countdown</string>
+
+    <!-- Update check errors (MES Update tab) -->
+    <string name="update_error_no_usb_pg">USB drive not found. Insert a USB drive and try again.</string>
+    <string name="update_error_no_usb_manifest_pg">No update.xml found on the USB drive.</string>
+    <string name="update_error_invalid_bundle_pg">The update file cannot be read.</string>
+    <string name="update_error_wrong_equipment_pg">This update is for a different equipment type.</string>
+    <string name="update_error_invalid_serial_pg">Serial number might not be valid for updates.</string>
+    <string name="update_error_server_unreachable_pg">Cannot reach the update server. Check the network connection and the date and time.</string>
+    <string name="update_error_updater_missing_pg">Update Service app not found.</string>
+    <string name="update_error_service_not_running_pg">The Update Service does not appear to be running.</string>
+</resources>

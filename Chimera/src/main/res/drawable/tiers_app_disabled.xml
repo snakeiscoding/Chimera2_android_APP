@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/tiers_disabled_app_overlay" />
+    <item android:drawable="@drawable/icon_lock" android:width="30dp" android:height="30dp" android:gravity="bottom" android:left="15dp" android:bottom="15dp"/>
+</layer-list>

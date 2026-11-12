@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name="com.jht.sprint8.Sprint8Activity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.sprint8">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jht.sprint8.sprint8workoutsummary.Sprint8WorkoutSummaryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.sprint8">
+        </activity>
+    </application>
+</manifest>

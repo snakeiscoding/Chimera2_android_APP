@@ -1,0 +1,33 @@
+<root>
+    <item name='java.net.URLConnection java.lang.String getHeaderField(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLConnection void addRequestProperty(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLConnection void addRequestProperty(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLConnection void setRequestProperty(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLConnection void setRequestProperty(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.HttpURLConnection void setRequestMethod(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLDecoder java.lang.String decode(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='java.net.URLDecoder java.lang.String decode(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

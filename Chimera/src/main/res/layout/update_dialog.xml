@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#85000000"
+    tools:ignore="SpUsage" >
+
+        <LinearLayout
+            android:id="@+id/dialog_container"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:background="#40ffffff">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:background="#FFE6E6E6">
+                        <ImageButton
+                            android:id="@+id/cornerCloseButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:src="@drawable/messagebox_button_close"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/message_title_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/available_updates_tc"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@android:color/black"
+                            android:textSize="30dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#40e6e6e6">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ff000000"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/message_text_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="@string/new_updates_available_pg"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="20dp"
+                                    android:maxHeight="300dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/install"
+                                            style="@style/GeneralEngineeringButton"
+                                            android:padding="10dp"
+                                            android:text="@string/install_tc" />
+
+                                        <Button
+                                            android:id="@+id/install_after_workout"
+                                            style="@style/GeneralEngineeringButton"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_width="wrap_content"
+                                            android:padding="10dp"
+                                            android:text="@string/install_after_workout_tc" />
+
+                                        <Button
+                                            android:id="@+id/install_later"
+                                            style="@style/GeneralEngineeringButton"
+                                            android:layout_marginLeft="10dp"
+                                            android:padding="10dp"
+                                            android:text="@string/install_later_tc" />
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+                </RelativeLayout>
+        </LinearLayout>
+</RelativeLayout>

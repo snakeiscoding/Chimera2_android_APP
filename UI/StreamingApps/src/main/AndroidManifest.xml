@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Vortex TvView needs singleTask and its own taskAffinity or else it will crash -->
+        <activity
+            android:name="com.jht.streamingapps.StreamingAppsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="touchscreen"
+            android:screenOrientation="landscape"
+            android:taskAffinity="com.jht.streamingapps.StreamingAppsActivity" />
+    </application>
+</manifest>

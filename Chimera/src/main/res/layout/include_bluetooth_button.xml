@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/bluetooth_pair_layout"
+    android:layout_width="333dp"
+    android:layout_height="62dp"
+    android:background="@drawable/default_button_selector1"
+    android:visibility="visible"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bt_pair_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_bluetooth_black"
+
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintWidth_percent="0.08"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bt_pair_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/pair_device_tc"
+        android:padding="2dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeTextType="uniform"
+
+        app:layout_constraintHeight_percent="0.5322"
+        app:layout_constraintWidth_percent="0.86"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_pair_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_pair_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

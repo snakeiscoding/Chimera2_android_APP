@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_checked="true" android:state_pressed="false">
+        <layer-list>
+            <item>
+                <bitmap
+                    android:src="@drawable/background_small_dark_btn"
+                />
+            </item>
+            <item>
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/icon_repeat_on"
+                />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_pressed="false">
+        <layer-list>
+            <item>
+                <bitmap
+                    android:src="@drawable/background_small_dark_btn"
+                />
+            </item>
+            <item>
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/icon_repeat"
+                />
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="true" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <bitmap
+                    android:src="@drawable/background_small_dark_btn_active"
+                />
+            </item>
+            <item>
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/icon_repeat_on"
+                />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <bitmap
+                    android:src="@drawable/background_small_dark_btn_active"
+                />
+            </item>
+            <item>
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/icon_repeat"
+                />
+            </item>
+        </layer-list>
+    </item>
+</selector>

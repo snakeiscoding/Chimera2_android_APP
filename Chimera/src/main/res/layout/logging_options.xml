@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#85000000"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="#40ffffff">
+        <View
+            android:id="@+id/logging_options_header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="#FFE6E6E6" />
+        <ImageButton
+            android:id="@+id/cornerCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintTop_toTopOf="@id/logging_options_header"
+            app:layout_constraintBottom_toBottomOf="@id/logging_options_header"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/messagebox_button_close"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/message_title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="@id/logging_options_header"
+            app:layout_constraintBottom_toBottomOf="@id/logging_options_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@android:color/black"
+            android:text="@string/logging_options_tc"
+            android:textSize="36dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/logging_options_header"
+            app:layout_constraintBottom_toBottomOf="@id/logging_options_end"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="#ff000000" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_mcu_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toBottomOf="@id/logging_options_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/mcu_uc" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_csafe_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/csafe_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_mcu_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_mcu_messages" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_urls"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/url_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_csafe_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_csafe_messages"/>
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_lcb_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/lcb_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_urls"
+            app:layout_constraintLeft_toLeftOf="@id/log_urls" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_gymkit_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/gymkit_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_lcb_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_lcb_messages" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_ptp"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/ptp_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_gymkit_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_gymkit_messages" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_dapi_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/dapi_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_ptp"
+            app:layout_constraintLeft_toLeftOf="@id/log_ptp" />
+
+        <com.jht.chimera.lib.widget.DataMatrixCheckBox
+            android:id="@+id/log_rfid_messages"
+            style="@style/LoggingOptionsCheckBox"
+            android:text="@string/rfid_uc"
+            app:layout_constraintTop_toBottomOf="@id/log_dapi_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_dapi_messages" />
+        <View
+            android:id="@+id/logging_options_end"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@id/log_rfid_messages"
+            app:layout_constraintLeft_toLeftOf="@id/log_rfid_messages"
+            android:layout_marginTop="20dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

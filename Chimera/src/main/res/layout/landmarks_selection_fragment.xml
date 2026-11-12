@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/va_background"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/landmarks_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.435"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/landmarks_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/ic_landmarks_logo"
+        />
+
+    <TextView
+        android:id="@+id/landmarks_description"
+        android:layout_width="0dp"
+        android:text="@string/help_landmarks_pg"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/landmarks_icon"
+        app:layout_constraintWidth_percent="0.433"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintBottom_toTopOf="@id/landmarks_recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/landmarks_icon"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/landmarks_recycler_view"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintStart_toStartOf="@id/landmarks_icon"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintHeight_percent=".64"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:scrollbars="horizontal"
+       android:scrollbarStyle="outsideInset"
+       android:scrollbarThumbHorizontal="@drawable/scrollbar_thumb_horizontal"
+       android:scrollbarTrackHorizontal="@drawable/scrollbar_track_horizontal"
+       android:scrollbarSize="15dp"
+       android:fadeScrollbars="false"
+       >
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/landmarks_setup_fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/favorite"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

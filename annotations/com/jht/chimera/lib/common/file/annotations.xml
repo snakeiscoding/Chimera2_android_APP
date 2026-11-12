@@ -1,0 +1,7 @@
+<root>
+    <item name='com.jht.chimera.lib.common.file.FileUtil'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

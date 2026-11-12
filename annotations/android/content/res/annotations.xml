@@ -1,0 +1,18 @@
+<root>
+    <item
+        name='android.content.res.Resources int getIdentifier(java.lang.String, java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.res.Resources int getIdentifier(java.lang.String, java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.res.Resources int getIdentifier(java.lang.String, java.lang.String, java.lang.String) 2'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.res.Resources java.io.InputStream open(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

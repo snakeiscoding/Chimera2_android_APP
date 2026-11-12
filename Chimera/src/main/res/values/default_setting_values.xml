@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="DATA_ENABLE_XID_LOGIN_BOOL">true</string>
+    <string name="DATA_REBOOT_INACTIVE_TIME_HOUR_INT">6</string>
+    <string name="DATA_CLUB_ID_INT">60</string>
+    <string name="DATA_USE_CAN_BOOL">true</string>
+    <string name="DATA_USE_CAN_HEART_RATE_BOOL">false</string>
+    <string name="DATA_AUTO_UPDATE_BOOL">true</string>
+    <string name="default_web_page">http://www.matrixfitness.com</string>
+    <string name="DATA_MASTER_VOLUME_V2_INT">10</string>
+    <string name="DATA_MAX_WORKOUT_TIME_MIN_INT">120</string>
+    <string name="tread_sense_enabled">true</string>
+    <string name="DATA_USE_CUSTOM_LOGO_BOOL">true</string>
+    <string name="DATA_USE_CUSTOM_BACKGROUND_BOOL">true</string>
+    <string name="DATA_USE_CUSTOM_BACKGROUND_COLOR_BOOL">true</string>
+    <string name="DATA_USE_CUSTOM_WELCOME_SCREEN_BOOL">true</string>
+    <string name="DATA_FTMS_ADVERTISING_ENABLED_BOOL">true</string>
+    <string name="recent_workout_app_limit">3</string>
+    <string name="DATA_SCREEN_TIMEOUT_SEC_INT">30</string>
+    <string name="DATA_MAX_COOLDOWN_TIME_INT">5</string>
+    <string name="DATA_ENERGY_SAVER_MODE_ENUM_INT">0</string>
+    <string name="power_limiting_enabled">false</string>
+    <string name="hide_web_and_survey">true</string>
+
+</resources>
+

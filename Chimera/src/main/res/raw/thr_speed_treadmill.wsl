@@ -1,0 +1,74 @@
+settings
+    workout_id = 44
+    allow_skip_warmup = 0
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+input TIME_GOAL_START
+input AGE
+input PERCENT_MAX_HEART_RATE
+input MAXIMUM_SPEED
+input HEART_RATE
+input SPEED_IN
+input COOLDOWN_TIME_START
+input GOAL
+
+export INCLINE
+export SPEED
+export GOAL_TYPE
+export GOAL
+export PREVENT_USER_GOAL_CHANGES
+export HEART_RATE_WARNING
+
+HEART_RATE_WARNING = 0
+maxHR = (211 - 0.64 * AGE)
+
+when HEART_RATE <= 0 for 60000
+    HEART_RATE_WARNING = 1
+    
+when HEART_RATE > 0 && HEART_RATE_WARNING == 1
+    HEART_RATE_WARNING = 0
+
+when HEART_RATE_WARNING == 1
+    SPEED = max(SPEED_IN - 1, 0.8)
+    wait 10000
+    
+when HEART_RATE > maxHR
+    end
+    
+stage "warmup"
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = 120000
+        PREVENT_USER_GOAL_CHANGES = 1
+        SPEED = 0.8
+        INCLINE = 0
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+
+stage "workout"
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = TIME_GOAL_START
+        PREVENT_USER_GOAL_CHANGES = 0
+        when HEART_RATE > 0
+            averageHR = average HEART_RATE for 20000
+            wait 20000
+            if averageHR >= floor(PERCENT_MAX_HEART_RATE / 100 * maxHR) + 5
+                SPEED = max(SPEED_IN - 0.5, 0.8)
+            else if HEART_RATE > 0 && averageHR <= floor(PERCENT_MAX_HEART_RATE / 100 * maxHR) - 5
+                SPEED = min(SPEED_IN + 0.5, MAXIMUM_SPEED)
+                    
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+            
+stage "cooldown"
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = COOLDOWN_TIME_START
+        SPEED = min(0.6 * SPEED_IN, 6.43738)
+        INCLINE = 0
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end

@@ -1,0 +1,58 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_message_center"
+    android:background="#ffff0000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jht.chimera.lib.widget.textview.EllipsizingTextView
+        android:id="@+id/text_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/message_center_textsize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/message_close_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="WEATHER ALERT: The National Weather Service has issued a severe..." />
+
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/action_button"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text=""
+        android:drawableRight="@drawable/icon_open_new"
+        android:drawableTint="#ff000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_message"
+        app:layout_constraintEnd_toStartOf="@id/message_close_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/message_close_btn"
+        android:layout_width="@dimen/message_center_height"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:drawableBackground="@android:color/black"
+        app:drawableIcon="@drawable/ic_close_white"
+        app:iconHeight="40dp"
+        app:iconWidth="40dp"
+        app:drawableIconTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/action_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

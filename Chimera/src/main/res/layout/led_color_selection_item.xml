@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/led_color_selection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/color_led_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default LED Color"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/hexColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hexColorButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/select_color_tc"
+        android:gravity="center"
+        app:input_type="text_input"
+        app:layout_constraintBottom_toBottomOf="@id/hexColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hexColor"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/hexColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0xFFFF000"
+        android:gravity="center"
+        app:input_type="text_input"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hexColorButton"
+        app:layout_constraintTop_toBottomOf="@id/color_led_text"
+        app:layout_constraintWidth_percent="0.16"
+        app:max_chars="8"
+        app:min_chars="0" />
+
+    <View
+        android:id="@+id/color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/hexColor"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/hexColor"
+        app:layout_constraintTop_toTopOf="@id/hexColor"
+        app:layout_constraintWidth_percent="0.03" />
+
+    <CheckBox
+        android:id="@+id/use_color_default"
+        style="@style/GeneralEngineeringCheckBox"
+        android:text="Use Color As Override For LED"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/hexColor"
+        app:layout_constraintStart_toEndOf="@id/color"
+        app:layout_constraintTop_toTopOf="@id/hexColor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

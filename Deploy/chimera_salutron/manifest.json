@@ -1,0 +1,1 @@
+{"manifest":{"application":{"bin_file":"HRM8700_nRF52_DFU_APP4552C.bin","dat_file":"HRM8700_nRF52_DFU_APP4552C.dat","init_packet_data":{"application_version":65535,"device_revision":48,"device_type":320,"firmware_crc16":49735,"softdevice_req":[133]}},"dfu_version":0.5}}

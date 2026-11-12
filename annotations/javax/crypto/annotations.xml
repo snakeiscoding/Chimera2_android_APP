@@ -1,0 +1,5 @@
+<root>
+    <item name='javax.crypto.Mac'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

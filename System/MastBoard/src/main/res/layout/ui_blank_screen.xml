@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+fixme:
+ * add an ID if it becomes needed.
+ * remove deprecated ui_out_of_order_screen.xml
+ * remove deprecated ui_estop_both.xml
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="#000000" />

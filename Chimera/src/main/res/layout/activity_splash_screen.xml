@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jht.splashapp.SplashScreenActivity"
+    android:background="@drawable/mx14_generations_splash_bg">
+
+    <ImageView
+        android:id="@+id/productLogo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_logo_matrix"/>
+
+
+    <TextView
+        android:id="@+id/error_code_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/error_code_text"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:text="@string/error_occurred_tc"
+        android:textColor="#FFFF0000"
+        android:textSize="36dp" />
+
+    <TextView
+        android:id="@+id/error_code_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error_code_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/error_code_title"
+        app:layout_constraintBottom_toTopOf="@id/error_code_message_text"
+        android:textColor="#FFFF0000"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/error_code_message_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error_code_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/error_code_text"
+        app:layout_constraintBottom_toTopOf="@id/productLogo"
+        android:textColor="#FFFFFFFF"
+        android:textSize="36dp" />
+
+
+    <ImageView
+        android:id="@+id/busyIndicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:srcCompat="@drawable/ic_spinner"
+        app:layout_constraintWidth_percent="0.025"
+        app:layout_constraintVertical_bias=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productLogo"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

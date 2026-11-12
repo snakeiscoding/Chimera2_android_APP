@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#85000000">
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/instructions_tc"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center">
+
+                <TableRow android:paddingTop="25dp">
+
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="start"
+                        android:text="1."
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spindown_instruction_1_pg"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp" />
+                </TableRow>
+
+                <TableRow android:paddingTop="25dp">
+
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:gravity="start"
+                        android:singleLine="false"
+                        android:text="2."
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spindown_instruction_2_pg"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp" />
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rpm_uc"
+                        android:textColor="@android:color/white"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:text="@string/flywheel_rpm_uc"
+                        android:textColor="@android:color/white"
+                        android:textSize="22dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/currentRPM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@android:color/white"
+                        android:textSize="22dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/flywheelRPM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="22dp"
+                        tools:ignore="HardcodedText" />
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/status_tc"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="26dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+
+
+            <Button
+                android:id="@+id/btnStartCalibration"
+                style="@style/GeneralEngineeringButton2"
+                android:enabled="false"
+                android:text="@string/press_to_start_calibration_tc" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="65dp" />
+
+            <Button
+                android:id="@+id/restoreFactoryCalibration"
+                style="@style/GeneralEngineeringButton2"
+                android:layout_width="match_parent"
+                android:text="@string/reset_to_factory_tc"
+                />
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/GeneralEngineeringButton2"
+                android:text="@string/cancel_tc" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

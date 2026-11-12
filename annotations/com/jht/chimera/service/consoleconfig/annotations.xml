@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.service.consoleconfig.ConsoleConfigService'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.consoleconfig.ConsoleConfigService$1 java.net.URL getURL()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

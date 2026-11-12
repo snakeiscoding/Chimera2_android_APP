@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.browser.WebBrowserActivity">
+
+    <LinearLayout
+        android:id="@+id/controlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1a1a1a"
+        android:orientation="horizontal"
+        android:padding="@dimen/BrowserBarPadding">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/ic_arrow_left_white"
+            android:tint="@color/web_browser_icon_colors"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:layout_margin="@dimen/BrowserBarPadding"
+            android:background="@drawable/web_browswer_button_bg_selector"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/forward"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/ic_arrow_right_white"
+            android:tint="@color/web_browser_icon_colors"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:layout_margin="@dimen/BrowserBarPadding"
+            android:background="@drawable/web_browswer_button_bg_selector"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/reload"
+            style="@style/WebBrowserSelectron"
+            app:drawableIconTint="#CCCCCC"
+            app:drawableIcon="@drawable/ic_refresh_white"/>
+
+        <EditText
+            android:id="@+id/addressBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/BrowserBarPadding"
+            android:layout_weight="1"
+            android:background="#505050"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            android:textSize="16dp"/>
+
+
+        <com.jht.chimera.lib.widget.button.FullscreenButton
+            android:id="@+id/showHidePanels"
+            style="@style/WebBrowserSelectron"
+            app:drawableIconTint="#CCCCCC"/>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/BrowserBarPadding"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/controlBar"
+        android:layout_below="@id/controlBar"
+    >
+
+        <RelativeLayout
+            android:id="@+id/nonVideoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.jht.chimera.lib.webapp.VideoEnabledWebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/videoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

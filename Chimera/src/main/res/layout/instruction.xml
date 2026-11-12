@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context="com.jht.chimera.ui.mymedia.InstructionFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/med_app_select_source_tc"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/instructio_text_size"
+        android:textStyle="bold" />
+
+</FrameLayout>

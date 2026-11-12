@@ -1,0 +1,364 @@
+{
+   "channels": [
+      {
+         "number": "3-1",
+         "name": "WISC",
+         "sourceType": "",
+         "majorNumber": "3",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "3-2",
+         "name": "TVW",
+         "sourceType": "",
+         "majorNumber": "3",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "3-3",
+         "name": "DABL",
+         "sourceType": "",
+         "majorNumber": "3",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "3-4",
+         "name": "QVC",
+         "sourceType": "",
+         "majorNumber": "3",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "3-5",
+         "name": "HSN",
+         "sourceType": "",
+         "majorNumber": "3",
+         "minorNumber": "5",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "15-1",
+         "name": "WMTVNBC",
+         "sourceType": "",
+         "majorNumber": "15",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "15-2",
+         "name": "WMTV-CW",
+         "sourceType": "",
+         "majorNumber": "15",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "15-3",
+         "name": "ANT-TV",
+         "sourceType": "",
+         "majorNumber": "15",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "15-4",
+         "name": "WMTV-WX",
+         "sourceType": "",
+         "majorNumber": "15",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "21-1",
+         "name": "WHA-HD",
+         "sourceType": "",
+         "majorNumber": "21",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "21-2",
+         "name": "WPT2",
+         "sourceType": "",
+         "majorNumber": "21",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "21-3",
+         "name": "WPT3",
+         "sourceType": "",
+         "majorNumber": "21",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "21-4",
+         "name": "WPT4",
+         "sourceType": "",
+         "majorNumber": "21",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "23-1",
+         "name": "W23BW-D",
+         "sourceType": "",
+         "majorNumber": "23",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "23-4",
+         "name": "3ABN-RM",
+         "sourceType": "",
+         "majorNumber": "23",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "23-5",
+         "name": "3ABN-RD",
+         "sourceType": "",
+         "majorNumber": "23",
+         "minorNumber": "5",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "23-6",
+         "name": "3ABN-RL",
+         "sourceType": "",
+         "majorNumber": "23",
+         "minorNumber": "6",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "23-7",
+         "name": "Radio74",
+         "sourceType": "",
+         "majorNumber": "23",
+         "minorNumber": "7",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "27-1",
+         "name": "WKOWABC",
+         "sourceType": "",
+         "majorNumber": "27",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "27-2",
+         "name": "WKOW-ME",
+         "sourceType": "",
+         "majorNumber": "27",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "27-3",
+         "name": "WKOWDEC",
+         "sourceType": "",
+         "majorNumber": "27",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "27-4",
+         "name": "CourtTV",
+         "sourceType": "",
+         "majorNumber": "27",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "27-5",
+         "name": "Justice",
+         "sourceType": "",
+         "majorNumber": "27",
+         "minorNumber": "5",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "47-1",
+         "name": "WMSNFOX",
+         "sourceType": "",
+         "majorNumber": "47",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "47-2",
+         "name": "Comet",
+         "sourceType": "",
+         "majorNumber": "47",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "47-3",
+         "name": "Charge!",
+         "sourceType": "",
+         "majorNumber": "47",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "47-4",
+         "name": "TBD",
+         "sourceType": "",
+         "majorNumber": "47",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-1",
+         "name": "IONPLUS",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "1",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-2",
+         "name": "MOVIES!",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "2",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-3",
+         "name": "H&I",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "3",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-4",
+         "name": "BOUNCE",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "4",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-5",
+         "name": "QVC",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "5",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-6",
+         "name": "LAFF",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "6",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-7",
+         "name": "MYSTERY",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "7",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-8",
+         "name": "GRIT",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "8",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      },
+      {
+         "number": "57-9",
+         "name": "ION HD",
+         "sourceType": "",
+         "majorNumber": "57",
+         "minorNumber": "9",
+         "serviceType": 1,
+         "isFavorite": 0,
+         "isSkip": 0
+      }
+   ]
+}

@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eng_column_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eng_column_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.66" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_console_serial_number"
+                style="@style/GeneralEditTextStringCapsEngineering"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_1"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                app:auto_correct="true"
+                app:label="@string/console_serial_number_tc"
+                app:max_chars="@integer/max_serial_number_chars"
+                tools:ignore="RtlHardcoded" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_frame_serial_number"
+                style="@style/GeneralEditTextStringCapsEngineering"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/frame_serial_number_tc"
+                app:max_chars="@integer/max_serial_number_chars" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_am_bridge_serial_number"
+                style="@style/GeneralEditTextStringCapsEngineering"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toRightOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="0dp"
+                android:imeOptions="actionDone"
+                app:label="@string/serial_number_bridge_tc"
+                app:max_chars="@integer/max_serial_number_chars" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_gen_club_id"
+                style="@style/GeneralEditTextIntEngineering"
+                android:imeOptions="actionDone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_gen_console_serial_number"
+                app:layout_constraintBottom_toTopOf="@id/am_serialnumber_linebreak"
+                app:label="@string/club_id_tc"
+                app:max_chars="5"
+                app:max_value="65535"
+                app:min_value="0" />
+
+            <Button
+                android:id="@+id/eng_upload_serial_numbers"
+                style="@style/GeneralEngineeringButton"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toTopOf="@id/eng_gen_club_id"
+                app:layout_constraintBottom_toTopOf="@id/am_serialnumber_linebreak"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_width="0dp"
+                android:text="@string/import_serial_numbers_tc" />
+
+            <TextView
+                android:id="@+id/machine_uuid_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/eng_am_bridge_serial_number"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="@string/machine_id_tc"/>
+
+            <TextView
+                android:id="@+id/machine_uuid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/machine_uuid_label"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="15dp"/>
+
+            <View
+                android:id="@+id/am_serialnumber_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_constraintTop_toBottomOf="@id/eng_gen_club_id"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/eng_enable_am"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/am_serialnumber_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/asset_management_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_enable_wt"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/am_serialnumber_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/workout_tracking_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_allow_guest"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/am_serialnumber_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/allow_guest_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_go_button_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_enable_am"
+                android:layout_marginTop="20dp"
+                android:text="@string/go_button_enabled_tc" />
+
+            <CheckBox
+                android:id="@+id/concierge_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_enable_am"
+                android:layout_marginTop="20dp"
+                android:text="@string/enable_concierge_tc" />
+
+            <CheckBox
+                android:id="@+id/appstore_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/eng_allow_guest"
+                android:layout_marginTop="20dp"
+                android:text="@string/enable_appstore_tc" />
+
+            <View
+                android:id="@+id/am_feature_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_constraintTop_toBottomOf="@id/eng_go_button_enabled"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/eng_login_xid_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/am_feature_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/btn_xid_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_barcode_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/am_feature_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/barcode_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_phone_number_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/am_feature_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/phone_number_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_email_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_xid_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/email_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_fitlinxx_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_xid_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/fit_linxx_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_custom_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_xid_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_rfid_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_fitlinxx_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/rfid_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_xarefit_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_marginTop="20dp"
+                android:text="@string/enable_hypercore_tc"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_custom_enabled" />
+
+            <CheckBox
+                android:id="@+id/eng_safety_pin_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_marginTop="20dp"
+                android:text="@string/security_pin_tc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_email_enabled" />
+
+            <CheckBox
+                android:id="@+id/eng_custom_login_rfid_only_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_safety_pin_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_rfid_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_wallet_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_rfid_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/wallet_login_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_login_qr_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_custom_login_rfid_only_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/qr_code_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_jump_device_redirect_app"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/jump_device_redirect_app_tc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_qr_enabled" />
+
+            <CheckBox
+                android:id="@+id/eng_register_xid_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/eng_xarefit_enabled"
+                android:layout_marginTop="20dp"
+                android:text="@string/enable_registration_tc" /><!-- enable_tc xid_tc register_tc -->
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/xarefit_data_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/custom_password_data_fields"
+                app:columnCount="3">
+                <!-- Row 1 -->
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/xarefit_site_id"
+                    style="@style/GeneralEditTextStringEngineering"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    app:label="@string/xarefit_site_id_tc"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/xarefit_server_url"
+                    style="@style/GeneralEditTextStringEngineering"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    app:label="@string/hypercore_server_url_tc"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/xarefit_site_id" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/xarefit_server_port"
+                    style="@style/GeneralEditTextStringEngineering"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    app:label="@string/hypercore_server_port_tc"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/xarefit_server_url" />
+            </androidx.gridlayout.widget.GridLayout>
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/eng_login_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_jump_device_redirect_app"
+                app:columnCount="3">
+                <!-- Login options Row 1 -->
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_primary_login_method"
+                    style="@style/GeneralEngineeringOptionSelector"
+                    app:label="@string/primary_login_method_tc"
+                    app:option_options="@array/custom_login_input_type"
+                    app:option_popup_width="400dp"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_safety_pin"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:layout_columnWeight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:maxLength="4"
+                    app:label="@string/safety_pin_enable_pg"
+                    app:errorEnabled="true"
+                    />
+
+                <!-- spacer for third item until there is a third item -->
+                <Space app:layout_columnWeight="1" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/custom_password_data_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_login_options"
+                app:columnCount="3">
+                <!-- Custom Login Row 1 -->
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_custom_login_name"
+                    style="@style/GeneralEditTextStringEngineering"
+                    app:label="@string/custom_login_name_tc"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    />
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_custom_password_label"
+                    style="@style/GeneralEditTextStringEngineering"
+                    app:label="@string/custom_login_password_label_tc"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    />
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_custom_login_label"
+                    style="@style/GeneralEditTextStringEngineering"
+                    app:label="@string/custom_login_user_name_label_tc"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    />
+
+                <!-- Custom Login Row 2 -->
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_custom_password_input_type"
+                    style="@style/GeneralEngineeringOptionSelector"
+                    app:label="@string/custom_login_password_input_type_tc"
+                    app:option_options="@array/custom_login_input_type"
+                    app:option_popup_width="400dp"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_custom_login_input_type"
+                    style="@style/GeneralEngineeringOptionSelector"
+                    app:label="@string/custom_login_user_name_input_type_tc"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:option_options="@array/custom_login_input_type"
+                    app:option_popup_width="400dp"
+                    app:layout_columnWeight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    />
+            </androidx.gridlayout.widget.GridLayout>
+
+
+            <View
+                android:id="@+id/am_login_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/xarefit_data_fields" />
+
+            <CheckBox
+                android:id="@+id/eng_show_welcome_screen"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/am_login_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/show_welcome_screen_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_logo"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/am_login_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_logo_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_welcome_background"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/am_login_linebreak"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_welcome_background_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_color_background"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_show_welcome_screen"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_background_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_show_custom_workout_background"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_show_welcome_screen"
+                android:layout_marginTop="20dp"
+                android:text="@string/custom_workout_background_tc" />
+
+            <Button
+                android:id="@+id/eng_upload_theme"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_show_welcome_screen"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/upload_custom_theme_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_club_com"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_show_custom_color_background"
+                android:layout_marginTop="20dp"
+                android:text="@string/clubCom_tc" />
+
+            <CheckBox
+                android:id="@+id/show_switch_stride_only"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_show_custom_workout_background"
+                android:layout_marginTop="20dp"
+                android:text="@string/switch_stride_only_tc" />
+
+            <View
+                android:id="@+id/am_custom_background_linebreak"
+
+                style="@style/engineering_line_break"
+                app:layout_constraintTop_toBottomOf="@id/eng_club_com"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_welcome_icon_position"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/am_custom_background_linebreak"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                app:label="@string/welcome_icon_position_tc"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_welcome_screen_fade"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintRight_toRightOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/am_custom_background_linebreak"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/welcome_screen_auto_hide_tc"
+                app:max_value="90"
+                app:min_value="0"
+                app:units="time_seconds" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_welcome_screen_slide_show"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/am_custom_background_linebreak"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:label="@string/custom_welcome_screen_slideshow_tc"
+                app:max_value="300"
+                app:min_value="10"
+                app:units="time_seconds" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_welcome_screen_time_until_dim"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_welcome_icon_position"
+                android:layout_marginTop="15dp"
+                app:label="@string/asset_management_dimness_timeout_tc"
+                app:option_popup_width="400dp" />
+
+            <TextView
+                android:id="@+id/screen_brightness_percent_label"
+                style="@style/GeneralEngineeringTextHeading"
+                android:layout_width="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/eng_welcome_icon_position"
+                android:layout_marginTop="20dp"
+                android:text="@string/asset_management_dimness_tc"
+                />
+
+            <SeekBar
+                android:id="@+id/asset_management_backlight"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_1"
+                app:layout_constraintRight_toLeftOf="@id/am_thumb_backlight_text"
+                app:layout_constraintTop_toBottomOf="@id/screen_brightness_percent_label"
+                android:layout_marginTop="5dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/am_thumb_backlight_text"
+                style="@style/GeneralEngineeringTextHeading"
+                android:text="50"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/asset_management_backlight"
+                app:layout_constraintTop_toTopOf="@id/asset_management_backlight"
+                android:layout_marginTop="5dp"
+                tools:ignore="MissingConstraints, HardcodedText"/>
+
+
+            <View
+                android:id="@+id/am_brightness_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_constraintTop_toBottomOf="@id/asset_management_backlight"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/enable_egym"
+                style="@style/GeneralEngineeringCheckBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/egym_update_time"
+                app:layout_constraintTop_toTopOf="@id/egym_update_time"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EGYM"
+                tools:ignore="HardcodedText" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/egym_update_time"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/am_brightness_linebreak"
+                app:layout_constraintLeft_toRightOf="@id/eng_column_1"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                app:input_type="time_clock"
+                app:label="@string/automatic_update_tc"
+                app:picker_animation="@style/EngTimeUpdateDialogAnimation" />
+
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/egym_environment"
+                style="@style/GeneralEngineeringOptionSelector"
+                app:label="EGYM Environment"
+                app:layout_constraintTop_toBottomOf="@id/am_brightness_linebreak"
+                app:layout_constraintLeft_toRightOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+
+                android:layout_marginTop="15dp"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/egym_website"
+                style="@style/GeneralEditTextStringEngineering"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                android:layout_marginRight="10dp"
+                app:layout_constraintTop_toBottomOf="@id/egym_update_time"
+                app:input_type="text_input"
+                app:label="EGYM Website" />
+
+            <Button
+                android:id="@+id/reset_egym_website"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/eng_column_2"
+                app:layout_constraintBottom_toBottomOf="@id/egym_website"
+                android:layout_marginRight="30dp"
+                android:text="@string/reset_website_tc"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- Settings may be needed include custom eng_workout, retail mode, lube belt, lube belt reste -->
+
+            <View
+                android:id="@+id/am_reset_egym_website_linebreak"
+                style="@style/engineering_line_break"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reset_egym_website" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_app_name"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="text_input"
+                app:label="Custom App Name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/eng_column_1"
+                app:layout_constraintTop_toBottomOf="@id/am_reset_egym_website_linebreak" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_app_url"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="text_input"
+                app:label="Custom App URL"
+                app:layout_constraintLeft_toRightOf="@id/eng_column_1"
+                app:layout_constraintRight_toLeftOf="@id/eng_column_2"
+                app:layout_constraintTop_toBottomOf="@id/am_reset_egym_website_linebreak" />
+
+            <Button
+                android:id="@+id/eng_upload_custom_app_icon"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/upload_custom_tc"
+                app:layout_constraintBottom_toBottomOf="@+id/eng_custom_app_url"
+                app:layout_constraintLeft_toLeftOf="@id/eng_column_2"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

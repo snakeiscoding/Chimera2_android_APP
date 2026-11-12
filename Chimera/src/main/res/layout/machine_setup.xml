@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_color_slate_blue"
+    tools:context="com.jht.chimera.ui.machinesetup.MachineSetup" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#C0262626">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/machine_setup_next_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/next_button"
+            android:background="@drawable/standard_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/machine_setup_confirm_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/check"
+            android:background="@drawable/standard_button"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/machine_setup_back_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/back_button"
+            android:background="@drawable/standard_button"
+            app:tint="@color/standard_button_tint"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/machine_setup_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="48dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/setup_next_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="machine_setup_next_button,machine_setup_confirm_button" />
+
+
+        <com.jht.chimera.lib.widget.indicator.TopBarWifiIndicator
+            android:id="@+id/machine_setup_network_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/setup_next_barrier"
+            android:layout_marginRight="20dp" />
+
+        <ImageView
+            android:id="@+id/machine_settings_busy"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/machine_setup_network_indicator"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_spinner"
+            android:visibility="gone"
+            android:contentDescription="@null" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF3E3E3E">
+
+    </RelativeLayout>
+
+
+    <com.jht.androiduiwidgets.viewpager.CustomAnimatedViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/machine_setup_pages" />
+
+    <View
+        android:id="@+id/machine_setup_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+</LinearLayout>

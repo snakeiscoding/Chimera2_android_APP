@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <WebView
+        android:id="@+id/clubComWebView"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- prevent webview scroll -->
+    <View
+        android:id="@+id/invisibleVew"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/welcome_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"/>
+
+    <ImageView
+        android:id="@+id/welcome_background2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_overlay"
+        android:splitMotionEvents="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/top_bar_widget"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintEnd_toStartOf="@id/buttonSettings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <com.jht.chimera.lib.widget.indicator.TopBarDebugIndicator
+            android:id="@+id/debug_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintStart_toEndOf="@id/login_name_text"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"/>
+
+        <com.jht.chimera.lib.widget.button.HomeButton
+            android:id="@+id/buttonHome"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#ffcccccc"
+            android:background="@drawable/button_gradient_users" />
+
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonSelectLanguage"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="@dimen/top_bar_height"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_icon_globe"
+            app:drawableIconTint="#ffcccccc"
+            app:layout_constraintStart_toEndOf="@id/buttonHome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="@dimen/top_bar_button_width"
+            android:layout_height="@dimen/top_bar_height"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_setting_white"
+            app:drawableIconTint="#ffcccccc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintStart_toEndOf="@id/buttonSelectLanguage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableBackground="@drawable/button_gradient_users"
+            app:drawableIcon="@drawable/ic_login"
+            app:iconHeight="40dp"
+            app:iconWidth="40dp"/>
+
+        <TextView
+            android:id="@+id/login_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/top_bar_height"
+            app:layout_constraintStart_toEndOf="@id/buttonLogin"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/sign_in_tc"
+            android:textColor="#cccccc"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="14dp" />
+
+
+        <View
+            android:id="@+id/welcome_background_bar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/welcome_background_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/welcome_guest_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="welcome_guest_button,welcome_guest_text,welcome_guest_info_button,welcome_guest_icon"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_guest_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_login_button"
+            app:layout_constraintEnd_toStartOf="@id/welcome_login_button"
+            app:layout_constraintWidth_percent="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/welcome_login_button"
+            app:srcCompat="@drawable/ic_parallelogram_small_selector"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/welcome_guest_icon"
+            app:layout_constraintStart_toStartOf="@id/welcome_guest_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_guest_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_guest_button"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_guest_button"
+            app:srcCompat="@drawable/ic_guest"
+            app:layout_constraintHeight_percent="0.095"
+            app:layout_constraintDimensionRatio="W, 1:1"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/welcome_guest_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_guest_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_guest_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_guest_button"
+            app:layout_constraintBottom_toTopOf="@id/welcome_guest_info_button"
+            android:text="@string/guest_tc"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_guest_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintStart_toStartOf="@id/welcome_guest_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_guest_button"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_info_parallelogram"
+            android:contentDescription="@null" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/welcome_login_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="welcome_login_button,welcome_login_text,welcome_login_info_button,welcome_login_icon"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/welcome_touch_to_continue_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="welcome_touch_to_continue_button,welcome_touch_to_continue_icon,welcome_touch_to_continue_text"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_touch_to_continue_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintDimensionRatio="W, 1:2.08"
+            app:layout_constraintEnd_toStartOf="@id/welcome_register_button"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/welcome_guest_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_background_bar"
+            app:srcCompat="@drawable/ic_parallelogram_large_selector"
+            android:visibility="gone"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/welcome_touch_to_continue_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_touch_to_continue_button"
+            app:srcCompat="@drawable/ic_continue"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintDimensionRatio="W, 17:20"
+            android:visibility="gone"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/welcome_touch_to_continue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_touch_to_continue_button"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+            android:text="@string/touch_to_continue_tc"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_login_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintDimensionRatio="W, 1:2.08"
+            app:layout_constraintEnd_toStartOf="@id/welcome_register_button"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/welcome_guest_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_background_bar"
+            app:srcCompat="@drawable/ic_parallelogram_large_selector"
+            android:contentDescription="@null"/>
+
+
+        <ImageView
+            android:id="@+id/welcome_login_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/welcome_login_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_login_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_login_button"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_login_button"
+            app:srcCompat="@drawable/ic_login"
+            android:tint="#444444"
+            app:layout_constraintHeight_percent="0.095"
+            app:layout_constraintDimensionRatio="W, 1:1"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/welcome_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_login_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_login_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_login_button"
+            app:layout_constraintBottom_toTopOf="@id/welcome_login_info_button"
+            android:text="@string/login_tc"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_login_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_login_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_login_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_info_parallelogram"
+            android:contentDescription="@null" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/welcome_register_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="welcome_register_button,welcome_register_text,welcome_register_info_button,welcome_register_icon"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_register_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_login_button"
+            app:layout_constraintWidth_percent="0.186"
+            app:layout_constraintStart_toEndOf="@id/welcome_login_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/welcome_login_button"
+            app:srcCompat="@drawable/ic_parallelogram_small_selector"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/welcome_register_icon"
+            app:layout_constraintStart_toStartOf="@id/welcome_register_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_register_button"
+            app:layout_constraintTop_toTopOf="@id/welcome_register_button"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_register_button"
+            app:srcCompat="@drawable/ic_register"
+            app:layout_constraintHeight_percent="0.095"
+            android:scaleType="fitEnd"
+            app:layout_constraintDimensionRatio="W, 1.3:1"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/welcome_register_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_register_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_register_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_register_button"
+            app:layout_constraintBottom_toTopOf="@id/welcome_register_info_button"
+            android:text="@string/register_tc"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            />
+
+        <ImageView
+            android:id="@+id/welcome_register_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/welcome_register_button"
+            app:layout_constraintEnd_toEndOf="@id/welcome_register_button"
+            app:layout_constraintTop_toBottomOf="@id/welcome_background_bar"
+            app:layout_constraintBottom_toBottomOf="@id/welcome_background_bar"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_info_parallelogram"
+            android:contentDescription="@null" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/language_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#C02D2D2D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonSelectLanguage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/language_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#C02D2D2D"
+                android:fadeScrollbars="false"
+                android:paddingStart="30dp"
+                android:paddingTop="30dp"
+                android:paddingEnd="30dp"
+                android:scrollbarSize="10dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarThumbVertical="@drawable/language_scroll_bar"
+                android:scrollbars="vertical"
+                android:spinnerMode="dialog"
+                android:verticalScrollbarPosition="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.35"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/top_bar_height_bordered"
+            android:translationZ="8dp"
+
+            ></View>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/top_bar_height"/>
+
+    <SurfaceView
+        android:id="@+id/welcome_video_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/login_overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <ImageView
+        android:id="@+id/welcome_touch_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".125"
+        app:layout_constraintWidth_percent=".04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="invisible"
+        android:background="@drawable/ic_icon_gesture_tap"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+
+        />
+
+    <com.jht.chimera.ui.mainapp.WelcomeScreenSettingsMenu
+        android:id="@+id/settings_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

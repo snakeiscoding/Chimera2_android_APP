@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".FirstTimeSetupActivity"
+            android:exported="true"
+            android:process="com.jht.machinesettings"
+            android:taskAffinity="com.jht.machinesettings"
+            android:configChanges="locale|layoutDirection"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+    </application>
+
+</manifest>

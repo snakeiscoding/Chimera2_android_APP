@@ -1,0 +1,6 @@
+<root>
+    <item
+        name='android.net.wifi.WifiManager android.net.wifi.WifiManager.MulticastLock createMulticastLock(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

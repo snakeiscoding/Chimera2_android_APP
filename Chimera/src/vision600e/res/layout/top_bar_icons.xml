@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentEnd="true"
+    android:paddingEnd="20dp"
+    android:gravity="end"
+    tools:ignore="RtlSymmetry">
+
+    <com.jht.chimera.lib.widget.indicator.TopBarBusyIndicator
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp" />
+
+    <com.jht.chimera.lib.widget.indicator.TopBarDownloadIndicator
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp"
+        />
+
+    <com.jht.chimera.lib.widget.indicator.TopBarHeadphoneIndicator
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp" />
+    <com.jht.chimera.lib.widget.indicator.TopBarSmartDeviceIndicator
+        android:layout_width="11dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp"/>
+
+    <com.jht.chimera.lib.widget.indicator.TopBarHeartRateIndicator
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp" />
+
+    <com.jht.chimera.lib.widget.indicator.TopBarWifiIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="14dp" />
+
+</LinearLayout>

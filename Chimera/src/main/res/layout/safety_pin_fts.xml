@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/safety_pin_center_segment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <CheckBox
+        android:id="@+id/eng_require_pin_checkbox"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/safety_pin_enable_pg"
+        android:padding="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/safety_warning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/safety_warning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_setup_alert_info_pg"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:paddingLeft="60dp"
+        android:paddingBottom="25dp"
+        android:drawablePadding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/pin_divider"
+        app:layout_constraintEnd_toStartOf="@+id/safety_pin_center_segment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eng_require_pin_checkbox"
+        app:drawableLeftCompat="@drawable/ic_info_filled" />
+
+    <View
+        android:id="@+id/pin_divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/eng_gen_pin_number_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/safety_warning" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/eng_gen_pin_number_input"
+        style="@style/GeneralEditTextIntEngineering"
+        android:layout_weight="2"
+        android:imeOptions="actionDone"
+        android:padding="50dp"
+        app:input_type="integer_input"
+        app:label="@string/safety_pin_entry_pg"
+        app:layout_constraintEnd_toEndOf="@+id/safety_pin_center_segment"
+        app:layout_constraintStart_toStartOf="@+id/eng_require_pin_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/pin_divider"
+        app:max_chars="@integer/max_pin_chars"
+        app:max_value="9999"
+        app:min_chars="@integer/max_pin_chars"
+        app:min_value="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_workout_left_basic"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="@android:color/black">
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticAppCompatImageButton
+        android:id="@+id/arrow_up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:enabled="false"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:srcCompat="@drawable/ic_plus_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jht.mastboard.ui.hapticwidgets.HapticAppCompatImageButton
+        android:id="@+id/arrow_down"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:enabled="false"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:srcCompat="@drawable/ic_minus_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_incline_yellow"
+        app:layout_constraintVertical_chainStyle="packed" />
+</androidx.constraintlayout.widget.ConstraintLayout>

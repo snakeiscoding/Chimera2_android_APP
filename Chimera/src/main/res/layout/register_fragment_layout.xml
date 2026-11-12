@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_color_slate_blue"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="SpUsage">
+    
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="54dp"-->
+        <!--app:layout_constraintWidth_percent=".485"-->
+        <!--android:background="@color/button_green"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--&gt;-->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--android:background="@color/button_red"-->
+            <!--app:layout_constraintWidth_percent=".65"-->
+            <!--&gt;</View>-->
+        <!---->
+        <!---->
+        <!---->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="54dp"-->
+        <!--app:layout_constraintWidth_percent=".485"-->
+        <!--android:background="@color/button_green"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--&gt;-->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--android:background="@color/button_red"-->
+            <!--app:layout_constraintWidth_percent=".65"-->
+            <!--&gt;</View>-->
+
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/register_user_confirm"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/check"
+        android:background="@drawable/standard_button"
+        app:tint="#ff00ff00"
+        android:enabled="false"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/register_accept_tc"
+        app:layout_constraintRight_toRightOf="@id/register_accept_tc"
+        app:layout_constraintLeft_toLeftOf="@id/register_accept_tc"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/register_user_spinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_spinner"
+        android:contentDescription="@null"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/register_accept_tc"
+        app:layout_constraintRight_toRightOf="@id/register_accept_tc"
+        app:layout_constraintLeft_toLeftOf="@id/register_accept_tc"
+        android:visibility="gone"
+        />
+
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:max_chars="14"
+        app:min_chars="10"
+        android:id="@+id/register_xid"
+        app:secondary_id="@id/register_xid_secondary"
+        android:nextFocusForward="@id/register_passcode_secondary"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:layout_height="wrap_content"
+        app:input_type="number_input"
+        app:error_message="left"
+        app:label="@string/xid_tc"
+        android:hint="@string/enter_xid_tc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/register_passcode"/>
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:max_chars="4"
+        app:min_chars="4"
+        android:id="@+id/register_passcode"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:nextFocusForward="@id/register_passcode_confirm_secondary"
+        app:secondary_id="@id/register_passcode_secondary"
+        android:layout_height="wrap_content"
+        app:input_type="number_input"
+        app:error_message="left"
+        app:password="true"
+        app:label="@string/passcode_tc"
+        android:hint="@string/enter_passcode_tc"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_xid"
+        app:layout_constraintBottom_toTopOf="@id/register_confirm_passcode" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:max_chars="4"
+        app:min_chars="4"
+        android:id="@+id/register_confirm_passcode"
+        android:nextFocusForward="@id/register_email_secondary"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:layout_height="wrap_content"
+        app:secondary_id="@id/register_passcode_confirm_secondary"
+        app:input_type="number_input"
+        app:password="true"
+        app:error_message="left"
+        app:label="@string/confirm_passcode_2_tc"
+        android:hint="@string/confirm_passcode_tc"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_passcode"
+        app:layout_constraintBottom_toTopOf="@id/register_email_address"  />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:min_chars="1"
+        app:max_chars="65"
+        android:id="@+id/register_email_address"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+
+        android:nextFocusForward="@id/register_first_name_secondary"
+        android:layout_height="wrap_content"
+        app:input_type="email_input"
+        app:error_message="left"
+        app:label="@string/email_tc"
+        android:hint="@string/email_address_tc"
+        app:secondary_id="@id/register_email_secondary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/register_confirm_passcode"
+        app:layout_constraintBottom_toTopOf="@id/register_first_name"  />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:min_chars="1"
+        app:max_chars="65"
+        android:id="@+id/register_first_name"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:nextFocusForward="@id/register_last_name_secondary"
+        android:layout_height="wrap_content"
+        app:input_type="text_input"
+        app:error_message="left"
+        app:secondary_id="@id/register_first_name_secondary"
+        app:label="@string/first_name_tc"
+        android:hint="@string/enter_first_name_tc"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_email_address"
+        app:layout_constraintBottom_toTopOf="@id/register_last_name" />
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:min_chars="1"
+        app:max_chars="65"
+        android:id="@+id/register_last_name"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:layout_height="wrap_content"
+        android:nextFocusForward="@id/register_birthdate_secondary"
+        app:input_type="text_input"
+        app:error_message="left"
+        android:imeOptions="actionNext"
+        app:label="@string/last_name_tc"
+        app:secondary_id="@id/register_last_name_secondary"
+        android:hint="@string/enter_last_name_tc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/register_first_name"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/register_birthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.485"
+        app:input_type="date"
+        android:imeOptions="actionNext"
+        app:error_message="right"
+        app:label="@string/birthdate_tc"
+        android:nextFocusForward="@id/register_weight_secondary"
+        app:secondary_id="@id/register_birthdate_secondary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/register_xid" />
+
+    <TextView
+        android:id="@+id/preferred_units_label_text_view"
+        style="@style/TextTitle"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/units_tc"
+        app:layout_constraintLeft_toLeftOf="@+id/register_birthdate"
+        app:layout_constraintTop_toTopOf="@+id/register_passcode"/>
+
+    <RadioGroup
+        android:id="@+id/units_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/register_birthdate"
+        app:layout_constraintTop_toBottomOf="@+id/preferred_units_label_text_view">
+
+        <RadioButton
+            android:id="@+id/units_metric_radio_button"
+            style="@style/SettingsRadioButtons"
+            android:layout_width="197dp"
+            android:checked="true"
+            android:layout_height="40dp"
+            android:text="@string/metric_tc"/>
+
+        <RadioButton
+            android:id="@+id/units_imperial_radio_button"
+            style="@style/SettingsRadioButtons"
+            android:layout_width="197dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:text="@string/imperial_tc"/>
+
+    </RadioGroup>
+
+    <com.jht.androiduiwidgets.selector.OptionSelectorItem
+        android:id="@+id/registrationGenderSelector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:label="@string/gender_tc"
+        app:layout_constraintBottom_toBottomOf="@id/register_confirm_passcode"
+        app:layout_constraintLeft_toLeftOf="@+id/register_birthdate"
+        app:layout_constraintWidth_percent="0.315"
+        app:layout_constraintTop_toTopOf="@id/register_confirm_passcode"
+        app:option_height="50dp"
+        app:option_popup_width="350dp"
+        app:option_popup_match_anchor_width="true"
+        app:option_popup_constrain_to_anchor="center"/>
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        app:min_chars="1"
+        app:max_chars="65"
+        android:id="@+id/register_weight"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.485"
+        android:layout_height="wrap_content"
+        app:input_type="integer_input"
+        app:error_message="right"
+        android:imeOptions="actionDone"
+        app:secondary_id="@id/register_weight_secondary"
+        app:label="@string/weight_tc"
+        android:hint="@string/lbs_lc"
+        app:layout_constraintLeft_toLeftOf="@id/register_birthdate"
+        app:layout_constraintTop_toTopOf="@id/register_email_address" />
+
+
+    <CheckBox
+        android:id="@+id/register_accept_tc"
+        style="@style/jht_checkbox"
+        android:layout_alignParentStart="true"
+        android:text="@string/accept_terms_and_condition_tc"
+        android:textColor="#f5b324"
+        android:textSize="24dp"
+        android:layout_marginBottom="0dp"
+
+
+        app:layout_constraintLeft_toLeftOf="@id/register_birthdate"
+        app:layout_constraintTop_toTopOf="@id/register_first_name"
+        app:layout_constraintBottom_toBottomOf="@id/register_first_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

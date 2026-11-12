@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_light_grey">#B3B3B3</color>
+
+    <color name="button_grey">#e6e6e6</color>
+    <color name="button_red">#ff0000</color>
+    <color name="button_green">#90993f</color>
+
+    <item name="settings_button_text_selected" type="color">#ffffffff</item>
+    <item name="settings_button_text_pressed" type="color">#ff333333</item>
+    <item name="settings_button_text_unpressed" type="color">#ff333333</item>
+    <item name="settings_button_text_disabled" type="color">#ff666666</item>
+
+    <color name="error_box_title_color">#e1261c</color>
+    <color name="error_box_message_color">#4B1714</color>
+
+    <color name="inactive">#99000000</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent_border">#33000000</color>
+    <color name="button_border">#ff888888</color>
+    <color name="button_arrow">#ff1a1a1a</color>
+    <color name="button_arrow_active">#ff333333</color>
+    <color name="button_cooldown">#ff31719e</color>
+    <color name="button_cooldown_active">#ff1d445f</color>
+    <color name="button_cooldown_disable">#ff2e4e66</color>
+    <color name="button_keypad">#ffcccccc</color>
+    <color name="button_keypad_active">#ff777777</color>
+    <color name="button_previous">#ff1a1a1a</color>
+    <color name="button_previous_active">#ff333333</color>
+    <color name="side_panel_button_active_bg">#ff1f2020</color>
+    <color name="side_panel_button_bg">#ff272829</color>
+    <color name="button_home">#00000000</color>
+    <color name="side_panel_background">#606060</color>
+    <color name="button_home_active">#ff282828</color>
+    <color name="button_home_disable">#80000000</color>
+    <color name="button_audio">#00000000</color>
+    <color name="button_audio_active">#ffb2b6bb</color>
+    <color name="button_pause">#ffc60f10</color>
+    <color name="button_pause_active">#ff9a0101</color>
+    <color name="button_resume">#ff0e9b2f</color>
+    <color name="button_resume_active">#ff017924</color>
+    <color name="pause_time_box">#ffe6e6e6</color>
+    <color name="button_teamviewer">#ffe6e6e6</color>
+    <color name="button_teamviewer_active">#ffb3b3b3</color>
+    <color name="button_language">#c0000000</color>
+    <color name="button_language_active">#ff282828</color>
+    <color name="button_personal_trainer">#ff4a8690</color>
+    <color name="button_personal_trainer_active">#ff345e65</color>
+    <color name="stat_cool_down">#ff0071bc</color>
+    <color name="stat_warm_up">#ffc60f10</color>
+    <color name="stat_workout">#ff333333</color>
+    <color name="stat_value">#ff333333</color>
+    <color name="stat_title">#ff666666</color>
+    <color name="app_selected_border">#ffffffff</color>
+    <color name="app_selected_fill">#00ffffff</color>
+    <color name="app_bar_color">#A8000000</color>
+
+    <color name="cool_down_cancel">#ce2d2d</color>
+    <color name="cool_down_cancel_active">#a32424</color>
+
+
+    <color name="twenty_pc_black">#20000000</color>
+    <color name="twenty_pc_white">#20FFFFFF</color>
+
+
+
+    <color name="settingColorLabel">#FFF</color>
+    <color name="settingColorButton">#fff</color>
+    <color name="settingColorValue">#bbb</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="base_grey">#4d4d4d</color>
+    <color name="app_order_inactive_bar_title">#50FFFFFF</color>
+    <color name="app_order_inactive_bar_app">#20FFFFFF</color>
+
+    <item name="settings_text" type="color">#ffffffff</item>
+    <item name="settings_dialog_bg" type="color">#ff888888</item>
+
+    <color name="black_transparent_background">#d4000000</color>
+    <color name="light_black_transparent_background">#30000000</color>
+    <color name="black_va_range_box_background">#60000000</color>
+    <color name="black_dialog_transparent_background">#80000000</color>
+    <color name="media_black_transparent_background">#4D000000</color>
+    <color name="dialog_background_activity_dim_color">#CC000000</color>
+    <color name="dialog_border_color">#575E65</color>
+    <color name="dialog_background">#1a1a1a</color>
+    <color name="Passport_Blue">#6a9dce</color>
+    <color name="va_text_selected_color">#227CB7</color>
+    <color name="keyboard_key_background">#e6e6e6</color>
+    <color name="semi_transparent_background">#26ffffff</color>
+    <color name="keyboard_option_background">#636363</color>
+    <color name="message_box_title_color">#e6e6e6</color>
+
+    <!--CGC-20235-->
+    <color name="samantha_blue">#69D3FF</color>
+
+    <color name="HrZoneTextLightBlue">#ff29abe2</color>
+    <color name="HrZoneTextBlue">#ff0071ff</color>
+    <color name="HrZoneTextGreen">#ff009245</color>
+    <color name="HrZoneTextOrange">#ffef7122</color>
+    <color name="HrZoneTextRed">#ffc81c2d</color>
+    <color name="guest_button_inactive">#ffffffff</color>
+    <color name="guest_button_active">#ffb0b0b0</color>
+    <color name="guest_button_disabled">#a0ffffff</color>
+    <color name="login_button_inactive">#ff00710e</color>
+    <color name="login_button_active">#ff004109</color>
+    <color name="login_button_disabled">#a000710e</color>
+
+
+
+    <color name="standard_button_color">#FFE6E6E6</color>
+    <color name="standard_button_active_color">#FFB3B3B3</color>
+    <color name="standard_button_disabled_color">#FF666666</color>
+
+    <color name="green_check_button_color">#ff3f9d47</color>
+    <color name="green_check_button_active_color">#ff327D38</color>
+    <color name="green_check_button_disabled_color">#ff193e1c</color>
+
+    <color name="app_page_drag_inactive_border">#FF5A5A5A</color>
+    <color name="app_page_drag_active_border">#FFFFFFFF</color>
+    <color name="channel_delete_button">#FFE6E6E6</color>
+    <color name="channel_delete_button_selected">#FFB3B3B3</color>
+    <color name="table_even_row_background_color">#3F000000</color>
+    <color name="table_odd_row_background_color">#7F000000</color>
+    <color name="standard_button_active">#FFB3B3B3</color>
+    <color name="standard_button">#FFE6E6E6</color>
+
+    <color name="device_select_background">#FFFCFCFC</color>
+    <color name="device_select_pressed_background">#FF9D9D9D</color>
+    <color name="right_side_background">#FF4F4F4F</color>
+    <color name="title_bar_background">#FF333333</color>
+    <color name="tab_background">#45000000</color>
+    <color name="browser_item_background_black">#20000000</color>
+    <color name="browser_item_background_white">#20FFFFFF</color>
+    <color name="tab_background_selected">#FF4F4F4F</color>
+
+
+    <color name="home_button_unselected">#00000000</color>
+    <color name="home_button_selected">#73000000</color>
+
+    <color name="version_top_bar_green">#416070</color>
+
+    <color name="profile_user1">#FCAF1A</color>
+    <color name="profile_user2">#FF0000</color>
+    <color name="profile_user3">#5B6770</color>
+    <color name="profile_user4">#673AB7</color>
+    <color name="profile_guest">#253746</color>
+    <color name="profile_new">#40FFFFFF</color>
+
+    <!-- Bluetooth Pairing -->
+
+    <color name="p1_audio_yellow_dark">#1AFFE55A</color>
+
+    <color name="matrixYellow">#f5b324</color>
+
+    <color name="keypad_delete_press">#FF333333</color>
+    <color name="calendar_workout_stat_text">#FFECECEC</color>
+    <color name="calendar_workout_stat_icon">#FF717171</color>
+    <color name="button_stat">#ffe6e6e6</color>
+    <color name="button_state_active">#ffb3b3b3</color>
+
+</resources>

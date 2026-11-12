@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<updates equipment="chimera" major="0" minor="1" patch="0" build="1" >
+	<update order="1" name="Updater"        file="chimera_updater.zip" major="0"  minor="0"          patch="0"  build="1" update_id="0d4c74f5-0c8b-45fd-b76c-fbf05976e9a4" type="software_updater" requires_reboot="true" />
+	<update order="2" name="OS"             file="chimera_os.zip"      major="0"  minor="0"          patch="0"  build="1" update_id="2ec6a147-375f-4a61-ad53-6050c17c27bb" type="general"          requires_reboot="false" />
+	<update order="3" name="MainApp"        file="chimera_mainapp.zip" major="0"  minor="0"          patch="0"  build="1" update_id="f5a6a28a-dacc-44a5-9949-697fc379873d" type="general"          requires_reboot="true" />
+	<update order="4" name="Assets"         file="chimera_assets.zip"  major="0"  minor="0"          patch="0"  build="1" update_id="a181a455-d9ac-4a63-ab64-1d4237223404" type="general"          requires_reboot="false" />
+	<update order="5" name="ThirdPartyApps" file="chimera_tpa.zip"     major="0"  minor="0"          patch="0"  build="1" update_id="fd9193ca-3ab3-43e9-829f-b41e83fc915f" type="general"          requires_reboot="false"/>
+</updates> 

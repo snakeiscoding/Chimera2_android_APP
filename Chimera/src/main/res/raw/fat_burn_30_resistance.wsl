@@ -1,0 +1,104 @@
+settings
+    workout_id = 49
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 1
+
+input LEVEL
+input TIME_GOAL_START
+input COOLDOWN_TIME_START
+input GOAL
+
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export INCLINE
+
+stage "workout"
+    GOAL = TIME_GOAL_START
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    INCLINE = 0
+    
+    totalIntervals = 16
+    lastSetInterval = 0
+    intervalCompletionTime = 0
+    
+    when STAGE_TIME_MS >= (GOAL - intervalCompletionTime) / (totalIntervals - interval) + intervalCompletionTime
+        interval = interval + 1
+    
+    when lastSetInterval != interval
+        intervalCompletionTime = STAGE_TIME_MS
+        lastSetInterval = interval
+
+    LEVEL_1_RESISTANCE = [1, 6, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 6, 1]
+    LEVEL_2_RESISTANCE = [1, 6, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 6, 1]
+    LEVEL_3_RESISTANCE = [5, 8, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 8, 5]
+    LEVEL_4_RESISTANCE = [5, 9, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 9, 5]
+    LEVEL_5_RESISTANCE = [6, 9, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 9, 6]
+    LEVEL_6_RESISTANCE = [6, 12, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 12, 6]
+    LEVEL_7_RESISTANCE = [8, 12, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 12, 8]
+    LEVEL_8_RESISTANCE = [8, 14, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 14, 8]
+    LEVEL_9_RESISTANCE = [9, 14, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 14, 9]
+    LEVEL_10_RESISTANCE = [9, 15, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 15, 9]
+    LEVEL_11_RESISTANCE = [12, 15, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 15, 12]
+    LEVEL_12_RESISTANCE = [12, 17, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 17, 12]
+    LEVEL_13_RESISTANCE = [14, 17, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 17, 14]
+    LEVEL_14_RESISTANCE = [14, 20, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 20, 14]
+    LEVEL_15_RESISTANCE = [15, 20, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 20, 15]
+    LEVEL_16_RESISTANCE = [15, 21, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 21, 15]
+    LEVEL_17_RESISTANCE = [17, 21, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 21, 17]
+    LEVEL_18_RESISTANCE = [17, 23, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 23, 17]
+    LEVEL_19_RESISTANCE = [20, 23, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 23, 20]
+    LEVEL_20_RESISTANCE = [21, 29, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 29, 21]
+
+    level 1
+        setIntervals RESISTANCE = LEVEL_1_RESISTANCE
+    level 2
+        setIntervals RESISTANCE = LEVEL_2_RESISTANCE
+    level 3
+        setIntervals RESISTANCE = LEVEL_3_RESISTANCE
+    level 4
+        setIntervals RESISTANCE = LEVEL_4_RESISTANCE
+    level 5
+        setIntervals RESISTANCE = LEVEL_5_RESISTANCE
+    level 6
+        setIntervals RESISTANCE = LEVEL_6_RESISTANCE
+    level 7
+        setIntervals RESISTANCE = LEVEL_7_RESISTANCE
+    level 8
+        setIntervals RESISTANCE = LEVEL_8_RESISTANCE
+    level 9
+        setIntervals RESISTANCE = LEVEL_9_RESISTANCE
+    level 10
+        setIntervals RESISTANCE = LEVEL_10_RESISTANCE
+    level 11
+        setIntervals RESISTANCE = LEVEL_11_RESISTANCE
+    level 12
+        setIntervals RESISTANCE = LEVEL_12_RESISTANCE
+    level 13
+        setIntervals RESISTANCE = LEVEL_13_RESISTANCE
+    level 14
+        setIntervals RESISTANCE = LEVEL_14_RESISTANCE
+    level 15
+        setIntervals RESISTANCE = LEVEL_15_RESISTANCE
+    level 16
+        setIntervals RESISTANCE = LEVEL_16_RESISTANCE
+    level 17
+        setIntervals RESISTANCE = LEVEL_17_RESISTANCE
+    level 18
+        setIntervals RESISTANCE = LEVEL_18_RESISTANCE
+    level 19
+        setIntervals RESISTANCE = LEVEL_19_RESISTANCE
+    level 20
+        setIntervals RESISTANCE = LEVEL_20_RESISTANCE
+
+stage "cooldown"
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        RESISTANCE = 1
+        INCINE = 0
+            
+        when INTERVAL_TIME_MS >= GOAL
+            end

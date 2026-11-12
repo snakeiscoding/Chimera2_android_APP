@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_settings_window"
+    android:background="@drawable/background_color_slate_blue"
+    style="@style/EngineeringPage"
+    tools:ignore="SpUsage, RtlHardcoded, RtlSymmetry" >
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/tv_channel_setup_channel_margin"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:id="@+id/tv_channel_setup_preview_background"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:background="#7f050505"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_preview_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="@null" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/tv_channel_setup_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/back_button"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/standard_button"
+        app:tint="@color/standard_button_tint"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tv_channel_setup_channel_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="90dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tv_channel_preview_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="460dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_back"/>
+
+
+    <Button
+        android:id="@+id/channel_setup_mode_1"
+        style="@style/GeneralEngineeringButton"
+        android:background="@drawable/selector_item_background"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/channel_setup_mode_2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/selector_text_color"
+        android:text="@string/ip_mode_tc" />
+
+
+    <Button
+        android:id="@+id/channel_setup_mode_2"
+        style="@style/GeneralEngineeringButton"
+        android:background="@drawable/selector_item_background"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/channel_setup_mode_1"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_setup_preview_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/selector_text_color"
+        android:text="@string/channel_mode_tc" />
+
+
+    <com.jht.androiduiwidgets.selector.OptionSelectorItem
+        android:id="@+id/tv_channel_setup_secondary_tuner"
+        style="@style/GeneralEngineeringOptionSelector"
+        android:layout_width="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:padding="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/channel_setup_mode_1"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline"
+        app:option_popup_width="400dp" />
+
+
+
+    <com.jht.androiduiwidgets.selector.OptionSelectorItem
+        android:id="@+id/tv_channel_setup_operation"
+        style="@style/GeneralEngineeringOptionSelector"
+        android:layout_width="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="0dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:padding="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel_setup_secondary_tuner"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline"
+        app:option_popup_width="400dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/tv_channel_setup_operation_button"
+        style="@style/GeneralEngineeringButton"
+        android:layout_width="200dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel_setup_operation"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline"
+        android:gravity="center"
+        app:srcCompat="@drawable/ic_check_white"
+        android:background="@drawable/button_control_resume"/>
+
+    <com.jht.chimera.lib.widget.tv.TVDefaultChannel
+        android:id="@+id/tv_setup_default_channel"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel_setup_operation_button"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline" />
+
+
+    <RelativeLayout
+        android:id="@+id/eng_tv_channel_list_container"
+        style="@style/jht_standard_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FF575E65"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_setup_default_channel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="RtlSymmetry">
+        <androidx.recyclerview.widget.RecyclerView
+            style="@style/jht_standard_inner_recycle_container"
+            android:id="@+id/eng_tv_channel_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/tv_channel_setup_tv_player_surface_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foregroundGravity="clip_horizontal|clip_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_channel_setup_keypad_barrier"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_preview_guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintDimensionRatio="16:9"
+        tools:ignore="RtlHardcoded">
+
+        <TextureView
+            android:id="@+id/eng_tv_player_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <SurfaceView
+            android:id="@+id/eng_tv_player_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextureView
+            android:id="@+id/eng_vlc_player_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.jht.iptvplayer.SubtitleBitmapView
+            android:id="@+id/eng_tv_subtitles_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_surface_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_channel_setup_tv_player_surface_container"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_setup_tv_player_surface_container"
+        app:layout_constraintLeft_toLeftOf="@id/tv_channel_setup_tv_player_surface_container"
+        app:layout_constraintRight_toRightOf="@id/tv_channel_setup_tv_player_surface_container"
+        android:background="#ff000000"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/tv_channel_setup_keypad_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="tv_channel_setup_keypad,tv_channel_setup_extended_controls" />
+
+
+    <com.jht.chimera.lib.widget.tv.TVKeypad
+        android:id="@+id/tv_channel_setup_keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_setup_extended_controls"
+        app:layout_constraintLeft_toRightOf="@id/system_volume"/>
+
+    <com.jht.chimera.lib.widget.tv.TVExtendedControls
+        android:id="@+id/tv_channel_setup_extended_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_setup_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_keypad" />
+
+    <com.jht.chimera.lib.widget.tv.TVColorButtons
+        android:id="@+id/tv_channel_setup_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintRight_toRightOf="@id/tv_channel_setup_tv_player_surface_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_extended_controls" />
+
+    <com.jht.androiduiwidgets.pillbox.PillBox
+        android:id="@+id/system_volume"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel_setup_tv_player_surface_container"
+        app:layout_constraintBottom_toTopOf="@id/tv_tuner_volume"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_setup_keypad"
+        app:layout_constraintLeft_toLeftOf="@id/tv_channel_setup_tv_player_surface_container" />
+
+    <com.jht.androiduiwidgets.pillbox.PillBox
+        android:id="@+id/tv_tuner_volume"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/system_volume"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_setup_keypad"
+        app:layout_constraintLeft_toLeftOf="@id/tv_channel_setup_tv_player_surface_container" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cab_settings_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/tv_channel_setup_channel_margin"
+        app:layout_constraintRight_toLeftOf="@id/tv_channel_preview_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_setup_default_channel">
+
+        <CheckBox
+            android:id="@+id/DATA_CAB_CLOSED_CAPTIONING_BOOL"
+            style="@style/GeneralEngineeringCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/closed_captioning_tc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cab_stb_type" />
+
+        <CheckBox
+            android:id="@+id/cab_guide"
+            style="@style/GeneralEngineeringCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_guide_pg"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DATA_CAB_CLOSED_CAPTIONING_BOOL" />
+
+        <com.jht.androiduiwidgets.edittext.UserTextInput
+            android:id="@+id/cab_volume"
+            style="@style/GeneralEditTextIntEngineering"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:label="@string/volume_tc"
+            app:input_type="integer_input"
+            app:min_value="0"
+            app:max_value="15"
+            app:max_chars="2"
+            app:default_value="15"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cab_guide"
+            android:inputType="textNoSuggestions"/>
+
+
+        <Button
+            android:id="@+id/cab_volume_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GeneralEngineeringButton"
+            android:text="@string/set_tc"
+            app:layout_constraintBottom_toBottomOf="@id/cab_volume"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/cab_volume_gain"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_width="200dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:padding="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:label="Volume Gain"
+            app:layout_constraintTop_toBottomOf="@id/cab_volume"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:option_popup_width="400dp"
+            app:option_options="@array/cab_volume_gain"/>
+
+        <Button
+            android:id="@+id/cab_volume_gain_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GeneralEngineeringButton"
+            android:text="@string/set_tc"
+            app:layout_constraintBottom_toBottomOf="@id/cab_volume_gain"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/cab_stb_setting"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_width="200dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:padding="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:label="STB Setting"
+            app:layout_constraintTop_toBottomOf="@id/cab_volume_gain"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:option_popup_width="400dp"
+            app:option_options="@array/cab_setting"/>
+
+        <Button
+            android:id="@+id/cab_stb_setting_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GeneralEngineeringButton"
+            android:text="@string/set_tc"
+            app:layout_constraintBottom_toBottomOf="@id/cab_stb_setting"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.jht.androiduiwidgets.edittext.UserTextInput
+            android:id="@+id/cab_stb_type"
+            style="@style/GeneralEditTextIntEngineering"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:label="STB Type"
+            app:input_type="integer_input"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:min_value="0"
+            app:max_value="99"
+            app:max_chars="2"
+            app:default_value="0"
+            android:layout_marginRight="20dp"
+            app:layout_constraintTop_toBottomOf="@id/cab_stb_setting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:inputType="textNoSuggestions"/>
+
+        <Button
+            android:id="@+id/cab_stb_type_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GeneralEngineeringButton"
+            android:text="@string/set_tc"
+            app:layout_constraintBottom_toBottomOf="@id/cab_stb_type"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/command_mapping_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/tv_setup_default_channel"
+        app:layout_constraintRight_toRightOf="@id/tv_setup_default_channel"
+        app:layout_constraintTop_toBottomOf="@id/tv_setup_default_channel">
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/enter_command_selector"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_width="350dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingStart="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:padding="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="0dp"
+            app:label="Enter Command"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:option_popup_width="350dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

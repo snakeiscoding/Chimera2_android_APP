@@ -1,0 +1,174 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/wattsGraphLayout"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hguidelineGraphTop"
+        app:layout_constraintBottom_toTopOf="@id/hguidelineGraphBottom">
+
+        <com.jht.chimera.lib.widget.athena.MaxBPMTestGraph
+            android:id="@+id/wattsGraph"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1332" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguidelineGraphTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguidelineGraphBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sectionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:text="@string/stage_uc"
+        android:textSize="40dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="40dp"
+        android:gravity="center"
+
+        android:textColor="#ffffff"
+
+        app:layout_constraintBottom_toTopOf="@+id/hguideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sectionHeaderOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        android:visibility="gone"
+        android:alpha="0.5"
+
+        app:layout_constraintEnd_toEndOf="@+id/sectionHeader"
+        app:layout_constraintStart_toStartOf="@+id/sectionHeader"
+        app:layout_constraintBottom_toBottomOf="@+id/sectionHeader"
+        app:layout_constraintTop_toTopOf="@+id/sectionHeader"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="200dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="200dp"
+        android:textStyle="bold"
+
+        app:layout_constraintHorizontal_bias="0.9641"
+        app:layout_constraintVertical_bias="0.7"
+
+        app:layout_constraintBottom_toBottomOf="@+id/timeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeLabel"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:lines="2"
+
+        android:maxLines="2"
+        android:text="@string/time_remaining_uc"
+
+        android:textColor="#B8B8B8"
+        android:textSize="50dp"
+        app:autoSizeMaxTextSize="50dp"
+        app:autoSizeTextType="uniform"
+        android:lineSpacingMultiplier=".83"
+        android:lineSpacingExtra="3dp"
+
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.75308"
+
+        app:layout_constraintEnd_toStartOf="@+id/numericTimeTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hguidelineBottom"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericBPMTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:text="000"
+        android:textColor="#ffffff"
+        android:textSize="200dp"
+        app:autoSizeMaxTextSize="200dp"
+        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
+
+        app:layout_constraintHorizontal_bias=".0359"
+        app:layout_constraintVertical_bias="0.7"
+
+        app:layout_constraintTop_toBottomOf="@+id/hguidelineBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericWattsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+
+        android:text="@string/bpm_uc"
+        android:textColor="#B8B8B8"
+        android:textSize="50dp"
+        app:autoSizeMaxTextSize="50dp"
+        app:autoSizeTextType="uniform"
+
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintVertical_bias="0.75308"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/numericBPMTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hguidelineBottom" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

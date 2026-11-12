@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage">
+
+
+    <TextView
+        android:id="@+id/experimental_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/experimental_warning_pg"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#90000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/experimental_warning" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/experimental_warning"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/enable_analytics"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Enable Analytics Per Workout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/export_analytics"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Export"
+                app:layout_constraintLeft_toRightOf="@id/enable_analytics"
+
+                app:layout_constraintTop_toTopOf="@id/enable_analytics"
+                tools:ignore="RtlHardcoded" />
+
+            <Button
+                android:id="@+id/reset_analytics"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Reset"
+                app:layout_constraintLeft_toRightOf="@id/export_analytics"
+                app:layout_constraintTop_toTopOf="@id/export_analytics"
+                tools:ignore="RtlHardcoded" />
+
+            <Button
+                android:id="@+id/view_analytics"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="View"
+                app:layout_constraintLeft_toRightOf="@id/reset_analytics"
+                app:layout_constraintTop_toTopOf="@id/reset_analytics"
+                tools:ignore="RtlHardcoded" />
+
+
+            <CheckBox
+                android:id="@+id/force_downgrade_updates_checkbox"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:text="Updates Downgrade"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/enable_analytics" />
+            <Button
+                android:id="@+id/clear_updates"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Clear update service"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/force_downgrade_updates_checkbox"
+                app:layout_constraintTop_toTopOf="@id/force_downgrade_updates_checkbox"
+                app:layout_constraintBottom_toBottomOf="@id/force_downgrade_updates_checkbox"/>
+
+            <CheckBox
+                android:id="@+id/enable_dapi_fallback"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="Enable DAPI fallback (need reboot)"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/force_downgrade_updates_checkbox" />
+
+
+            <TextView
+                android:id="@+id/crashes_in_cache"
+                style="@style/GeneralEngineeringTextValue"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:singleLine="false"
+                app:layout_constraintLeft_toRightOf="@id/sendManualCrash"
+                app:layout_constraintTop_toBottomOf="@id/crash_monitoring" />
+
+
+            <Button
+                android:id="@+id/sendManualCrash"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Send Manual Crash"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/downloadCachedLogs" />
+
+            <Button
+                android:id="@+id/downloadCachedLogs"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Download Crash Cache"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/crashes_in_cache" />
+
+            <Button
+                android:id="@+id/clearCrashReportingCache"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Clear Cache"
+                app:layout_constraintLeft_toRightOf="@id/downloadCachedLogs"
+                app:layout_constraintTop_toBottomOf="@id/crashes_in_cache" />
+
+            <Button
+                android:id="@+id/updateCrashReportingCache"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Update Cache"
+                app:layout_constraintLeft_toRightOf="@id/clearCrashReportingCache"
+                app:layout_constraintTop_toBottomOf="@id/crashes_in_cache" />
+
+            <CheckBox
+                android:id="@+id/crash_monitoring"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Crash Reporting Enabled"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_workout_data_alternate_endpoint" />
+
+            <CheckBox
+                android:id="@+id/persistent_logs"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Persistent Logs Enabled"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/sendManualCrash" />
+
+            <CheckBox
+                android:id="@+id/crash_report_disable_endpoints"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:text="Disable Crash Reporting Endpoints"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/persistent_logs" />
+
+            <CheckBox
+                android:id="@+id/crash_report_disable_blocklist"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:text="Disable Crash Reporting Blocklist"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/crash_report_disable_endpoints" />
+
+            <CheckBox
+                android:id="@+id/crash_report_debug_logs"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:text="Enable Crash Reporting Debug Logs"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/crash_report_disable_blocklist" />
+
+            <CheckBox
+                android:id="@+id/eng_send_crash_report_log_data_to_alternate_endpoint_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="Send Crash Reporting logs to alternate endpoint"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/crash_report_debug_logs" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_send_crash_report_log_data_to_alternate_endpoint"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:label="Crash Reporting Logs Alternative Endpoint"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_send_crash_report_log_data_to_alternate_endpoint_enabled"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/custom_passcode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/enable_dapi_fallback"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/eng_send_workout_data_to_alternate_endpoint_enabled">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/custom_passcode_checkbox_and_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="@id/custom_passcode_layout"
+                    app:layout_constraintBottom_toTopOf="@id/custom_passcode_entry_and_confirmation"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <CheckBox
+                        android:id="@+id/enable_settings_lockout"
+                        style="@style/GeneralEngineeringCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/enable_settings_lockout_tc"
+                        app:layout_constraintTop_toTopOf="@id/custom_passcode_checkbox_and_description"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/settings_lockout_description"
+                        app:layout_constraintBottom_toBottomOf="@id/custom_passcode_checkbox_and_description"
+                        />
+
+                    <TextView
+                        android:id="@+id/settings_lockout_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/GeneralEngineeringTextValue"
+                        android:text="@string/settings_lockout_description_pg"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"
+                        android:singleLine="false"
+                        app:layout_constraintTop_toTopOf="@id/custom_passcode_checkbox_and_description"
+                        app:layout_constraintBottom_toBottomOf="@id/custom_passcode_checkbox_and_description"
+                        app:layout_constraintLeft_toRightOf="@id/enable_settings_lockout"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/custom_passcode_entry_and_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/custom_passcode_checkbox_and_description">
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/enter_custom_passcode"
+                        style="@style/GeneralEditTextStringEngineering"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="20dp"
+                        android:imeOptions="actionDone"
+                        app:label="@string/enter_custom_passcode_tc"
+                        app:layout_constraintLeft_toLeftOf="@id/custom_passcode_entry_and_confirmation"
+                        app:layout_constraintTop_toTopOf="@id/custom_passcode_entry_and_confirmation"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                    <com.jht.androiduiwidgets.edittext.UserTextInput
+                        android:id="@+id/confirm_custom_passcode"
+                        style="@style/GeneralEditTextStringEngineering"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="20dp"
+                        android:imeOptions="actionDone"
+                        app:label="@string/confirm_custom_passcode_tc"
+                        app:layout_constraintLeft_toRightOf="@id/enter_custom_passcode"
+                        app:layout_constraintTop_toTopOf="@id/custom_passcode_entry_and_confirmation"
+                        app:layout_constraintWidth_percent="0.45" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/apply_passcode"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/apply_passcode_tc"
+                    app:layout_constraintLeft_toLeftOf="@id/custom_passcode_checkbox_and_description"
+                    app:layout_constraintTop_toBottomOf="@id/custom_passcode_entry_and_confirmation"
+                    tools:ignore="RtlHardcoded" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <CheckBox
+                android:id="@+id/eng_send_workout_data_to_alternate_endpoint_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="@string/send_workout_data_to_alternate_location_tc"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/custom_passcode_layout" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_workout_data_alternate_endpoint"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:label="@string/workout_data_alternate_endpoint_tc"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_send_workout_data_to_alternate_endpoint_enabled"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <CheckBox
+                android:id="@+id/eng_send_crash_report_incident_data_to_alternate_endpoint_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="Send Crash Reporting Incident data to alternate endpoint"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_send_crash_report_log_data_to_alternate_endpoint" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_send_crash_report_incident_data_to_alternate_endpoint"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:label="Crash Reporting Incident Data Alternative Endpoint"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_send_crash_report_incident_data_to_alternate_endpoint_enabled"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/crash_reporting_collection_time"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="Crash Reporting Collection Time"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_send_crash_report_incident_data_to_alternate_endpoint"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="120"
+                app:min_value="1" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_hdmi_error_threshold"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="HDMI Error Threshold"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@+id/crash_reporting_collection_time"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="5"
+                app:min_value="1" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_deinterlace_skip_frame"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                android:visibility="gone"
+                app:input_type="integer_input"
+                app:label="Deinterlace Skip Frame Count"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_hdmi_error_threshold"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="5"
+                app:min_value="0" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_recent_workout_app_limit"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="Recent Workout App Limit"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_hdmi_error_threshold"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="15"
+                app:min_value="1" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/workout_snapshot_selector"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:label="@string/workout_snapshots_tc"
+                app:layout_constraintTop_toBottomOf="@id/eng_hdmi_resolution"
+                app:layout_constraintStart_toStartOf="@id/eng_hdmi_resolution"
+                app:layout_constraintWidth_percent="0.45"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_hdmi_resolution"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:label="HDMI Output Resolution"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crash_reporting_collection_time"
+                app:layout_constraintWidth_percent="0.45"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_distance_precision"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="Distance Display Precision"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_recent_workout_app_limit"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="3"
+                app:min_value="0" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_iptv_player_type"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:label="IPTV Player Type"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_distance_precision"
+                app:layout_constraintWidth_percent="0.45"
+                app:option_popup_width="400dp" />
+
+            <CheckBox
+                android:id="@+id/show_stb_command_list_checkbox"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:text="Show STB Command List"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_iptv_player_type" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_wired_headphone_hdmi_delay"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="Wired Headphone HDMI Delay (us)"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/show_stb_command_list_checkbox"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="100000"
+                app:min_value="0" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_wireless_headphone_hdmi_delay"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:label="Wireless Headphone HDMI Delay (us)"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/show_stb_command_list_checkbox"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="100000"
+                app:min_value="0" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_weather_app_selection"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:label="Weather Application"
+                app:layout_constraintLeft_toLeftOf="@id/enable_analytics"
+                app:layout_constraintTop_toBottomOf="@id/eng_wireless_headphone_hdmi_delay"
+                app:layout_constraintWidth_percent="0.45"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_default_system_app"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:label="Default App"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_wireless_headphone_hdmi_delay"
+                app:layout_constraintWidth_percent="0.45"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_custom_app_package_path"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:imeOptions="actionDone"
+                app:input_type="text_input"
+                app:label="Custom App Path (needs reboot)"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_default_system_app"
+                app:layout_constraintWidth_percent="0.45"
+                app:max_value="3"
+                app:min_value="0" />
+
+            <RelativeLayout
+                android:id="@+id/analytics_line_break"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/engineering_line_break"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_custom_app_package_path"
+                />
+
+            <LinearLayout
+                android:id="@+id/log_checkboxes_col_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/log_checkboxes_col_2"
+                app:layout_constraintTop_toBottomOf="@id/analytics_line_break">
+
+                <CheckBox
+                    android:id="@+id/test_delayed_va"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Delay VA Loading" />
+
+                <CheckBox
+                    android:id="@+id/enable_hulu_app"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enable Hulu" />
+
+                <CheckBox
+                    android:id="@+id/dapi_analytics_enabled"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/enable_dapi_analytics_tc" />
+
+                <CheckBox
+                    android:id="@+id/ftms_control_enabled"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/enable_ftms_control_tc" />
+
+                <CheckBox
+                    android:id="@+id/eng_nightly_updates"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/check_for_nightly_updates_tc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/log_checkboxes_col_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@id/log_checkboxes_col_1"
+                app:layout_constraintRight_toLeftOf="@id/log_checkboxes_col_3"
+                app:layout_constraintTop_toBottomOf="@id/analytics_line_break">
+
+                <CheckBox
+                    android:id="@+id/enable_ymca_360"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enable YMCA360" />
+
+                <CheckBox
+                    android:id="@+id/enable_isc_at_boot"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enable ISC at boot" />
+
+                <CheckBox
+                    android:id="@+id/disable_wifi"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Turn Off WiFi" />
+
+                <CheckBox
+                    android:id="@+id/enable_disney_app"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enable Disney+" />
+
+                <CheckBox
+                    android:id="@+id/enable_amazon_freevee"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Amazon Freevee"
+                    android:layout_marginTop="20dp" />
+
+                <CheckBox
+                    android:id="@+id/enable_daily_force_reboot"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Force Reboot"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/log_checkboxes_col_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@id/log_checkboxes_col_2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/analytics_line_break">
+
+                <CheckBox
+                    android:id="@+id/power_limiting"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Power Limit Check (reboot required)"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/DATA_ADB_VIA_NETWORK_BOOL"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/network_adb_tc" />
+
+                <CheckBox
+                    android:id="@+id/show_stb_advanced"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Show Advance STB Options" />
+
+                <CheckBox
+                    android:id="@+id/enable_mile_high_run_club"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Enable Mile High Run Club" />
+
+                <CheckBox
+                    android:id="@+id/live_climb_enabled"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Live-Climb Event" />
+            </LinearLayout>
+
+            <!-- Keeps the next section below the tallest checkbox column. -->
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/log_checkboxes_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="log_checkboxes_col_1,log_checkboxes_col_2,log_checkboxes_col_3" />
+
+            <LinearLayout
+                android:id="@+id/chameleon_settings_layout"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/log_checkboxes_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/chameleon"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="wrap_content"
+                app:label="UI System (some features may need reboot)"
+                app:option_popup_width="400dp" />
+            <CheckBox
+                android:id="@+id/chameleon_autohide"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use Autohide Panels with non-Legacy UI" />
+
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_upload_theme"
+                    style="@style/GeneralEngineeringOptionSelector"
+                    android:layout_width="wrap_content"
+                    app:label="Dynamic Theme"
+                    app:option_popup_width="400dp" />
+
+            <CheckBox
+                android:id="@+id/enable_stb_streaming"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Use LG750E for streaming apps" />
+
+            <TextView
+                android:id="@+id/build_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16dp"
+                tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

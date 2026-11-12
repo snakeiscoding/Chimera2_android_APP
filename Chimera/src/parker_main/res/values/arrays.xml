@@ -1,0 +1,14 @@
+<resources>
+
+    <string-array name="welcome_icon_positions">
+        <item>@string/center_tc</item>
+        <item>@string/top_tc</item>
+        <item>@string/gone_tc</item>
+    </string-array>
+
+    <string-array name="erp_mode">
+        <item>@string/off_tc</item>
+        <item>@string/idle_timeout_tc</item>
+    </string-array>
+
+</resources>

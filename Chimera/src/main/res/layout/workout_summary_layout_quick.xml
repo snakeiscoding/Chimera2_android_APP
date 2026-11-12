@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/favorite_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/add_to_favorite_tc"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <!-- Hardcode into GridLayout / TableLayout or recycler with google FlexboxLayout ? -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quick_stats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favorite_layout"
+        app:layout_constraintRight_toLeftOf="@id/survey_group"
+        >
+        <!-- should we define a flow_maxElementsWrap ? -->
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:flow_wrapMode="chain"
+            app:flow_horizontalStyle="spread"
+            app:flow_verticalStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:constraint_referenced_ids="stat1,stat2,stat3,stat4,stat5" />
+
+        <com.jht.chimera.ui.mainapp.workoutsummary.WorkoutQuickStat
+            android:id="@+id/stat1"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+        <com.jht.chimera.ui.mainapp.workoutsummary.WorkoutQuickStat
+            android:id="@+id/stat2"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+        <com.jht.chimera.ui.mainapp.workoutsummary.WorkoutQuickStat
+            android:id="@+id/stat3"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+        <com.jht.chimera.ui.mainapp.workoutsummary.WorkoutQuickStat
+            android:id="@+id/stat4"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+        <com.jht.chimera.ui.mainapp.workoutsummary.WorkoutQuickStat
+            android:id="@+id/stat5"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- survey area -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/survey_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.30">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/workout_rating_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_gray_tile"
+            app:backgroundTint="#90000000"
+            app:backgroundTintMode="src_over"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_close_workout_rating"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintTop_toTopOf="@+id/workout_rating_background" />
+
+        <TextView
+            android:id="@+id/thanks_for_feedback"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/thanks_for_your_feedback_pg"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"
+            app:autoSizeMaxTextSize="30dp"
+            app:autoSizeMinTextSize="15dp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/star_rating1"
+            app:layout_constraintDimensionRatio="H,6.5:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintTop_toBottomOf="@+id/btn_close_workout_rating"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".8" />
+
+        <com.jht.chimera.lib.widget.StarRatingView
+            android:id="@+id/star_rating1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/star_rating2"
+            app:layout_constraintDimensionRatio="w,2.7:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintTop_toBottomOf="@+id/btn_close_workout_rating" />
+
+        <com.jht.chimera.lib.widget.StarRatingView
+            android:id="@+id/star_rating2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/survey_question"
+            app:layout_constraintDimensionRatio="w,2.7:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintTop_toBottomOf="@+id/star_rating1" />
+
+        <TextView
+            android:id="@+id/survey_question"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:text="@string/survey_question_pg"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal"
+            app:autoSizeMaxTextSize="40dp"
+            app:autoSizeMinTextSize="20dp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/survey_sentence"
+            app:layout_constraintDimensionRatio="H,6.5:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".83" />
+
+        <TextView
+            android:id="@+id/survey_sentence"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:text="@string/survey_sentence_pg"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal"
+            app:autoSizeMaxTextSize="30dp"
+            app:autoSizeMinTextSize="10dp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/btn_take_survey"
+            app:layout_constraintDimensionRatio="H,7.5:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".93" />
+
+        <Button
+            android:id="@+id/btn_take_survey"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/take_the_survey_pg"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_bottom_guideline"
+            app:layout_constraintDimensionRatio="H,4:1"
+            app:layout_constraintEnd_toEndOf="@+id/workout_rating_background"
+            app:layout_constraintStart_toStartOf="@+id/workout_rating_background"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/button_bottom_guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

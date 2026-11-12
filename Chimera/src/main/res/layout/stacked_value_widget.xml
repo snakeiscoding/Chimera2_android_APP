@@ -1,0 +1,39 @@
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/stackValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-6dp"
+        android:layout_marginTop="-5dp"
+        android:gravity="bottom"
+        android:paddingLeft="8dp"
+        android:paddingTop="1dp"
+        android:textSize="80dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:lines="1"
+        android:contentDescription="parameterValue"
+        app:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/stackLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:gravity="bottom|left"
+        android:paddingLeft="8dp"
+        android:paddingBottom="1dp"
+        android:textColor="#939393"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:lines="1"
+        android:contentDescription="parameterLabel"
+        app:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+</merge>

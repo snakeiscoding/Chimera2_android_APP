@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:id="@+id/list_item_layout">
+
+
+    <RelativeLayout
+        android:id="@+id/list_item_background_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".755"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintDimensionRatio="H,1.53:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/list_item_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+        <ImageView
+            android:id="@+id/list_item_background_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tiers_disabled"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/list_item_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@id/list_item_background_container"
+        app:layout_constraintStart_toStartOf="@id/list_item_background_container"
+        app:layout_constraintTop_toTopOf="@id/list_item_background_container"
+        app:layout_constraintBottom_toBottomOf="@id/list_item_background_container"
+        android:background="@drawable/workout_overlay_selector"
+        android:contentDescription="@null" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/list_item_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHeight_percent=".15"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintStart_toStartOf="@id/list_item_background_container"
+        app:layout_constraintEnd_toEndOf="@id/list_item_background_container"
+        app:layout_constraintTop_toBottomOf="@id/list_item_background_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:textColor="@color/category_item_text"
+        android:gravity="center"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="16dp"
+        tools:ignore="SpUsage" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".25"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_background_container"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

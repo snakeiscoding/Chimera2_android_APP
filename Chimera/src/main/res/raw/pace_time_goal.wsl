@@ -1,0 +1,39 @@
+settings
+    workout_id = 73
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 1
+
+input TIME_GOAL_START
+input TARGET_AVG_SPEED
+input GOAL
+input START_RESISTANCE
+input COOLDOWN_TIME_START
+input DISTANCE
+
+export RESISTANCE
+export GOAL
+export GOAL_TYPE
+export CURRENT_AVG_TARGET_SPEED
+export SPEED
+
+stage "workout"
+    interval
+        RESISTANCE = START_RESISTANCE
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = TIME_GOAL_START
+        CURRENT_AVG_TARGET_SPEED = TARGET_AVG_SPEED
+        SPEED = TARGET_AVG_SPEED
+
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+
+stage "cooldown"
+    interval
+        RESISTANCE = 1
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = COOLDOWN_TIME_START
+
+        when INTERVAL_TIME_MS >= GOAL
+            end

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is explicitly for strings ready for translating -->
+<resources>
+    <string name="edit_profile_tc">Edit Profile</string>
+</resources>

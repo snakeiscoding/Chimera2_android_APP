@@ -1,0 +1,3 @@
+@echo off
+
+adb shell am broadcast -a "com.jht.loggerservice.ACTION_UPDATE_DATA_MATRIX_KEY" --es key DM_DEBUG_KEYS_BOOL --es type boolean --es value false

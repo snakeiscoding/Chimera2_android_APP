@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/demo_mode_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_demo_mode"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/debug_options_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:textSize="12dp"
+        android:textColor="#40FF0000"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        tools:ignore="SpUsage" />
+
+</merge>

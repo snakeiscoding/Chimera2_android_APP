@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/EngineeringPage">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/press_any_key_pg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF232323"
+            android:orientation="horizontal"
+            android:paddingEnd="25dp">
+
+            <TextView
+                style="@style/GeneralEngineeringTextHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/key_code_tc" />
+
+            <TextView
+                style="@style/GeneralEngineeringTextHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/key_updown_tc" />
+
+            <TextView
+                style="@style/GeneralEngineeringTextHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="@string/combo_key_tc" />
+        </LinearLayout>
+
+        <RelativeLayout
+            style="@style/jht_standard_table_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eng_key_test_table"
+                style="@style/jht_standard_inner_recycle_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#26FFFFFF" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

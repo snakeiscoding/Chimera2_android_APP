@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="600dp"
+    android:orientation="horizontal">
+
+    <ImageView android:id="@+id/shadow"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom|right"
+            android:orientation="vertical"
+            android:weightSum="1000">
+
+            <TextView
+                android:id="@+id/marker_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@android:color/white"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+            <Space
+                android:id="@+id/marker_text_position"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0"
+            />
+
+        </LinearLayout>
+
+        <com.jht.chimera.lib.widget.progressbar.VerticalProgressBar
+            android:id="@+id/landmark_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:progressDrawable="@drawable/landmark_progress_bar"
+        />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_landmark_lines"/>
+    </LinearLayout>
+
+</RelativeLayout>

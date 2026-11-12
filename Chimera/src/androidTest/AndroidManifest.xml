@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Allow the instrumetation testing to force stop packages. -->
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+
+    <instrumentation
+        android:name="androidx.test.runner.AndroidJUnitRunner"
+        android:targetPackage="com.jht.chimera"
+        android:targetProcesses="com.jht.splashapp">
+        <meta-data
+            android:name="remoteMethod"
+            android:value="androidx.test.espresso.remote.EspressoRemote#remoteInit" />
+    </instrumentation>
+
+    <instrumentation
+        android:name="com.jht.chimera.test.runner.MachineSettingsTestRunner"
+        android:targetPackage="com.jht.chimera"
+        android:targetProcesses="com.jht.machinesettings">
+        <meta-data
+            android:name="remoteMethod"
+            android:value="androidx.test.espresso.remote.EspressoRemote#remoteInit" />
+    </instrumentation>
+
+    <instrumentation
+        android:name="com.jht.chimera.test.runner.MainAppTestRunner"
+        android:targetPackage="com.jht.chimera"
+        android:targetProcesses="com.jht.mainapp,com.jht.splashapp">
+        <meta-data
+            android:name="remoteMethod"
+            android:value="androidx.test.espresso.remote.EspressoRemote#remoteInit" />
+    </instrumentation>
+
+    <instrumentation
+        android:name="com.jht.chimera.test.runner.SplashAppTestRunner"
+        android:targetPackage="com.jht.chimera"
+        android:targetProcesses="com.jht.splashapp">
+        <meta-data
+            android:name="remoteMethod"
+            android:value="androidx.test.espresso.remote.EspressoRemote#remoteInit" />
+    </instrumentation>
+
+    <instrumentation
+        android:name="com.jht.chimera.test.runner.MachineSetupTestRunner"
+        android:targetPackage="com.jht.chimera"
+        android:targetProcesses="com.jht.machinesetup">
+        <meta-data
+            android:name="remoteMethod"
+            android:value="androidx.test.espresso.remote.EspressoRemote#remoteInit" />
+    </instrumentation>
+</manifest>

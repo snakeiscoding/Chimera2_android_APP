@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout
+            style="@style/EngineeringPageGridLayout"
+            app:columnCount="2">
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_workout_time"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/default_workout_time_tc"
+                app:input_type="integer_input"
+                app:max_value="@integer/max_default_workout_time"
+                app:min_value="@integer/min_default_workout_time"
+                app:units="time_minutes" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_workout_distance"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:layout_marginBottom="10dp"
+                app:input_type="double_input"
+                app:input_resolution="0.1"
+                android:imeOptions="actionDone"
+                app:label="@string/default_workout_distance_tc"
+                app:units="distance" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_workout_floors"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/default_workout_floors_tc"
+                app:max_value="500"
+                app:min_value="15"
+                app:units="floors" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_workout_calories"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/default_workout_calories_tc"
+                app:input_type="integer_input"
+                app:max_value="@integer/max_default_workout_calories"
+                app:min_value="@integer/min_default_workout_calories"
+                app:units="calories" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_age"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/age_tc"
+                app:input_type="integer_input"
+                app:max_value="@integer/max_default_age"
+                app:min_value="@integer/min_default_age"
+                app:units="time_years" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_weight"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="integer_input"
+                app:decimal_format="0"
+                app:label="@string/weight_tc"
+                app:units="weight" />
+
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_height"
+                style="@style/GeneralEditTextMeasurementEngineering"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                app:input_type="integer_input"
+                android:imeOptions="actionDone"
+                app:decimal_format="0"
+                app:label="@string/height_tc" />
+
+
+            <com.jht.chimera.lib.widget.radiogroup.RadioGroup
+                android:id="@+id/eng_default_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:label="@string/gender_tc"
+                app:layout_columnWeight="1" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_level"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:label="@string/level_tc"
+                app:max_value="@integer/max_default_level"
+                app:min_value="@integer/min_default_level" />
+
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <CheckBox
+                android:id="@+id/eng_use_baidu"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/use_baidu_tc" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_default_web_page"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="url_input"
+
+                app:label="@string/default_web_browser_page_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_treo_web_page"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="url_input"
+                app:label="@string/treo_tc" />
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <CheckBox
+                android:id="@+id/eng_survey_post_workout"
+                android:visibility="gone"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/post_workout_survey_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_survey_post_workout_URL"
+                android:visibility="gone"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="url_input"
+                app:label="Post Workout Survey URL" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_survey_mid_workout_URL"
+                android:visibility="gone"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginBottom="10dp"
+                android:imeOptions="actionDone"
+                app:input_type="url_input"
+                app:label="Mid Workout Survey URL" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

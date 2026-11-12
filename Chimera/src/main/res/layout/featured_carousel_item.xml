@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jht.chimera.ui.mainapp.carousel.CarouselLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_feature_layout"
+        tools:ignore="SpUsage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/featured_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/dark_overlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#80000000"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/title_top_guide"
+            app:layout_constraintGuide_percent=".12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carousel_title"
+            app:layout_constraintEnd_toEndOf="@id/dark_overlay"
+            app:layout_constraintStart_toStartOf="@id/dark_overlay"
+            app:layout_constraintTop_toTopOf="@id/title_top_guide"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.42"
+            tools:ignore="HardcodedText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:paddingBottom="10dp"
+            android:text="Title"
+            android:textColor="@android:color/white"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carousel_description"
+            app:layout_constraintBottom_toTopOf="@id/start_button_container"
+            app:layout_constraintEnd_toEndOf="@id/carousel_title"
+            app:layout_constraintStart_toStartOf="@id/carousel_title"
+            app:layout_constraintTop_toBottomOf="@id/carousel_title"
+            tools:ignore="HardcodedText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="7"
+            android:paddingBottom="30dp"
+            android:text="Description"
+            android:textColor="#FFE7E7E7"
+            android:textSize="@dimen/featured_item_description_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/start_button_container"
+            app:layout_constraintDimensionRatio="H,3.5:1"
+            app:layout_constraintStart_toStartOf="@id/carousel_title"
+            app:layout_constraintTop_toBottomOf="@id/carousel_description"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/carousel_start_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/start_selector"
+                android:elevation="5dp"
+                android:text="@string/setup_uc"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/main_start_button_lock"
+                tools:targetApi="lollipop"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/icon_lock"
+                android:contentDescription="@null"
+                android:elevation="2dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.jht.chimera.ui.mainapp.carousel.CarouselLinearLayout>

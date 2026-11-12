@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This layout allows for the application of a custom dashboard opener. This is intended for the e-stop
+and out of order screens at this time. This just allows the element to be applied without issues.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jht.chimera.service.ui.panels.ErrorPanelDashboardOpener">
+
+    <!-- Views for allowing top and bottom touch. -->
+    <View
+        android:id="@+id/hidden_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/hidden_view_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#FFFFFF00" />
+
+    <View
+        android:id="@+id/hidden_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hidden_view_top"
+        tools:background="#FFFFA500" />
+
+    <!-- View for allowing center touch -->
+    <View
+        android:id="@+id/hidden_view_top_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H, 16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        tools:background="@android:color/system_neutral1_100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+settings
+    workout_id = 0
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 1
+
+input TIME_GOAL_START
+input GOAL
+input SPEED_IN
+input START_SPEED
+input START_INCLINE
+input COOLDOWN_TIME_START
+
+export SPEED
+export INCLINE
+export GOAL
+export COOL_DOWN_GOAL
+export GOAL_TYPE
+
+stage "workout"
+    interval
+        SPEED = START_SPEED
+        INCLINE = START_INCLINE
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = TIME_GOAL_START
+        
+        when INTERVAL_TIME_MS >= GOAL
+            if (COOLDOWN_TIME_START > 0)
+                interval = interval + 1
+            else
+                end
+            
+stage "cooldown"
+    interval
+        SPEED = min(0.6 * SPEED_IN, 6.43738)
+        INCLINE = 0
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = COOLDOWN_TIME_START
+
+        when STAGE_TIME_MS >= GOAL
+            end

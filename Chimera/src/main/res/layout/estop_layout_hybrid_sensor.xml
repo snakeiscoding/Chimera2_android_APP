@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/hybrid_reset_layout">
+
+    <View
+        android:id="@+id/text_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.39" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ir_sensor_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="IR Sensor is Engaged"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/ir_sensor_text"
+        app:layout_constraintEnd_toEndOf="@id/text_background"
+        app:layout_constraintStart_toStartOf="@id/text_background"
+        app:layout_constraintTop_toTopOf="@id/text_background"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ir_sensor_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Once standing safely, press Reset Treadmill to return to 0% incline and start a new workout"
+        android:textColor="#FFDCDCDC"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/hybrid_reset_button"
+        app:layout_constraintEnd_toEndOf="@id/text_background"
+        app:layout_constraintStart_toStartOf="@id/text_background"
+        app:layout_constraintTop_toBottomOf="@id/ir_sensor_header"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <Button
+        android:id="@+id/hybrid_reset_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Reset Treadmill"
+        android:textColor="@color/black"
+        android:background="@drawable/hybrid_ir_button"
+        app:layout_constraintTop_toBottomOf="@id/ir_sensor_text"
+        app:layout_constraintBottom_toBottomOf="@id/text_background"
+        app:layout_constraintStart_toStartOf="@id/text_background"
+        app:layout_constraintEnd_toEndOf="@id/text_background"
+        app:layout_constraintWidth_percent="0.106"
+        app:layout_constraintHeight_percent="0.044" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

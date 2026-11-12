@@ -1,0 +1,7 @@
+<root>
+    <item name='com.jht.chimera.ui.bluetooth.TestScanner'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

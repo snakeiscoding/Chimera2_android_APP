@@ -1,0 +1,8 @@
+<root>
+    <item
+        name='com.jht.chimera.lib.common.formatting.BasicNumberFormat java.lang.String format(java.lang.Float, int)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:ignore="ContentDescription,SpUsage"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/landmarks_setup_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="W, 16:9"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/landmarks_setup_place_background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".173"
+        app:layout_constraintWidth_default="percent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/landmarks_setup_back_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="@string/back_uc"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:layout_constraintStart_toEndOf="@id/landmarks_setup_back_spacer"/>
+
+    <Space
+        android:id="@+id/landmarks_setup_back_spacer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="W, 1.5:1"
+        app:layout_constraintHorizontal_bias=".016"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/landmarks_setup_back_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/landmarks_setup_back_text"
+        />
+
+    <ImageView
+        android:id="@+id/landmarks_setup_back_arrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_icon_arrow_left"
+        app:layout_constraintBottom_toBottomOf="@id/landmarks_setup_back_spacer"
+        app:layout_constraintDimensionRatio="W, 1:1"
+        app:layout_constraintEnd_toEndOf="@id/landmarks_setup_back_spacer"
+        app:layout_constraintStart_toStartOf="@id/landmarks_setup_back_spacer"
+        app:layout_constraintTop_toTopOf="@id/landmarks_setup_back_spacer" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/landmarks_setup_back_button"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/landmarks_setup_back_arrow"
+        android:background="@android:color/transparent"
+        />
+
+
+
+   <ImageView
+       android:id="@+id/landmarks_setup_shield"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:background="@drawable/shield"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintWidth_percent=".583"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"/>
+
+   <TextView
+       android:id="@+id/landmarks_setup_title"
+       android:layout_width="wrap_content"
+       android:layout_height="45dp"
+       android:autoSizeTextType="uniform"
+       android:autoSizeMinTextSize="34dp"
+       android:autoSizeMaxTextSize="42dp"
+       app:layout_constraintVertical_chainStyle="packed"
+       android:textSize="40dp"
+       android:text="Landmarks Setup"
+       android:textColor="@android:color/white"
+       app:layout_constraintVertical_bias="0.14"
+       app:layout_constraintBottom_toTopOf="@id/landmarks_setup_sub_title"
+       app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+       app:layout_constraintTop_toTopOf="@id/landmarks_setup_shield"
+       tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/landmarks_setup_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:textSize="18dp"
+        android:text="Paris"
+        android:paddingBottom="10dp"
+        android:textColor="#99FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/landmarks_setup_title"
+        app:layout_constraintBottom_toTopOf="@id/landmarks_setup_description"
+        app:layout_constraintTop_toBottomOf="@id/landmarks_setup_title"
+        tools:ignore="HardcodedText" />
+
+   <TextView
+       android:id="@+id/landmarks_setup_description"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:textSize="30dp"
+       android:text="Landmarks Setup"
+       android:textColor="@android:color/white"
+       app:layout_constraintVertical_chainStyle="packed"
+       app:layout_constraintStart_toStartOf="@id/landmarks_setup_title"
+       app:layout_constraintEnd_toEndOf="@id/landmarks_setup_shield"
+       app:layout_constraintBottom_toTopOf="@id/landmarks_setup_sub_description"
+       app:layout_constraintTop_toBottomOf="@id/landmarks_setup_sub_title"
+       tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/landmarks_setup_sub_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Landmarks Setup"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:textColor="#99FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/landmarks_setup_description"
+        app:layout_constraintBottom_toTopOf="@id/landmark_pill_boxes_top"
+        app:layout_constraintEnd_toEndOf="@id/landmarks_setup_value_selector_2"
+        app:layout_constraintTop_toBottomOf="@id/landmarks_setup_description"
+        tools:ignore="HardcodedText" />
+
+
+    <com.jht.androiduiwidgets.pillbox.PillBox
+       android:id="@+id/landmarks_setup_value_selector_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H, 2.8:1"
+        app:layout_constraintStart_toStartOf="@id/landmarks_setup_title"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
+        app:layout_constraintWidth_percent=".209"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintWidth_default="percent"/>
+
+
+   <com.jht.androiduiwidgets.pillbox.PillBox
+       android:id="@+id/landmarks_setup_value_selector_2"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintDimensionRatio="H, 2.8:1"
+       app:layout_constraintStart_toEndOf="@id/landmarks_setup_value_selector_1"
+       app:layout_constraintBottom_toTopOf="@id/start_button"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintWidth_percent=".209"
+       android:layout_marginBottom="20dp"
+       app:layout_constraintWidth_default="percent"/>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/landmark_pill_boxes_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="landmarks_setup_value_selector_1,landmarks_setup_value_selector_2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/landmark_pill_boxes_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="landmarks_setup_value_selector_1,landmarks_setup_value_selector_2" />
+
+   <Button
+       android:id="@+id/start_button"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:background="@drawable/start_selector"
+       android:text="@string/quick_go_tc"
+       android:textColor="@android:color/white"
+       app:layout_constraintVertical_chainStyle="spread"
+       android:textSize="21dp"
+       android:textStyle="bold"
+       android:layout_marginBottom="20dp"
+       app:layout_constraintDimensionRatio="H,4.42:1"
+       app:layout_constraintStart_toStartOf="@id/landmarks_setup_value_selector_2"
+       app:layout_constraintEnd_toEndOf="@id/landmarks_setup_value_selector_2"
+       app:layout_constraintTop_toBottomOf="@id/landmark_pill_boxes_bottom"
+       app:layout_constraintBottom_toBottomOf="@id/landmarks_setup_shield" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

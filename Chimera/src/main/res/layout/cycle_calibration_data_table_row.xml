@@ -1,0 +1,35 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:background="@drawable/interval_split_background"
+    android:layout_margin="2dp"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:contentDescription="labelView"
+        android:id="@+id/labelView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:lines="1"
+        android:text="@string/va_go_button_tag_pg"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:contentDescription="dataView"
+        android:id="@+id/dataView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="1"
+        android:layout_gravity="left"
+        android:lines="1"
+        android:text="@string/data_tc"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText" />
+</TableRow>

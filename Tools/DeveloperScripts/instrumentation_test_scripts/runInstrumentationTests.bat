@@ -1,0 +1,5 @@
+runChimeraDefaultTests.bat
+runChimeraMachineSettingsTests.bat
+runChimeraMainAppTests.bat
+runChimeraSplashAppTests.bat
+

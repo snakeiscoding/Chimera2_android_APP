@@ -1,0 +1,13 @@
+<root>
+    <item name='com.jht.chimera.service.usbmedia.mtpums.lib.mtp.ContentServer'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.usbmedia.mtpums.lib.mtp.MtpController void createContentList()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

@@ -1,0 +1,8 @@
+<root>
+    <item name='android.app.NotificationChannel NotificationChannel(java.lang.String, java.lang.CharSequence, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.app.Notification.Builder Builder(android.content.Context, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

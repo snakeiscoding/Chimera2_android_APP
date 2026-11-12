@@ -1,0 +1,8 @@
+<Configuration>
+    <Config Version="1">
+        <systemSettings>
+            <enableMFi>false</enableMFi>
+            <enableGymkit>false</enableGymkit>
+        </systemSettings>
+    </Config>
+</Configuration>

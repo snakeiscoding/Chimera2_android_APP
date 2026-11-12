@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Channel type identifiers: new LgChannel format + legacy Enseo aliases -->
+    <xs:simpleType name="ChannelTypeId">
+        <xs:restriction base="xs:string">
+            <!-- New LgChannel identifiers -->
+            <xs:enumeration value="IP1" />
+            <xs:enumeration value="IP2" />
+            <xs:enumeration value="RF1" />
+            <xs:enumeration value="RF2" />
+            <xs:enumeration value="RF3" />
+            <xs:enumeration value="RF4" />
+            <xs:enumeration value="RF5" />
+            <xs:enumeration value="RF6" />
+            <!-- Legacy Enseo identifiers (backward compatibility) -->
+            <xs:enumeration value="UDP" />
+            <xs:enumeration value="RTP" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- IPv4 address pattern -->
+    <xs:simpleType name="IPv4Address">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Channel element: supports both LgChannel and legacy Enseo attributes -->
+    <xs:complexType name="ChannelType">
+        <!-- Common attributes (new format) -->
+        <xs:attribute name="uuid" type="xs:string" />
+        <xs:attribute name="number" type="xs:string" />
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="enabled" type="xs:string" />
+        <xs:attribute name="channelType" type="ChannelTypeId" />
+        <xs:attribute name="broadcastType" type="xs:string" />
+
+        <!-- Legacy Enseo attributes (backward compatibility) -->
+        <xs:attribute name="chnumber" type="xs:integer" />
+        <xs:attribute name="source" type="ChannelTypeId" />
+        <xs:attribute name="rfBroadcastType" type="xs:string" />
+        <xs:attribute name="default" type="xs:boolean" />
+
+        <!-- IP channel attributes -->
+        <xs:attribute name="ip" type="IPv4Address" />
+        <xs:attribute name="port" type="xs:integer" />
+        <xs:attribute name="logicalNumber" type="xs:string" />
+
+        <!-- RF channel attributes -->
+        <xs:attribute name="major" type="xs:string" />
+        <xs:attribute name="minor" type="xs:string" />
+        <xs:attribute name="frequency" type="xs:string" />
+        <xs:attribute name="programNumber" type="xs:string" />
+
+        <!-- RF Class 4 (satellite) attributes -->
+        <xs:attribute name="satelliteId" type="xs:string" />
+        <xs:attribute name="polarization" type="xs:string" />
+
+        <!-- RF Class 5/6 (DVB-T2/ATSC 3.0) attributes -->
+        <xs:attribute name="plpId" type="xs:string" />
+    </xs:complexType>
+
+    <!-- Channel list container -->
+    <xs:complexType name="ChannelListType">
+        <xs:sequence>
+            <xs:element name="Channels">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Root elements: new format and legacy -->
+    <xs:element name="LgChannels" type="ChannelListType" />
+    <xs:element name="IPTVChannels" type="ChannelListType" />
+
+</xs:schema>

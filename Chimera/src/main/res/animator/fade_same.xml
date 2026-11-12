@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Used for preventing transition animations for nested fragments if parent fragment does transition-->
+
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/accelerate_decelerate"
+    android:valueFrom="1"
+    android:valueTo="1"
+    android:propertyName="alpha"
+    android:duration="300" />

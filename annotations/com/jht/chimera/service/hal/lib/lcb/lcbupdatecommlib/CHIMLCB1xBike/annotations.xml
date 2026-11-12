@@ -1,0 +1,8 @@
+<root>
+    <item
+        name='com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMLCB1xBike.CHIMLCB1xBikeLcbUpdateFlow'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

@@ -1,0 +1,57 @@
+settings
+    workout_id = 59
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 0
+
+input LEVEL
+input GOAL
+input MIN_RESISTANCE
+input MAX_RESISTANCE
+
+export RESISTANCE
+export GOAL
+export GOAL_TYPE
+export PREVENT_USER_GOAL_CHANGES
+
+TIME_BEGINNER = [4, 12]
+TIME_ADVANCED = [4, 22]
+
+intervalDuration = 4
+
+stage "workout"
+    PREVENT_USER_GOAL_CHANGES = 1
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    
+    currentIntervalType = 0
+    RESISTANCE = MIN_RESISTANCE
+    when INTERVAL_TIME_MS >= intervalDuration * 60000
+        // Switching interval, alternate between low and high
+        if (currentIntervalType == 0)
+            currentIntervalType = 1
+            RESISTANCE = MAX_RESISTANCE
+        else
+            currentIntervalType = 0
+            RESISTANCE = MIN_RESISTANCE
+            
+        interval = interval + 1
+    
+    
+    level "beginner"
+        GOAL = 16 * 60 * 1000 // There are 16 minutes of intervals
+        setIntervals intervalDuration = TIME_BEGINNER
+    
+    level "advanced"
+        GOAL = 26 * 60 * 1000 // There are 26 minutes of intervals
+        setIntervals intervalDuration = TIME_ADVANCED
+        
+
+stage "cooldown"
+    interval
+        RESISTANCE = MIN_RESISTANCE
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = 4 * 60 * 1000
+
+        when INTERVAL_TIME_MS >= GOAL
+            end

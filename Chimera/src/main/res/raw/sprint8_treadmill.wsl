@@ -1,0 +1,785 @@
+settings
+    workout_id = 18
+    allow_skip_warmup = 0
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 0
+
+input RAMP_RATE_SPEED
+input RAMP_RATE_INCLINE
+input SPEED_IN
+input INCLINE_IN
+input LEVEL
+
+export SPEED
+export INCLINE
+export GOAL_TYPE
+export GOAL
+export INTERVAL_GOAL
+export INTERVAL_GOAL_TYPE
+export PREVENT_USER_GOAL_CHANGES
+
+// Specific for Sprint8
+export NEXT_SPEED
+export NEXT_INCLINE
+export IS_RAMPING
+export IS_SPRINTING
+
+NEXT_SPEED = -1
+NEXT_INCLINE = -1
+IS_RAMPING = 0
+
+LEVEL_1_SPEED =   [5.149888, 2.41401, 5.149888, 2.41401, 5.63269, 2.41401, 5.63269, 2.41401, 5.954558, 2.41401, 5.954558, 2.41401, 5.954558, 2.41401, 5.954558]
+LEVEL_1_INCLINE = [3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+LEVEL_2_SPEED = [5.954558, 2.41401, 5.954558, 2.41401, 6.43736, 2.41401, 6.43736, 2.41401, 6.759228, 2.41401, 6.759228, 2.41401, 6.759228, 2.41401, 6.759228]
+LEVEL_2_INCLINE = [3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+LEVEL_3_SPEED = [6.759228, 2.41401, 6.759228, 2.41401, 7.081096, 2.41401, 7.081096, 2.41401, 7.402964, 2.41401, 7.402964, 2.41401, 7.402964, 2.41401, 7.402964]
+LEVEL_3_INCLINE = [3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+LEVEL_4_SPEED = [7.402964, 2.41401, 7.402964, 2.41401, 7.724832, 2.41401, 7.724832, 2.41401, 8.0467, 2.41401, 8.0467, 2.41401, 8.0467, 2.41401, 8.0467]
+LEVEL_4_INCLINE = [3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+LEVEL_5_SPEED = [7.885766, 2.41401, 7.885766, 2.41401, 8.207634, 2.41401, 8.207634, 2.41401, 8.529502, 2.41401, 8.529502, 2.41401, 8.529502, 2.41401, 8.529502]
+LEVEL_5_INCLINE = [3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+LEVEL_6_SPEED = [8.0467, 3.21868, 8.0467, 3.21868, 8.36856, 3.21868, 8.36856, 3.21868, 8.85137, 3.21868, 8.85137, 3.21868, 8.85137, 3.21868, 8.85137]
+LEVEL_6_INCLINE = [4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+LEVEL_7_SPEED = [8.529502, 3.21868, 8.529502, 3.21868, 8.85137, 3.21868, 8.85137, 3.21868, 9.334172, 3.21868, 9.334172, 3.21868, 9.334172, 3.21868, 9.334172]
+LEVEL_7_INCLINE = [4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+LEVEL_8_SPEED = [9.334172, 3.21868, 9.334172, 3.21868, 9.65604, 3.21868, 9.65604, 3.21868, 10.138842, 3.21868, 10.138842, 3.21868, 10.138842, 3.21868, 10.138842]
+LEVEL_8_INCLINE = [4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+LEVEL_9_SPEED = [9.65604, 3.21868, 9.65604, 3.21868, 10.138842, 3.21868, 10.138842, 3.21868, 10.46071, 3.21868, 10.46071, 3.21868, 10.46071, 3.21868, 10.46071]
+LEVEL_9_INCLINE = [4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+LEVEL_10_SPEED = [10.46071, 3.21868, 10.46071, 3.21868, 10.782578, 3.21868, 10.782578, 3.21868, 11.26538, 3.21868, 11.26538, 3.21868, 11.26538, 3.21868, 11.26538]
+LEVEL_10_INCLINE = [4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+LEVEL_11_SPEED = [11.26538, 4.02335, 11.26538, 4.02335, 11.587248, 4.02335, 11.587248, 4.02335, 12.07005, 4.02335, 12.07005, 4.02335, 12.07005, 4.02335, 12.07005]
+LEVEL_11_INCLINE = [5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+LEVEL_12_SPEED = [12.07005, 4.02335, 12.07005, 4.02335, 12.391918, 4.02335, 12.391918, 4.02335, 12.87472, 4.02335, 12.87472, 4.02335, 12.87472, 4.02335, 12.87472]
+LEVEL_12_INCLINE = [5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+LEVEL_13_SPEED = [12.87472, 4.02335, 12.87472, 4.02335, 13.196588, 4.02335, 13.196588, 4.02335, 13.67939, 4.02335, 13.67939, 4.02335, 13.67939, 4.02335, 13.67939]
+LEVEL_13_INCLINE = [5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+LEVEL_14_SPEED = [13.67939, 4.02335, 13.67939, 4.02335, 14.001258, 4.02335, 14.001258, 4.02335, 14.48406, 4.02335, 14.48406, 4.02335, 14.48406, 4.02335, 14.48406]
+LEVEL_14_INCLINE = [5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+LEVEL_15_SPEED = [14.48406, 4.02335, 14.48406, 4.02335, 14.805928, 4.02335, 14.805928, 4.02335, 15.28873, 4.02335, 15.28873, 4.02335, 15.28873, 4.02335, 15.28873]
+LEVEL_15_INCLINE = [5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+LEVEL_16_SPEED = [15.28873, 4.82802, 15.28873, 4.82802, 15.610598, 4.82802, 15.610598, 4.82802, 16.0934, 4.82802, 16.0934, 4.82802, 16.0934, 4.82802, 16.0934]
+LEVEL_16_INCLINE = [6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6]
+LEVEL_17_SPEED = [16.0934, 4.82802, 16.0934, 4.82802, 16.415268, 4.82802, 16.415268, 4.82802, 16.89807, 4.82802, 16.89807, 4.82802, 16.89807, 4.82802, 16.89807]
+LEVEL_17_INCLINE = [6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6]
+LEVEL_18_SPEED = [16.89807, 4.82802, 16.89807, 4.82802, 17.219938, 4.82802, 17.219938, 4.82802, 17.70274, 4.82802, 17.70274, 4.82802, 17.70274, 4.82802, 17.70274]
+LEVEL_18_INCLINE = [6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6, 1, 6]
+LEVEL_19_SPEED = [17.70274, 4.82802, 17.70274, 4.82802, 18.024608, 4.82802, 18.024608, 4.82802, 18.50741, 4.82802, 18.50741, 4.82802, 18.50741, 4.82802, 18.50741]
+LEVEL_19_INCLINE = [6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6]
+LEVEL_20_SPEED = [18.50741, 9.65604, 18.50741, 9.65604, 18.829278, 9.65604, 18.829278, 9.65604, 19.31208, 9.65604, 19.31208, 9.65604, 19.31208, 9.65604, 19.31208]
+LEVEL_20_INCLINE = [6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6]
+
+
+stage "warmup"
+    PREVENT_USER_GOAL_CHANGES = 1
+    SPEED = 0.80467
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 3 * 60 * 1000
+    INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_CONSTANT
+    INTERVAL_GOAL = 3 * 60 * 1000
+    IS_SPRINTING = 0
+    
+    // When it is time to ramp
+    when IS_RAMPING != 1 && ((INTERVAL_TIME_MS >= GOAL - (abs(NEXT_SPEED - SPEED_IN) / RAMP_RATE_SPEED) * 1000) || (INTERVAL_TIME_MS >= GOAL - (abs(NEXT_INCLINE - INCLINE_IN) / RAMP_RATE_INCLINE) * 1000))
+        SPEED = NEXT_SPEED
+        INCLINE = NEXT_INCLINE
+        IS_RAMPING = 1
+        
+    when INTERVAL_TIME_MS >= GOAL
+        IS_RAMPING = 0
+        interval = interval + 1
+    
+    level 1
+        interval
+            NEXT_SPEED = LEVEL_1_SPEED[0]
+            NEXT_INCLINE = LEVEL_1_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_1_SPEED[0]
+            NEXT_INCLINE = LEVEL_1_INCLINE[0]
+    level 2
+        interval
+            NEXT_SPEED = LEVEL_2_SPEED[0]
+            NEXT_INCLINE = LEVEL_2_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_2_SPEED[0]
+            NEXT_INCLINE = LEVEL_2_INCLINE[0]
+    level 3
+        interval
+            NEXT_SPEED = LEVEL_3_SPEED[0]
+            NEXT_INCLINE = LEVEL_3_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_3_SPEED[0]
+            NEXT_INCLINE = LEVEL_3_INCLINE[0]
+
+    level 4
+        interval
+            NEXT_SPEED = LEVEL_4_SPEED[0]
+            NEXT_INCLINE = LEVEL_4_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_4_SPEED[0]
+            NEXT_INCLINE = LEVEL_4_INCLINE[0]
+
+    level 5
+        interval
+            NEXT_SPEED = LEVEL_5_SPEED[0]
+            NEXT_INCLINE = LEVEL_5_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_5_SPEED[0]
+            NEXT_INCLINE = LEVEL_5_INCLINE[0]
+    level 6
+
+        interval
+            NEXT_SPEED = LEVEL_6_SPEED[0]
+            NEXT_INCLINE = LEVEL_6_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_6_SPEED[0]
+            NEXT_INCLINE = LEVEL_6_INCLINE[0]
+    level 7
+
+        interval
+            NEXT_SPEED = LEVEL_7_SPEED[0]
+            NEXT_INCLINE = LEVEL_7_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_7_SPEED[0]
+            NEXT_INCLINE = LEVEL_7_INCLINE[0]
+    level 8
+
+        interval
+            NEXT_SPEED = LEVEL_8_SPEED[0]
+            NEXT_INCLINE = LEVEL_8_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_8_SPEED[0]
+            NEXT_INCLINE = LEVEL_8_INCLINE[0]
+    level 9
+
+        interval
+            NEXT_SPEED = LEVEL_9_SPEED[0]
+            NEXT_INCLINE = LEVEL_9_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_9_SPEED[0]
+            NEXT_INCLINE = LEVEL_9_INCLINE[0]
+    level 10
+
+        interval
+            NEXT_SPEED = LEVEL_10_SPEED[0]
+            NEXT_INCLINE = LEVEL_10_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_10_SPEED[0]
+            NEXT_INCLINE = LEVEL_10_INCLINE[0]
+    level 11
+
+        interval
+            NEXT_SPEED = LEVEL_11_SPEED[0]
+            NEXT_INCLINE = LEVEL_11_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_11_SPEED[0]
+            NEXT_INCLINE = LEVEL_11_INCLINE[0]
+    level 12
+
+        interval
+            NEXT_SPEED = LEVEL_12_SPEED[0]
+            NEXT_INCLINE = LEVEL_12_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_12_SPEED[0]
+            NEXT_INCLINE = LEVEL_12_INCLINE[0]
+    level 13
+
+        interval
+            NEXT_SPEED = LEVEL_13_SPEED[0]
+            NEXT_INCLINE = LEVEL_13_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_13_SPEED[0]
+            NEXT_INCLINE = LEVEL_13_INCLINE[0]
+    level 14
+
+        interval
+            NEXT_SPEED = LEVEL_14_SPEED[0]
+            NEXT_INCLINE = LEVEL_14_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_14_SPEED[0]
+            NEXT_INCLINE = LEVEL_14_INCLINE[0]
+    level 15
+
+        interval
+            NEXT_SPEED = LEVEL_15_SPEED[0]
+            NEXT_INCLINE = LEVEL_15_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_15_SPEED[0]
+            NEXT_INCLINE = LEVEL_15_INCLINE[0]
+    level 16
+
+        interval
+            NEXT_SPEED = LEVEL_16_SPEED[0]
+            NEXT_INCLINE = LEVEL_16_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_16_SPEED[0]
+            NEXT_INCLINE = LEVEL_16_INCLINE[0]
+    level 17
+
+        interval
+            NEXT_SPEED = LEVEL_17_SPEED[0]
+            NEXT_INCLINE = LEVEL_17_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_17_SPEED[0]
+            NEXT_INCLINE = LEVEL_17_INCLINE[0]
+    level 18
+
+        interval
+            NEXT_SPEED = LEVEL_18_SPEED[0]
+            NEXT_INCLINE = LEVEL_18_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_18_SPEED[0]
+            NEXT_INCLINE = LEVEL_18_INCLINE[0]
+    level 19
+
+        interval
+            NEXT_SPEED = LEVEL_19_SPEED[0]
+            NEXT_INCLINE = LEVEL_19_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_19_SPEED[0]
+            NEXT_INCLINE = LEVEL_19_INCLINE[0]
+    level 20
+
+        interval
+            NEXT_SPEED = LEVEL_20_SPEED[0]
+            NEXT_INCLINE = LEVEL_20_INCLINE[0]
+
+        onLevelSwap
+            NEXT_SPEED = LEVEL_20_SPEED[0]
+            NEXT_INCLINE = LEVEL_20_INCLINE[0]
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 14.5 * 60 * 1000
+    PREVENT_USER_GOAL_CHANGES = 1
+    INTERVAL_GOAL_TYPE = GOAL_TYPE_TIME_CONSTANT
+    SPRINT8_INT_TIMES = [30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000, 90000, 30000]
+    setIntervals INTERVAL_GOAL = SPRINT8_INT_TIMES
+    
+    currentInterval = -1
+    nextSpeedInterval = -1
+    timeLeftInInterval = 0
+    
+    
+    IS_SPRINTING_ARRAY = [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+    setIntervals IS_SPRINTING = IS_SPRINTING_ARRAY
+
+    // When the interval is switched this will be run
+    when interval != currentInterval
+        currentInterval = interval
+        // If we skipped an interval we remove the skipped time from the time goal
+        GOAL = GOAL - timeLeftInInterval
+    
+    // Update the time left in interval
+    when 1
+        timeLeftInInterval = INTERVAL_GOAL - INTERVAL_TIME_MS
+        
+    // Ramp when in recovery and is correct time
+    when INTERVAL_GOAL == 90000 && IS_RAMPING != 1 && ((INTERVAL_TIME_MS >= ((INTERVAL_GOAL) - (abs(NEXT_SPEED - SPEED_IN) / RAMP_RATE_SPEED) * 1000)) || ((INTERVAL_TIME_MS >= (INTERVAL_GOAL) - (abs(NEXT_INCLINE - INCLINE_IN) / RAMP_RATE_INCLINE) * 1000)))
+        IS_RAMPING = 1
+        SPEED = NEXT_SPEED
+        INCLINE = NEXT_INCLINE
+        
+    when INTERVAL_TIME_MS >= INTERVAL_GOAL // Set the next values for UI to display
+        IS_RAMPING = 0
+        interval = interval + 1    
+    
+    // If the workout is paused during a sprint do not continue the sprint after resume
+    onResume
+        if (INTERVAL_GOAL == 30000)
+            interval = interval + 1
+        
+    level 1
+        setIntervals SPEED = LEVEL_1_SPEED
+        setIntervals INCLINE = LEVEL_1_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_1_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_1_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_1_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_1_INCLINE[interval + 1]
+                
+    level 2
+        setIntervals SPEED = LEVEL_2_SPEED
+        setIntervals INCLINE = LEVEL_2_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_2_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_2_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_2_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_2_INCLINE[interval + 1]
+
+    level 3
+        setIntervals SPEED = LEVEL_3_SPEED
+        setIntervals INCLINE = LEVEL_3_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_3_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_3_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_3_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_3_INCLINE[interval + 1]
+    level 4
+        setIntervals SPEED = LEVEL_4_SPEED
+        setIntervals INCLINE = LEVEL_4_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_4_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_4_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_4_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_4_INCLINE[interval + 1]
+    level 5
+        setIntervals SPEED = LEVEL_5_SPEED
+        setIntervals INCLINE = LEVEL_5_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_5_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_5_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 2.41401
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_5_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_5_INCLINE[interval + 1]
+    level 6
+        setIntervals SPEED = LEVEL_6_SPEED
+        setIntervals INCLINE = LEVEL_6_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_6_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_6_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_6_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_6_INCLINE[interval + 1]
+    level 7
+        setIntervals SPEED = LEVEL_7_SPEED
+        setIntervals INCLINE = LEVEL_7_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_7_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_7_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_7_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_7_INCLINE[interval + 1]
+    level 8
+        setIntervals SPEED = LEVEL_8_SPEED
+        setIntervals INCLINE = LEVEL_8_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_8_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_8_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_8_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_8_INCLINE[interval + 1]
+    level 9
+        setIntervals SPEED = LEVEL_9_SPEED
+        setIntervals INCLINE = LEVEL_9_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_9_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_9_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_9_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_9_INCLINE[interval + 1]
+    level 10
+        setIntervals SPEED = LEVEL_10_SPEED
+        setIntervals INCLINE = LEVEL_10_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_10_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_10_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 3.21868
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_10_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_10_INCLINE[interval + 1]
+    level 11
+        setIntervals SPEED = LEVEL_11_SPEED
+        setIntervals INCLINE = LEVEL_11_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_11_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_11_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_11_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_11_INCLINE[interval + 1]
+    level 12
+        setIntervals SPEED = LEVEL_12_SPEED
+        setIntervals INCLINE = LEVEL_12_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_12_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_12_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_12_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_12_INCLINE[interval + 1]
+    level 13
+        setIntervals SPEED = LEVEL_13_SPEED
+        setIntervals INCLINE = LEVEL_13_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_13_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_13_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_13_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_13_INCLINE[interval + 1]
+    level 14
+        setIntervals SPEED = LEVEL_14_SPEED
+        setIntervals INCLINE = LEVEL_14_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_14_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_14_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_14_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_14_INCLINE[interval + 1]
+    level 15
+        setIntervals SPEED = LEVEL_15_SPEED
+        setIntervals INCLINE = LEVEL_15_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_15_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_15_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.02335
+                NEXT_INCLINE = 0
+            else
+                NEXT_SPEED = LEVEL_15_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_15_INCLINE[interval + 1]
+    level 16
+        setIntervals SPEED = LEVEL_16_SPEED
+        setIntervals INCLINE = LEVEL_16_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_16_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_16_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_16_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_16_INCLINE[interval + 1]
+    level 17
+        setIntervals SPEED = LEVEL_17_SPEED
+        setIntervals INCLINE = LEVEL_17_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_17_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_17_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_17_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_17_INCLINE[interval + 1]
+    level 18
+        setIntervals SPEED = LEVEL_18_SPEED
+        setIntervals INCLINE = LEVEL_18_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_18_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_18_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 1
+            else
+                NEXT_SPEED = LEVEL_18_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_18_INCLINE[interval + 1]
+    level 19
+        setIntervals SPEED = LEVEL_19_SPEED
+        setIntervals INCLINE = LEVEL_19_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 2
+            else
+                NEXT_SPEED = LEVEL_19_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_19_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 4.82802
+                NEXT_INCLINE = 2
+            else
+                NEXT_SPEED = LEVEL_19_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_19_INCLINE[interval + 1]
+    level 20
+        setIntervals SPEED = LEVEL_20_SPEED
+        setIntervals INCLINE = LEVEL_20_INCLINE
+        when interval != nextSpeedInterval
+            nextSpeedInterval = interval
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 9.65604
+                NEXT_INCLINE = 2
+            else
+                NEXT_SPEED = LEVEL_20_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_20_INCLINE[interval + 1]
+
+        onLevelSwap
+            if (interval == 14) // If this is the sprint before cooldown
+                NEXT_SPEED = 9.65604
+                NEXT_INCLINE = 2
+            else
+                NEXT_SPEED = LEVEL_20_SPEED[interval + 1]
+                NEXT_INCLINE = LEVEL_20_INCLINE[interval + 1]
+            
+stage "cooldown"
+    PREVENT_USER_GOAL_CHANGES = 1
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 2.5 * 60 * 1000
+    INTERVAL_GOAL = 150000
+    IS_SPRINTING = 0
+    
+    when INTERVAL_TIME_MS >= GOAL
+        end
+    
+    level 1
+        interval
+            SPEED = 2.41401
+            INCLINE = 0
+    level 2
+        interval
+            SPEED = 2.41401
+            INCLINE = 0
+    level 3
+        interval
+            SPEED = 2.41401
+            INCLINE = 0
+    level 4
+        interval
+            SPEED = 2.41401
+            INCLINE = 0
+    level 5
+        interval
+            SPEED = 2.41401
+            INCLINE = 0
+    level 6
+        interval
+            SPEED = 3.21868
+            INCLINE = 0
+    level 7
+        interval
+            SPEED = 3.21868
+            INCLINE = 0
+    level 8
+        interval
+            SPEED = 3.21868
+            INCLINE = 0
+    level 9
+        interval
+            SPEED = 3.21868
+            INCLINE = 0
+    level 10
+        interval
+            SPEED = 3.21868
+            INCLINE = 0
+    level 11
+        interval
+            SPEED = 4.02335
+            INCLINE = 0
+    level 12
+        interval
+            SPEED = 4.02335
+            INCLINE = 0
+    level 13
+        interval
+            SPEED = 4.02335
+            INCLINE = 0
+    level 14
+        interval
+            SPEED = 4.02335
+            INCLINE = 0
+    level 15
+        interval
+            SPEED = 4.02335
+            INCLINE = 0
+    level 16
+        interval
+            SPEED = 4.82802
+            INCLINE = 1
+    level 17
+        interval
+            SPEED = 4.82802
+            INCLINE = 1
+    level 18
+        interval
+            SPEED = 4.82802
+            INCLINE = 1
+    level 19
+        interval
+            SPEED = 4.82802
+            INCLINE = 2
+    level 20
+        interval
+            SPEED = 9.65604
+            INCLINE = 2

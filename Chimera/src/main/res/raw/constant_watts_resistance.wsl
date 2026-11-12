@@ -1,0 +1,82 @@
+settings
+    workout_id = 20
+    allow_skip_warmup = 0
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+input WATTS
+input TIME_GOAL_START
+input TARGET_WATTS_START
+input TARGET_WATTS
+input COOLDOWN_TIME_START
+input RESISTANCE_IN
+// 0 = No, 1 = Yes
+input LCB_CONTROLS_WATTS
+
+export RESISTANCE
+export INCLINE
+export GOAL
+export GOAL_TYPE
+export TARGET_WATTS
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+// 0 = Resistance, 1 = Watts
+export CONTROL_MODE
+
+stage "warmup"
+    PREVENT_USER_CHANGES = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        CONTROL_MODE = 0
+        GOAL = 120000
+        RESISTANCE = 1
+        INCLINE = 0
+        TARGET_WATTS = TARGET_WATTS_START
+        when INTERVAL_TIME_MS >= 120000
+            interval = interval + 1
+
+stage "workout"
+    PREVENT_USER_CHANGES = 1
+    PREVENT_USER_GOAL_CHANGES = 0
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = TIME_GOAL_START
+        
+        CONTROL_MODE = LCB_CONTROLS_WATTS
+
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+        
+        when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS - 50 >= WATTS
+            RESISTANCE = RESISTANCE_IN + 3
+            wait 2000
+        else when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS - 50 < WATTS && TARGET_WATTS - 30 >= WATTS
+            RESISTANCE = RESISTANCE_IN + 2
+            wait 2000
+        else when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS - 30 < WATTS && TARGET_WATTS - 10 >= WATTS
+            RESISTANCE = RESISTANCE_IN + 1
+            wait 2000
+        else when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS + 10 <= WATTS && TARGET_WATTS + 30 >= WATTS
+            RESISTANCE = max(RESISTANCE_IN - 1, 1)
+            wait 2000
+        else when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS + 30 < WATTS && TARGET_WATTS + 50 >= WATTS
+            RESISTANCE = max(RESISTANCE_IN - 2, 1)
+            wait 2000
+        else when LCB_CONTROLS_WATTS == 0 && TARGET_WATTS + 50 <= WATTS
+            RESISTANCE = max(RESISTANCE_IN - 3, 1)
+            wait 2000
+
+stage "cooldown"
+    PREVENT_USER_CHANGES = 0
+    PREVENT_USER_GOAL_CHANGES = 0
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        CONTROL_MODE = 0
+        RESISTANCE = 1
+        INCLINE = 0
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- Drop Shadow -->
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <gradient android:type="radial"
+          android:centerColor="#000000"
+          android:endColor="@android:color/transparent"
+          android:startColor="#ffffff"
+          android:gradientRadius="50%"/>
+      <padding android:bottom="20dp" android:left="10dp" android:right="10dp" android:top="5dp" />
+    </shape>
+  </item>
+
+  <!-- button -->
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <solid android:color="#FFFFFF" />
+      <!--<size android:height="184dp" android:width="184dp" />-->
+    </shape>
+  </item>
+
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <stroke android:width="8dp" android:color="@android:color/transparent" />
+      <solid android:color="#006a37" />
+    </shape>
+  </item>
+
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <stroke android:color="@android:color/transparent" android:width="14dp"/>
+      <solid android:color="#00c845" />
+    </shape>
+  </item>
+
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <stroke android:color="@android:color/transparent" android:width="18dp" />
+      <gradient android:startColor="#FeFFFe" android:endColor="#26d061" android:angle="270" />
+    </shape>
+  </item>
+
+  <item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+      <stroke android:color="@android:color/transparent" android:width="22dp" />
+      <gradient android:startColor="#00c845" android:endColor="#00822d" android:angle="270" />
+    </shape>
+  </item>
+
+
+</layer-list>

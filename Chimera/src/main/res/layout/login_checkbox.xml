@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!-- This is stupid, but we need this to loalogin_checkboxkbox dynamically with the correct style -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cell_checkbox"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+</RelativeLayout>

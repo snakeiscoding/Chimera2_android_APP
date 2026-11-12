@@ -1,0 +1,203 @@
+settings
+    workout_id = 56
+    allow_skip_warmup = 1
+    graph_future = 0
+    allow_skip_workout = 0
+    allow_user_goal_changes = 0
+
+input COOLDOWN_TIME_START
+input GENDER
+input AGE
+input SPM
+
+export GOAL_TYPE
+export RESISTANCE
+export GOAL
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export ALLOW_PAUSE
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+
+export HEART_RATE_WARNING
+
+stage workout
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 300000 // 5 minutes
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    
+    RESISTANCE = 5
+    completedTest = 0
+            
+    interval
+        // Stop if spm is not maintained
+        when STAGE_TIME_MS >= 11000 && SPM < 64 for 4000
+            stage = stage + 1
+        
+        // Check heart rate is available after 219 seconds (10 second intervals) so we can display a warning
+        when STAGE_TIME_MS >= 219000
+            HEART_RATE_WARNING = HEART_RATE < 40
+            wait 10000
+        
+        when STAGE_TIME_MS == 241000
+            HEART_RATE_WARNING = HEART_RATE < 40
+            
+            
+        when STAGE_TIME_MS > 287000
+            averageHR = average HEART_RATE for 12000
+            if (HEART_RATE < 40)
+                stage = stage + 1
+    
+        when STAGE_TIME_MS >= 300000
+            completedTest = 1
+            interval = interval + 1
+            
+
+stage cooldown
+    RESISTANCE = 1
+    PREVENT_USER_GOAL_CHANGES = 0
+    PREVENT_USER_CHANGES = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = COOLDOWN_TIME_START
+    
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            end
+            
+// Heart rate values for scores
+HR_VALUE_1 = [79, 89, 99, 105, 116, 128, 300]
+HR_VALUE_2 = [81, 89, 99, 107, 117, 128, 300]
+HR_VALUE_3 = [83, 96, 103, 112, 119, 130, 300]
+HR_VALUE_4 = [87, 97, 105, 116, 122, 132, 300]
+HR_VALUE_5 = [86, 97, 103, 112, 120, 129, 300]
+HR_VALUE_6 = [88, 96, 103, 113, 120, 130, 300]
+HR_VALUE_7 = [85, 98, 108, 117, 126, 140, 300]
+HR_VALUE_8 = [88, 99, 111, 119, 126, 138, 300]
+HR_VALUE_9 = [90, 102, 110, 118, 128, 140, 300]
+HR_VALUE_10 = [94, 104, 115, 120, 129, 135, 300]
+HR_VALUE_11 = [95, 104, 112, 118, 128, 139, 300]
+HR_VALUE_12 = [90, 102, 115, 122, 128, 134, 300]
+
+// Scoring values
+SCORES = [6, 5, 4, 3, 2, 1, 0]
+
+onStop
+    if (completedTest == 0)
+        TEST_SCORE_MALE = 0
+        TEST_SCORE_FEMALE = 0
+    else
+        temp_score = 0
+        if (AGE >= 0 && AGE <= 25)
+            i = 0
+            lookup_value = HR_VALUE_1[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_1[1]
+                
+        else if (AGE >= 26 && AGE <= 35)
+            i = 0
+            lookup_value = HR_VALUE_2[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_2[1]
+                
+        else if (AGE >= 36 && AGE <= 45)
+            i = 0
+            lookup_value = HR_VALUE_3[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_3[1]
+                
+        else if (AGE >= 46 && AGE <= 55)
+            i = 0
+            lookup_value = HR_VALUE_4[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_4[1]
+                
+        else if (AGE >= 56 && AGE <= 65)
+            i = 0
+            lookup_value = HR_VALUE_5[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_5[1]
+                
+        else if (AGE >= 66 && AGE <= 100)
+            i = 0
+            lookup_value = HR_VALUE_6[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_6[1]
+
+        TEST_SCORE_MALE = temp_score
+                
+        if (AGE >= 0 && AGE <= 25)
+            i = 0
+            lookup_value = HR_VALUE_7[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_7[1]
+                
+        else if (AGE >= 26 && AGE <= 35)
+            i = 0
+            lookup_value = HR_VALUE_8[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_8[1]
+                
+        else if (AGE >= 36 && AGE <= 45)
+            i = 0
+            lookup_value = HR_VALUE_9[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_9[1]
+                
+        else if (AGE >= 46 && AGE <= 55)
+            i = 0
+            lookup_value = HR_VALUE_10[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_10[1]
+                
+        else if (AGE >= 56 && AGE <= 65)
+            i = 0
+            lookup_value = HR_VALUE_11[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_11[1]
+                
+        else if (AGE >= 66 && AGE <= 100)
+            i = 0
+            lookup_value = HR_VALUE_12[i]
+            temp_score = SCORES[i]
+            while averageHR > lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = HR_VALUE_12[1]
+                
+        
+        TEST_SCORE_FEMALE = temp_score

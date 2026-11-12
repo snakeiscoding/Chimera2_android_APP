@@ -1,0 +1,12 @@
+<root>
+    <item name='com.jht.chimera.lib.widget.CommonRoutines java.lang.String getDateFormatPattern()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.widget.CommonRoutines java.lang.String getTimeFormatPattern()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

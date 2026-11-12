@@ -1,0 +1,20 @@
+<root>
+    <item
+        name='com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMClimb.CHIMClimbLcbUpdateFlow'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMClimb.CHIMClimbLcbUpdateFlow void procBinFileLcbInfoErrorHandler(com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMClimb.CHIMClimbLcbUpdateFlow.CheckLcbInfoError)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMClimb.CHIMClimbLcbUpdateFlow void procMessageStringrHandler(com.jht.chimera.service.hal.lib.lcb.lcbupdatecommlib.CHIMClimb.CHIMClimbLcbUpdateFlow.MessageString)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

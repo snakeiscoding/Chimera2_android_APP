@@ -1,0 +1,28 @@
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.ParkerGoScreenActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            android:taskAffinity="com.jht.mainapp"
+            tools:ignore="DiscouragedApi" />
+
+        <activity
+            android:name="com.jht.chimera.ui.mainapp.goscreen.DemoVideoActivity"
+            android:launchMode="singleTask"
+            android:process="com.jht.mainapp"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            android:taskAffinity="com.jht.mainapp"
+            tools:ignore="DiscouragedApi" />
+    </application>
+
+</manifest>

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.jht.chimera.ui.mymedia.VideoPlayerController">
+
+    <fragment
+        android:id="@+id/video_browser"
+        android:name="com.jht.chimera.ui.mymedia.MediaBrowser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="FragmentTagUsage" />
+
+    <fragment
+        android:id="@+id/video_player_view"
+        android:name="com.jht.chimera.ui.mymedia.VideoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="FragmentTagUsage" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+
+    <integer name="max_workout_time">480</integer>
+    <integer name="max_cool_down_time">20</integer>
+</resources>

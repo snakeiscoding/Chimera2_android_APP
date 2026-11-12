@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage"
+    android:padding="0dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_source_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_wireless_audio_column">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tv_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_tv_icon"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/tv_icon"
+                app:layout_constraintBottom_toBottomOf="@id/tv_icon"
+                app:layout_constraintStart_toEndOf="@id/tv_icon"
+                android:text="@string/tv_uc"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="5dp"
+                tools:ignore="SpUsage" />
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_tv_source_selection"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="300dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                app:label="@string/source_selection_tc"
+                app:option_popup_height="600dp"
+                app:option_popup_width="400dp" />
+
+
+            <Button
+                android:id="@+id/eng_tv_check_for_updates"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:text="@string/update_from_usb_tc"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_source_selection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RelativeLayout
+                android:id="@+id/defaultChannelContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_check_for_updates"
+                app:layout_constraintStart_toStartOf="parent" >
+
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_tv_default_channel_selector_1"
+                    style="@style/GeneralEngineeringOptionSelector"
+                    android:layout_width="300dp"
+                    app:label="@string/default_tv_channel_tc"
+                    app:option_popup_width="400dp" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_tv_player_default_channel_input_1"
+                    style="@style/GeneralEditTextStringEngineering"
+                    android:layout_width="280dp"
+                    android:padding="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    app:label="@string/default_tv_channel_tc"
+                    android:imeOptions="actionDone"
+                    app:min_value="0" />
+
+            </RelativeLayout>
+
+
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_tv_settop_box_selection"
+                android:layout_width="300dp"
+                app:option_popup_width="300dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/defaultChannelContainer"
+                android:layout_height="wrap_content"
+                app:label="@string/set_top_box_tc"/>
+
+            <Button
+                android:id="@+id/eng_stb_tv_import"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_settop_box_selection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:padding="20dp"
+                android:text="@string/import_set_top_box_configuration_tc" />
+
+            <CheckBox
+                android:id="@+id/eng_tv_use_sap"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/eng_stb_tv_import"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/use_sap_channel_list_pg" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_wireless_audio_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_source_column"
+            app:layout_constraintEnd_toStartOf="@id/tv_channel_setup_column">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/remove_tv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_remote_tv_icon"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/remove_tv_icon"
+                app:layout_constraintBottom_toBottomOf="@id/remove_tv_icon"
+                app:layout_constraintStart_toEndOf="@id/remove_tv_icon"
+                android:text="@string/remote_tv_tc"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="5dp"
+                tools:ignore="SpUsage" />
+
+            <CheckBox
+                android:id="@+id/eng_remote_tv"
+                style="@style/GeneralEngineeringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                app:layout_constraintTop_toBottomOf="@id/remove_tv_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:text="@string/wireless_audio_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_remote_tv_channel"
+                style="@style/GeneralEditTextIntEngineering"
+                app:layout_constraintTop_toBottomOf="@id/eng_remote_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="300dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+
+                app:label="@string/wireless_audio_default_channel_tc"
+                app:max_value="20"
+                app:min_value="1" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_remote_tv_volume"
+                style="@style/GeneralEditTextIntEngineering"
+                app:layout_constraintTop_toBottomOf="@id/eng_remote_tv_channel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:label="@string/wireless_audio_volume_tc"
+                app:max_value="100"
+                app:min_value="0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_channel_setup_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_wireless_audio_column"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/eng_tv_configure"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:padding="20dp"
+                android:text="@string/tv_channel_setup_tc" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/tv_settings_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_channel_setup_column,tv_source_column,tv_wireless_audio_column" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stb_tv_timing_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_source_column"
+            app:layout_constraintEnd_toEndOf="@id/tv_channel_setup_column"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings_barrier">
+            <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                android:id="@+id/eng_tv_stb_remote_button"
+                style="@style/GeneralEngineeringOptionSelector"
+                android:layout_width="300dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                app:label="Remote Button"
+                app:option_popup_width="400dp" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tv_stb_frequency"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="250dp"
+                app:label="@string/ir_frequency_tc"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/eng_tv_stb_remote_button"
+                app:layout_constraintEnd_toStartOf="@id/eng_tv_stb_repeat"
+                app:input_type="integer_input"
+                app:units="khz"
+                app:min_value="0"
+                app:max_value="80"
+                app:max_chars="2"/>
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tv_stb_repeat"
+                style="@style/GeneralEditTextIntEngineering"
+                android:layout_width="250dp"
+                app:label="Min Repeats"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:min_value="0"
+                app:max_value="3"
+                app:max_chars="1"/>
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tv_stb_button_original"
+                style="@style/GeneralEditTextStringEngineering"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_remote_button"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="200dp"
+
+                app:label="Current"
+                app:read_only="true"
+                app:multiline="true"/>
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_tv_stb_button_new"
+                style="@style/GeneralEditTextStringEngineering"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_original"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="200dp"
+                app:multiline="true"
+
+                app:label="Timing"/>
+
+            <Button
+                android:id="@+id/eng_tv_stb_button_reset"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_new"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_stb_space"
+                app:layout_constraintEnd_toStartOf="@id/eng_tv_stb_button_restore"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                android:text="@string/reset_to_original_tc" />
+
+            <Button
+                android:id="@+id/eng_tv_stb_button_restore"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_new"
+                app:layout_constraintStart_toEndOf="@id/eng_tv_stb_button_reset"
+                app:layout_constraintBottom_toTopOf="@id/tv_stb_space"
+                app:layout_constraintEnd_toStartOf="@id/eng_tv_stb_button_save"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                android:text="@string/restore_current_tc" />
+
+            <Button
+                android:id="@+id/eng_tv_stb_button_save"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_new"
+                app:layout_constraintStart_toEndOf="@id/eng_tv_stb_button_restore"
+                app:layout_constraintBottom_toTopOf="@id/tv_stb_space"
+                app:layout_constraintEnd_toStartOf="@id/eng_tv_stb_button_execute"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                android:text="@string/save_tc" />
+
+
+            <Button
+                android:id="@+id/eng_tv_stb_button_execute"
+                style="@style/GeneralEngineeringButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_new"
+                app:layout_constraintStart_toEndOf="@id/eng_tv_stb_button_save"
+                app:layout_constraintBottom_toTopOf="@id/tv_stb_space"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                android:text="@string/execute_tc" />
+
+            <Space
+                android:id="@+id/tv_stb_space"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eng_tv_stb_button_save" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<resources>
+    <integer name="ifitWorkoutSelectionX">683</integer>
+    <integer name="ifitWorkoutSelectionY">384</integer>
+    <integer name="ifitStartWorkoutX">270</integer>
+    <integer name="ifitStartWorkoutY">200</integer>
+    <integer name="ifitAccepWorkoutX">690</integer>
+    <integer name="ifitAccepWorkoutY">525</integer>
+    <integer name="ifitEndWarmupX">690</integer>
+    <integer name="ifitEndWarmupY">570</integer>
+</resources>

@@ -1,0 +1,125 @@
+settings
+    workout_id = 40
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 1
+
+input LEVEL
+input TIME_GOAL_START
+input START_SPEED
+input SPEED_IN
+input COOLDOWN_TIME_START
+input GOAL
+
+export INCLINE
+export GOAL
+export GOAL_TYPE
+export SPEED
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = TIME_GOAL_START
+    SPEED = START_SPEED
+    INCLINE = 0
+    
+    totalIntervals = 16
+    lastSetInterval = 0
+    intervalCompletionTime = 0
+    
+    when STAGE_TIME_MS >= (GOAL - intervalCompletionTime) / (totalIntervals - interval) + intervalCompletionTime
+        interval = interval + 1
+
+    when lastSetInterval != interval
+        intervalCompletionTime = STAGE_TIME_MS
+        lastSetInterval = interval
+
+    level 1
+        LEVEL1_INCLINE = [0, 0.5, 0, 1.5, 0, 2.5, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3]
+        setIntervals INCLINE = LEVEL1_INCLINE
+            
+    level 2
+        LEVEL2_INCLINE = [0, 0.5, 0, 2, 0, 2.5, 0, 3.5, 0, 3.5, 0, 3.5, 0, 3.5, 0, 3.5]
+        setIntervals INCLINE = LEVEL2_INCLINE
+        
+    level 3
+        LEVEL3_INCLINE = [0, 0.5, 0, 2, 0, 3, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4]
+        setIntervals INCLINE = LEVEL3_INCLINE
+        
+    level 4
+        LEVEL4_INCLINE = [0, 0.5, 0, 2.5, 0, 3.5, 0, 4.5, 0, 4.5, 0, 4.5, 0, 4.5, 0, 4.5]
+        setIntervals INCLINE = LEVEL4_INCLINE
+        
+    level 5
+        LEVEL5_INCLINE = [0, 0.5, 0, 3, 0, 4, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5]
+        setIntervals INCLINE = LEVEL5_INCLINE
+        
+    level 6
+        LEVEL6_INCLINE = [0, 0.5, 0, 3, 0, 4.5, 0, 5.5, 0, 5.5, 0, 5.5, 0, 5.5, 0, 5.5]
+        setIntervals INCLINE = LEVEL6_INCLINE
+            
+    level 7
+        LEVEL7_INCLINE = [0, 0.5, 0, 3.5, 0, 4.5, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6]
+        setIntervals INCLINE = LEVEL7_INCLINE
+        
+    level 8
+        LEVEL8_INCLINE = [0, 0.5, 0, 3.5, 0, 5, 0, 6.5, 0, 6.5, 0, 6.5, 0, 6.5, 0, 6.5]
+        setIntervals INCLINE = LEVEL8_INCLINE
+        
+    level 9
+        LEVEL9_INCLINE = [0, 1, 0, 4, 0, 5.5, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7]
+        setIntervals INCLINE = LEVEL9_INCLINE
+        
+    level 10
+        LEVEL10_INCLINE = [0, 1, 0, 4.5, 0, 6, 0, 8, 0, 8, 0, 8, 0, 8, 0, 8]
+        setIntervals INCLINE = LEVEL10_INCLINE
+        
+    level 11
+        LEVEL11_INCLINE = [0, 1, 0, 5, 0, 7, 0, 9, 0, 9, 0, 9, 0, 9, 0, 9]
+        setIntervals INCLINE = LEVEL11_INCLINE
+        
+    level 12
+        LEVEL12_INCLINE = [0, 1, 0, 5.5, 0, 7.5, 0, 9.5, 0, 9.5, 0, 9.5, 0, 9.5, 0, 9.5]
+        setIntervals INCLINE = LEVEL12_INCLINE
+        
+    level 13
+        LEVEL13_INCLINE = [0, 1, 0, 5.5, 0, 8, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10]
+        setIntervals INCLINE = LEVEL13_INCLINE
+        
+    level 14
+        LEVEL14_INCLINE = [0, 1, 0, 6, 0, 8, 0, 10.5, 0, 10.5, 0, 10.5, 0, 10.5, 0, 10.5]
+        setIntervals INCLINE = LEVEL14_INCLINE
+        
+    level 15
+        LEVEL15_INCLINE = [0, 1, 0, 6, 0, 8.5, 0, 11, 0, 11, 0, 11, 0, 11, 0, 11]
+        setIntervals INCLINE = LEVEL15_INCLINE
+        
+    level 16
+        LEVEL16_INCLINE = [0, 1.5, 0, 6.5, 0, 9.5, 0, 12, 0, 12, 0, 12, 0, 12, 0, 12]
+        setIntervals INCLINE = LEVEL16_INCLINE
+        
+    level 17
+        LEVEL17_INCLINE = [0, 1.5, 0, 7, 0, 9.5, 0, 12.5, 0, 12.5, 0, 12.5, 0, 12.5, 0, 12.5]
+        setIntervals INCLINE = LEVEL17_INCLINE
+        
+    level 18
+        LEVEL18_INCLINE = [0, 1.5, 0, 7, 0, 10, 0, 13, 0, 13, 0, 13, 0, 13, 0, 13]
+        setIntervals INCLINE = LEVEL18_INCLINE
+        
+    level 19
+        LEVEL19_INCLINE = [0, 1.5, 0, 8, 0, 11, 0, 14, 0, 14, 0, 14, 0, 14, 0, 14]
+        setIntervals INCLINE = LEVEL19_INCLINE
+        
+    level 20
+        LEVEL20_INCLINE = [0, 1.5, 0, 8.5, 0, 11.5, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15]
+        setIntervals INCLINE = LEVEL20_INCLINE
+        
+stage "cooldown"
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INCLINE = 0
+        SPEED = min(0.6 * SPEED_IN, 6.43738)
+            
+        when INTERVAL_TIME_MS >= GOAL
+            end

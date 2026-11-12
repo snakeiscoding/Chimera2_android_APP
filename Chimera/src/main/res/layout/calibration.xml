@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/eng_calibration_treadmill"
+                style="@style/EngineeringPageGridLayout"
+                app:columnCount="2">
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_tm_min_incline_adc"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/min_incline_adc_tc"
+                    app:max_value="19000"
+                    app:min_value="2000"
+                    app:units="adc" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_tm_max_incline_adc"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/max_incline_adc_tc"
+                    app:max_value="36000"
+                    app:min_value="19000"
+                    app:units="adc" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_tm_min_incline_offset"
+                    style="@style/GeneralEditTextDoubleEngineering"
+                    app:label="Min Incline ADC Offset"
+                    app:max_value="36000"
+                    app:min_value="0"
+                    app:units="adc" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_tm_max_incline_offset"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="Max Incline ADC Offset"
+                    app:max_value="36000"
+                    app:min_value="0"
+                    app:units="adc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_columnSpan="2">
+
+                    <Button
+                        android:id="@+id/eng_calibration_treadmill_button"
+                        style="@style/GeneralEngineeringButton"
+                        android:layout_width="300dp"
+                        android:text="@string/calibrate_tc" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/engineering_line_break_small" />
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/performance_plus_tm_calibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/magnet_angle_text_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/eng_magnet_angle_get_treadmill_button"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/magnet_angle_tc"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="@dimen/jht_setting_title_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/eng_magnet_angle_get_treadmill_button"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="280dp"
+                    android:text="@string/magnet_angle_get_tc"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toRightOf="@id/magnet_angle_text_container"
+                    app:layout_constraintRight_toLeftOf="@id/eng_magnet_angle_calibration_treadmill_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/eng_magnet_angle_calibration_treadmill_button"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="280dp"
+                    android:text="@string/calibrate_tc"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toRightOf="@id/eng_magnet_angle_get_treadmill_button"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/eng_calibration_ascent"
+                style="@style/EngineeringPageGridLayout"
+                app:columnCount="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_columnSpan="2">
+
+                    <Button
+                        android:id="@+id/eng_calibration_ascent_button"
+                        style="@style/GeneralEngineeringButton"
+                        android:layout_width="300dp"
+                        android:text="@string/calibrate_tc" />
+                </RelativeLayout>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/eng_calibration_climbmill"
+                style="@style/EngineeringPageGridLayout"
+                app:columnCount="2">
+
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_cz_frequency"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/cz_frequency_tc"
+                    app:read_only="true" />
+
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_ir_frequency"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/ir_frequency_tc"
+                    app:read_only="true" />
+
+                <RelativeLayout style="@style/engineering_line_break_small" />
+
+                <CheckBox
+                    android:id="@+id/eng_calibration_use_lcb_watts"
+                    style="@style/GeneralEngineeringCheckBox"
+                    android:text="@string/climbmill_watts_tc" />
+
+                <RelativeLayout style="@style/engineering_line_break_small" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_en_cm_weight"
+                    style="@style/GeneralEditTextMeasurementEngineering"
+                    app:label="@string/weight_tc"
+                    app:units="weight" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_en_cm_time"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/time_tc"
+                    app:max_value="60"
+                    app:min_value="40"
+                    app:units="time_seconds" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_en_cm_spm"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/spm_uc"
+                    app:max_value="54"
+                    app:min_value="50"
+                    app:units="spm" />
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_calibration_en_cm_factor"
+                    style="@style/GeneralEditTextIntEngineering"
+                    app:label="@string/calibration_factor_tc"
+                    app:max_value="1300"
+                    app:min_value="700" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_columnSpan="2">
+
+                    <Button
+                        android:id="@+id/eng_calibration_en_cm_calibrate"
+                        style="@style/GeneralEngineeringButton"
+                        android:layout_width="300dp"
+                        android:text="@string/calibrate_tc" />
+                </RelativeLayout>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:id="@+id/eng_spindown_calibration_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/spindownCalibration"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/spin_down_test_tc" />
+
+                <Button
+                    android:id="@+id/buttonICSetTorqueCalibration"
+                    android:visibility="gone"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/zero_tare_torque_sensor_tc" />
+
+                <Button
+                    android:id="@+id/restoreFromNetwork"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/raptor_parameter_restore_from_net_tc" />
+
+                <TextView
+                    android:id="@+id/raptorNetworkRestoreMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/restoreFromUSB"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/raptor_parameter_restore_from_usb_tc" />
+
+                <Button
+                    android:id="@+id/pushToLCB"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/save_calibration_settings_to_lcb_tc"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/retrieveFromLCB"
+                    style="@style/SpinbikeCalibrationButton"
+                    android:text="@string/retrieve_calibration_settings_from_lcb_tc" />
+
+                <TextView
+                    android:id="@+id/currentCalibrationSettingsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/current_calibration_settings_tc"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/calibrationDataTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="#000"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

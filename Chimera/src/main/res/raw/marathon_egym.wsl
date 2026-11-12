@@ -1,0 +1,18 @@
+settings
+    workout_id = 79
+    allow_skip_warmup = 0
+    allow_skip_workout = 0
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+export SPEED
+export INCLINE
+export RESISTANCE
+export GOAL_TYPE
+
+stage "workout"
+    interval
+        GOAL_TYPE = GOAL_TYPE_NONE_CONSTANT
+        SPEED = 0.8
+        INCLINE = 0
+        RESISTANCE = 1

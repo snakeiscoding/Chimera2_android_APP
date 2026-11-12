@@ -1,0 +1,7 @@
+<root>
+    <item name='com.jht.chimera.lib.database.sqliteassethelper.SQLiteAssetHelper'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

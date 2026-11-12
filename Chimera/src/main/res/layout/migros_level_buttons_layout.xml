@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/level_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="start|top"
+        android:paddingStart="5dp"
+        android:text="@string/level_tc"
+        android:textColor="#FFF4F4F4"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false"/>
+
+    <RadioGroup
+        android:id="@+id/level_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/level_title">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/beginner_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_gender_bg_selector"
+            android:button="@null"
+            android:checked="true"
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/beginner_tc"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="24dp"
+            android:textColor="@color/gender_radio_button_text_color_selector"
+            app:autoSizeTextType="uniform" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/advanced_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_gender_bg_selector"
+            android:button="@null"
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/advanced_tc"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="24dp"
+            android:textColor="@color/gender_radio_button_text_color_selector"
+            app:autoSizeTextType="uniform" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

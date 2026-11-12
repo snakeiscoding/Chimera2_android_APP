@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/top_bar_height"
+    android:background="@color/dialog_background_activity_dim_color">
+
+    <FrameLayout
+        android:id="@+id/dynamicViewPlaceHolder"
+        style="@style/wrappedContent"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

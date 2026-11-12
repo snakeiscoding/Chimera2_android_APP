@@ -1,0 +1,10 @@
+<root>
+    <item
+        name='com.jht.androidcommonalgorithms.network.AddressHelper java.lang.String getIPAddress(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='com.jht.androidcommonalgorithms.network.AddressHelper java.lang.String getMACAddressStr(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

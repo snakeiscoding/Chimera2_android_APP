@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/inactiveScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/inactive"/>
+
+    <RelativeLayout
+        android:id="@+id/dialogLayout"
+        android:layout_width="640dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent_border"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/titleBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ff0000">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#333333"
+                    android:textSize="34dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <com.jht.chimera.lib.widget.selectron.SelectronButton
+                android:id="@+id/btnClose"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                app:drawableBackground="#ff0000"
+                app:drawableIcon="@drawable/ic_close_white"
+                app:iconHeight="40dp"
+                app:iconWidth="40dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:background="#1a1a1a">
+
+            <ScrollView
+                android:id="@+id/message_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarThumbVertical="@drawable/language_list_box_scroller"
+                android:scrollbarTrackVertical="@drawable/language_list_box_scroller_bg">
+
+                <TextView
+                    android:id="@+id/text_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/message_center_textsize"/>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

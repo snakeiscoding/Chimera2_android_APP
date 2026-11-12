@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSizeDashboardMedium">16dp</dimen>
+    <dimen name="textSizeDashboardLarge">20dp</dimen>
+    <dimen name="textSizeDashboardButton">16dp</dimen>
+    <dimen name="textSizeMedium">14dp</dimen>
+    <dimen name="textSizeLarge">18dp</dimen>
+
+    <dimen name="BrowserBarPadding">2dp</dimen>
+
+    <style name="WebBrowserSelectron">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:padding">@dimen/settings_padding</item>
+        <item name="drawableBackground">#505050</item>
+        <item name="drawablePressState">#303030</item>
+        <item name="drawableDisableState">#b3b3b3</item>
+        <item name="iconWidth">60dp</item>
+        <item name="iconHeight">60dp</item>
+        <item name="android:layout_margin">@dimen/BrowserBarPadding</item>
+    </style>
+
+    <dimen name="top_bar_button_width">120dp</dimen>
+    <dimen name="go_screen_workoutProgramSliderExtraSpace">30dp</dimen>
+
+    <!--Keypad dimensions. Double length should be button side length * 2 + interior margin-->
+    <dimen name="keypad_button_side_length">100dp</dimen>
+    <dimen name="keypad_interior_margin">2dp</dimen>
+    <dimen name="keypad_button_side_double_length">202dp</dimen>
+
+
+    <!-- Please add misc. dimensions here -->
+    <dimen name="title_bar_size">100dp</dimen>
+    <dimen name="title_textsize">25sp</dimen>
+    <dimen name="titleButtonHeight">70dp</dimen>
+    <dimen name="titleButtonWidth">75dp</dimen>
+    <dimen name="titleFragmentHeight">100dp</dimen>
+    <dimen name="titleButtonMargin">5dp</dimen>
+
+    <dimen name="safety_pin_dialog_border">10dp</dimen>
+    <dimen name="safety_pin_dialog_title_text_size">22dp</dimen>
+    <dimen name="safety_pin_dialog_title_text_margin">20dp</dimen>
+    <dimen name="safety_pin_dialog_error_text_size">20dp</dimen>
+    <dimen name="safety_pin_dialog_edit_text_size">43dp</dimen>
+    <dimen name="safety_pin_dialog_edit_text_height">106dp</dimen>
+    <dimen name="safety_pin_dialog_edit_text_width">78dp</dimen>
+    <dimen name="safety_pin_dialog_edit_text_margin">30dp</dimen>
+    <dimen name="safety_pin_dialog_keypad_margin">40dp</dimen>
+    <dimen name="safety_pin_dialog_margin_bottom">200dp</dimen>
+    <dimen name="safety_pin_button_side_length">110dp</dimen>
+    <dimen name="safety_pin_button_text">64dp</dimen>
+    <dimen name="safety_pin_button_delete_padding">25dp</dimen>
+    <dimen name="safety_pin_button_confirm_padding">20dp</dimen>
+
+    <dimen name="setting_general_widget_width">350dp</dimen>
+    <dimen name="settings_button_height">65dp</dimen>
+    <dimen name="settings_padding">10dp</dimen>
+    <dimen name="settings_padding_text">5dp</dimen>
+    <dimen name="settings_label_text_size">32dp</dimen>
+    <dimen name="settings_text_size">20dp</dimen>
+    <dimen name="settings_text_size_small">16dp</dimen>
+
+    <!-- -->
+
+
+    <dimen name="runScreenLib_graphLegendItemTextLeftMargin">8dp</dimen>
+    <dimen name="runScreenLib_graphLegendItemTextRightMargin">32dp</dimen>
+    <dimen name="runScreenLib_graphLegendItemColorSwatchWidth">30dp</dimen>
+    <dimen name="runScreenLib_graphLegendItemColorSwatchHeight">10dp</dimen>
+    <dimen name="runScreenLib_graphLegendItemLineHeight">18dp</dimen>
+    <dimen name="runScreenLib_graphLegendTextSize">14dp</dimen>
+
+    <!-- -->
+
+
+    <!-- size of the left and right bar. -->
+    <dimen name="left_bar_width">147dp</dimen>
+    <dimen name="right_bar_width">147dp</dimen>
+
+    <dimen name="top_bar_height">80dp</dimen>
+    <dimen name="top_bar_height_bordered">79dp</dimen>
+
+    <dimen name="bottom_bar_width">1626dp</dimen>
+    <dimen name="bottom_bar_height">146dp</dimen>
+    <dimen name="bottom_bar_stats_height">86dp</dimen>
+
+    <dimen name="system_bar_height">80dp</dimen>
+    <dimen name="screen_width">1920dp</dimen>
+    <dimen name="screen_height">1080dp</dimen>
+    <dimen name="height_minus_top_bottom_bars">920dp</dimen>
+
+    <dimen name="stat_bottom_margin">85dp</dimen>
+
+    <dimen name="app_buttons_bottom_bar_height">60dp</dimen>
+    <dimen name="app_container_width">1626dp</dimen>
+
+    <dimen name="settinglock_width">124dp</dimen>
+    <dimen name="settinglock_height">88dp</dimen>
+
+    <dimen name="message_center_width">600dp</dimen>
+    <dimen name="message_center_height">79dp</dimen>
+    <dimen name="message_center_textsize">18sp</dimen>
+
+    <!-- -->
+
+    <dimen name="select_media_device_top_panel">120dp</dimen>
+
+    <dimen name="title_header_text_size">50sp</dimen>
+    <dimen name="sub_header_text_size">25sp</dimen>
+
+    <!-- Media App Margin -->
+
+    <dimen name="instructio_text_size">20sp</dimen>
+    <!-- Media Browser -->
+    <dimen name="media_browser_paddingleft">10dp</dimen>
+    <dimen name="media_browser_paddingright">15dp</dimen>
+    <dimen name="media_browser_paddingtop">5dp</dimen>
+    <dimen name="media_browser_paddingbottom">5dp</dimen>
+
+    <dimen name="media_browser_seekbar_textsize">15sp</dimen>
+
+    <dimen name="audio_player_repeat_button_size">50dp</dimen>
+    <dimen name="audio_player_shuffle_button_size">50dp</dimen>
+
+    <dimen name="audio_player_repeat_one_left_margin">49dp</dimen>
+    <dimen name="second_timeline_left_margin">20dp</dimen>
+    <dimen name="second_timeline_top_margin">10dp</dimen>
+    <dimen name="second_timeline_right_margin">20dp</dimen>
+
+    <dimen name="next_previous_size">80dp</dimen>
+    <dimen name="play_size">100dp</dimen>
+    <dimen name="track_title_height">53dp</dimen>
+
+    <dimen name="media_player_margin_top">0dp</dimen>
+    <dimen name="media_player_margin_bottom">10dp</dimen>
+
+
+    <dimen name="mp_toolbar_tab_button_drawable_spacing">13dp</dimen>
+    <dimen name="mp_toolbar_tab_button_drawable_padding">10dp</dimen>
+    <dimen name="mp_toolbar_tab_button_width">225dp</dimen>
+    <dimen name="mp_toolbar_tab_button_height">80dp</dimen>
+    <dimen name="mp_toolbar_tab_button_padding_left">53dp</dimen>
+    <dimen name="mp_toolbar_height">90dp</dimen>
+    <dimen name="mp_toolbar_margin_left">27dp</dimen>
+    <dimen name="media_app_left_margin">10dp</dimen>
+    <dimen name="media_app_right_margin">10dp</dimen>
+
+    <dimen name="video_tab_button_left_padding">107dp</dimen>
+
+    <dimen name="close_media_window_left_margin">20dp</dimen>
+    <dimen name="close_media_window_right_padding">20dp</dimen>
+
+
+    <!-- Media Player Items -->
+    <dimen name="browse_item_padding_right">5dp</dimen>
+    <dimen name="duration_width">80dp</dimen>
+
+    <dimen name="media_browser_padding_left">15dp</dimen>
+
+    <dimen name="video_player_separator">10dp</dimen>
+
+    <dimen name="audio_player_icon_top_margin">28dp</dimen>
+
+    <integer name="file_browser_weight_video_player">46</integer>
+    <integer name="video_player_weight_video_player">54</integer>
+
+    <integer name="audio_album_weight_audio_player">7</integer>
+    <integer name="audio_info_weight_audio_player">3</integer>
+    <dimen name="track_info_text_size">15sp</dimen>
+
+    <!-- -->
+    <!-- categories -->
+    <dimen name="category_padding">10dp</dimen>
+
+    <!-- listview -->
+    <dimen name="listview_bottom_margin">60dp</dimen>
+    <dimen name="listview_width">430dp</dimen>
+    <dimen name="listview_padding">10dp</dimen>
+
+    <!-- list item -->
+    <dimen name="list_item_padding">10dp</dimen>
+    <dimen name="list_item_padding_right">10dp</dimen>
+
+    <!-- public -->
+    <dimen name="devices_title_margin_top">40dp</dimen>
+    <dimen name="devices_title_margin_bottom">10dp</dimen>
+    <dimen name="button_margin">5dp</dimen>
+
+    <!-- font -->
+    <dimen name="font_size_title">46sp</dimen>
+    <dimen name="font_size_categories_title">26sp</dimen>
+    <dimen name="font_size_device_name">20sp</dimen>
+
+    <!-- -->
+    <dimen name="listview_item_height">50dp</dimen>
+    <dimen name="listview_divider_height">10dp</dimen>
+    <dimen name="workout_info_icon">32dp</dimen>
+
+    <!--  Landmarks RunActivity -->
+    <dimen name="progress_padding">20dp</dimen>
+    <dimen name="content_right_margin_normal_screen">60dp</dimen>
+    <dimen name="total_floors_text_margin_left">5dp</dimen>
+    <dimen name="total_floors_text_margin_top">2dp</dimen>
+
+    <!-- Landmarks RunActivity - full-screen -->
+    <dimen name="text_size_fullscreen_goal_value">26sp</dimen>
+    <dimen name="text_size_fullscreen_goal_value_unit">23sp</dimen>
+    <dimen name="text_size_fullscreen_landmark_title">27sp</dimen>
+    <dimen name="text_size_fullscreen_landmark_location">23sp</dimen>
+    <dimen name="text_size_fullscreen_landmark_height">20sp</dimen>
+    <dimen name="text_width_fullscreen_landmark_name">200dp</dimen>
+    <dimen name="text_width_fullscreen_landmark_location">240dp</dimen>
+
+    <!-- -->
+    <dimen name="jht_setting_title_text_size">20dp</dimen>
+
+    <dimen name="top_bar_settings_button_text_size">24dp</dimen>
+    <dimen name="jht_setting_margin_bottom">10dp</dimen>
+
+    <dimen name="engineering_setting_title_margin_bottom">10dp</dimen>
+    <dimen name="engineering_page_list_width">310dp</dimen>
+
+    <dimen name="network_setup_col_1">150dp</dimen>
+    <dimen name="network_setup_col_2">230dp</dimen>
+    <dimen name="network_setup_col_3">230dp</dimen>
+    <dimen name="ip_tv_channel_list_title_text_size">16dp</dimen>
+    <dimen name="general_margin_bottom">12dp</dimen>
+    <dimen name="iptv_channel_delete_width">70dp</dimen>
+
+    <dimen name="messageDialogBox_horizontalPadding">38dp</dimen>
+    <dimen name="messageDialogBox_closeButtonSize">81dp</dimen>
+
+    <dimen name="login_user_name_margin_top">130dp</dimen>
+
+    <dimen name="carousel_height">500dp</dimen>
+    <dimen name="previous_workout_list_width">240dp</dimen>
+    <dimen name="previous_workout_list_height">160dp</dimen>
+    <dimen name="calendar_workout_margin">20dp</dimen>
+    <dimen name="calendar_workout_split">0.70</dimen>
+
+    <dimen name="profile_thumbnail_margin">40dp</dimen>
+
+    <dimen name="stat_item_text_size">40dp</dimen>
+    <dimen name="inactive_app_list_width">180dp</dimen>
+
+    <dimen name="constant_watts_font_size_large_value">108dp</dimen>
+    <dimen name="constant_watts_font_size_large_units">36dp</dimen>
+
+    <item name="top_bar_next_value_percentage" format="float" type="dimen">0.1</item>
+
+    <dimen name="workout_calendar_item_height">120dp</dimen>
+</resources>

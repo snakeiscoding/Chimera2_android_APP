@@ -1,0 +1,199 @@
+settings
+    workout_id = 57
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 1
+    allow_user_goal_changes = 1
+    levels = 20
+
+input LEVEL
+input TIME_GOAL_START
+input COOLDOWN_TIME_START
+input GOAL
+
+export INCLINE
+export GOAL
+export GOAL_TYPE
+export SPEED
+
+COOLDOWN_SPEED = [2.41402, 2.41402, 2.41402, 2.41402, 2.41402, 3.21869, 3.21869, 3.21869, 3.21869, 3.21869, 4.02336, 4.02336, 4.02336, 4.02336, 4.02336, 4.82803,  4.82803,  4.82803, 4.82803,  4.82803]
+
+stage "warmup"
+    SPEED = 0.804672
+    INCLINE = 0
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 180000 // 180 seconds is always warmup time
+
+    interval
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+
+stage "workout"
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = TIME_GOAL_START
+    isSprinting = 1
+
+    // When time is up for the workout go to the cooldown
+    when STAGE_TIME_MS >= GOAL
+        stage = stage + 1
+
+    // Go to the recovery interval when 30 seconds have passed
+    when (INTERVAL_TIME_MS >= 30000 && isSprinting > 0)
+        isSprinting = 0
+        interval = "recovery"
+
+    // Go to the sprint interval when 90 seconds have passed
+    when (INTERVAL_TIME_MS >= 90000 && isSprinting == 0)
+        isSprinting = 1
+        interval = "sprint"
+
+    level 1
+        interval "sprint"
+            SPEED = 5.1499
+
+        interval "recovery"
+            SPEED = 2.41402
+
+   level 2
+       interval "sprint"
+           SPEED = 5.95457
+
+       interval "recovery"
+           SPEED = 2.41402
+
+   level 3
+       interval "sprint"
+           SPEED = 6.75924
+
+       interval "recovery"
+           SPEED = 2.41402
+
+   level 4
+       interval "sprint"
+           SPEED = 7.40298
+
+       interval "recovery"
+           SPEED = 2.41402
+
+
+   level 5
+       interval "sprint"
+           SPEED = 7.88579
+
+       interval "recovery"
+           SPEED = 2.41402
+
+   level 6
+       interval "sprint"
+           SPEED = 8.04672
+
+       interval "recovery"
+           SPEED = 3.21869
+
+   level 7
+       interval "sprint"
+           SPEED = 8.52952
+
+       interval "recovery"
+           SPEED = 3.21869
+
+   level 8
+       interval "sprint"
+           SPEED = 9.3342
+
+       interval "recovery"
+           SPEED = 3.21869
+
+   level 9
+       interval "sprint"
+           SPEED = 9.65606
+
+       interval "recovery"
+           SPEED = 3.21869
+
+   level 10
+       interval "sprint"
+           SPEED = 10.4607
+
+       interval "recovery"
+           SPEED = 3.21869
+
+   level 11
+       interval "sprint"
+           SPEED = 11.2654
+
+       interval "recovery"
+           SPEED = 4.02336
+
+   level 12
+       interval "sprint"
+           SPEED = 12.0701
+
+       interval "recovery"
+           SPEED = 4.02336
+
+   level 13
+       interval "sprint"
+           SPEED = 12.8748
+
+       interval "recovery"
+           SPEED = 4.02336
+
+   level 14
+       interval "sprint"
+           SPEED = 13.6794
+
+       interval "recovery"
+           SPEED = 4.02336
+
+   level 15
+       interval "sprint"
+           SPEED = 14.4841
+
+       interval "recovery"
+           SPEED = 4.02336
+
+   level 16
+       interval "sprint"
+           SPEED = 15.2888
+
+       interval "recovery"
+           SPEED = 4.82803
+
+   level 17
+       interval "sprint"
+           SPEED = 16.0934
+
+       interval "recovery"
+           SPEED = 4.82803
+
+   level 18
+       interval "sprint"
+           SPEED = 16.89811
+
+       interval "recovery"
+           SPEED = 4.82803
+
+   level 19
+       interval "sprint"
+           SPEED = 17.7028
+
+       interval "recovery"
+           SPEED = 5.6327
+
+   level 20
+       interval "sprint"
+           SPEED = 18.50746
+
+       interval "recovery"
+           SPEED = 5.6327
+
+stage "cooldown"
+    interval
+        GOAL = 150000
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        INCLINE = 0
+        SPEED = COOLDOWN_SPEED[LEVEL - 1]
+            
+        when INTERVAL_TIME_MS >= GOAL
+            end

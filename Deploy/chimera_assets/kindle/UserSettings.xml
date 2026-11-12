@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="FTUE_EVENT_TRIGGERED" value="false" />
+    <int name="COVER_IMAGE_WIDTH_SMALL" value="168" />
+    <boolean name="FTUE_NEWSSTAND_LOADING_SCREEN_SHOWN" value="false" />
+    <long name="RESUME_REQUEST_COUNTER_RESET_TIME" value="-1" />
+    <boolean name="FTUE_LOADING_SCREEN_SHOWN" value="true" />
+    <boolean name="FTUE_NEWSSTAND_EVENT_TRIGGERED" value="false" />
+    <int name="COVER_IMAGE_HEIGHT_MEDIUM" value="720" />
+    <int name="COVER_IMAGE_WIDTH_LARGE" value="720" />
+    <int name="COVER_IMAGE_HEIGHT_LARGE" value="720" />
+    <int name="COVER_IMAGE_WIDTH_MEDIUM" value="720" />
+    <int name="COVER_IMAGE_HEIGHT_SMALL" value="252" />
+    <boolean name="CONTINUOUS_SCROLL_REFLOWABLE" value="true" />
+    <boolean name="CONTINUOUS_SCROLL_REFLOWABLE_EVER_ENABLED" value="true" />
+    <int name="RESUME_CONTENT_UPDATE_REQUEST_COUNTER" value="1" />
+    <boolean name="SIDECAR_MIGRATION" value="true" />
+    <int name="RESUME_CONTENT_ADD_REQUEST_COUNTER" value="0" />
+</map>

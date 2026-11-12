@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    tools:context=".ui.machinesettings.factory.IcrCalibrationActivity">
+
+    <!-- Header -->
+    <com.jht.chimera.lib.widget.selectron.SelectronButton
+        android:id="@+id/buttonClose"
+        app:drawableIcon="@drawable/ic_close"
+        app:drawableIconTint="#ff000000"
+        app:iconHeight="48dp"
+        app:iconWidth="48dp"
+        android:background="@color/base_light_grey"
+        android:layout_width="@dimen/top_bar_button_width"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/header_title"
+        />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/edit_text_label_size"
+        android:text="ICR CALIBRATION"
+        app:layout_constraintTop_toTopOf="@+id/buttonClose"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonClose"
+        app:layout_constraintStart_toEndOf="@+id/buttonClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/EngineeringPageGridLayout"
+        app:columnCount="3"
+        app:layout_constraintTop_toBottomOf="@id/buttonClose"
+        >
+        <!-- zero kgf -->
+        <TextView
+            android:id="@+id/label0"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measure Zero kgf"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+        <Button
+            android:id="@+id/button0"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Get ZERO kgf ADC"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+        <TextView
+            android:id="@+id/text_button0"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="--"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+
+        <!-- non-zero kgf -->
+        <TextView
+            android:id="@+id/label1"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measure NON-Zero kgf"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+        <Button
+            android:id="@+id/button1"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Get Non-Zero kgf ADC"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+        <TextView
+            android:id="@+id/text_button1"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="--"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+
+        <!-- write to LCB -->
+        <Button
+            android:id="@+id/button_doit"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Write to LCB"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal"
+            />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- values -->
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULTS"
+        app:layout_constraintTop_toBottomOf="@id/grid_item_layout"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

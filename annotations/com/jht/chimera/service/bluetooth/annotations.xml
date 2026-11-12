@@ -1,0 +1,7 @@
+<root>
+    <item name='com.jht.chimera.service.bluetooth.BTAdapter BTAdapter()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

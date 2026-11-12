@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_fragment_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <Space
+        android:id="@+id/login_space"
+        android:layout_width="@dimen/top_bar_button_width"
+        android:layout_height="@dimen/top_bar_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_recycler_view"
+        android:layout_width="wrap_content"
+        app:layout_constrainedWidth="true"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_guideline_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_guideline_top"
+        />
+
+    <TextView
+        android:id="@+id/user_login_error_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login_failed_message_pg"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/profile_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_guideline_top" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

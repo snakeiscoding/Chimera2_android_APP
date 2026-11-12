@@ -1,0 +1,60 @@
+{
+  "customWorkouts": [
+    {
+      "title": "",
+      "subTitle": "",
+      "description": "",
+      "subDescription": "",
+      "backgroundPath": "",
+      "iconPath": "",
+      "identifier": "",
+      "categoryType": 0,
+      "customWorkoutData": [
+        {
+          "min": 0,
+          "max": 15,
+          "value": 0,
+          "stepSize": 0.5,
+          "precision": 1,
+          "label": "Incline",
+          "units": "%",
+          "identifier": "START_INCLINE",
+          "graphStyle": 0,
+          "graphColor": -151781,
+          "intervalData": [
+            2.5, 3.0
+          ]
+        },
+        {
+          "min": 0.800000011920929,
+          "max": 20,
+          "value": 0.800000011920929,
+          "stepSize": 0.10000000149011612,
+          "precision": 1,
+          "label": "Speed",
+          "units": "KPH",
+          "identifier": "START_SPEED",
+          "graphStyle": 2,
+          "graphColor": -65536,
+          "intervalData": [
+            1.5, 3.0
+          ]
+        },
+        {
+          "min": 1,
+          "max": 120,
+          "value": 5,
+          "stepSize": 1,
+          "precision": 0,
+          "label": "Time",
+          "units": "minutes",
+          "identifier": "TIME_GOAL_START",
+          "graphColor": 0,
+          "intervalData": [
+            1.0, 5.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+settings
+    workout_id = 38
+    allow_skip_warmup = 1
+    graph_future = 1
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+//// short_name = Cooper     workout name = fitness_test_cooper_cardio
+// treadmill_workout=false     stepper_workout=false     ep_workout=true     climbmill_workout=false     bike_workout=true     ascent_workout=true
+
+input GOAL
+input WEIGHT
+input COOLDOWN_TIME_START
+input AGE
+input GENDER
+input WATTS
+input RPM
+// 0 = No, 1 = Yes
+input LCB_CONTROLS_WATTS
+
+export INCLINE
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export VO2
+export TEST_SCORE
+export ALLOW_PAUSE
+
+// For controlling the resistance and displaying the target watts
+export TARGET_WATTS
+export COOPER_RPM_WARNING
+// 0 = Resistance, 1 = Watts
+export CONTROL_MODE
+
+// For disabling user interaction
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+
+VALUES_1 = [51.4, 48.2, 46.8, 44.2, 42.5, 41.0, 39.5, 37.1, 34.5, 0]
+VALUES_2 = [50.4, 46.8, 44.6, 42.4, 41.0, 38.9, 37.4, 35.4, 32.5, 0]
+VALUES_3 = [48.2, 44.1, 41.8, 39.9, 38.1, 36.7, 35.1, 33.0, 30.9, 0]
+VALUES_4 = [45.3, 41.0, 38.5, 36.7, 35.2, 33.8, 32.3, 30.2, 28.0, 0]
+VALUES_5 = [42.5, 38.1, 35.3, 33.6, 31.8, 30.2, 28.7, 26.5, 23.1, 0]
+VALUES_6 = [44.2, 41.0, 38.1, 36.7, 35.2, 33.8, 32.3, 30.6, 28.4, 0]
+VALUES_7 = [41.0, 38.6, 36.7, 34.6, 33.8, 32.3, 30.5, 28.7, 26.5, 0]
+VALUES_8 = [39.5, 36.3, 33.8, 32.3, 30.9, 29.5, 28.3, 26.5, 25.1, 0]
+VALUES_9 = [35.2, 32.3, 30.9, 29.4, 28.2, 26.9, 25.5, 24.3, 22.3, 0]
+VALUES_10 = [35.2, 31.2, 29.4, 27.2, 25.8, 24.5, 23.8, 22.8, 20.8, 0]
+
+SCORES = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+
+stage "workout"
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    GOAL = 30 * 60 * 1000
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    INCREMENT_TIME = 120000
+    NUM_INCREMENTS = 0
+    CONTROL_MODE = LCB_CONTROLS_WATTS
+    COOPER_RPM_WARNING = 0
+    if (GENDER == GENDER_MALE)
+        WATTS_INCREMENT = 35
+    else
+        WATTS_INCREMENT = 25
+        
+    TARGET_WATTS = WATTS_INCREMENT
+    vo2Watts = TARGET_WATTS
+    
+    interval
+        when WORKOUT_TIME_MS >= INCREMENT_TIME
+            NUM_INCREMENTS = NUM_INCREMENTS + 1
+            if (NUM_INCREMENTS >= 15)
+                interval = interval + 1
+            else
+                TARGET_WATTS = TARGET_WATTS + WATTS_INCREMENT
+                vo2Watts = TARGET_WATTS
+                INCREMENT_TIME = INCREMENT_TIME + 120000
+        
+        // Sends the new resistance every so often
+        when 1
+            if (RPM > 80)
+                COOPER_RPM_WARNING = 2
+            else if (RPM < 60)
+                COOPER_RPM_WARNING = 1
+            else
+                COOPER_RPM_WARNING = 0
+        
+        when RPM > 80 || RPM < 60 for 10000
+            vo2Watts = TARGET_WATTS
+            interval = interval + 1
+    
+stage "cooldown"
+    interval
+        PREVENT_USER_GOAL_CHANGES = 0
+        PREVENT_USER_CHANGES = 0
+        RESISTANCE = 1
+        INCLINE = 0
+        CONTROL_MODE = 0
+        COOPER_RPM_WARNING = 0
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = COOLDOWN_TIME_START
+
+        when INTERVAL_TIME_MS > 1999 && INTERVAL_TIME_MS >= GOAL
+            end
+            
+            
+onStop
+    VO2 = (((vo2Watts * 6) * 2) + (3.5 * WEIGHT)) / WEIGHT
+    
+    if AGE >= 0 && AGE <= 29 && GENDER == GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_1[i]
+        temp_score = SCORES[i]
+        
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_1[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 30 && AGE <= 39 && GENDER == GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_2[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_2[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 40 && AGE <= 49 && GENDER == GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_3[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_3[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 50 && AGE <= 59 && GENDER == GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_4[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_4[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 60 && AGE <= 200 && GENDER == GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_5[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_5[i]
+        TEST_SCORE = temp_score
+        
+    if AGE >= 0 && AGE <= 29 && GENDER != GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_6[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_6[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 30 && AGE <= 39 && GENDER != GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_7[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_7[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 40 && AGE <= 49 && GENDER != GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_8[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_8[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 50 && AGE <= 59 && GENDER != GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_9[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_9[i]
+        TEST_SCORE = temp_score
+        
+    else if AGE >= 60 && AGE <= 200 && GENDER != GENDER_MALE
+        i = 0
+        VO2_array_val = VALUES_10[i]
+        temp_score = SCORES[i]
+        while  VO2 < VO2_array_val
+            temp_score = SCORES[i]
+            i = i + 1
+            VO2_array_val = VALUES_10[i]
+        TEST_SCORE = temp_score
+
+    

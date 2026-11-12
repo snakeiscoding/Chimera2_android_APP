@@ -1,0 +1,58 @@
+settings
+    workout_id = 94
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+input GOAL
+input SPEED_IN
+input START_SPEED
+input START_INCLINE
+input COOLDOWN_TIME_START
+
+input START_GOAL_TYPE
+input START_GOAL
+
+export SPEED
+export INCLINE
+export GOAL
+export COOL_DOWN_GOAL
+export GOAL_TYPE
+
+stage "workout"
+    interval
+        PREVENT_USER_GOAL_CHANGES = 1
+        SPEED = START_SPEED
+        INCLINE = START_INCLINE
+        GOAL_TYPE = START_GOAL_TYPE
+        GOAL = START_GOAL
+        
+        
+        when (GOAL_TYPE == GOAL_TYPE_TIME_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_TIME_CONSTANT) && INTERVAL_TIME_MS >= GOAL
+            end
+        
+        else when (GOAL_TYPE == GOAL_TYPE_DISTANCE_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_DISTANCE_CONSTANT) && STAGE_DISTANCE >= GOAL
+            end
+        
+        else when (GOAL_TYPE == GOAL_TYPE_CALORIES_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_CALORIES_CONSTANT) && STAGE_CALORIES >= GOAL
+            end
+            
+        else when (GOAL_TYPE == GOAL_TYPE_FLOORS_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_FLOORS_CONSTANT) && STAGE_FLOORS >= GOAL
+            end
+            
+        else when (GOAL_TYPE == GOAL_TYPE_ELEVATION_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_TIME_CONSTANT) && STAGE_ELEVATION >= GOAL
+            end
+            
+        else when (GOAL_TYPE == GOAL_TYPE_STEPS_STAGE_CONSTANT || GOAL_TYPE == GOAL_TYPE_STEPS_CONSTANT) && STAGE_STEPS>= GOAL
+            end
+            
+stage "cooldown"
+    interval
+        SPEED = min(0.6 * SPEED_IN, 6.43738)
+        INCLINE = 0
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = COOLDOWN_TIME_START
+
+        when STAGE_TIME_MS >= GOAL
+            end

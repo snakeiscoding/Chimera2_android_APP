@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout
+            style="@style/EngineeringPageGridLayout"
+            app:columnCount="2">
+
+            <CheckBox
+                android:id="@+id/eng_auto_update_time_enabled"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="@string/automatic_update_tc" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_auto_update_time"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_marginBottom="10dp"
+                app:input_type="time_clock"
+                app:picker_animation="@style/EngTimeUpdateDialogAnimation" />
+
+            <RelativeLayout
+                style="@style/engineering_transparent_line_break"
+                app:layout_columnSpan="2" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_columnWeight="1">
+
+                <Button
+                    android:id="@+id/eng_update_from_usb"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="280dp"
+                    android:text="@string/update_from_usb_tc" />
+
+                <ProgressBar
+                    android:id="@+id/check_updates_spinner_usb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/eng_update_from_usb"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_columnWeight="1">
+
+                <Button
+                    android:id="@+id/eng_update_from_ota"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_width="280dp"
+                    android:text="@string/check_for_updates_tc" />
+
+                <ProgressBar
+                    android:id="@+id/check_updates_spinner_ota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/eng_update_from_ota"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eng_nightly_updates_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1">
+
+                <TextView
+                    android:id="@+id/eng_nightly_updates_label"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:textAlignment="center"
+                    android:text="@string/nightly_dropdown_label_tc"
+                    android:textSize="20sp"
+                    android:clickable="false"
+                    android:layout_centerInParent="true"/>
+
+                <com.jht.androiduiwidgets.selector.OptionSelectorItem
+                    android:id="@+id/eng_nightly_updates_dropdown"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:text=""
+                    android:layout_alignEnd="@id/eng_nightly_updates_label"
+                    android:layout_marginTop="50dp"
+                    android:layout_alignStart="@id/eng_nightly_updates_label"
+                    app:option_popup_padding_start="20dp"
+                    app:option_popup_padding_top="50dp"
+                    app:option_popup_height="350dp"
+                    app:option_height="@dimen/user_text_info_text"
+                    app:option_popup_width="600dp"/>
+
+                <LinearLayout
+                    android:id="@+id/eng_disable_nightly_layout"
+                    android:layout_width="280dp"
+                    android:layout_alignTop="@id/eng_nightly_updates_dropdown"
+                    android:layout_alignEnd="@id/eng_nightly_updates_dropdown"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:background="@color/samantha_blue"
+                    android:orientation="horizontal"/>
+
+                <ProgressBar
+                    android:id="@+id/eng_nightly_updates_spinner"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignEnd="@id/eng_nightly_updates_dropdown"
+                    android:layout_alignTop="@id/eng_nightly_updates_label"
+                    android:clickable="false"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_columnSpan="2">
+
+                <TextView
+                    style="@style/GeneralEngineeringTextHeading"
+                    android:text="@string/available_updates_tc" />
+
+                <RelativeLayout
+                    style="@style/jht_standard_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/eng_available_updates"
+                        style="@style/jht_standard_inner_recycle_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF575E65"
+                        android:padding="0dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_columnSpan="2">
+
+                <TextView
+                    style="@style/GeneralEngineeringTextHeading"
+                    android:text="@string/packages_tc" />
+
+                <RelativeLayout
+                    style="@style/jht_standard_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/eng_update_packages"
+                        style="@style/jht_standard_inner_recycle_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF575E65"
+                        android:padding="0dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/featured_setup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/start_selector"
+        android:text="@string/quick_go_tc"
+        android:textColor="@android:color/white"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/go_button_scroll_bg"
+        app:layout_constraintDimensionRatio="H,4.42:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/go_button_scroll_bg"
+        app:layout_constraintWidth_percent="0.25"
+        tools:ignore="SpUsage" />
+
+    <ImageView
+        android:id="@+id/featured_setup_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/featured_setup_shield"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shield"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent=".583" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/go_button_scroll_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="5dp"
+        android:fadeScrollbars="false"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/featured_setup_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="featured Setup"
+                android:textColor="@android:color/white"
+                android:textSize="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/featured_setup_sub_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_marginEnd="15dp"
+                android:text="Paris"
+                android:textColor="#99FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_title"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_title"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/featured_setup_sub_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="Paris"
+                android:textColor="#99FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_title"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_sub_title"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/featured_setup_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="featured Setup"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_title"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_sub_title_2"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <com.jht.androiduiwidgets.pillbox.PillBox
+                android:id="@+id/featured_setup_value_selector_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintDimensionRatio="H, 2.8:1"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_title"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_description"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.jht.androiduiwidgets.pillbox.PillBox
+                android:id="@+id/featured_setup_value_selector_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="H, 2.8:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/featured_setup_value_selector_1"
+                app:layout_constraintTop_toTopOf="@id/featured_setup_value_selector_1"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.jht.androiduiwidgets.pillbox.PillBox
+                android:id="@+id/featured_setup_value_selector_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintDimensionRatio="H, 2.8:1"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_title"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_value_selector_1"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.jht.androiduiwidgets.pillbox.PillBox
+                android:id="@+id/featured_setup_value_selector_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintDimensionRatio="H, 2.8:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/featured_setup_value_selector_1"
+                app:layout_constraintTop_toBottomOf="@id/featured_setup_value_selector_1"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.45" />
+
+<!--        Layout is required to space correctly because ratios don't correctly work with biasing-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/migros_button_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/featured_setup_value_selector_4"
+                app:layout_constraintEnd_toEndOf="@id/featured_setup_value_selector_4"
+                app:layout_constraintTop_toTopOf="@id/featured_setup_value_selector_4"
+                app:layout_constraintBottom_toBottomOf="@id/featured_setup_value_selector_4"
+                app:layout_constraintWidth_percent="0.45"
+                app:layout_constraintVertical_bias="0.1">
+
+                <com.jht.chimera.ui.mainapp.goscreen.MigrosLevelRadioButton
+                    android:id="@+id/migros_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <com.jht.chimera.ui.mainapp.goscreen.WorkoutFeatured.BottomCropImageView
+        android:id="@+id/go_button_scroll_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/featured_setup_shield"
+        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintStart_toStartOf="@id/featured_setup_shield"
+        app:srcCompat="@drawable/shield_gray" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

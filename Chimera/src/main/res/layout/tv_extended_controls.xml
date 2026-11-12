@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="#16FFFFFF"
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    tools:ignore="RtlHardcoded">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_expanded_upper_left"
+        style="@style/tv_remote_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu_black_80dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_expanded_upper_left_2"
+        style="@style/tv_remote_button"
+        app:layout_constraintLeft_toRightOf="@id/eng_tv_control_expanded_upper_left"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_tv_icon_guide" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_up"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_arrow_upward_black_80dp" />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_expanded_upper_right"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        app:layout_constraintLeft_toRightOf="@id/eng_tv_control_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_80dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_left"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        app:layout_constraintLeft_toRightOf="@id/eng_tv_control_expanded_upper_left"
+        app:layout_constraintTop_toTopOf="@id/eng_tv_control_confirm"
+        app:srcCompat="@drawable/ic_arrow_left_black_80dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_confirm"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/ic_check_green_80dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_right"
+        style="@style/tv_remote_button"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toRightOf="@id/eng_tv_control_confirm"
+        app:layout_constraintTop_toBottomOf="@id/eng_tv_control_up"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/ic_arrow_right_black_80dp" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_expanded_bottom_left"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eng_tv_control_left"
+        app:srcCompat="@drawable/ic_icon_info_available_black" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_down"
+        style="@style/tv_remote_button"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eng_tv_control_right"
+        app:srcCompat="@drawable/ic_arrow_down_black_80dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/eng_tv_control_expanded_bottom_right"
+        style="@style/tv_remote_button"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eng_tv_control_right"
+        app:srcCompat="@drawable/ic_icon_cc" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

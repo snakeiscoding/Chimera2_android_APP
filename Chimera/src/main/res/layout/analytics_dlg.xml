@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageBoxMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33FFFFFF"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/analytics_tc"
+            android:textColor="@android:color/black"
+            android:textSize="30dp" />
+
+        <com.jht.chimera.lib.widget.selectron.SelectronButton
+            android:id="@+id/messageBoxCloseImageButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:drawableBackground="#e6e6e6"
+            app:drawableIcon="@drawable/ic_close_white"
+            app:drawableIconTint="#000000"
+            app:iconHeight="60dp"
+            app:iconWidth="60dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        style="@style/jht_standard_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:3.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/file_selector"
+            style="@style/jht_standard_inner_recycle_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF575E65" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FF1A1A1A"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout">
+
+        <TextView
+            android:id="@+id/messageBoxInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

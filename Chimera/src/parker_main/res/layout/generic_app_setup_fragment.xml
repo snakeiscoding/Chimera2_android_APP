@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline_start"
+        android:background="@drawable/button_gradient_setting"/>
+
+    <ImageView
+        android:id="@+id/setup_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="50dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/setup_shield"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/setup_shield"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent=".583"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/setup_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:paddingBottom="10dp"
+        android:text="Setup"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintBottom_toBottomOf="@id/setup_shield"
+        app:layout_constraintStart_toStartOf="@id/vertical_guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/start_button"
+        app:layout_constraintTop_toTopOf="@id/setup_shield"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/setup_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:paddingBottom="30dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintVertical_bias="0.14"
+        app:layout_constraintStart_toStartOf="@id/setup_title"
+        app:layout_constraintEnd_toEndOf="@id/start_button"
+        app:layout_constraintTop_toBottomOf="@id/setup_title"
+        app:layout_constraintBottom_toTopOf="@id/setup_value_selector_1"
+        tools:ignore="HardcodedText,SpUsage" />
+
+   <com.jht.androiduiwidgets.pillbox.PillBox
+       android:id="@+id/setup_value_selector_1"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintDimensionRatio="H, 2.8:1"
+       app:layout_constraintStart_toStartOf="@id/setup_title"
+       app:layout_constraintTop_toBottomOf="@id/setup_description"
+       app:layout_constraintWidth_percent=".209"
+       app:layout_constraintWidth_default="percent"
+       app:layout_constraintBottom_toTopOf="@id/setup_value_selector_3"/>
+
+
+   <com.jht.androiduiwidgets.pillbox.PillBox
+       android:id="@+id/setup_value_selector_2"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintDimensionRatio="H, 2.8:1"
+       app:layout_constraintStart_toEndOf="@id/setup_value_selector_1"
+       app:layout_constraintTop_toTopOf="@id/setup_value_selector_1"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintWidth_percent=".209"
+       app:layout_constraintWidth_default="percent"/>
+
+   <com.jht.androiduiwidgets.pillbox.PillBox
+       android:id="@+id/setup_value_selector_3"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintDimensionRatio="H, 2.8:1"
+       app:layout_constraintStart_toStartOf="@id/setup_title"
+       app:layout_constraintTop_toBottomOf="@id/setup_value_selector_1"
+       app:layout_constraintEnd_toEndOf="@id/setup_value_selector_1"
+       app:layout_constraintBottom_toTopOf="@id/start_button"
+    />
+
+
+    <com.jht.androiduiwidgets.pillbox.PillBox
+        android:id="@+id/setup_value_selector_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H, 2.8:1"
+        app:layout_constraintStart_toStartOf="@id/setup_value_selector_2"
+        app:layout_constraintTop_toBottomOf="@id/setup_value_selector_1"
+        app:layout_constraintEnd_toEndOf="@id/setup_value_selector_2"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
+        />
+
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/start_selector"
+        android:text="@string/quick_go_tc"
+        android:textColor="@android:color/white"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,4.42:1"
+        app:layout_constraintEnd_toEndOf="@id/setup_value_selector_2"
+        app:layout_constraintStart_toStartOf="@id/setup_value_selector_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".945"
+        tools:ignore="SpUsage" />
+
+    <CheckBox
+        android:id="@+id/favorite"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

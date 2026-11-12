@@ -1,0 +1,80 @@
+settings
+    workout_id = 45
+    allow_skip_warmup = 0
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+input TIME_GOAL_START
+input AGE
+input PERCENT_MAX_HEART_RATE
+input HEART_RATE
+input INCLINE_IN
+input COOLDOWN_TIME_START
+input GOAL
+input MAXIMUM_INCLINE
+
+export INCLINE
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export HEART_RATE_WARNING
+export PREVENT_USER_GOAL_CHANGES
+
+HEART_RATE_WARNING = 0
+maxHR = (211 - 0.64 * AGE)
+
+when HEART_RATE <= 0 for 60000
+    HEART_RATE_WARNING = 1
+    
+when HEART_RATE > 0
+    HEART_RATE_WARNING = 0
+
+when HEART_RATE_WARNING == 1
+    RESISTANCE = max(RESISTANCE_IN - 1, 0)
+    wait 10000
+    
+when HEART_RATE > maxHR
+    end
+    
+stage "warmup"
+    interval
+        INCLINE = 0
+        RESISTANCE = 1
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = 120000
+        PREVENT_USER_GOAL_CHANGES = 1
+        
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+
+stage "workout"
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = TIME_GOAL_START
+        PREVENT_USER_GOAL_CHANGES = 0
+        
+        when HEART_RATE > 0
+            averageHR = average HEART_RATE for 5000
+            wait 5000 // Always wait 5 seconds to read HR before using
+            targetHr = floor(PERCENT_MAX_HEART_RATE / 100 * maxHR)
+            if averageHR >= targetHr + 5
+                // If over target by 5 or more lower every 5 seconds
+                INCLINE = max(INCLINE_IN - 5, 0)
+            else if HEART_RATE > 0 && averageHR <= targetHr - 5
+                // If 5 or more under target raise every 10 seconds
+                INCLINE = min(INCLINE_IN + 5, MAXIMUM_INCLINE)
+            
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+            
+stage "cooldown"
+    interval
+        GOAL = COOLDOWN_TIME_START
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+
+        RESISTANCE = 1
+        INCLINE = 0
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end

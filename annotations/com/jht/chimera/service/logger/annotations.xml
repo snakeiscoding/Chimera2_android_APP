@@ -1,0 +1,18 @@
+<root>
+    <item name='com.jht.chimera.service.logger.LoggerDBOpener'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.service.logger.LoggerDataSource void addServiceLog(com.jht.chimera.lib.common.log.ServiceLog)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.service.logger.LoggerService'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

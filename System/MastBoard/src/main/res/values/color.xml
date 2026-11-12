@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="p1_basic_led_1">#ff0000ff</color>
+    <color name="p1_basic_led_2">#ffffff00</color>
+    <color name="p1_basic_led_3">#ff00ff00</color>
+    <color name="p1_basic_led_4">#ffff0000</color>
+    <color name="p1_basic_led_5">#FFFFFFFF</color>
+
+    <color name="p1_speed_led_1">#D9594D</color>
+    <color name="p1_speed_led_2">#ECAD5F</color>
+    <color name="p1_speed_led_3">#F4E262</color>
+    <color name="p1_speed_led_4">#B5F06A</color>
+    <color name="p1_speed_led_5">#5EE96A</color>
+
+
+</resources>

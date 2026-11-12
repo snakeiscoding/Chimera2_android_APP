@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/calendar_workout_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4c4c4c"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="April 3 2020&#xA;12:00 AM"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/workout_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sprint 8 or whatever"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B5B5"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#313131"
+        android:padding="@dimen/calendar_workout_margin"
+        >
+
+        <!-- Hardcode into GridLayout / TableLayout or recycler with google FlexboxLayout ? -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/calendar_workout_margin"
+            >
+            <TableRow>
+                <TextView
+                    android:id="@+id/stat_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="00:30:00"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_time_total_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/stat_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="10.2"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_distance_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/stat_calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="410"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_calories_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/stat_pace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="12:00"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_pace_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/stat_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="4.5"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_speed_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/stat_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="145"
+                    android:textSize="18dp"
+                    android:textColor="@color/calendar_workout_stat_text"
+                    android:maxLines="1"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_heart_white"
+                    android:drawableTint="@color/calendar_workout_stat_icon"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/button_doit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/start_workout_tc"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="#3f9c47"
+            />
+    </LinearLayout>
+
+</LinearLayout>

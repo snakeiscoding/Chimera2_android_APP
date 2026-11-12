@@ -1,0 +1,13 @@
+# Title: Summary, imperative, start upper case, don't end with a period
+# EX: JRA-34 Fixed the Issue
+# No more than 50 chars. #### 50 chars is here: #
+
+# Remember blank line between title and body do not write in line below.
+
+# Body: Explain *what* and *why* (not *how*). Include task ID (Jira issue)
+# Our Account Allows for Smart Commits 
+# https://confluence.atlassian.com/fisheye/using-smart-commits-960155400.html
+# Wrap at 72 chars. ################################## which is here: #
+
+
+

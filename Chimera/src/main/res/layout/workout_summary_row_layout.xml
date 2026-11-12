@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/workoutSummaryTableRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/summaryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+
+        <!-- Use a fixed width for the first column to ensure all subsequent columns align -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summaryRowLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="start|center_vertical"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:maxLines="2"/>
+
+        <include layout="@layout/workout_summary_row_divider"/>
+
+        <TextView
+            style="@style/workoutSummaryTableStatValueCell"
+            android:id="@+id/summaryRowWarmup"/>
+
+        <include layout="@layout/workout_summary_row_divider"/>
+
+        <TextView
+            style="@style/workoutSummaryTableStatValueCell"
+            android:id="@+id/summaryRowWorkout" />
+
+        <include layout="@layout/workout_summary_row_divider"/>
+
+        <TextView
+            style="@style/workoutSummaryTableStatValueCell"
+            android:id="@+id/summaryRowCooldown" />
+
+        <include layout="@layout/workout_summary_row_divider"/>
+
+        <TextView
+            style="@style/workoutSummaryTableStatValueCell"
+            android:id="@+id/summaryRowTotal"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:text=""
+            android:background="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

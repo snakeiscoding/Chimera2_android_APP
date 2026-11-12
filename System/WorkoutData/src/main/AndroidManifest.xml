@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Signature-level write permission: granted only to APKs signed with the same
+      key (first-party console apps). Reads are intentionally left open.
+    -->
+    <permission
+        android:name="com.jht.workoutdata.permission.WRITE"
+        android:protectionLevel="signature" />
+
+    <application>
+        <!--
+          exported=true so other APKs can read. Reads (query/Cursor) are open to
+          any app. android:writePermission guards the unused insert/update/delete
+          mutators; the real write path (call: addPoint/clear) is enforced in code
+          inside WorkoutContentProvider.call(), since the framework does not apply
+          writePermission to call().
+        -->
+        <provider
+            android:name="com.jht.workoutdata.provider.WorkoutContentProvider"
+            android:authorities="com.jht.workoutdata.provider"
+            android:exported="true"
+            android:writePermission="com.jht.workoutdata.permission.WRITE" />
+    </application>
+
+</manifest>

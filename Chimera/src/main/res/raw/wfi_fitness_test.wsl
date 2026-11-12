@@ -1,0 +1,106 @@
+settings
+    workout_id = 52
+    allow_skip_warmup = 0
+    graph_future = 0
+    allow_skip_workout = 0
+    allow_user_goal_changes = 0
+
+input GOAL
+input COOLDOWN_TIME_START
+input AGE
+input RESISTANCE_IN
+input HEIGHT
+input HEART_RATE
+
+export RESISTANCE
+export GOAL_TYPE
+export GOAL
+export INTERVAL_GOAL_REMAINING
+export TEST_SCORE
+export ALLOW_PAUSE
+export VO2
+export PREVENT_USER_CHANGES
+export PREVENT_USER_GOAL_CHANGES
+export MAX_HEART_RATE
+
+RESISTANCE_LEVELS = [7, 10, 12, 13, 15, 16, 18, 20, 21, 22, 24, 26, 27, 29]
+MAX_HEART_RATE = (208 - (0.7 * AGE)) * 0.85
+
+stage warmup
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    GOAL = 120000
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    
+    interval
+        RESISTANCE = 5 // Corresponds to correct warmup spm
+        
+        when INTERVAL_TIME_MS >= GOAL
+            interval = interval + 1
+    
+
+stage workout
+    ALLOW_PAUSE = 0
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    GOAL = 60000 * 14
+    avgHeartRate = average HEART_RATE for 60000 // Average the heart rate for the each interval
+    lastHr = 0
+    
+    // Scores:
+    // 0 = Success
+    // 1 = HR too low
+    // 2 = No HR increase
+    // 3 = Test stopped
+    // 4 = No HR found
+    
+    tempScore = 3
+    
+    setIntervals RESISTANCE = RESISTANCE_LEVELS
+    
+    when INTERVAL_TIME_MS >= 60000
+        if interval == 13 // If this is the last interval the heart rate has not increased enough
+            tempScore = 1
+            end
+        if lastHr >= avgHeartRate
+            tempScore = 2 // HR did not increase
+            end
+        else
+            lastHr = avgHeartRate
+        avgHeartRate = average HEART_RATE for 60000 
+        interval = interval + 1
+        // Average the heart rate for the each interval
+        
+    when HEART_RATE > MAX_HEART_RATE for 15000
+        tempScore = 0
+        workoutTime = STAGE_TIME_MS
+        stage = stage + 1
+        
+    when HEART_RATE == 0 for 5000
+        tempScore = 4
+        end
+        
+    
+stage cooldown
+    ALLOW_PAUSE = 1
+    PREVENT_USER_GOAL_CHANGES = 1
+    PREVENT_USER_CHANGES = 1
+    
+    interval
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = 120000
+        RESISTANCE = 4
+        
+        when INTERVAL_TIME_MS >= GOAL
+            end
+
+onStop
+    TEST_SCORE = tempScore
+    if (tempScore == 0)
+        bmi = WEIGHT / pow(HEIGHT / 100, 2)
+        VO2 = 57.774 + (1.757 * (workoutTime / 1000 / 60)) - (0.904 * bmi)
+    else
+        VO2 = 0
+

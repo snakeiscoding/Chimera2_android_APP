@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/eng_cab_channel"
+        style="@style/GeneralEditTextStringCapsItemEngineering"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center" />
+
+    <com.jht.androiduiwidgets.selector.OptionSelectorItem
+        style="@style/GeneralEngineeringOptionItemSelector"
+        android:id="@+id/eng_cab_source"
+        android:layout_width="100dp"
+        app:option_popup_width="200dp"/>
+
+    <com.jht.androiduiwidgets.edittext.UserTextInput
+        android:id="@+id/eng_cab_name"
+        style="@style/GeneralEditTextStringCapsItemEngineering"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        app:auto_correct="true"
+        app:max_chars="@integer/max_serial_number_chars" />
+
+    <CheckBox
+        android:id="@+id/eng_cab_enable"
+        style="@style/GeneralEngineeringItemCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/eng_cab_default"
+        style="@style/GeneralEngineeringItemCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/iptv_channel_delete_width"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/cab_deleteChannel"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:background="@drawable/channel_delete_button"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/delete_tc"
+                android:src="@drawable/tv_x" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

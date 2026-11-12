@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EngineeringPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        style="@style/jht_standard_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/analytics_table"
+            style="@style/jht_standard_inner_recycle_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#26FFFFFF" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:text="@string/reset_tc" />
+
+        <Button
+            android:id="@+id/reset_ptp_button"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:text="@string/reset_tc"
+            android:layout_marginStart="20dp"/>
+
+        <RadioButton
+            android:id="@+id/lcb_communication_analytics_button"
+            style="@style/GeneralRadioButton"
+            android:layout_width="wrap_content"
+            android:checked="false"
+            android:layout_height="wrap_content"
+            android:text="LCB Stats"
+            android:paddingLeft="20dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

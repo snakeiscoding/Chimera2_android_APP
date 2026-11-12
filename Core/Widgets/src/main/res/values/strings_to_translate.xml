@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connect_watch_phone_apple_tc">Connect to your Apple Watch / iPhone</string>
+    <string name="connect_watch_phone_apple_pg">Hold Apple Watch or iPhone near the reader to connect.</string>
+    <string name="apple2_help_note_pg">And if AirPods Pro 3 or a 3rd party Heart Rate Sensor is paired with your iPhone you will get heart rate data synced with your workout.</string>
+
+    <string name="apple2_help_pg">Hold your Apple Watch or iPhone near the reader and tap to confirm the connection on your device to automatically connect to this machine.</string>
+    <!-- for now use full translations instead of prepositional field insertion -->
+    <string name="apple2_help_top_right_pg">Hold your Apple Watch or iPhone near the reader to the top right and tap to confirm the connection on your device to automatically connect to this machine.</string>
+    <string name="apple2_help_bottom_left_pg">Hold your Apple Watch or iPhone near the reader to the bottom left and tap to confirm the connection on your device to automatically connect to this machine.</string>
+    <string name="apple2_help_bottom_center_pg">Hold your Apple Watch or iPhone near the reader to the bottom center and tap to confirm the connection on your device to automatically connect to this machine.</string>
+
+    <!-- stride length additions -->
+    <string name="stride_length_tc">Stride Length</string>
+    <string name="average_stride_length_tc">Average Stride Length</string>
+    <string name="average_spm_tc">Average SPM</string>
+
+    <!-- Cadence modal additions (moved from UI/TrackApp and UI/Sprint8 local files) -->
+    <string name="cadence_tc">Cadence</string>
+    <string name="lap_tc">Lap</string>
+    <string name="current_cadence_tc">Current Cadence</string>
+
+</resources>

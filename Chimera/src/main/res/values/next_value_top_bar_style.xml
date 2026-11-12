@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="top_bar_background">
+        <item name="android:background">#FFAAAAAA</item>
+    </style>
+
+    <style name="left_right_background">
+        <item name="android:background">#FFDDDDDD</item>
+    </style>
+
+    <style name="left_right_value_text">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="left_right_unit_text">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="next_increment_label_text">
+        <item name="android:textColor">#FF808080</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="countdown_label_text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

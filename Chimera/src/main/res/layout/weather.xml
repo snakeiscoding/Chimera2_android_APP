@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/weather_settings_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_weather_default_city"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:label="@string/default_city_tc"
+                app:read_only="true" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_weather_default_city_lat"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:label="@string/latitude_tc"
+                app:read_only="true" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_weather_default_city_long"
+                style="@style/GeneralEditTextStringEngineering"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:label="@string/longitude_tc"
+                app:read_only="true" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

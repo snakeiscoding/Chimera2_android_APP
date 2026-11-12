@@ -1,0 +1,5 @@
+<root>
+    <item name='org.w3c.dom.NamedNodeMap org.w3c.dom.Node getNamedItem(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/activity_network_setup"
+              android:orientation="vertical"
+              android:layout_width="272dp"
+              android:layout_height="400dp">
+
+    <ScrollView
+        android:layout_width="272dp"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutIndoorCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/position_sensor_tc"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="32dp"
+                        app:autoSizeTextType="uniform" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/white"/>
+
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="@string/position_sensor_tc"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:id="@+id/textViewPositionSensor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="@string/resistance_level_tc"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:id="@+id/textViewResistanceLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="@string/calibration_min_tc"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:id="@+id/textViewICCalibrationMinPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"
+                            tools:ignore="HardcodedText" />
+                        <View android:layout_width="0dp"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="@string/calibration_max_tc"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"/>
+                        <TextView
+                            android:id="@+id/textViewICCalibrationMaxPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="20dp"
+                            tools:ignore="HardcodedText" />
+                        <View android:layout_width="0dp"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/buttonICSetPositionCalibrationMin"
+                        style="@style/SettingsButton2"
+                        android:layout_width="match_parent"
+                        android:clickable="false"
+                        android:text="@string/update_position_sensor_calibration_min_tc"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/buttonICSetPositionCalibrationMax"
+                        style="@style/SettingsButton2"
+                        android:layout_width="match_parent"
+                        android:clickable="false"
+                        android:text="@string/update_position_sensor_calibration_max_tc"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/torque_sensor_tc"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="32dp"
+                        android:maxLines="1"
+                        app:autoSizeTextType="uniform"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/white"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/torque_tc"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:maxLines="1"
+                            app:autoSizeTextType="uniform"
+                            />
+
+                        <TextView
+                            android:id="@+id/activeTorqueValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:text="---"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:layout_weight="1"
+                            app:autoSizeTextType="uniform"
+
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonICSetTorqueCalibration"
+                        style="@style/SettingsButton2"
+                        android:layout_width="match_parent"
+                        android:text="@string/zero_tare_torque_sensor_tc"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/buttonICSpinDownTest"
+                    android:layout_width="match_parent"
+                    style="@style/SettingsButton2"
+                    android:textAllCaps="false"
+                    android:text="@string/spin_down_test_tc"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/raptorString"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SettingsLabel"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <TableLayout
+                android:id="@+id/calibrationDataTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

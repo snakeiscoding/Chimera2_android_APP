@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_debug"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Spinner
+            android:id="@+id/spinner_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:spinnerMode="dropdown"/>
+
+        <Button
+            android:id="@+id/button_set_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Frame"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/text_lcb_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_frame_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_machine_setup_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff0000"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_demo_mode_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DemoMode on"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <Button
+            android:id="@+id/button_demo_mode_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DemoMode off"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/text_demo_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_adb_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adb wifi"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/text_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Speed"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_speed"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="20"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_speed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_incline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Incline"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_incline"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_incline"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_resistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Resistance"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_resistance"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="30"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_resistance"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_rpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Demo RPM"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_rpm"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="200"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_rpm"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_demo_hr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Demo HR"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_hr"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="220"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_hr"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_workout_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Demo Workout Speed"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_workout_speed"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:min="1"
+            android:max="30"/>
+
+        <TextView
+            android:id="@+id/text_seekbar_workout_speed"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

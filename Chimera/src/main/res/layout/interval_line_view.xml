@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_margin="1dp"
+    >
+
+    <TextView
+        android:contentDescription="splitNumberTextView"
+        android:id="@+id/splitNumberTextView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:lines="1"
+        android:gravity="bottom|left"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:autoSizeMaxTextSize="24dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:contentDescription="splitTime"
+        android:id="@+id/splitTimeTextView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:lines="1"
+        android:layout_weight="1"
+        android:gravity="bottom|right"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="5dp"
+        android:autoSizeMaxTextSize="30dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:contentDescription="splitDistance"
+        android:id="@+id/splitDistanceTextView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:lines="1"
+        android:gravity="bottom|right"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="5dp"
+        android:autoSizeMaxTextSize="30dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:contentDescription="splitType"
+        android:id="@+id/splitTypeTextView"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:lines="1"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="4dp"
+        android:autoSizeMaxTextSize="15dp"
+        android:autoSizeTextType="uniform"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

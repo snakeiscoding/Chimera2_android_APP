@@ -1,0 +1,81 @@
+settings
+    workout_id = 59
+    allow_skip_warmup = 1
+    allow_skip_workout = 1
+    graph_future = 0
+    allow_user_goal_changes = 0
+
+input LEVEL
+// Values for the hi low targets
+input MIN_TARGET_WATTS
+input MAX_TARGET_WATTS
+input TARGET_WATTS
+input WATTS
+input RESISTANCE_IN
+
+export TARGET_WATTS
+export RESISTANCE
+export GOAL
+export GOAL_TYPE
+export PREVENT_USER_GOAL_CHANGES
+
+TIME_BEGINNER = [4, 12]
+TIME_ADVANCED = [4, 22]
+
+// Will keep WATTS close to TARGET_WATTS
+when TARGET_WATTS - 50 >= WATTS
+    RESISTANCE = RESISTANCE_IN + 3
+    wait 2000
+else when TARGET_WATTS - 50 < WATTS && TARGET_WATTS - 30 >= WATTS
+    RESISTANCE = RESISTANCE_IN + 2
+    wait 2000
+else when TARGET_WATTS - 30 < WATTS && TARGET_WATTS - 10 >= WATTS
+    RESISTANCE = RESISTANCE_IN + 1
+    wait 2000
+else when TARGET_WATTS + 10 <= WATTS && TARGET_WATTS + 30 >= WATTS
+    RESISTANCE = RESISTANCE_IN - 1
+    wait 2000
+else when TARGET_WATTS + 30 < WATTS && TARGET_WATTS + 50 >= WATTS
+    RESISTANCE = RESISTANCE_IN - 2
+    wait 2000
+else when TARGET_WATTS + 50 <= WATTS
+    RESISTANCE = RESISTANCE_IN - 3
+    wait 2000
+
+intervalDuration = 4
+
+stage "workout"
+    PREVENT_USER_GOAL_CHANGES = 1
+    GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+    
+    currentIntervalType = 0
+    TARGET_WATTS = MIN_TARGET_WATTS
+    when INTERVAL_TIME_MS >= intervalDuration * 60000
+        // Switching interval, alternate between low and high
+        if (currentIntervalType == 0)
+            currentIntervalType = 1
+            TARGET_WATTS = MAX_TARGET_WATTS
+        else
+            currentIntervalType = 0
+            TARGET_WATTS = MIN_TARGET_WATTS
+            
+        interval = interval + 1
+    
+    
+    level "beginner"
+        GOAL = 16 * 60 * 1000 // There are 16 minutes of intervals
+        setIntervals intervalDuration = TIME_BEGINNER
+    
+    level "advanced"
+        GOAL = 26 * 60 * 1000 // There are 26 minutes of intervals
+        setIntervals intervalDuration = TIME_ADVANCED
+        
+
+stage "cooldown"
+    interval
+        TARGET_WATTS = MIN_TARGET_WATTS
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        GOAL = 4 * 60 * 1000
+
+        when INTERVAL_TIME_MS >= GOAL
+            end

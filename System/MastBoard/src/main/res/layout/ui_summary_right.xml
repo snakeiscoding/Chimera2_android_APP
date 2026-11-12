@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ui_summary_right"
+    android:layout_width="240dp"
+    android:layout_height="320dp"
+    android:background="@drawable/lcd_gray_box_border">
+
+    <com.jht.chimera.lib.widget.streamingimageview.StreamingImageView
+        android:id="@+id/calorieFlameImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valueSummary"
+        android:layout_marginBottom="120dp"
+        app:baseFilename="fire_"
+        app:basePath="fire"
+        app:fileExtension=".png"
+        app:endIndex="49"
+        app:fps="20"
+        app:frameIdFieldWidth="2"
+        app:speed="1.0"
+        app:startIndex="1"
+        app:useFileCache="true"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_calories_tc"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal"
+        android:textAlignment="gravity"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@id/valueSummary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/valueSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

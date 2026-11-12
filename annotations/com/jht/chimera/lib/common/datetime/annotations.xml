@@ -1,0 +1,8 @@
+<root>
+    <item
+        name='com.jht.chimera.lib.common.datetime.DateTimeUtil void setDateFormat(com.jht.chimera.lib.common.i18n.DateFormat)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

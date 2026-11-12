@@ -1,0 +1,43 @@
+<root>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueDouble(java.lang.String, double) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings double getValueDouble(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueFloat(java.lang.String, float) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings float getValueFloat(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueString(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueString(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings double getValueString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueLong(java.lang.String, long) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings long getValueLong(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueInt(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings int getValueInt(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings void putValueBoolean(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='com.jht.datamatrixservice.IGlobalSettings boolean getValueBoolean(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+
+
+</root>

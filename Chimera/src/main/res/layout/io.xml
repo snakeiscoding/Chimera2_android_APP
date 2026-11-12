@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hardware_main_container"
+    tools:ignore="HardcodedText"
+    style="@style/EngineeringPage">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout style="@style/EngineeringPageGridLayout">
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_io_fan_level"
+                style="@style/GeneralEditTextIntEngineering"
+                android:imeOptions="actionDone"
+                app:label="Fan Level"
+                app:max_value="100"
+                app:min_value="10" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_io_fan_rpm"
+                style="@style/GeneralEditTextStringEngineering"
+                app:label="Fan Rpm"
+                app:read_only="true" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_columnSpan="@integer/eng_cols_per_page">
+
+                <Button
+                    android:id="@+id/eng_clear_io_fan_speed"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_centerInParent="true"
+                    android:layout_width="200dp"
+                    android:text="Clear Fan Level"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+            style="@style/engineering_line_break"
+            app:layout_columnSpan="@integer/eng_cols_per_page" />
+
+<!--            <com.jht.androiduiwidgets.edittext.UserTextInput-->
+<!--                android:id="@+id/eng_io_console_power"-->
+<!--                style="@style/GeneralEditTextStringEngineering"-->
+<!--                app:label="Console Power"-->
+<!--                app:read_only="true" />-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/GeneralEngineeringTextHeading"
+                    android:text="Console Power" />
+
+                <TextView
+                    android:id="@+id/eng_io_console_power"
+                    style="@style/GeneralEngineeringTextValue"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/GeneralEngineeringTextHeading"
+                    android:text="Extend Power" />
+
+                <TextView
+                    android:id="@+id/eng_io_extend_power"
+                    style="@style/GeneralEngineeringTextValue"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_columnWeight="1">
+
+                <TextView
+                    style="@style/GeneralEngineeringTextHeading"
+                    android:text="USB Power" />
+
+                <TextView
+                    android:id="@+id/eng_io_usb_power"
+                    style="@style/GeneralEngineeringTextValue"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_columnSpan="@integer/eng_cols_per_page">
+
+                <Button
+                    android:id="@+id/eng_io_power_monitor"
+                    style="@style/GeneralEngineeringButton"
+                    android:layout_centerInParent="true"
+                    android:layout_width="200dp"
+                    android:text="POWER MONITOR" />
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/eng_io_extend_power_switch"
+                style="@style/GeneralEngineeringCheckBox"
+                android:text="Use Extend Power" />
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="@integer/eng_cols_per_page" />
+
+            <com.jht.androiduiwidgets.edittext.UserTextInput
+                android:id="@+id/eng_io_watchdog_reboot"
+                style="@style/GeneralEditTextStringEngineering"
+                app:label="Watch Dog Reboot"
+                app:read_only="true" />
+
+
+            <RelativeLayout
+                style="@style/engineering_line_break"
+                app:layout_columnSpan="@integer/eng_cols_per_page" />
+
+            <androidx.gridlayout.widget.GridLayout
+                style="@style/EngineeringPageGridLayout"
+                app:columnCount="2"
+                app:layout_columnSpan="3">
+
+                <com.jht.androiduiwidgets.edittext.UserTextInput
+                    android:id="@+id/eng_hardware_cab_test_title"
+                    style="@style/GeneralEditTextStringEngineering"
+                    app:label="CAB Test"
+                    app:read_only="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_columnSpan="2">
+
+                    <Button
+                        android:id="@+id/eng_hardware_cab_test"
+                        style="@style/GeneralEngineeringButton"
+                        android:layout_width="200dp"
+                        android:text="@string/cab_test_tc" />
+                </RelativeLayout>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

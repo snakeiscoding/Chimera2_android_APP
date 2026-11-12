@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="0dp"
+    android:paddingEnd="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eng_network_setup_wireless_selection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/eng_network_setup_network_settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45">
+
+        <TextView
+            android:id="@+id/eng_network_settings_wireless_heading"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/available_networks_tc"
+            app:layout_constraintBottom_toTopOf="@id/eng_network_wireless_selection_outer_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/eng_network_wireless_selection_outer_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintHeight_default="spread"
+            app:layout_constraintBottom_toTopOf="@id/eng_import_wifi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eng_network_settings_wireless_heading">
+            <RelativeLayout
+                android:id="@+id/eng_network_wireless_selection_container"
+                style="@style/jht_standard_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_default="wrap"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/eng_network_wireless_selection"
+                    style="@style/jht_standard_inner_recycle_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF575E65" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/eng_import_wifi"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/import_wifi_settings_tc"
+            app:layout_constraintBottom_toTopOf="@id/eng_export_wifi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/eng_export_wifi"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:text="@string/export_wifi_settings_to_disk_tc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eng_network_setup_network_settings"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.55">
+
+        <TextView
+            android:id="@+id/eng_network_settings_ip_headings"
+            style="@style/GeneralEngineeringTextHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/network_setup_tc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/eng_network_settings_wifi_advanced"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eng_network_settings_ip_headings">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/network_settings_values"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF718395"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/eng_network_settings_wifi_advanced"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/advanced_wifi_settings_tc"
+            app:layout_constraintBottom_toTopOf="@id/eng_network_settings_eth_advanced"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/eng_network_settings_eth_advanced"
+            android:visibility="gone"
+            style="@style/GeneralEngineeringButton"
+            android:layout_width="300dp"
+            android:text="@string/advanced_ethernet_settings_tc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

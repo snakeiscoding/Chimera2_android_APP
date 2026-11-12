@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/EngineeringPage"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/eng_automatic_date_time"
+        style="@style/GeneralEngineeringCheckBox"
+        android:layout_width="wrap_content"
+        android:text="@string/automatic_date_and_time_tc" />
+
+    <RelativeLayout style="@style/engineering_line_break" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.jht.androiduiwidgets.edittext.UserTextInput
+            android:id="@+id/engineering_date_time_date"
+            style="@style/GeneralEditTextStringEngineering"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            app:input_type="date"
+            app:label="@string/date_tc"
+            app:picker_animation="@style/EngDateDialogAnimation" />
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/eng_date_format"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_weight="1"
+            app:label="@string/dateformat_tc"
+            app:option_popup_width="400dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout style="@style/engineering_line_break" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.jht.androiduiwidgets.edittext.UserTextInput
+            android:id="@+id/eng_current_system_time"
+            style="@style/GeneralEditTextStringEngineering"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            app:input_type="time_clock"
+            app:label="@string/time_tc"
+            app:picker_animation="@style/EngTimeDialogAnimation" />
+
+
+        <com.jht.chimera.lib.widget.radiogroup.RadioGroup
+            android:id="@+id/eng_time_format_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:label="@string/time_format_tc"
+            app:layout_columnWeight="1" />
+
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/eng_time_zone"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_weight="1"
+            app:label="@string/time_zone_tc"
+            app:option_options="@array/timezoneDisplay"
+            app:option_popup_height="@dimen/option_selector_height"
+            app:option_popup_width="500dp" />
+    </LinearLayout>
+
+    <RelativeLayout style="@style/engineering_line_break" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.jht.androiduiwidgets.selector.OptionSelectorItem
+            android:id="@+id/eng_language_select"
+            style="@style/GeneralEngineeringOptionSelector"
+            android:layout_weight="1"
+            app:label="@string/select_language_tc"
+            app:option_popup_height="@dimen/option_selector_height"
+            app:option_popup_width="500dp" />
+
+
+        <com.jht.chimera.lib.widget.radiogroup.RadioGroup
+            android:id="@+id/eng_default_units"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:label="@string/units_tc"
+            app:layout_columnWeight="2" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

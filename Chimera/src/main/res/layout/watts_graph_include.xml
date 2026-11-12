@@ -1,0 +1,142 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:background="#aa000000"
+            />
+
+        <com.jht.chimera.lib.widget.athena.WattsGraph
+            android:id="@+id/wattsGraph"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.274" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|right"
+
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="122dp"
+        android:textStyle="bold"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="122dp"
+
+        app:layout_constraintHeight_percent="0.1998"
+        app:layout_constraintHorizontal_bias=".14"
+        app:layout_constraintVertical_bias=".99"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/timeLabel"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeLabel"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:gravity="center|left"
+
+        android:lines="2"
+        android:minLines="2"
+        android:maxLines="2"
+        android:text="@string/time_remaining_uc"
+
+        android:textAllCaps="true"
+        android:textColor="#B8B8B8"
+        android:textSize="50dp"
+        android:lineSpacingMultiplier=".83"
+        android:lineSpacingExtra="3dp"
+
+        app:layout_constraintHorizontal_bias=".05"
+        app:layout_constraintHeight_percent="0.2"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="50dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numericTimeTV"
+        app:layout_constraintBottom_toTopOf="@id/hguideline"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericWattsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center|right"
+
+        android:text="000"
+        android:textAlignment="gravity"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="200dp"
+        android:textStyle="bold"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="200dp"
+
+        app:layout_constraintHeight_percent=".328"
+        app:layout_constraintHorizontal_bias=".70"
+        app:layout_constraintVertical_bias="0.25"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/numericWattsLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numericWattsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+
+        android:text="@string/watts_uc"
+        android:textAlignment="gravity"
+        app:layout_constraintHorizontal_bias=".15"
+        app:layout_constraintHeight_percent="0.14"
+
+        android:textAllCaps="true"
+        android:textColor="#B8B8B8"
+        android:textSize="50dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="50dp"
+
+        app:layout_constraintStart_toEndOf="@id/numericWattsTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/hguideline"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

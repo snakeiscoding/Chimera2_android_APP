@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- copied from chimera for legacy UI components we had to copy over -->
+
+    <declare-styleable name="SliderWidget">
+        <attr name="rangeMin" format="float"/>
+        <attr name="rangeMax" format="float"/>
+        <attr name="quantizeStepSize" format="float"/>
+        <attr name="highlightColor" format="color"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="displayPrecision" format="integer"/>
+        <attr name="captionText" format="string"/>
+        <attr name="extraTextSpace" format="integer"/>
+        <attr name="isSlimline" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SelectronRadioGroup">
+        <attr name="orientation">
+            <!--<enum name="horizontal" value="0"/>-->
+            <!--<enum name="vertical" value="1"/>-->
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="HomeButton">
+        <attr name="tint" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectronButton">
+        <attr name="drawableIcon" format="reference"/>
+        <attr name="drawableBackground" format="reference|color"/>
+        <attr name="drawablePressState" format="reference|color"/>
+        <attr name="drawableDisableState" format="reference|color"/>
+        <attr name="drawableCheckedState" format="reference|color"/>
+        <attr name="clickableTimeMiliSecond" format="integer"/>
+        <attr name="iconWidth" format="dimension"/>
+        <attr name="iconHeight" format="dimension"/>
+        <attr name="drawableIconTint" format="color"/>
+        <attr name="drawableIconPressedTint" format="color"/>
+        <attr name="drawableIconCheckedTint" format="color"/>
+        <attr name="drawableIconGravity">
+            <flag name="bottom" value="80"/>
+            <flag name="center" value="17"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="top" value="48"/>
+        </attr>
+        <attr name="useRadioButtonStyle" format="boolean"/>
+        <attr name="iconPaddingLeft" format="dimension"/>
+        <attr name="iconPaddingTop" format="dimension"/>
+        <attr name="iconPaddingRight" format="dimension"/>
+        <attr name="iconPaddingBottom" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutofitTextView">
+        <attr name="minTextSize" format="dimension"/>
+        <attr name="sizeToFit" format="boolean"/>
+        <attr name="preferSingleLine" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StreamingImageView">
+        <attr name="basePath" format="string"/>
+        <attr name="baseFilename" format="string"/>
+        <attr name="frameIdFieldWidth" format="integer"/>
+        <attr name="startIndex" format="integer"/>
+        <attr name="endIndex" format="integer"/>
+        <attr name="fps" format="integer"/>
+        <attr name="speed" format="float"/>
+        <attr name="useFileCache" format="boolean"/>
+        <attr name="backgroundDrawable" format="reference"/>
+        <attr name="zOrderOnTop" format="boolean"/>
+        <attr name="fileExtension" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="JHTDial">
+        <attr name="dial_background" format="reference"/>
+        <attr name="dial_fill" format="reference"/>
+        <attr name="dial_targetZone" format="reference"/>
+        <attr name="dial_needle" format="reference"/>
+        <attr name="dial_minMaxMarker" format="reference"/>
+        <attr name="dial_targetZoneStartValue" format="float"/>
+        <attr name="dial_targetZoneStopValue" format="float"/>
+        <attr name="dial_numbericTextBottomMargin" format="integer"/>
+        <attr name="dial_numericTextSize" format="dimension"/>
+        <attr name="dial_numericTextColor" format="color"/>
+        <attr name="dial_unitLabelText" format="reference"/>
+        <attr name="dial_unitLabelTextSize" format="dimension"/>
+        <attr name="dial_unitLabelTextColor" format="color"/>
+        <attr name="dial_minLabelValue" format="float"/>
+        <attr name="dial_maxLabelValue" format="float"/>
+        <attr name="dial_minMaxLabelTextSize" format="dimension"/>
+        <attr name="dial_minMaxLabelTextColor" format="color"/>
+        <attr name="dial_precisionValue" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="JHTDialNumeric">
+        <attr name="dialNumeric_icon" format="reference"/>
+        <attr name="dialNumeric_numericTextSize" format="dimension"/>
+        <attr name="dialNumeric_numericTextColor" format="color"/>
+        <attr name="dialNumeric_numericTargetSize" format="dimension"/>
+        <attr name="dialNumeric_numericTargetColor" format="color"/>
+        <attr name="dialNumeric_unitLabelText" format="reference"/>
+        <attr name="dialNumeric_unitLabelTextSize" format="dimension"/>
+        <attr name="dialNumeric_unitLabelTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="OptionSelectorItem">
+        <attr name="option_text" format="string" />
+        <attr name="option_options" format="reference" />
+        <attr name="option_values" format="reference" />
+        <attr name="option_height" format="dimension" />
+        <attr name="option_popup_width" format="dimension" />
+        <attr name="option_popup_height" format="dimension" />
+        <attr name="option_popup_padding_top" format="dimension" />
+        <attr name="option_popup_padding_start" format="dimension" />
+    </declare-styleable>
+
+</resources>

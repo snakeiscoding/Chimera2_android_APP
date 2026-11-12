@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/web_view_container_popup_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <ImageView
+        android:id="@+id/web_view_container_popup_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:clickable="false"
+        android:src="@drawable/icon_x"
+        app:tint="#ffffff" />
+
+    <com.jht.chimera.ui.mainapp.PopupWebView
+        android:id="@+id/web_view_container_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp" />
+
+</RelativeLayout>

@@ -1,0 +1,231 @@
+settings
+    workout_id = 53
+    allow_skip_warmup = 1
+    graph_future = 0
+    allow_skip_workout = 1
+    allow_user_goal_changes = 0
+
+input GENDER
+input AGE
+input HEART_RATE
+input METS
+
+export TARGET_METS
+export GOAL_TYPE
+export GOAL
+export PREVENT_USER_GOAL_CHANGES
+export PREVENT_USER_CHANGES
+export SUBMAX_OUTPUT
+export VO2
+export TEST_SCORE_MALE
+export TEST_SCORE_FEMALE
+export MAX_STAGE_HEART_RATE
+export MIN_STAGE_HEART_RATE
+export ALLOW_PAUSE
+export firstHr
+export secondHr
+export slope
+export metsMax
+export previousMets
+export USER_MAX_HEART_RATE
+
+USER_MAX_HEART_RATE = 215 - AGE * 0.75
+STAGE_NUM = 0
+TOTAL_STAGES = 4
+
+stageStartTime = 0
+firstCheck = stageStartTime + 2 * 60000
+nextCheck = stageStartTime + 3 * 60000
+stageEnd = stageStartTime + 5 * 60000
+stageNum = 0
+previousStageHr = 0
+previousMets = 0
+
+stage "workout"
+    interval
+        ALLOW_PAUSE = 0
+        PREVENT_USER_GOAL_CHANGES = 1
+        PREVENT_USER_CHANGES = 1
+        GOAL = 60000 * 5 * TOTAL_STAGES
+        GOAL_TYPE = GOAL_TYPE_TIME_STAGE_CONSTANT
+        TARGET_METS = 4
+        MIN_STAGE_HEART_RATE = 0
+        MAX_STAGE_HEART_RATE = 0
+
+
+        when STAGE_TIME_MS == firstCheck - 4000
+            firstHr = average HEART_RATE for 4000
+
+        when STAGE_TIME_MS == firstCheck
+            MIN_STAGE_HEART_RATE = firstHr
+            MAX_STAGE_HEART_RATE = firstHr + 5
+
+        when STAGE_TIME_MS == nextCheck - 4000
+            secondHr = average HEART_RATE for 4000
+
+        when STAGE_TIME_MS == nextCheck - 5000
+            averageMets = average METS for 5000
+
+        when STAGE_TIME_MS == nextCheck
+            if firstHr == 0 || secondHr == 0
+                SUBMAX_OUTPUT = 1
+                end
+            else if firstHr < previousStageHr || secondHr <= firstHr
+                SUBMAX_OUTPUT = 2
+                end
+            else if secondHr - firstHr <= 5
+                if previousStageHr >= 115 && secondHr >= 115
+                    slope = (secondHr - previousStageHr) / (averageMets - previousMets)
+                    metsMax = averageMets
+                    if averageMets - previousMets > 0
+                        metsMax = ((USER_MAX_HEART_RATE - secondHr) / slope) + averageMets
+                    VO2 = metsMax * 3.5
+                    SUBMAX_OUTPUT = 0
+                    end
+                else if stageNum == TOTAL_STAGES - 2 && secondHr < 115
+                    SUBMAX_OUTPUT = 3
+                    end
+                else if stageNum == 0
+                    previousMets = averageMets
+                    if secondHr < 100
+                        TARGET_METS = 7
+                    else if secondHr <= 120
+                        TARGET_METS = 6
+                    else
+                        TARGET_METS = 5
+                else
+                    previousMets = TARGET_METS
+                    TARGET_METS = previousMets + 2
+
+                MIN_STAGE_HEART_RATE = 0
+                MAX_STAGE_HEART_RATE = 0
+                stageNum = stageNum + 1
+                stageStartTime = nextCheck
+                firstCheck = stageStartTime + 2 * 60000
+                nextCheck = stageStartTime + 3 * 60000
+                stageEnd = stageStartTime + 5 * 60000
+                previousStageHr = secondHr
+            else if nextCheck >= stageEnd
+                SUBMAX_OUTPUT = 4
+                end
+            else
+                firstHr = secondHr
+                MIN_STAGE_HEART_RATE = firstHr
+                MAX_STAGE_HEART_RATE = firstHr + 5
+                nextCheck = nextCheck + 60000
+
+SCORES = [4, 3, 2, 1, 0]
+
+MALE_VALUES_1 = [51.3,46.7,42.4,39.4,0]
+MALE_VALUES_2 = [50.3,44.5,40.9,37.3,0]
+MALE_VALUES_3 = [48.1,41.7,38,35,0]
+MALE_VALUES_4 = [45.2,38.4,35.1,32.2,0]
+MALE_VALUES_5 = [42.4,35.2,31.7,28.6,0]
+
+FEMALE_VALUES_1 = [44.1,38,35.1,32.2,0]
+FEMALE_VALUES_2 = [40.9,36.6,33.7,30.4,0]
+FEMALE_VALUES_3 = [39.4,33.7,30.8,28.2,0]
+FEMALE_VALUES_4 = [35.1,30.8,28.1,25.4,0]
+FEMALE_VALUES_5 = [35.1,29.3,25.7,23.7,0]
+
+onStop
+    if SUBMAX_OUTPUT == 0
+        if AGE >= 0 && AGE <= 29
+            i = 0
+            lookup_value = MALE_VALUES_1[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = MALE_VALUES_1[i]
+
+        else if AGE >= 30 && AGE <= 39
+            i = 0
+            lookup_value = MALE_VALUES_2[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = MALE_VALUES_2[i]
+
+        else if AGE >= 40 && AGE <= 49
+            i = 0
+            lookup_value = MALE_VALUES_3[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = MALE_VALUES_3[i]
+
+        else if AGE >= 50 && AGE <= 59
+            i = 0
+            lookup_value = MALE_VALUES_4[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = MALE_VALUES_4[i]
+
+        else if AGE >= 60 && AGE <= 200
+            i = 0
+            lookup_value = MALE_VALUES_5[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = MALE_VALUES_5[i]
+
+        TEST_SCORE_MALE = temp_score
+
+
+        if AGE >= 0 && AGE <= 29
+            i = 0
+            lookup_value = FEMALE_VALUES_1[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = FEMALE_VALUES_1[i]
+
+        else if AGE >= 30 && AGE <= 39
+            i = 0
+            lookup_value = FEMALE_VALUES_2[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = FEMALE_VALUES_2[i]
+
+        else if AGE >= 40 && AGE <= 49
+            i = 0
+            lookup_value = FEMALE_VALUES_3[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = FEMALE_VALUES_3[i]
+
+        else if AGE >= 50 && AGE <= 59
+            i = 0
+            lookup_value = FEMALE_VALUES_4[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = FEMALE_VALUES_4[i]
+
+        else if AGE >= 60 && AGE <= 200
+            i = 0
+            lookup_value = FEMALE_VALUES_5[i]
+            temp_score = SCORES[i]
+            while  VO2 <= lookup_value
+                temp_score = SCORES[i]
+                i = i + 1
+                lookup_value = FEMALE_VALUES_5[i]
+
+        TEST_SCORE_FEMALE = temp_score
+
+    else
+        VO2 = 0
+        TEST_SCORE_MALE = 0
+        TEST_SCORE_FEMALE = 0

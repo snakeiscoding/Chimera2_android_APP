@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hardware_main_container"
+    tools:ignore="HardcodedText"
+    style="@style/EngineeringPage">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.gridlayout.widget.GridLayout style="@style/EngineeringPageGridLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/hr_test_label"
+                        style="@style/SettingsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/edit_text_label_size" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+</RelativeLayout>

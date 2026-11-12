@@ -1,0 +1,5 @@
+<root>
+    <item name='com.jht.chimera.lib.common.ExecuteAsRoot com.jht.chimera.lib.common.ExecuteAsRoot addCommand(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

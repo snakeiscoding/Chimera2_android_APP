@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/video_player_border"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+
+        <RelativeLayout
+            android:id="@+id/video_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:gravity="center">
+
+            <TextureView
+                android:id="@+id/tv_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/dolby_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="80dp"
+            android:background="#000000"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/dolby_audio_white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_fullScreenControl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="top"
+                android:background="#0dffffff">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_show_video_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/svg_ic_list" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btn_video_player_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/icon_previous_fullscreen_selector" />
+
+            <ToggleButton
+                android:id="@+id/btn_video_player_play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/video_player_toggle_button_selector"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textOff=""
+                android:textOn="" />
+
+            <Button
+                android:id="@+id/btn_video_player_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/icon_next_fullscreen_selector" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="#0dffffff">
+
+                <TextView
+                    android:id="@+id/video_elapsed_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="#A9A9A9"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <SeekBar
+                    android:id="@+id/videoSeekBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/button_scrubber"
+                    android:thumbOffset="0dip" />
+
+                <TextView
+                    android:id="@+id/video_remaining_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="#A9A9A9"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <ToggleButton
+                    android:id="@+id/ib_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/video_player_full_screen_selector"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

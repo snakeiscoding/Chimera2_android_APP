@@ -1,0 +1,18 @@
+<root>
+    <item
+        name='com.jht.chimera.ui.machinesettings.pages.AssetManagement void show(android.animation.Animator.AnimatorListener, boolean)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.ui.machinesettings.pages.DateTime void setCurrentTime()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.ui.machinesettings.pages.Weather java.lang.String createUrl()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

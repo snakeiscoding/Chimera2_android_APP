@@ -1,0 +1,190 @@
+<resources>
+    <item name="register_xid_secondary" type="id"/>
+    <item name="register_passcode_secondary" type="id"/>
+    <item name="register_passcode_confirm_secondary" type="id"/>
+    <item name="register_email_secondary" type="id"/>
+    <item name="register_first_name_secondary" type="id"/>
+    <item name="register_last_name_secondary" type="id"/>
+    <item name="register_birthdate_secondary" type="id"/>
+    <item name="register_weight_secondary" type="id"/>
+
+    <item name="eng_require_pin_checkbox" type="id"/>
+    <item name="eng_gen_pin_number_input" type="id"/>
+    <item name="eng_promotional_video" type="id"/>
+    <item name="eng_promotional_video_timeout" type="id"/>
+    <item name="settings_menu" type="id"/>
+    <item name="eng_hardware_usb_attach_count" type="id"/>
+    <item name="eng_hardware_usb_attach_reset" type="id"/>
+    <item name="eng_iptv_player_type" type="id"/>
+    <item name="test_delayed_va" type="id"/>
+    <item name="eng_hardware_fan_mode" type="id"/>
+    <item name="new_tv_lib" type="id"/>
+    <item name="egym_website" type="id"/>
+    <item name="reset_egym_website" type="id"/>
+
+    <item name="eng_wired_headphone_hdmi_delay" type="id" />
+    <item name="eng_wireless_headphone_hdmi_delay" type="id" />
+    <item name="eng_weather_app_selection" type="id" />
+    <item name="eng_project_one_debug" type="id" />
+    <item name="eng_hardware_gymkit" type="id" />
+    <item name="eng_hardware_samsung_watch" type="id" />
+    <item name="eng_hardware_mfi" type="id" />
+
+    <item name="samsung_icon_indicator" type="id"/>
+    <item name="samsung_badge" type="id"/>
+    <item name="eng_welcome_screen_time_until_dim" type="id"/>
+    <item name="eng_welcome_screen_dim" type="id"/>
+    <item name="asset_management_backlight" type="id"/>
+    <item name="am_thumb_backlight_text" type="id"/>
+    <item name="eng_hardware_fan_line" type="id"/>
+    <item name="build_info" type="id"/>
+
+    <item name="force_hide_ifit" type="id"/>
+    <item name="hardware_none_button" type="id"/>
+    <item name="hardware_demo_mode_button" type="id"/>
+    <item name="hardware_energy_saver_button" type="id"/>
+    <item name="hardware_screen_saver_button" type="id"/>
+    <item name="demo_mode_input" type="id"/>
+    <item name="energy_saver_input" type="id"/>
+    <item name="timeout_selection" type="id"/>
+    <item name="timeout_break" type="id"/>
+    <item name="timeout_group" type="id"/>
+    <item name="energy_erp_demo_break" type="id"/>
+    <item name="bump_sensor_setting" type="id"/>
+    <item name="enable_interact_app" type="id"/>
+    <item name="show_stb_advanced" type="id"/>
+    <item name="eng_hardware_motor_type_value" type="id"/>
+    <item name="enable_myzone_app" type="id"/>
+    <item name="oc_communication_analytics_button" type="id"/>
+    <item name="eng_featured_workout_selector_1" type="id"/>
+    <item name="eng_featured_workout_selector_2" type="id"/>
+    <item name="eng_featured_workout_selector_3" type="id"/>
+    <item name="enable_myzone" type="id"/>
+    <item name="xarefit_login_button" type="id"/>
+    <item name="eng_xarefit_enabled" type="id"/>
+    <item name="xarefit_data_fields" type="id"/>
+    <item name="xarefit_site_id" type="id"/>
+    <item name="xarefit_server_url" type="id"/>
+    <item name="xarefit_server_port" type="id"/>
+    <item name="enable_ymca_360" type="id"/>
+    <item name="enable_mile_high_run_club" type="id"/>
+    <item name="clear_updates" type="id"/>
+    <item name="enable_dapi_fallback" type="id"/>
+    <item name="myzone_summary_layout" type="id"/>
+    <item name="myzone_calories_val" type="id"/>
+    <item name="myzone_effort_val" type="id"/>
+    <item name="myzone_meps_val" type="id"/>
+    <item name="myzone_average_hr_val" type="id"/>
+    <item name="myzone_peak_hr_val" type="id"/>
+    <item name="myzone_duration_val" type="id"/>
+    <item name="eng_hardware_headphone_insert_b_label" type="id"/>
+    <item name="mz_lvl1_data" type="id"/>
+    <item name="mz_lvl2_data" type="id"/>
+    <item name="mz_lvl3_data" type="id"/>
+    <item name="mz_lvl4_data" type="id"/>
+    <item name="mz_lvl5_data" type="id"/>
+    <item name="mz_lvl6_data" type="id"/>
+    <item name="power_limiting" type="id"/>
+    <item name="eng_distance_precision" type="id"/>
+    <item name="machine_uuid" type="id"/>
+    <item name="enable_isc_at_boot" type="id"/>
+    <item name="network_setup_widget" type="id"/>
+    <item name="eng_hdmi_resolution" type="id"/>
+    <item name="eng_tv_stb_button_reset" type="id"/>
+    <item name="eng_tv_stb_button_restore" type="id"/>
+    <item name="eng_tv_stb_button_save" type="id"/>
+    <item name="eng_tv_stb_button_execute" type="id"/>
+    <item name="eng_tv_stb_button_new" type="id"/>
+    <item name="disable_wifi" type="id"/>
+    <item name="eng_tv_stb_frequency" type="id"/>
+    <item name="eng_tv_stb_repeat" type="id"/>
+    <item name="stb_tv_timing_settings" type="id"/>
+    <item name="eng_tv_stb_remote_button" type="id"/>
+    <item name="eng_network_setup_network_settings" type="id"/>
+    <item name="eng_network_wireless_selection" type="id"/>
+    <item name="eng_tv_stb_button_original" type="id"/>
+    <item name="eng_network_settings_wifi_advanced" type="id"/>
+    <item name="enable_hulu_app" type="id"/>
+    <item name="connect_to_matrix_wifi_status" type="id"/>
+    <item name="connect_to_matrix_wifi" type="id"/>
+    <item name="workout_summary_survey" type="id"/>
+    <item name="lcb_data_values" type="id"/>
+    <item name="lcb_data_title" type="id"/>
+    <item name="lcb_data_group" type="id"/>
+    <item name="eng_primary_login_method" type="id" />
+    <item name="eng_custom_app_name" type="id"/>
+    <item name="eng_custom_app_url" type="id"/>
+    <item name="eng_upload_custom_app_icon" type="id"/>
+    <item name="welcome_login_xarefit_icon" type="id"/>
+    <item name="eng_default_system_app" type="id"/>
+    <item name="eng_hardware_disable_audio" type="id"/>
+    <item name="eng_network_settings_bandwidth_test" type="id"/>
+    <item name="eng_hardware_rfid_tag_value_dec" type="id"/>
+    <item name="eng_hardware_headphone_insert_a_label" type="id"/>
+    <item name="eng_send_workout_data_to_alternate_endpoint_enabled" type="id"/>
+    <item name="eng_workout_data_alternate_endpoint" type="id"/>
+    <item name="ftms_control_enabled" type="id"/>
+    <item name="enable_rfid_scans" type="id"/>
+    <item name="dapi_analytics_enabled" type="id"/>
+    <item name="enable_disney_app" type="id"/>
+    <item name="enable_amazon_freevee" type="id"/>
+    <item name="enable_daily_force_reboot" type="id"/>
+    <item name="enable_pluto_tv" type="id"/>
+    <item name="live_climb_enabled" type="id"/>
+    <item name="concierge_button" type="id"/>
+    <item name="concierge_enabled" type="id"/>
+    <item name="switch_workout_overlay_text_view" type="id"/>
+    <item name="eng_websocket_login_enabled" type="id"/>
+    <item name="eng_nightly_updates" type="id"/>
+    <item name="eng_gen_bridge_serial_number" type="id"/>
+    <item name="eng_am_bridge_serial_number" type="id"/>
+    <item name="settings_dialog_bridge_title" type="id"/>
+    <item name="settings_panel_bridge_serial_number" type="id"/>
+    <item name="machine_setup_bridge_serial_number" type="id"/>
+    <item name="eng_force_enable_ifit_on_hardware" type="id"/>
+
+    <!-- new crash MES -->
+    <item name="crash_report_disable_endpoints" type="id"/>
+    <item name="eng_send_crash_report_incident_data_to_alternate_endpoint" type="id"/>
+    <item name="crash_reporting_collection_time" type="id"/>
+    <item name="eng_send_crash_report_log_data_to_alternate_endpoint_enabled" type="id"/>
+    <item name="eng_send_crash_report_log_data_to_alternate_endpoint" type="id"/>
+    <item name="eng_send_crash_report_incident_data_to_alternate_endpoint_enabled" type="id"/>
+    <item name="crash_report_disable_blocklist" type="id"/>
+    <item name="crash_report_debug_logs" type="id"/>
+    <item name="sendManualCrash" type="id"/>
+    <item name="clearCrashReportingCache" type="id"/>
+    <item name="updateCrashReportingCache" type="id"/>
+    <item name="downloadCachedLogs" type="id"/>
+    <item name="crashes_in_cache" type="id"/>
+    <item name="force_downgrade_updates_checkbox" type="id"/>
+
+    <!--  IDs from Parker  -->
+    <item name="eng_treo_web_page" type="id"/>
+    <item name="workout_snapshot_selector" type="id"/>
+    <item name="eng_remove_iFit_marker" type="id"/>
+
+
+    <item name="friction_test_button" type="id"/>
+    <item name="friction_test_layout" type="id"/>
+    <item name="eng_hardware_erp_type" type="id"/>
+    <item name="eng_hardware_erp_type_space1" type="id"/>
+    <item name="eng_hardware_erp_type_space2" type="id"/>
+    <item name="eng_max_speed_reverse" type="id"/>
+    <item name="eng_start_speed_reverse" type="id"/>
+
+    <item name="eng_custom_app_package_path" type="id"/>
+
+    <!-- ProjectOne (Onyx) hardware page extras. These views only exist in main/res/layout/hardware.xml,
+         which parker_main, t600xe and vision600e replace wholesale, so declare the ids here to keep
+         ProjectOneHardwareExtras compiling on every flavor. -->
+    <item name="eng_hardware_haptic_feedback_line_break" type="id"/>
+    <item name="eng_hardware_haptic_enable_checkbox" type="id"/>
+    <item name="eng_hardware_haptic_effect_input" type="id"/>
+    <item name="eng_hardware_haptic_btn_layout" type="id"/>
+    <item name="eng_hardware_haptic_btn" type="id"/>
+    <item name="color_picker_dialog_container" type="id"/>
+    <item name="led_color_selection_recycler_view" type="id"/>
+    <item name="reset_LED_colors_button" type="id"/>
+    <item name="seekBarBrightnessLED" type="id"/>
+</resources>

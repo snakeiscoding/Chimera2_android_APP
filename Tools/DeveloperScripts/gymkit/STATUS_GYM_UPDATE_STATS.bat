@@ -1,0 +1,4 @@
+adb shell am broadcast -a "com.jht.loggerservice.ACTION_UPDATE_DATA_MATRIX_KEY" --es key DATA_GYM_KIT_CALORIES_ACTIVE_INT --es type integer --es value 20
+adb shell am broadcast -a "com.jht.loggerservice.ACTION_UPDATE_DATA_MATRIX_KEY" --es key DATA_GYM_KIT_CALORIES_TOTAL_INT --es type integer --es value 40
+adb shell am broadcast -a "com.jht.loggerservice.ACTION_UPDATE_DATA_MATRIX_KEY" --es key ACTION_UPDATE_GYM_KIT_HEART_RATE_INT --es type integer --es value 81
+adb shell am broadcast -a "com.jht.loggerservice.ACTION_UPDATE_DATA_MATRIX_KEY" --es key DATA_GYM_KIT_AVE_HEART_RATE_INT --es type integer --es value 79

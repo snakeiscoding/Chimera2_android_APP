@@ -1,0 +1,10 @@
+<root>
+    <item
+        name='android.content.pm.PackageManager android.content.Intent getLaunchIntentForPackage(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.pm.PackageManager android.content.pm.PackageInfo getPackageInfo(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

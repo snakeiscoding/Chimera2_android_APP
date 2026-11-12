@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingEnd="11dp"
+    android:paddingStart="7dp"
+    android:paddingTop="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_media_item_row_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/browse_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="10"
+        android:ellipsize="end"
+        android:paddingEnd="@dimen/browser_item_padding_end"
+        android:paddingStart="@dimen/browser_item_padding_start"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/media_list_text_size" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_media_item_row_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/browser_item_padding_end"
+        app:srcCompat="@drawable/svg_ic_media_item_row_triangle"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fitnessGoalScreenSidePadding">35dp</dimen>
+    <dimen name="topBarHeight">80dp</dimen>
+    <dimen name="pageIndicatorHeight">30dp</dimen>
+    <dimen name="pageIndicatorWidth">67dp</dimen>
+    <dimen name="pageIndicatorPaddingTop">64dp</dimen>
+    <dimen name="pageIndicatorPaddingEnd">46dp</dimen>
+    <dimen name="surveyScreensTopPadding">64dp</dimen>
+    <dimen name="fitnessGoalCardSpacing">16dp</dimen>
+    <dimen name="fitnessGoalScreensTopPadding">48dp</dimen>
+
+    <dimen name="checkboxDescriptionFontSize">16sp</dimen>
+
+    <dimen name="icon2XS">16dp</dimen>
+    <dimen name="iconXS">22dp</dimen>
+    <dimen name="icon1Small">26dp</dimen>
+    <dimen name="iconSmall">30dp</dimen>
+    <dimen name="iconMedium">42dp</dimen>
+    <dimen name="iconLarge">48dp</dimen>
+    <dimen name="icon2Large">62dp</dimen>
+    <dimen name="iconXL">54dp</dimen>
+    <dimen name="icon2XL">60dp</dimen>
+
+    <dimen name="seca_button_width">200dp</dimen>
+    <dimen name="seca_button_height">60dp</dimen>
+
+    <dimen name="survey_start_icon_width">160dp</dimen>
+    <dimen name="survey_start_icon_height">218dp</dimen>
+    <dimen name="survey_start_icon_padding">60dp</dimen>
+    <dimen name="dropdown_popup_width">382dp</dimen>
+
+    <dimen name="body_scan_image_width">283dp</dimen>
+    <dimen name="body_scan_image_height">400dp</dimen>
+
+    <dimen name="seca_results_top_box_width">1326dp</dimen>
+    <dimen name="seca_results_top_box_height">219dp</dimen>
+
+    <dimen name="seca_results_top_box_padding">24dp</dimen>
+    <dimen name="metric_value_padding">2dp</dimen>
+    <dimen name="results_top_exercises_padding">16dp</dimen>
+    <dimen name="exercises_title_padding">24dp</dimen>
+    <dimen name="exercises_title_padding_bottom">10dp</dimen>
+
+    <dimen name="seca_calendar_width">686dp</dimen>
+    <dimen name="seca_calendar_padding">115dp</dimen>
+
+    <!--Padding around machine image-->
+    <dimen name="machine_left">11dp</dimen>
+    <dimen name="machine_top">11dp</dimen>
+    <dimen name="machine_right">11dp</dimen>
+    <dimen name="machine_bottom">11dp</dimen>
+
+    <!--padding underneath page indicator-->
+    <dimen name="space_under_page_indicator">24dp</dimen>
+
+    <dimen name="rec_exercises_width">771dp</dimen>
+    <dimen name="rec_exercises_height">355dp</dimen>
+    <dimen name="recommended_exercises_check_top">75dp</dimen>
+
+    <dimen name="rec_exercises_item_width">711dp</dimen>
+    <dimen name="rec_exercises_item_height">152dp</dimen>
+
+    <dimen name="body_comp_column_width">532dp</dimen>
+    <dimen name="body_comp_column_height">355dp</dimen>
+
+    <dimen name="quick_stats_height">219dp</dimen>
+
+    <dimen name="spacing_summary_recommended">16dp</dimen>
+    <dimen name="spacing_summary_recommended_body_comp">18dp</dimen>
+</resources>

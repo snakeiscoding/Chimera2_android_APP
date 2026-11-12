@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_feature_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/featured_main_height"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_top_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_bottom_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70" />
+
+    <com.jht.chimera.ui.mainapp.goscreen.WorkoutFeatured.FeaturedDiagonal
+        android:id="@+id/featured_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:degree="5"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,2.09:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/featured_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="W, 3:1"
+        app:layout_constraintBottom_toBottomOf="@id/title_top_guide"
+        app:layout_constraintEnd_toEndOf="@id/featured_title"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.10"
+        app:layout_constraintHorizontal_bias=".987"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/featured_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@android:color/white"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintTop_toTopOf="@id/title_top_guide"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.33"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/featured_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subtitle"
+        android:textColor="#CCCCCCCC"
+        android:textSize="14dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@id/featured_title"
+        app:layout_constraintStart_toStartOf="@id/featured_title"
+        app:layout_constraintTop_toBottomOf="@id/featured_title"
+        app:layout_constraintBottom_toTopOf="@id/featured_subtitle_2"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/featured_subtitle_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subtitle"
+        android:textColor="#CCCCCCCC"
+        android:textSize="14dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/featured_title"
+        app:layout_constraintStart_toStartOf="@id/featured_title"
+        app:layout_constraintTop_toBottomOf="@id/featured_subtitle"
+        app:layout_constraintBottom_toTopOf="@id/featured_text"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/featured_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="#FFE7E7E7"
+        android:textSize="@dimen/featured_item_description_text_size"
+        app:layout_constraintBottom_toTopOf="@id/start_button_container"
+        app:layout_constraintStart_toStartOf="@id/featured_title"
+        app:layout_constraintEnd_toEndOf="@id/featured_title"
+        app:layout_constraintTop_toBottomOf="@id/featured_subtitle_2"
+        android:maxLines="7"
+        android:ellipsize="end"
+        android:paddingBottom="30dp"
+        android:lineSpacingMultiplier="1.2"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/start_button_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,4.42:1"
+        app:layout_constraintStart_toStartOf="@id/featured_title"
+        app:layout_constraintTop_toBottomOf="@id/featured_text"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2">
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/start_selector"
+            android:text="@string/setup_uc"
+            android:textColor="@android:color/white"
+            android:textSize="21dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/main_start_button_lock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:elevation="2dp"
+            android:background="@drawable/icon_lock"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            tools:targetApi="lollipop"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

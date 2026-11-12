@@ -1,0 +1,12 @@
+<root>
+    <item
+        name='android.webkit.WebView void addJavascriptInterface(java.lang.Object, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.webkit.WebView void loadUrl(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.webkit.WebSettings void setUserAgentString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+</root>

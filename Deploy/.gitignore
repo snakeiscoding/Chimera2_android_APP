@@ -1,0 +1,15 @@
+out
+Thumbs.db
+.DS_Store
+update_packages
+version.txt
+*.apk
+checklist.csv
+
+# Except this file
+!*.so
+!*.exe
+
+# Ensure the generated directories are not being committed.
+/generated_cleanup_*/
+/generated_dummy_*/

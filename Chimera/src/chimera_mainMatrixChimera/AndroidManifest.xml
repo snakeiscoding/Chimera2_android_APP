@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_chimera_app_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/ChimeraTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:supportsRtl,android:theme,android:icon,android:hardwareAccelerated">
+
+
+    </application>
+
+
+</manifest>

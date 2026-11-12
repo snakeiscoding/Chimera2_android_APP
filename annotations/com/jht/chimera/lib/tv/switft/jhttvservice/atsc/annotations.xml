@@ -1,0 +1,25 @@
+<root>
+    <item
+        name='com.jht.chimera.lib.tv.switft.jhttvservice.atsc.ATSCChannelInfo java.lang.String toString()'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item name='com.jht.chimera.lib.tv.switft.jhttvservice.atsc.ATSCHelperBase'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.lib.tv.switft.jhttvservice.atsc.ATSCHelperBase$1 void onGetComponentOutput(byte[])'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+    <item
+        name='com.jht.chimera.lib.tv.switft.jhttvservice.atsc.ATSCHelperBase$1 void onGetTunerType(byte)'>
+        <annotation name='java.lang.SuppressWarnings'>
+            <val val="&quot;HardCodedStringLiteral&quot;" />
+        </annotation>
+    </item>
+</root>

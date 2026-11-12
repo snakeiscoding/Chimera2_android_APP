@@ -1,0 +1,105 @@
+<root>
+    <item name='android.content.ClipData'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ComponentName ComponentName(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ComponentName ComponentName(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ContentValues void put(java.lang.String, java.lang.Integer) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ContentValues void put(java.lang.String, java.lang.Long) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ContentValues void put(java.lang.String, java.lang.Double) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ContentValues void put(java.lang.String, java.lang.Boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.ContentValues void put(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Context java.lang.Object getSystemService(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent Intent(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent T getParcelableExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent putExtra(java.lang.String, android.os.Parcelable) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent putExtra(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent android.content.Intent putExtra(java.lang.String, float) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent android.content.Intent putExtra(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent android.content.Intent putExtra(java.lang.String, long) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent putExtra(java.lang.String, java.io.Serializable) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent putExtra(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent putExtra(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent setClassName(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent android.content.Intent setClassName(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent boolean getBooleanExtra(java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent boolean hasExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent int getIntExtra(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent int[] getIntArrayExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent float getFloatExtra(java.lang.String, float) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent java.io.Serializable getSerializableExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.Intent java.lang.String getStringExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item
+        name='android.content.Intent java.util.ArrayList&lt;java.lang.String&gt; getStringArrayListExtra(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.IntentFilter IntentFilter(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+    <item name='android.content.IntentFilter void addAction(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NonNls' />
+    </item>
+
+</root>

@@ -1,0 +1,419 @@
+<resources>	
+    <string-array name="dateFormatList">
+        <item>@string/yyyy_mm_dd_ac</item>
+        <item>@string/mm_dd_yyyy_ac</item>
+        <item>@string/dd_mm_yyyy_ac</item>
+    </string-array>
+    
+    <string-array name="timeFormatList">
+        <item>@string/twelve_hour_pg</item>
+        <item>@string/twenty_four_hour_pg</item>
+    </string-array>
+    
+    <string-array name="timAmPm">
+        <item>@string/am_uc</item>
+        <item>@string/pm_uc</item>
+    </string-array>
+    
+    
+    <string-array name="dapi_environments">
+        <item >@string/dapi_dev_tc</item>
+        <item >@string/dapi_qa_tc</item>
+        <item >@string/dapi_staging_tc</item>
+        <item >@string/dapi_production_tc</item>
+    </string-array>
+
+
+
+    <string-array name="gender_list">
+        <item >@string/male_tc</item>
+        <item >@string/female_tc</item>
+        <item >@string/non_binary_gender_tc</item>
+    </string-array>
+
+    <string-array name="weather_applications">
+        <item >Matrix Weather App</item>
+        <item >My Weather</item>
+        <item >Moji Weather</item>
+    </string-array>
+
+    <string-array name="egym_environments">
+        <item >"Test-Co"</item>
+        <item >"Development"</item>
+        <item >"Production"</item>
+    </string-array>
+
+    <string-array name="aspect_ratio">
+        <item >@string/fill_tc</item>
+        <item >@string/auto_tc</item>
+    </string-array>
+    <string-array name="tv_tuner_type">
+        <item >@string/cvbs_uc</item>
+        <item >@string/hdmi_uc</item>
+    </string-array>
+
+    <string-array name="erp_type">
+        <item>@string/erp_tc</item>
+        <item>@string/sleep_mode_tc</item>
+    </string-array>
+
+    <string-array name="erp_mode">
+        <item>@string/off_tc</item>
+        <item>@string/idle_timeout_tc</item>
+        <item>@string/time_tc</item>
+    </string-array>
+
+    <string-array name="fan_mode">
+        <item>@string/default_tc</item>
+        <item>@string/limited_1_tc</item>
+        <item>@string/limited_2_tc</item>
+        <item>@string/off_tc</item>
+    </string-array>
+
+    <string-array name="ant_plus_protocol">
+        <item>4.2</item>
+        <item>5.0</item>
+    </string-array>
+
+    <string-array name="ip_setup_options">
+        <item>@string/dhcp1_ac</item>
+        <item>@string/static_ip_address_tc</item>
+    </string-array>
+
+    <string-array name="iptv_protocols">
+        <item>RTSP</item>
+        <item>RTP</item>
+        <item>UDP</item>
+        <item>HTTP</item>
+        <item>HTTPS</item>
+    </string-array>
+
+
+    <string-array name="enseo_pro_iptv_protocols">
+        <item>UDP</item>
+        <item>RTP</item>
+    </string-array>
+
+    <!--
+    <string-array name="DATA_TV_SOURCE_STRING">
+        <item >@string/coaxial_tc</item>
+        <item >@string/coaxial_japan_tc</item><item>@string/coaxial_km2_tc</item>
+        <item >@string/iptv_without_stb_tc</item>
+        <item >@string/iptv_hdmi_tc</item>
+        <item >@string/iptv_with_stb_tc</item>
+        <item >@string/cab_uc</item>
+        <item >@string/tv_proidiom_tc</item>
+
+    </string-array>
+    -->
+    <string-array name="DATA_TV_SOURCE_STRING">
+        <item>US Tuner (ATSC/DBV-T)</item>
+        <item>Pro-Idiom</item>
+        <item>JP Tuner (ISDB-T)</item>
+        <item>JP Tuner (ISDB-T)</item>
+        <item>EU Tuner (DVB-T2/C/S)</item>
+        <item>Brazil Tuner</item>
+        <item>Set Top Box</item>
+        <item>IPTV</item>
+        <item>CAB / CableSAT</item>
+    </string-array>
+
+    <string-array name="tv_source2">
+        <item>SwiftInfo Tuner</item>
+        <item>VividMetrics Tuner</item>
+        <item>Set Top Box</item>
+        <item>IPTV</item>
+        <item>CAB / CableSAT</item>
+    </string-array>
+
+
+    <string-array name="selectlanguage">
+        <item>Select Language</item>
+        <item>Sélectionnez la Langue</item>
+        <item>Scegli la Lingua</item>
+        <item>Selecciona Idioma</item>
+        <item>Taal Selecteren</item>
+        <item>Selecione o Idioma</item>
+        <item>언어 선택</item>
+        <item>اختر اللغة</item>
+        <item>Välj Språk</item>
+        <item>Выбор языка</item>
+        <item>Valitse Kieli</item>
+        <item>选择语言</item>
+        <item>選擇語言</item>
+        <item>言語の選択</item>
+        <item>Dil Seçin</item>
+        <item>เลือกภาษา</item>
+        <item>Pilih Bahasa</item>
+        <item>Wybierz Język</item>
+    </string-array>
+
+
+    <string-array name="timezoneDisplay">
+
+        <item>@string/midway_island_samoa_tc</item>
+        <item>@string/hawaii_tc</item>
+        <item>@string/alaska_tc</item>
+        <item>@string/pacific_time_us_and_canada_tijuana_tc</item>
+        <item>@string/mountain_time_us_and_canada_tc</item>
+        <item>@string/chihuahua_la_paz_mazatlan_tc</item>
+        <item>@string/arizona_tc</item>
+        <item>@string/saskatchewan_tc</item>
+        <item>@string/guadalajara_mexico_city_monterrey_tc</item>
+        <item>@string/central_time_us_and_canada_tc</item>
+        <item>@string/central_america_tc</item>
+        <item>@string/indiana_east_tc</item>
+        <item>@string/eastern_time_us_and_canada_tc</item>
+        <item>@string/bogota_lima_quito_tc</item>
+        <item>@string/santiago_tc</item>
+        <item>@string/manaus_tc</item>
+        <item>@string/caracas_la_paz_tc</item>
+        <item>@string/atlantic_time_canada_tc</item>
+        <item>@string/newfoundland_and_labrador_tc</item>
+        <item>@string/greenland_tc</item>
+        <item>@string/buenos_aires_georgetown_tc</item>
+        <item>@string/brasilia_tc</item>
+        <item>@string/mid_atlantic_tc</item>
+        <item>@string/cape_verde_islands_tc</item>
+        <item>@string/azores_tc</item>
+        <item>@string/casablanca_monrovia_tc</item>
+        <item>@string/greenwich_mean_time_dublin_edinburgh_lisbon_london_tc</item>
+        <item>@string/amsterdam_berlin_bern_rome_stockholm_vienna_tc</item>
+        <item>@string/belgrade_bratislava_budapest_ljubljana_prague_tc</item>
+        <item>@string/brussels_copenhagen_madrid_paris_tc</item>
+        <item>@string/sarajevo_skopje_warsaw_zagreb_tc</item>
+        <item>@string/west_central_africa_tc</item>
+        <item>@string/athens_bucharest_istanbul_tc</item>
+        <item>@string/cairo_tc</item>
+        <item>@string/harare_pretoria_tc</item>
+        <item>@string/helsinki_kiev_riga_sofia_tallinn_vilnius_tc</item>
+        <item>@string/jerusalem_tc</item>
+        <item>@string/minsk_tc</item>
+        <item>@string/windhoek_tc</item>
+        <item>@string/baghdad_tc</item>
+        <item>@string/kuwait_riyadh_tc</item>
+        <item>@string/moscow_st._petersburg_volgograd_tc</item>
+        <item>@string/nairobi_tc</item>
+        <item>@string/tehran_tc</item>
+        <item>@string/abu_dhabi_muscat_tc</item>
+        <item>@string/baku_tc</item>
+        <item>@string/tblisi_tc</item>
+        <item>@string/yerevan_tc</item>
+        <item>@string/kabul_tc</item>
+        <item>@string/ekaterinburg_tc</item>
+        <item>@string/islamabad_karachi_tashkent_tc</item>
+        <item>@string/chennai_kolkata_mumbai_new_delhi_tc</item>
+        <item>@string/sri_jayawardenepura_tc</item>
+        <item>@string/kathmandu_tc</item>
+        <item>@string/almaty_novosibirsk_tc</item>
+        <item>@string/astana_dhaka_tc</item>
+        <item>@string/yangon_rangoon_tc</item>
+        <item>@string/bangkok_hanoi_jakarta_tc</item>
+        <item>@string/krasnoyarsk_tc</item>
+        <item>@string/beijing_chongqing_hong_kong_sar_urumqi_tc</item>
+        <item>@string/irkutsk_ulaanbaatar_tc</item>
+        <item>@string/kuala_lumpur_singapore_tc</item>
+        <item>@string/perth_tc</item>
+        <item>@string/taipei_tc</item>
+        <item>@string/osaka_sapporo_tokyo_tc</item>
+        <item>@string/seoul_tc</item>
+        <item>@string/yakutsk_tc</item>
+        <item>@string/adelaide_tc</item>
+        <item>@string/darwin_tc</item>
+        <item>@string/brisbane_tc</item>
+        <item>@string/canberra_melbourne_sydney_tc</item>
+        <item>@string/guam_port_moresby_tc</item>
+        <item>@string/hobart_tc</item>
+        <item>@string/vladivostok_tc</item>
+        <item>@string/magadan_solomon_islands_new_caledonia_tc</item>
+        <item>@string/auckland_wellington_tc</item>
+        <item>@string/fiji_islands_kamchatka_marshall_islands_tc</item>
+        <item>@string/nuku_alofa</item>
+    </string-array>
+
+    <string-array name="ianaTimezone">
+        <item>Pacific/Apia</item>
+        <item>Pacific/Honolulu</item>
+        <item>America/Anchorage</item>
+        <item>America/Tijuana</item>
+        <item>America/Denver</item>
+        <item>America/Chihuahua</item>
+        <item>America/Phoenix</item>
+        <item>America/Regina</item>
+        <item>America/Monterrey</item>
+        <item>America/Chicago</item>
+        <item>America/Costa_Rica</item>
+        <item>America/Indiana/Indianapolis</item>
+        <item>America/New_York</item>
+        <item>America/Bogota</item>
+        <item>America/Santiago</item>
+        <item>America/Cuiaba</item>
+        <item>America/La_Paz</item>
+        <item>America/Halifax</item>
+        <item>America/St_Johns</item>
+        <item>America/Godthab</item>
+        <item>America/Argentina/Buenos_Aires</item>
+        <item>America/Sao_Paulo</item>
+        <item>Atlantic/South_Georgia</item>
+        <item>Atlantic/Cape_Verde</item>
+        <item>Atlantic/Azores</item>
+        <item>Africa/Monrovia</item>
+        <item>Europe/London</item>
+        <item>Europe/Berlin</item>
+        <item>Europe/Belgrade</item>
+        <item>Europe/Paris</item>
+        <item>Europe/Belgrade</item>
+        <item>Africa/Lagos</item>
+        <item>Europe/Istanbul</item>
+        <item>Africa/Cairo</item>
+        <item>Africa/Harare</item>
+        <item>Europe/Riga</item>
+        <item>Asia/Jerusalem</item>
+        <item>Europe/Minsk</item>
+        <item>Africa/Windhoek</item>
+        <item>Asia/Baghdad</item>
+        <item>Asia/Kuwait</item>
+        <item>Europe/Moscow</item>
+        <item>Africa/Nairobi</item>
+        <item>Asia/Tehran</item>
+        <item>Asia/Muscat</item>
+        <item>Asia/Baku</item>
+        <item>Asia/Tbilisi</item>
+        <item>Asia/Yerevan</item>
+        <item>Asia/Kabul</item>
+        <item>Asia/Yekaterinburg</item>
+        <item>Asia/Tashkent</item>
+        <item>Asia/Calcutta</item>
+        <item>Asia/Colombo</item>
+        <item>Asia/Kathmandu</item>
+        <item>Asia/Novosibirsk</item>
+        <item>Asia/Almaty</item>
+        <item>Asia/Rangoon</item>
+        <item>Asia/Bangkok</item>
+        <item>Asia/Krasnoyarsk</item>
+        <item>Asia/Shanghai</item>
+        <item>Asia/Irkutsk</item>
+        <item>Asia/Singapore</item>
+        <item>Australia/Perth</item>
+        <item>Asia/Taipei</item>
+        <item>Asia/Tokyo</item>
+        <item>Asia/Seoul</item>
+        <item>Asia/Yakutsk</item>
+        <item>Australia/Adelaide</item>
+        <item>Australia/Darwin</item>
+        <item>Australia/Brisbane</item>
+        <item>Australia/Sydney</item>
+        <item>Pacific/Guam</item>
+        <item>Australia/Hobart</item>
+        <item>Asia/Vladivostok</item>
+        <item>Pacific/Guadalcanal</item>
+        <item>Pacific/Auckland</item>
+        <item>Pacific/Fiji</item>
+        <item>Pacific/Tongatapu</item>
+
+    </string-array>
+
+
+    <string-array name="subnet_addresses_options">
+        <item>255.0.0.0</item>
+        <item>255.128.0.0</item>
+        <item>255.192.0.0</item>
+        <item>255.224.0.0</item>
+        <item>255.240.0.0</item>
+        <item>255.248.0.0</item>
+        <item>255.252.0.0</item>
+        <item>255.254.0.0</item>
+        <item>255.255.0.0</item>
+        <item>255.255.128.0</item>
+        <item>255.255.192.0</item>
+        <item>255.255.224.0</item>
+        <item>255.255.240.0</item>
+        <item>255.255.248.0</item>
+        <item>255.255.252.0</item>
+        <item>255.255.254.0</item>
+        <item>255.255.255.0</item>
+        <item>255.255.255.128</item>
+        <item>255.255.255.192</item>
+        <item>255.255.255.224</item>
+        <item>255.255.255.240</item>
+        <item>255.255.255.248</item>
+        <item>255.255.255.252</item>
+    </string-array>
+
+    <string-array name="welcome_icon_positions">
+        <item>@string/center_tc</item>
+        <item>@string/top_tc</item>
+        <item>@string/gone_tc</item>
+    </string-array>
+
+
+
+    <string-array name="hidden_security_type">
+        <item >@string/none_tc</item>
+        <item >@string/wep_uc</item>
+        <item >@string/wpa_uc</item>
+        <item >@string/wpa2_psk_uc</item>
+    </string-array>
+
+
+    <string-array name="custom_login_input_type">
+        <item >@string/number_tc</item>
+        <item >@string/alphanumeric_tc</item>
+        <item >@string/email_tc</item>
+    </string-array>
+
+    <string-array name="treadmill_motor_type">
+        <item>Motor Type 0</item>
+        <item>Motor Type 1</item>
+        <item>Motor Type 2</item>
+        <item>Motor Type 3</item>
+        <item>Motor Type 4</item>
+        <item>Motor Type 5</item>
+        <item>Motor Type 6</item>
+        <item>Motor Type 7</item>
+    </string-array>
+
+
+    <string-array name="screen_timeout">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+    </string-array>
+
+    <string-array name="iptv_player_type">
+        <item>VLC</item>
+        <item>ANDROID</item>
+    </string-array>
+
+
+    <string-array name="cab_setting">
+        <item>SOFF</item>
+        <item>SCAB</item>
+        <item>SCAS</item>
+        <item>SSAT</item>
+    </string-array>
+
+    <string-array name="cab_volume_gain">
+        <item>1.0</item>
+        <item>0.5</item>
+        <item>0.33</item>
+        <item>SSAT</item>
+    </string-array>
+
+    <string-array name="screen_brightness_timeout">
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+    </string-array>
+
+
+    <string-array name="workout_snapshot_settings">
+        <item >@string/login_only_tc</item>
+        <item >@string/on_tc</item>
+        <item >@string/off_tc</item>
+    </string-array>
+
+</resources>

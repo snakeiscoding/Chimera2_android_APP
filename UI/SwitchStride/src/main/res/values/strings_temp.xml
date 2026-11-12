@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="belt_is_currently_in_reverse_pg">Belt is currently in reverse</string>
+    <string name="switch_stride_tc">Switch Stride</string>
+    <string name="help_switch_stride_pg">Designed to improve coordination, strengthen often-overlooked muscle groups, and boost cardiovascular endurance, this hybrid session lets you switch directions mid-workout.</string>
+
+    <string name="reverse_tc">Reverse</string>
+    <string name="cancel_tc">Cancel</string>
+    <string name="belt_is_currently_in_reverse_tc">Belt is currently in reverse</string>
+    <string name="reverse_to_backward_belt_tc">Reverse to Backward Belt?</string>
+    <string name="reverse_to_forward_belt_tc">Reverse to Forward Belt?</string>
+    <string name="forward_belt_dialog_message_pg">Stay facing forward—the belt will start moving in reverse, causing you to walk forward.</string>
+    <string name="reverse_belt_dialog_message_pg">Stay facing forward—the belt will start moving in reverse, causing you to walk backward.</string>
+    <string name="stay_facing_forward_pg">Stay facing forward - the belt is stopping and will begin reversing shortly.</string>
+    <string name="stopping_belt_tc">Stopping Belt…</string>
+
+    <!-- SwitchStride run screen buttons -->
+    <string name="reverse_belt_tc">Reverse Belt</string>
+    <string name="pause_tc">Pause</string>
+    <string name="resume_tc">Resume</string>
+
+    <!-- SwitchStride countdown -->
+    <string name="are_you_ready_uc">ARE YOU READY?</string>
+    <string name="switch_stride_only_tc">Switch Stride Only</string>
+    <string name="switch_stride_workout_pg">Designed to improve coordination, strengthen often-overlooked muscle groups, and boost cardiovascular endurance, this hybrid session lets you switch directions mid-workout. Alternate between walking forward to target glutes and hamstrings, and backward to engage quads, calves, and improve knee stability.</string>
+
+    <string name="switch_stride_pg">Speed and incline are fixed when workout begins. You may adjust the metrics after your workout starts.</string>
+    <string name="hbt_start_speed_tc">Start Speed:</string>
+    <string name="hbt_start_incline_tc">Start Incline:</string>
+
+    <!--Temporary switch stride strings-->
+    <string name="hbt_start_incline_value"> 0.0%</string>
+    <string name="hbt_start_speed_value"> 0.1 mph</string>
+</resources>
